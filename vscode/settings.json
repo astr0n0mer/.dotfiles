@@ -1,0 +1,58 @@
+{
+  "editor.wordWrap": "on",
+  "editor.accessibilitySupport": "off",
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "git.autofetch": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.stickyScroll.enabled": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "editor.fontFamily": "MonoLisa, \"Fira Code\", \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "update.enableWindowsBackgroundUpdates": false,
+  "window.commandCenter": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "~/../css",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "editor.minimap.showSlider": "always",
+  "liveServer.settings.NoBrowser": true,
+  "telemetry.telemetryLevel": "off",
+  "liveSassCompile.settings.includeItems": [],
+  "liveSassCompile.settings.useNewCompiler": false,
+  "liveSassCompile.settings.showOutputWindowOn": "Error",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveSassCompile.settings.rootIsWorkspace": null,
+  "editor.formatOnSave": true,
+  "editor.cursorStyle": "block",
+  "editor.cursorBlinking": "phase",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
+}
