@@ -1,3 +1,4 @@
+// path: /home/astronomer/.config/VSCodium/User/settings.json
 {
   "editor.wordWrap": "on",
   "editor.accessibilitySupport": "off",
@@ -32,7 +33,10 @@
       "savePathReplacementPairs": null
     }
   ],
-  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "editor.minimap.showSlider": "always",
   "liveServer.settings.NoBrowser": true,
   "telemetry.telemetryLevel": "off",
