@@ -1,1 +1,278 @@
-[{"identifier":{"id":"github.github-vscode-theme","uuid":"7328a705-91fc-49e6-8293-da6f112e482d"},"version":"6.3.4","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/github.github-vscode-theme-6.3.4","scheme":"file"},"relativeLocation":"github.github-vscode-theme-6.3.4","metadata":{"id":"7328a705-91fc-49e6-8293-da6f112e482d","publisherDisplayName":"GitHub","publisherId":"7c1c19cd-78eb-4dfb-8999-99caf7679002","targetPlatform":"undefined","isApplicationScoped":false,"updated":false,"isPreReleaseVersion":false,"preRelease":false,"installedTimestamp":1683092131050}},{"identifier":{"id":"oderwat.indent-rainbow","uuid":"eaa2127d-cb69-4ab9-8505-a60c9ee5f28b"},"version":"8.3.1","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/oderwat.indent-rainbow-8.3.1","scheme":"file"},"relativeLocation":"oderwat.indent-rainbow-8.3.1","metadata":{"id":"eaa2127d-cb69-4ab9-8505-a60c9ee5f28b","publisherId":"ac064ae0-224d-4351-9aa4-45ef7bf3ed21","publisherDisplayName":"oderwat","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"preRelease":false,"installedTimestamp":1654968942653}},{"identifier":{"id":"ritwickdey.liveserver","uuid":"b63c44fd-0457-4696-99e9-dbfdf70d77de"},"version":"5.7.9","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/ritwickdey.liveserver-5.7.9","scheme":"file"},"relativeLocation":"ritwickdey.liveserver-5.7.9","metadata":{"id":"b63c44fd-0457-4696-99e9-dbfdf70d77de","publisherId":"17fd9a78-e430-4a78-add2-ade4a8830352","publisherDisplayName":"Ritwick Dey","targetPlatform":"undefined","isApplicationScoped":false,"updated":true,"isPreReleaseVersion":false,"preRelease":false,"installedTimestamp":1661923747452}},{"identifier":{"id":"sdras.night-owl","uuid":"e58f546c-babc-455f-a265-ba40dbd140d4"},"version":"2.0.1","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/sdras.night-owl-2.0.1","scheme":"file"},"relativeLocation":"sdras.night-owl-2.0.1","metadata":{"id":"e58f546c-babc-455f-a265-ba40dbd140d4","publisherId":"addae8ad-0041-44f2-a2d4-cbebe4912d50","publisherDisplayName":"sarah.drasner","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"preRelease":false,"installedTimestamp":1654968941241}},{"identifier":{"id":"styled-components.vscode-styled-components","uuid":"22a740c5-ec07-4bf0-a58f-1a38aabea310"},"version":"1.7.8","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/styled-components.vscode-styled-components-1.7.8","scheme":"file"},"relativeLocation":"styled-components.vscode-styled-components-1.7.8","metadata":{"id":"22a740c5-ec07-4bf0-a58f-1a38aabea310","publisherId":"608ef4b3-a3fc-4d26-918a-19c0d8435cf4","publisherDisplayName":"Styled Components","targetPlatform":"undefined","isApplicationScoped":false,"updated":true,"isPreReleaseVersion":false,"installedTimestamp":1683094038405,"preRelease":false}},{"identifier":{"id":"dsznajder.es7-react-js-snippets","uuid":"19804510-b475-4dae-b0f7-6ca08fd1af0c"},"version":"4.4.3","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/dsznajder.es7-react-js-snippets-4.4.3","scheme":"file"},"relativeLocation":"dsznajder.es7-react-js-snippets-4.4.3","metadata":{"id":"19804510-b475-4dae-b0f7-6ca08fd1af0c","publisherId":"7ea644b4-2d93-4979-aac5-a12afebeb762","publisherDisplayName":"dsznajder","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"installedTimestamp":1685723444701,"preRelease":false}},{"identifier":{"id":"humao.rest-client","uuid":"dda49fd5-1f3b-4d25-bf61-4fc41905ede5"},"version":"0.25.1","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/humao.rest-client-0.25.1","scheme":"file"},"relativeLocation":"humao.rest-client-0.25.1","metadata":{"id":"dda49fd5-1f3b-4d25-bf61-4fc41905ede5","publisherId":"aa260071-fe15-4a92-8990-7b8753d9cbc7","publisherDisplayName":"Huachao Mao","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"installedTimestamp":1690113408155,"preRelease":false}},{"identifier":{"id":"esbenp.prettier-vscode","uuid":"96fa4707-6983-4489-b7c5-d5ffdfdcce90"},"version":"10.1.0","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/esbenp.prettier-vscode-10.1.0","scheme":"file"},"relativeLocation":"esbenp.prettier-vscode-10.1.0","metadata":{"id":"96fa4707-6983-4489-b7c5-d5ffdfdcce90","publisherId":"d16f4e39-2ffb-44e3-9c0d-79d873570e3a","publisherDisplayName":"Prettier","targetPlatform":"undefined","isApplicationScoped":false,"updated":true,"isPreReleaseVersion":false,"installedTimestamp":1690908200814,"preRelease":false}},{"identifier":{"id":"glenn2223.live-sass","uuid":"137c3643-510d-4a1f-a737-793c72e8b411"},"version":"6.1.1","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/glenn2223.live-sass-6.1.1","scheme":"file"},"relativeLocation":"glenn2223.live-sass-6.1.1","metadata":{"id":"137c3643-510d-4a1f-a737-793c72e8b411","publisherId":"ee3335b0-2909-465b-ac95-ac4972a4bf1d","publisherDisplayName":"Glenn Marks","targetPlatform":"undefined","isApplicationScoped":false,"updated":true,"isPreReleaseVersion":false,"installedTimestamp":1692336461995,"preRelease":false}},{"identifier":{"id":"bradlc.vscode-tailwindcss","uuid":"4db62a7c-7d70-419c-96d2-6c3a4dc77ea5"},"version":"0.10.0","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/bradlc.vscode-tailwindcss-0.10.0","scheme":"file"},"relativeLocation":"bradlc.vscode-tailwindcss-0.10.0","metadata":{"id":"4db62a7c-7d70-419c-96d2-6c3a4dc77ea5","publisherId":"84722833-669b-4c7d-920e-b60e43fae19a","publisherDisplayName":"Tailwind Labs","targetPlatform":"undefined","isApplicationScoped":false,"updated":true,"isPreReleaseVersion":false,"installedTimestamp":1693374772518,"preRelease":false}},{"identifier":{"id":"orta.vscode-jest","uuid":"7997a8ae-1fae-4022-b834-12f6318aeffd"},"version":"5.2.3","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/orta.vscode-jest-5.2.3","scheme":"file"},"relativeLocation":"orta.vscode-jest-5.2.3","metadata":{"id":"7997a8ae-1fae-4022-b834-12f6318aeffd","publisherId":"c22b4001-1af3-48d1-87ed-490c6c3b747f","publisherDisplayName":"Orta","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"installedTimestamp":1694106639379,"preRelease":false}},{"identifier":{"id":"golang.go","uuid":"d6f6cfea-4b6f-41f4-b571-6ad2ab7918da"},"version":"0.39.1","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/golang.go-0.39.1","scheme":"file"},"relativeLocation":"golang.go-0.39.1","metadata":{"id":"d6f6cfea-4b6f-41f4-b571-6ad2ab7918da","publisherId":"dbf6ae0a-da75-4167-ac8b-75b4512f2153","publisherDisplayName":"Go Team at Google","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"installedTimestamp":1694231312117,"preRelease":false}},{"identifier":{"id":"hediet.debug-visualizer","uuid":"bce78737-8848-49f7-a27d-97004928fe41"},"version":"2.4.0","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/hediet.debug-visualizer-2.4.0","scheme":"file"},"relativeLocation":"hediet.debug-visualizer-2.4.0","metadata":{"id":"bce78737-8848-49f7-a27d-97004928fe41","publisherId":"4d8048f9-07cf-483a-b27b-1fdc29cea931","publisherDisplayName":"Henning Dieterichs","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"installedTimestamp":1694420699274,"preRelease":false}},{"identifier":{"id":"dbaeumer.vscode-eslint","uuid":"583b2b34-2c1e-4634-8c0b-0b82e283ea3a"},"version":"2.4.2","location":{"$mid":1,"path":"/c:/Users/Astronomer/.vscode/extensions/dbaeumer.vscode-eslint-2.4.2","scheme":"file"},"relativeLocation":"dbaeumer.vscode-eslint-2.4.2","metadata":{"id":"583b2b34-2c1e-4634-8c0b-0b82e283ea3a","publisherId":"29859a75-d81b-4f0e-8578-2c80ecee6f99","publisherDisplayName":"Microsoft","targetPlatform":"undefined","updated":false,"isPreReleaseVersion":false,"installedTimestamp":1694892408954,"preRelease":false}},{"identifier":{"id":"github.copilot","uuid":"23c4aeee-f844-43cd-b53e-1113e483f1a6"},"version":"1.112.420","location":{"$mid":1,"fsPath":"c:\\Users\\Astronomer\\.vscode\\extensions\\github.copilot-1.112.420","_sep":1,"external":"file:///c%3A/Users/Astronomer/.vscode/extensions/github.copilot-1.112.420","path":"/c:/Users/Astronomer/.vscode/extensions/github.copilot-1.112.420","scheme":"file"},"relativeLocation":"github.copilot-1.112.420","metadata":{"id":"23c4aeee-f844-43cd-b53e-1113e483f1a6","publisherId":"7c1c19cd-78eb-4dfb-8999-99caf7679002","publisherDisplayName":"GitHub","targetPlatform":"undefined","isApplicationScoped":false,"updated":true,"isPreReleaseVersion":false,"installedTimestamp":1695036439819,"preRelease":false}}]
+[
+    {
+        "identifier": {
+            "id": "sdras.night-owl",
+            "uuid": "e58f546c-babc-455f-a265-ba40dbd140d4"
+        },
+        "version": "2.0.1",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/sdras.night-owl-2.0.1-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "sdras.night-owl-2.0.1-universal",
+        "metadata": {
+            "id": "e58f546c-babc-455f-a265-ba40dbd140d4",
+            "publisherId": "addae8ad-0041-44f2-a2d4-cbebe4912d50",
+            "publisherDisplayName": "sdras",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695226666667,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "github.github-vscode-theme",
+            "uuid": "7328a705-91fc-49e6-8293-da6f112e482d"
+        },
+        "version": "6.3.4",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/github.github-vscode-theme-6.3.4-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "github.github-vscode-theme-6.3.4-universal",
+        "metadata": {
+            "id": "7328a705-91fc-49e6-8293-da6f112e482d",
+            "publisherId": "7c1c19cd-78eb-4dfb-8999-99caf7679002",
+            "publisherDisplayName": "GitHub",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236869,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "dbaeumer.vscode-eslint",
+            "uuid": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a"
+        },
+        "version": "2.4.2",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/dbaeumer.vscode-eslint-2.4.2-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "dbaeumer.vscode-eslint-2.4.2-universal",
+        "metadata": {
+            "id": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a",
+            "publisherId": "29859a75-d81b-4f0e-8578-2c80ecee6f99",
+            "publisherDisplayName": "dbaeumer",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236842,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "orta.vscode-jest",
+            "uuid": "7997a8ae-1fae-4022-b834-12f6318aeffd"
+        },
+        "version": "5.2.3",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/orta.vscode-jest-5.2.3-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "orta.vscode-jest-5.2.3-universal",
+        "metadata": {
+            "id": "7997a8ae-1fae-4022-b834-12f6318aeffd",
+            "publisherId": "c22b4001-1af3-48d1-87ed-490c6c3b747f",
+            "publisherDisplayName": "Orta",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236784,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "bradlc.vscode-tailwindcss",
+            "uuid": "4db62a7c-7d70-419c-96d2-6c3a4dc77ea5"
+        },
+        "version": "0.10.0",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/bradlc.vscode-tailwindcss-0.10.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "bradlc.vscode-tailwindcss-0.10.0-universal",
+        "metadata": {
+            "id": "4db62a7c-7d70-419c-96d2-6c3a4dc77ea5",
+            "publisherId": "84722833-669b-4c7d-920e-b60e43fae19a",
+            "publisherDisplayName": "bradlc",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236893,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "styled-components.vscode-styled-components",
+            "uuid": "22a740c5-ec07-4bf0-a58f-1a38aabea310"
+        },
+        "version": "1.7.8",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/styled-components.vscode-styled-components-1.7.8-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "styled-components.vscode-styled-components-1.7.8-universal",
+        "metadata": {
+            "id": "22a740c5-ec07-4bf0-a58f-1a38aabea310",
+            "publisherId": "608ef4b3-a3fc-4d26-918a-19c0d8435cf4",
+            "publisherDisplayName": "styled-components",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236907,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "glenn2223.live-sass",
+            "uuid": "137c3643-510d-4a1f-a737-793c72e8b411"
+        },
+        "version": "6.1.1",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/glenn2223.live-sass-6.1.1-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "glenn2223.live-sass-6.1.1-universal",
+        "metadata": {
+            "id": "137c3643-510d-4a1f-a737-793c72e8b411",
+            "publisherId": "ee3335b0-2909-465b-ac95-ac4972a4bf1d",
+            "publisherDisplayName": "glenn2223",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236944,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "esbenp.prettier-vscode",
+            "uuid": "96fa4707-6983-4489-b7c5-d5ffdfdcce90"
+        },
+        "version": "10.1.0",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/esbenp.prettier-vscode-10.1.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "esbenp.prettier-vscode-10.1.0-universal",
+        "metadata": {
+            "id": "96fa4707-6983-4489-b7c5-d5ffdfdcce90",
+            "publisherId": "d16f4e39-2ffb-44e3-9c0d-79d873570e3a",
+            "publisherDisplayName": "esbenp",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236916,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "oderwat.indent-rainbow",
+            "uuid": "eaa2127d-cb69-4ab9-8505-a60c9ee5f28b"
+        },
+        "version": "8.3.1",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/oderwat.indent-rainbow-8.3.1-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "oderwat.indent-rainbow-8.3.1-universal",
+        "metadata": {
+            "id": "eaa2127d-cb69-4ab9-8505-a60c9ee5f28b",
+            "publisherId": "ac064ae0-224d-4351-9aa4-45ef7bf3ed21",
+            "publisherDisplayName": "oderwat",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236757,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "ritwickdey.liveserver",
+            "uuid": "b63c44fd-0457-4696-99e9-dbfdf70d77de"
+        },
+        "version": "5.7.9",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/ritwickdey.liveserver-5.7.9-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "ritwickdey.liveserver-5.7.9-universal",
+        "metadata": {
+            "id": "b63c44fd-0457-4696-99e9-dbfdf70d77de",
+            "publisherId": "17fd9a78-e430-4a78-add2-ade4a8830352",
+            "publisherDisplayName": "ritwickdey",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236924,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "humao.rest-client",
+            "uuid": "dda49fd5-1f3b-4d25-bf61-4fc41905ede5"
+        },
+        "version": "0.25.0",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/humao.rest-client-0.25.0-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "humao.rest-client-0.25.0-universal",
+        "metadata": {
+            "id": "dda49fd5-1f3b-4d25-bf61-4fc41905ede5",
+            "publisherId": "aa260071-fe15-4a92-8990-7b8753d9cbc7",
+            "publisherDisplayName": "humao",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236933,
+            "preRelease": false
+        }
+    },
+    {
+        "identifier": {
+            "id": "dsznajder.es7-react-js-snippets",
+            "uuid": "19804510-b475-4dae-b0f7-6ca08fd1af0c"
+        },
+        "version": "4.4.3",
+        "location": {
+            "$mid": 1,
+            "path": "/home/astronomer/.vscode-oss/extensions/dsznajder.es7-react-js-snippets-4.4.3-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "dsznajder.es7-react-js-snippets-4.4.3-universal",
+        "metadata": {
+            "id": "19804510-b475-4dae-b0f7-6ca08fd1af0c",
+            "publisherId": "7ea644b4-2d93-4979-aac5-a12afebeb762",
+            "publisherDisplayName": "dsznajder",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695227236716,
+            "preRelease": false
+        }
+    }
+]

@@ -1,0 +1,13 @@
+code \
+--install-extension bradlc.vscode-tailwindcss \
+--install-extension dbaeumer.vscode-eslint \
+--install-extension dsznajder.es7-react-js-snippets \
+--install-extension esbenp.prettier-vscode \
+--install-extension GitHub.github-vscode-theme \
+--install-extension glenn2223.live-sass \
+--install-extension humao.rest-client \
+--install-extension oderwat.indent-rainbow \
+--install-extension Orta.vscode-jest \
+--install-extension ritwickdey.LiveServer \
+--install-extension sdras.night-owl \
+--install-extension styled-components.vscode-styled-components
