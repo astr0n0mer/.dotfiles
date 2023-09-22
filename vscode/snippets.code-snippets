@@ -17,21 +17,21 @@
 // }
 
 {
-  "Print to console": {
+  "print-to-console": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "clog",
     "body": "console.log(${1})",
     "description": "Add a console.log() statement"
   },
 
-  "Print to debug console": {
+  "print-to-debug-console": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "cdebug",
     "body": "console.debug(${1})",
     "description": "Add a console.debug() statement"
   },
 
-  "given-when-then template": {
+  "given-when-then": {
     "scope": "javascript,typescript",
     "prefix": "testc",
     "body": [
@@ -47,7 +47,7 @@
     "description": "Create the Given-When-Then test template"
   },
 
-  "playwright-test": {
+  "e2e-test": {
     "scope": "javascript,typescript",
     "prefix": "testp",
     "body": [
