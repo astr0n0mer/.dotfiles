@@ -124,3 +124,10 @@ export NVM_DIR="$HOME/.nvm"
 
 # Custom Aliases
 alias code='codium'
+alias md='mkdir'
+
+# Custom Functions
+mdcd() {
+    mkdir $1;
+    cd $1;
+}
