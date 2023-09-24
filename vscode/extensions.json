@@ -275,5 +275,30 @@
             "installedTimestamp": 1695227236716,
             "preRelease": false
         }
+    },
+    {
+        "identifier": {
+            "id": "ms-playwright.playwright",
+            "uuid": "f53b1d43-eef4-4909-99ca-56b5fa3e108c"
+        },
+        "version": "1.0.15",
+        "location": {
+            "$mid": 1,
+            "fsPath": "/home/astronomer/.vscode-oss/extensions/ms-playwright.playwright-1.0.15-universal",
+            "external": "file:///home/astronomer/.vscode-oss/extensions/ms-playwright.playwright-1.0.15-universal",
+            "path": "/home/astronomer/.vscode-oss/extensions/ms-playwright.playwright-1.0.15-universal",
+            "scheme": "file"
+        },
+        "relativeLocation": "ms-playwright.playwright-1.0.15-universal",
+        "metadata": {
+            "id": "f53b1d43-eef4-4909-99ca-56b5fa3e108c",
+            "publisherId": "43a584fb-6d7a-4782-ae52-15ee5fde9bab",
+            "publisherDisplayName": "ms-playwright",
+            "targetPlatform": "universal",
+            "updated": false,
+            "isPreReleaseVersion": false,
+            "installedTimestamp": 1695538499592,
+            "preRelease": false
+        }
     }
 ]

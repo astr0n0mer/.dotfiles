@@ -8,6 +8,7 @@ code \
 --install-extension humao.rest-client \
 --install-extension oderwat.indent-rainbow \
 --install-extension Orta.vscode-jest \
+--install-extension ms-playwright.playwright \
 --install-extension ritwickdey.LiveServer \
 --install-extension sdras.night-owl \
 --install-extension styled-components.vscode-styled-components
