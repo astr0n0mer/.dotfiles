@@ -51,9 +51,9 @@
     "scope": "javascript,typescript",
     "prefix": "testp",
     "body": [
-      "test('should ${1:have}', async ({ page }) => {",
-      "${2:page}",
-      "}"
+      "test('should ${1:have}', async ({ ${2:page} }) => {",
+      "${3:${2}}",
+      "})"
     ],
     "description": "Create a blank playwright test"
   }
