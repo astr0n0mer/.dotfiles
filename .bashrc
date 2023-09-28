@@ -131,3 +131,13 @@ mdcd() {
     mkdir $1;
     cd $1;
 }
+
+# autojump
+
+if [ -f "/usr/share/autojump/autojump.sh" ]; then
+	. /usr/share/autojump/autojump.sh
+elif [ -f "/usr/share/autojump/autojump.bash" ]; then
+	. /usr/share/autojump/autojump.bash
+else
+	echo "can't find the autojump script"
+fi

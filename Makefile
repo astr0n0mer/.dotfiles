@@ -11,7 +11,7 @@ add:
 	git add .
 
 commit: add
-	git commit -m "$(date)"
+	git commit -m "$(shell date)"
 
 push: commit
 	git push origin main
