@@ -133,7 +133,6 @@ mdcd() {
 }
 
 # autojump
-
 if [ -f "/usr/share/autojump/autojump.sh" ]; then
 	. /usr/share/autojump/autojump.sh
 elif [ -f "/usr/share/autojump/autojump.bash" ]; then
