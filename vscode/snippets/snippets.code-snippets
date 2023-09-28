@@ -1,4 +1,4 @@
-// path: /home/astronomer/.config/VSCodium/User/snippets/snippets.code-snippets
+// path: ~/.config/VSCodium/User/snippets/snippets.code-snippets
 
 // Place your global snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and
 // description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope
@@ -20,14 +20,14 @@
   "print-to-console": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "clog",
-    "body": "console.log(${2:'${1}'}${3})",
+    "body": "console.log('$1', $1);",
     "description": "Add a console.log() statement"
   },
 
   "print-to-debug-console": {
     "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "cdebug",
-    "body": "console.debug(${2:'${1}'}${3})",
+    "body": "console.debug('$1', $1);",
     "description": "Add a console.debug() statement"
   },
 
@@ -52,7 +52,7 @@
     "prefix": "testp",
     "body": [
       "test('should ${1:have}', async ({ ${2:page} }) => {",
-      "${3:${2}}",
+      "${3:$2}",
       "})"
     ],
     "description": "Create a blank playwright test"
