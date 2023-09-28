@@ -1,11 +1,9 @@
-.PHONY: default sync-all sync-.bashrc add commit push pull
+.PHONY: default sync-all add commit push pull
 
 default:
 	@echo "error: no_default_target_specified"
 
 sync-all: pull push
-
-sync-.bashrc: pull .bashrc push
 
 add:
 	git add .
