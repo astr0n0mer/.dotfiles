@@ -1,48 +1,23 @@
 {
-  "editor.wordWrap": "on",
-  "editor.accessibilitySupport": "off",
-  "files.defaultLanguage": "${activeEditorLanguage}",
-  "git.autofetch": true,
-  "editor.guides.bracketPairs": "active",
-  "editor.stickyScroll.enabled": true,
-  "[html]": {
+  "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[css]": {
+  "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "workbench.colorTheme": "GitHub Dark Dimmed",
-  "editor.fontFamily": "MonoLisa, \"Fira Code\", \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "[scss]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
-  "update.enableWindowsBackgroundUpdates": false,
-  "window.commandCenter": true,
-  "liveSassCompile.settings.formats": [
-    {
-      "format": "expanded",
-      "extensionName": ".css",
-      "savePath": "~/../css",
-      "savePathReplacementPairs": null
-    }
-  ],
-  "liveSassCompile.settings.autoprefix": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "editor.minimap.showSlider": "always",
-  "liveServer.settings.NoBrowser": true,
-  "telemetry.telemetryLevel": "off",
-  "liveSassCompile.settings.includeItems": [],
-  "liveSassCompile.settings.useNewCompiler": false,
-  "liveSassCompile.settings.showOutputWindowOn": "Error",
-  "[javascriptreact]": {
+  "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescript]": {
@@ -51,11 +26,37 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "liveSassCompile.settings.rootIsWorkspace": null,
-  "editor.formatOnSave": true,
-  "editor.cursorStyle": "block",
+  "editor.accessibilitySupport": "off",
   "editor.cursorBlinking": "phase",
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  }
+  "editor.cursorStyle": "block",
+  "editor.fontFamily": "MonoLisa, \"Fira Code\", \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "editor.formatOnSave": true,
+  "editor.guides.bracketPairs": "active",
+  "editor.minimap.showSlider": "always",
+  "editor.stickyScroll.enabled": true,
+  "editor.wordWrap": "on",
+  "files.defaultLanguage": "${activeEditorLanguage}",
+  "git.autofetch": true,
+  "liveSassCompile.settings.autoprefix": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "extensionName": ".css",
+      "format": "expanded",
+      "savePath": "~/../css",
+      "savePathReplacementPairs": null
+    }
+  ],
+  "liveSassCompile.settings.includeItems": [],
+  "liveSassCompile.settings.rootIsWorkspace": null,
+  "liveSassCompile.settings.showOutputWindowOn": "Error",
+  "liveSassCompile.settings.useNewCompiler": false,
+  "liveServer.settings.NoBrowser": true,
+  "telemetry.telemetryLevel": "off",
+  "update.enableWindowsBackgroundUpdates": false,
+  "window.commandCenter": true,
+  "workbench.colorTheme": "GitHub Dark Dimmed",
+  "workbench.sideBar.location": "right"
 }
