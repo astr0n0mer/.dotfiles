@@ -124,13 +124,13 @@ export NVM_DIR="$HOME/.nvm"
 
 # Custom Aliases
 alias code='codium'
-alias md='mkdir'
+alias md='mkdir -p'
 alias xcopy='xclip -selection c -in -rmlastnl'
 alias xpaste='xclip -selection c -out'
 
 # Custom Functions
 mdcd() {
-    mkdir $1;
+    mkdir $1 -p;
     cd $1;
 }
 
