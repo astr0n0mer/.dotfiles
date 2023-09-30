@@ -1,5 +1,33 @@
 # VS Code
 
+## Setup instructions
+
+Create symbolic links from config files in `.dotfiles` repo to your local config files.
+
+Syntax:
+
+```bash
+ln -s /path/to/source/file_or_folder /path/to/link/file_or_folder
+```
+
+VS Code settings:
+
+```bash
+ln -s ~/projects/.dotfiles/vscode/settings.json ~/.config/VSCodium/User/settings.json
+```
+
+VS Code extensions:
+
+```bash
+ln -s ~/projects/.dotfiles/vscode/extensions.json ~/.vscode-oss/extensions/extensions.json
+```
+
+VS Code user snippets:
+
+```bash
+ln -s ~/projects/.dotfiles/vscode/snippets ~/.config/VSCodium/User/snippets
+```
+
 ## References
 
 ### Snippets
