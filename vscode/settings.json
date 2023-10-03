@@ -54,6 +54,7 @@
   "liveSassCompile.settings.showOutputWindowOn": "Error",
   "liveSassCompile.settings.useNewCompiler": false,
   "liveServer.settings.NoBrowser": true,
+  "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
   "update.enableWindowsBackgroundUpdates": false,
   "window.commandCenter": true,

@@ -125,6 +125,7 @@ export NVM_DIR="$HOME/.nvm"
 # Custom Aliases
 alias code='codium'
 alias md='mkdir -p'
+alias psqlinit='psql -h localhost -U postgres -d exercises'
 alias xcopy='xclip -selection c -in -rmlastnl'
 alias xpaste='xclip -selection c -out'
 
