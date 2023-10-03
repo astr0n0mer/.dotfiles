@@ -130,6 +130,10 @@ alias xcopy='xclip -selection c -in -rmlastnl'
 alias xpaste='xclip -selection c -out'
 
 # Custom Functions
+killport() {
+    fuser -k $1/tcp;
+}
+
 mdcd() {
     mkdir $1 -p;
     cd $1;
