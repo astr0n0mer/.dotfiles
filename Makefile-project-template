@@ -1,0 +1,25 @@
+.PHONY: default dev test-internal test build clean
+
+default:
+	@echo "error: no_default_target_specified \navailable targets: node_modules, dev, test, build, clean"
+
+package.json:
+	npm init
+
+node_modules: package.json
+	npm install
+
+dev: node_modules
+	npm run dev
+
+test-internal: node_modules
+	npm run test
+
+test:
+	make -j 2 dev test-internal
+
+build:
+	npm run build
+
+clean:
+	rm -rf node_modules
