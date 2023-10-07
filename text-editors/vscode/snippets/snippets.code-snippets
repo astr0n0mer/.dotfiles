@@ -32,7 +32,7 @@
   },
 
   "given-when-then": {
-    "scope": "javascript,typescript",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "testc",
     "body": [
       "// Given",
@@ -48,7 +48,7 @@
   },
 
   "e2e-test": {
-    "scope": "javascript,typescript",
+    "scope": "javascript,javascriptreact,typescript,typescriptreact",
     "prefix": "testp",
     "body": [
       "test('should ${1:have}', async ({ ${2:page} }) => {",

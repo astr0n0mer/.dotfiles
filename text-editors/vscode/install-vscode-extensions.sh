@@ -1,4 +1,4 @@
-code \
+codium \
 --install-extension bradlc.vscode-tailwindcss \
 --install-extension dbaeumer.vscode-eslint \
 --install-extension dsznajder.es7-react-js-snippets \
@@ -6,9 +6,10 @@ code \
 --install-extension GitHub.github-vscode-theme \
 --install-extension glenn2223.live-sass \
 --install-extension humao.rest-client \
---install-extension oderwat.indent-rainbow \
---install-extension Orta.vscode-jest \
 --install-extension ms-playwright.playwright \
---install-extension ritwickdey.LiveServer \
+--install-extension oderwat.indent-rainbow \
+--install-extension orta.vscode-jest \
+--install-extension ritwickdey.liveserver \
 --install-extension sdras.night-owl \
---install-extension styled-components.vscode-styled-components
+--install-extension styled-components.vscode-styled-components \
+--install-extension vscodevim.vim

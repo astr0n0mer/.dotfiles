@@ -1,7 +1,11 @@
-.PHONY: default sync-all add commit push pull
+.PHONY: default help sync-all add commit push pull
 
 default:
-	@echo "error: no_default_target_specified"
+	@echo "error: no_target_specified"
+	@make help --silent
+
+help:
+	@echo "Available targets: sync-all, add, commit, push, pull"
 
 sync-all: pull push
 

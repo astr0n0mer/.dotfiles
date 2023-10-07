@@ -10,22 +10,15 @@ Syntax:
 ln -s /path/to/source/file_or_folder /path/to/link/file_or_folder
 ```
 
-VS Code settings:
-
 ```bash
-ln -s ~/projects/.dotfiles/vscode/settings.json ~/.config/VSCodium/User/settings.json
-```
+# VS Code extensions:
+ln -s ~/projects/.dotfiles/text-editors/vscode/extensions.json ~/.vscode-oss/extensions/extensions.json
 
-VS Code extensions:
+# VS Code settings:
+ln -s ~/projects/.dotfiles/text-editors/vscode/settings.json ~/.config/VSCodium/User/settings.json
 
-```bash
-ln -s ~/projects/.dotfiles/vscode/extensions.json ~/.vscode-oss/extensions/extensions.json
-```
-
-VS Code user snippets:
-
-```bash
-ln -s ~/projects/.dotfiles/vscode/snippets ~/.config/VSCodium/User/snippets
+# VS Code user snippets:
+ln -s ~/projects/.dotfiles/text-editors/vscode/snippets ~/.config/VSCodium/User/snippets
 ```
 
 ## References
