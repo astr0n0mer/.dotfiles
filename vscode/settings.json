@@ -58,6 +58,7 @@
   "telemetry.telemetryLevel": "off",
   "update.enableWindowsBackgroundUpdates": false,
   "window.commandCenter": true,
+  "window.titleBarStyle": "custom",
   "workbench.colorTheme": "GitHub Dark Dimmed",
   "workbench.sideBar.location": "right"
 }
