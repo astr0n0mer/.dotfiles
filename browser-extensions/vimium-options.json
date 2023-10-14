@@ -2,28 +2,24 @@
   "settingsVersion": "1.67.7",
   "exclusionRules": [
     {
-      "pattern": "https?://community.cloud.databricks.com/*",
-      "passKeys": ""
-    },
-    {
       "pattern": "https?://monkeytype.com/*",
-      "passKeys": "r"
+      "passKeys": "rx"
     },
     {
       "pattern": "https?://play.typeracer.com/*",
-      "passKeys": "r"
+      "passKeys": "rx"
     },
     {
       "pattern": "https?://www.nitrotype.com/*",
-      "passKeys": "r"
+      "passKeys": "rx"
     },
     {
       "pattern": "https?://www.speedcoder.net/*",
-      "passKeys": "r"
+      "passKeys": "rx"
     },
     {
       "pattern": "https?://zty.pe/*",
-      "passKeys": "r"
+      "passKeys": "rx"
     }
   ],
   "filterLinkHints": true,
@@ -31,7 +27,7 @@
   "hideHud": false,
   "keyMappings": "# Insert your preferred key mappings here.",
   "linkHintCharacters": "asdfjkl;",
-  "linkHintNumbers": "12345",
+  "linkHintNumbers": "1234",
   "newTabUrl": "about:newtab",
   "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
   "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
