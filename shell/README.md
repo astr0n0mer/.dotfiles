@@ -16,5 +16,5 @@ Create symbolic links from config files in `.dotfiles` repo to your local config
 
   ```bash
   rm ~/.bashrc
-  ln -s ~/projects/.dotfiles/shell/.bashrc ~/.bashrc
+  ln -s ~/projects/.dotfiles/shell/.bashrc $_
   ```
