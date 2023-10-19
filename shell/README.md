@@ -29,5 +29,7 @@ Create symbolic links from config files in `.dotfiles` repo to your local config
 | [gh](https://command-not-found.com/gh)             | Work seamlessly with GitHub.                                                     |
 | [gio](https://command-not-found.com/gio)           | A library of handy utility functions.                                            |
 | [grep](https://command-not-found.com/grep)         | Find patterns in files using regular expressions.                                |
+| [json_pp](https://command-not-found.com/json_pp)   | Extends from [json_xs](https://command-not-found.com/json_xs).                   |
+| [json_xs](https://command-not-found.com/json_xs)   | Converts between some input and output formats (one of them is JSON).            |
 | [xargs](https://command-not-found.com/xargs)       | Execute a command with piped arguments coming from another command, a file, etc. |
 | [xclip](https://command-not-found.com/xclip)       | X11 clipboard manipulation tool, similar to xsel.                                |
