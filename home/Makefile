@@ -4,8 +4,9 @@ default:
 
 .PHONY: monkeytype.com.json
 monkeytype.com.json:
-	xclip -selection c -out > ~/projects/.dotfiles/websites/monkeytype.com.json
+	xclip -selection c -out | json_xs > ~/projects/.dotfiles/websites/$@
 
 .PHONY: vimium-options.json
 vimium-options.json:
-	mv ~/Downloads/vimium-options.json ~/projects/.dotfiles/browser-extensions/vimium-options.json -f
+	cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@
+	mv ~/Downloads/$@ ~/projects/.dotfiles/browser-extensions/$@ -f
