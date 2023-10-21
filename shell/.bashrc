@@ -125,7 +125,9 @@ export NVM_DIR="$HOME/.nvm"
 # Custom Aliases
 alias code='codium'
 alias md='mkdir -p'
+alias np='pnpm'
 alias psqlinit='psql -h localhost -U postgres -d exercises'
+alias python='python3'
 alias xcopy='xclip -selection c -in -rmlastnl'
 alias xpaste='xclip -selection c -out'
 
@@ -147,3 +149,11 @@ elif [ -f "/usr/share/autojump/autojump.bash" ]; then
 else
 	echo "can't find the autojump script"
 fi
+
+# pnpm
+export PNPM_HOME="/home/astronomer/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
