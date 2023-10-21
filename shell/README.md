@@ -31,6 +31,7 @@ Create symbolic links from config files in `.dotfiles` repo to your local config
 | [grep](https://command-not-found.com/grep)         | Find patterns in files using regular expressions.                                |
 | [json_pp](https://command-not-found.com/json_pp)   | Extends from [json_xs](https://command-not-found.com/json_xs).                   |
 | [json_xs](https://command-not-found.com/json_xs)   | Converts between some input and output formats (one of them is JSON).            |
+| [sort](https://command-not-found.com/sort)         | Sort lines of text files.                                                        |
 | [tee](https://command-not-found.com/tee)           | Read from stdin and write to stdout and files (or commands).                     |
 | [tidy](https://command-not-found.com/tidy)         | HTML syntax checker and reformatter.                                             |
 | [xargs](https://command-not-found.com/xargs)       | Execute a command with piped arguments coming from another command, a file, etc. |
