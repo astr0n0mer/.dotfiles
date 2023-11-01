@@ -123,6 +123,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Custom Aliases
+alias clip='gpaste-client'
 alias md='mkdir -p'
 alias np='pnpm'
 alias psqlinit='psql -h localhost -U postgres -d exercises'
