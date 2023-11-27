@@ -17,6 +17,9 @@
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -56,7 +59,7 @@
   "liveServer.settings.NoBrowser": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
-  "update.enableWindowsBackgroundUpdates": false,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
   "window.commandCenter": true,
   "window.titleBarStyle": "custom",
   "workbench.colorTheme": "GitHub Dark Dimmed",
