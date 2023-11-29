@@ -1,1 +1,17 @@
+# vs-code
+# ignore: everything in vscode/user
+**/vscode/user/*
+# track: level 1 files in vscode/user
+!**/vscode/user/*.*
+# track: everything in vscode/user/profiles
+!**/vscode/user/profiles/
+# ignore: all directories in vscode/user/profiles
+**/vscode/user/profiles/*/
+# track: everything in vscode/user/snippets
+!**/vscode/user/snippets/
+
+# miscellaneous
+.DS_Store
+
+# experimentation
 sandbox
