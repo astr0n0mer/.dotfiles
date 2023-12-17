@@ -11,11 +11,28 @@ ln -s /path/to/source/file_or_folder /path/to/link/file_or_folder
 ```
 
 ```bash
-rm -r ~/.config/VSCodium/User
+# for VSCodium
+rm -r ~/.config/VSCodium/User # on Linux
+rm -r ~/Library/Application\ Support/VSCodium/User # on macOS
+rm -r %APPDATA%\VSCodium\User # on Windows
+```
+
+```bash
+# for VS Code
+rm -r ~/.config/Code/User # on Linux
+rm -r ~/Library/Application\ Support/Code/User # on macOS
+rm -r %APPDATA%\Code\User # on Windows
+```
+
+```bash
 ln -s ~/projects/.dotfiles/text-editors/vscode/user $_
 ```
 
 ## References
+
+### Profiles
+
+- [Profiles in Visual Studio Code](https://code.visualstudio.com/docs/editor/profiles)
 
 ### Snippets
 
@@ -25,4 +42,4 @@ ln -s ~/projects/.dotfiles/text-editors/vscode/user $_
 
 ### VS Codium
 
-- [Migrating from Visual Studio Code to VSCodium | VSCodium Docs](https://github.com/VSCodium/vscodium/blob/master/DOCS.md#migrating-from-visual-studio-code-to-vscodium)
+- [Migrating from Visual Studio Code to VSCodium | VSCodium Docs](https://github.com/VSCodium/vscodium/blob/master/docs/index.md#migrating)
