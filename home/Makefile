@@ -6,6 +6,10 @@ default:
 monkeytype.com.json:
 	xclip -selection c -out | json_xs > ~/projects/.dotfiles/websites/$@
 
+.PHONY: Raycast.rayconfig
+Raycast.rayconfig:
+	mv ~/Downloads/Raycast*.rayconfig ~/projects/.dotfiles/devtools/$@ -f
+
 .PHONY: vimium-options.json
 vimium-options.json:
 	cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@

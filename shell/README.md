@@ -19,6 +19,13 @@ Create symbolic links from config files in `.dotfiles` repo to your local config
   ln -s ~/projects/.dotfiles/shell/.bashrc $_
   ```
 
+- [Z shell](./.zshrc):
+
+  ```bash
+  rm ~/.zshrc
+  ln -s ~/projects/.dotfiles/shell/.zshrc $_
+  ```
+
 ## Bash commands you should know:
 
 | Command                                            | Description                                                                      |

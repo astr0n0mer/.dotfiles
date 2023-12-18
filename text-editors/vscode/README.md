@@ -25,7 +25,7 @@ rm -r %APPDATA%\Code\User # on Windows
 ```
 
 ```bash
-ln -s ~/projects/.dotfiles/text-editors/vscode/user $_
+ln -s ~/projects/.dotfiles/text-editors/vscode/user $_ # fox Unix systems
 ```
 
 ## References
