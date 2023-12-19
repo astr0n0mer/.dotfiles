@@ -8,9 +8,9 @@ monkeytype.com.json:
 
 .PHONY: Raycast.rayconfig
 Raycast.rayconfig:
-	mv ~/Downloads/Raycast*.rayconfig ~/projects/.dotfiles/devtools/$@ -f
+	mv -f ~/Downloads/Raycast*.rayconfig ~/projects/.dotfiles/devtools/$@
 
 .PHONY: vimium-options.json
 vimium-options.json:
 	cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@
-	mv ~/Downloads/$@ ~/projects/.dotfiles/browser-extensions/$@ -f
+	mv -f ~/Downloads/$@ ~/projects/.dotfiles/browser-extensions/$@
