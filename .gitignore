@@ -24,7 +24,7 @@ sandbox
 .mongodb/
 .npm/
 .nvm/
-.oh-my-zsh/
+.oh-my-zsh/*
 .pyenv/
 .python_history
 .rest-client/
@@ -62,3 +62,5 @@ Pictures/
 Public/
 projects*/
 .Trash/
+
+**/setup-*.sh
