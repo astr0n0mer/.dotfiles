@@ -2,6 +2,13 @@
 
 Collection of my config files for operating systems, tools and utilities.
 
+## Setup
+
+```bash
+echo ".dotfiles" >> ~/.gitignore
+git clone --bare git@github.com:astr0n0mer/.dotfiles.git ~/.dotfiles
+```
+
 | Category           | Config File                                                                  |
 | ------------------ | ---------------------------------------------------------------------------- |
 | Browser Extensions | [Vimium](./.config/vimium/vimium-options.json)                               |

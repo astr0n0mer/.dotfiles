@@ -107,3 +107,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# .dotfiles
+dot() {
+    /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
+}
+
+dotedit() {
+    GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME ${1:-codium} $HOME
+}
