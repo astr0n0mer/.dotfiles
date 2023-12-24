@@ -2,12 +2,12 @@
 
 Collection of my config files for operating systems, tools and utilities.
 
-| Category           | Config File                                           |
-| ------------------ | ----------------------------------------------------- |
-| Browser Extensions | [Vimium](./browser-extensions/vimium-options.json)    |
-| Home               | [Makefile](./home/README.md)                          |
-| Miscellaneous      | [Makefile](./miscellaneous/Makefile-project-template) |
-| Operating Systems  | [Linux](./operating-systems/linux/)                   |
-| Shell              | [Z Shell, Bash](./shell/README.md)                    |
-| Text Editors       | [VSCodium, VS Code](./text-editors/vscode/README.md)  |
-| Websites           | [monkeytype.com](./websites/monkeytype.com.json)      |
+| Category           | Config File                                                                  |
+| ------------------ | ---------------------------------------------------------------------------- |
+| Browser Extensions | [Vimium](./.config/vimium/vimium-options.json)                               |
+| Home               | [Makefile](./Makefile)                                                       |
+| Miscellaneous      | [Makefile](./.config/miscellaneous/)                                         |
+| Operating Systems  | [Linux](./.config/miscellaneous/linux/)                                      |
+| Shell              | [Z Shell](./.zshrc), [Bash](./.bashrc)                                       |
+| Text Editors       | [VSCodium, VS Code](./Library/Application%20Support/VSCodium/User/README.md) |
+| Websites           | [monkeytype.com](./.config/monkeytype/settings.json)                         |

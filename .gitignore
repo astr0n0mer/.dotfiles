@@ -1,17 +1,64 @@
-# vs-code
-# ignore: everything in vscode/user
-**/vscode/user/*
-# track: level 1 files in vscode/user
-!**/vscode/user/*.*
-# track: everything in vscode/user/profiles
-!**/vscode/user/profiles/
-# ignore: all directories in vscode/user/profiles
-**/vscode/user/profiles/*/
-# track: everything in vscode/user/snippets
-!**/vscode/user/snippets/
-
-# miscellaneous
-.DS_Store
+# your dotfiles repo name
+.dotfiles
 
 # experimentation
 sandbox
+
+# system files & directories
+.CFUserTextEncoding
+.DS_Store
+.bash_history
+
+.config/*
+!.config/vimium/
+!.config/miscellaneous/
+!.config/monkeytype/
+!.config/raycast/
+.config/raycast/*/
+.docker/
+# want to track
+.gitconfig
+.lesshst
+.local/
+.logseq/
+.mongodb/
+.npm/
+.nvm/
+.oh-my-zsh/
+.pyenv/
+.python_history
+.rest-client/
+.ssh/
+.viminfo
+.vscode-oss/
+.vscode/*
+!.vscode/tasks.json
+.zcompdump*
+.zsh_history
+.zsh_sessions/
+
+# mac specific system files & directories
+Applications/
+Desktop/
+Documents/
+Downloads/
+Library/*
+
+# vscodium
+!Library/Application*Support/
+Library/Application*Support/*
+!Library/Application*Support/VSCodium/
+Library/Application*Support/VSCodium/*
+!Library/Application*Support/VSCodium/User/
+Library/Application*Support/VSCodium/User/*
+!Library/Application*Support/VSCodium/User/*.*
+!Library/Application*Support/VSCodium/User/profiles/
+Library/Application*Support/VSCodium/User/profiles/*/
+!Library/Application*Support/VSCodium/User/snippets/
+
+Movies/
+Music/
+Pictures/
+Public/
+projects*/
+.Trash/

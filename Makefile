@@ -25,3 +25,16 @@ push: commit
 .PHONY: pull
 pull:
 	git pull
+
+.PHONY: monkeytype-settings.json
+monkeytype-settings.json:
+	xclip -selection c -out | json_xs > ~/.config/monkeytype/settings.json
+
+.PHONY: raycast-settings.rayconfig
+raycast-settings.rayconfig:
+	mv -f ~/Downloads/Raycast*.rayconfig ~/.config/raycast/settings.rayconfig
+
+.PHONY: vimium-options.json
+vimium-options.json:
+	cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@
+	mv -f ~/Downloads/$@ ~/.config/vimium/$@
