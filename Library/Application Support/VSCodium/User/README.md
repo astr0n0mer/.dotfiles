@@ -2,7 +2,7 @@
 
 ## Setup instructions
 
-Create symbolic links from config files in `.dotfiles` repo to your local config files.
+Create symbolic links from VSCodium to VS Code config files.
 
 Syntax:
 
@@ -10,22 +10,23 @@ Syntax:
 ln -s /path/to/source/file_or_folder /path/to/link/file_or_folder
 ```
 
-```bash
-# for VSCodium
-rm -r ~/.config/VSCodium/User # on Linux
-rm -r ~/Library/Application\ Support/VSCodium/User # on macOS
-rm -r %APPDATA%\VSCodium\User # on Windows
-```
+Linux:
 
 ```bash
-# for VS Code
-rm -r ~/.config/Code/User # on Linux
-rm -r ~/Library/Application\ Support/Code/User # on macOS
-rm -r %APPDATA%\Code\User # on Windows
+ln -s ~/.config/VSCodium/User ~/.config/Code/User
 ```
 
+macOS:
+
 ```bash
-ln -s ~/projects/.dotfiles/text-editors/vscode/user $_ # fox Unix systems
+ln -s ~/Library/Application\ Support/VSCodium/User ~/Library/Application\ Support/Code/User
+```
+
+Windows:
+
+```bash
+# untested command
+mklink %APPDATA%\Code\User %APPDATA%\VSCodium\User
 ```
 
 ## References
