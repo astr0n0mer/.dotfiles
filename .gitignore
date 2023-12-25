@@ -8,8 +8,11 @@ sandbox
 .CFUserTextEncoding
 .DS_Store
 .bash_history
+.cache/
 
 .config/*
+!.config/dashy/
+!.config/gh/
 !.config/vimium/
 !.config/miscellaneous/
 !.config/monkeytype/
@@ -22,9 +25,15 @@ sandbox
 .local/
 .logseq/
 .mongodb/
+.node/
 .npm/
 .nvm/
+
 .oh-my-zsh/*
+!.oh-my-zsh/custom/
+.oh-my-zsh/custom/*
+!.oh-my-zsh/custom/*.*
+
 .pyenv/
 .python_history
 .rest-client/
@@ -63,4 +72,5 @@ Public/
 projects*/
 .Trash/
 
-**/setup-*.sh
+# **/setup-*.sh
+# need to track ~/.oh-my-zsh/setup-oh-my-zsh-plugins.sh

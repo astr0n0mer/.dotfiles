@@ -1,0 +1,165 @@
+pageInfo:
+  title: Dashy - astr0n0mer
+  description: Welcome to your dashboard!
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Documentation
+      path: https://dashy.to/docs
+appConfig:
+  theme: colorful
+  layout: auto
+  iconSize: medium
+  language: en
+sections:
+  - name: Personal
+    icon: >-
+      https://lh3.googleusercontent.com/ogw/ANLem4YvPy-r0rB3DzDPGJ-tccXgemTn1MqoBnRKPgS7YQ=s64-c-mo
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_0
+        title: Digital Garden
+        icon: https://dgarden.vercel.app/static/img/logo.png
+        url: https://dgarden.vercel.app/
+        target: sametab
+        id: 0_836_digitalgarden
+      - &ref_1
+        title: Hacker news
+        icon: favicon
+        url: https://news.ycombinator.com/
+        target: sametab
+        id: 1_836_hackernews
+      - &ref_2
+        title: GitHub pulls
+        icon: favicon
+        url: https://github.com/pulls
+        target: sametab
+        id: 2_836_githubpulls
+    filteredItems:
+      - *ref_0
+      - *ref_1
+      - *ref_2
+  - name: Procedure
+    icon: https://procedure.tech/wp-content/themes/proceduretech/img/favicon.jpg
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_3
+        title: Site
+        icon: https://procedure.tech/wp-content/themes/proceduretech/img/favicon.jpg
+        url: https://procedure.tech/
+        id: 0_937_site
+      - &ref_4
+        title: GitHub
+        icon: favicon
+        url: https://github.com/orgs/proceduretech/repositories
+        id: 1_937_github
+      - &ref_5
+        title: Twitter
+        icon: favicon
+        url: https://twitter.com/ProcedureHQ
+        id: 2_937_twitter
+      - &ref_6
+        title: YouTube
+        icon: favicon
+        url: https://www.youtube.com/@ProcedureHQ
+        target: null
+        id: 3_937_youtube
+    filteredItems:
+      - *ref_3
+      - *ref_4
+      - *ref_5
+      - *ref_6
+  - name: Timelyschools
+    icon: >-
+      https://images.squarespace-cdn.com/content/v1/645d110ab878a54b2b9e4165/4f484b10-d769-4ad2-8d3e-52bacf2ed82f/favicon.ico?format=100w
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_7
+        title: Site
+        icon: >-
+          https://images.squarespace-cdn.com/content/v1/645d110ab878a54b2b9e4165/4f484b10-d769-4ad2-8d3e-52bacf2ed82f/favicon.ico?format=100w
+        url: https://www.timelyschools.com/
+        id: 0_1391_site
+      - &ref_8
+        title: 1Password
+        icon: https://app.1password.com/images/favicon.ico
+        url: https://timely.1password.com/
+        id: 1_1391_password
+      - &ref_9
+        title: timely-service/pulls
+        icon: favicon
+        url: https://github.com/timelyschools/timely-service/pulls
+        id: 2_1391_timelyservicepulls
+      - &ref_10
+        title: scheduling-service/pulls
+        icon: favicon
+        url: https://github.com/timelyschools/scheduling-service/pulls
+        id: 3_1391_schedulingservicepulls
+    filteredItems:
+      - *ref_7
+      - *ref_8
+      - *ref_9
+      - *ref_10
+  - name: Getting Started
+    icon: fas fa-rocket
+    items:
+      - &ref_11
+        title: Dashy Live
+        description: Development a project management links for Dashy
+        icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
+        url: https://live.dashy.to/
+        target: newtab
+        id: 0_1481_dashylive
+      - &ref_12
+        title: GitHub
+        description: Source Code, Issues and Pull Requests
+        url: https://github.com/lissy93/dashy
+        icon: favicon
+        id: 1_1481_github
+      - &ref_13
+        title: Docs
+        description: Configuring & Usage Documentation
+        provider: Dashy.to
+        icon: far fa-book
+        url: https://dashy.to/docs
+        id: 2_1481_docs
+      - &ref_14
+        title: Showcase
+        description: See how others are using Dashy
+        url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
+        icon: far fa-grin-hearts
+        id: 3_1481_showcase
+      - &ref_15
+        title: Config Guide
+        description: See full list of configuration options
+        url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
+        icon: fas fa-wrench
+        id: 4_1481_configguide
+      - &ref_16
+        title: Support
+        description: Get help with Dashy, raise a bug, or get in contact
+        url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
+        icon: far fa-hands-helping
+        id: 5_1481_support
+    filteredItems:
+      - *ref_11
+      - *ref_12
+      - *ref_13
+      - *ref_14
+      - *ref_15
+      - *ref_16
