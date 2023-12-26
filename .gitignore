@@ -1,76 +1,68 @@
 # your dotfiles repo name
-.dotfiles
+/.dotfiles
 
 # experimentation
 sandbox
 
-# system files & directories
-.CFUserTextEncoding
-.DS_Store
-.bash_history
+# system directories
 .cache/
-
-.config/*
-!.config/dashy/
-!.config/gh/
-!.config/vimium/
-!.config/miscellaneous/
-!.config/monkeytype/
-!.config/raycast/
 .config/raycast/*/
 .docker/
-# want to track
-.gitconfig
-.lesshst
 .local/
 .logseq/
 .mongodb/
 .node/
 .npm/
 .nvm/
-
-.oh-my-zsh/*
-!.oh-my-zsh/custom/
-.oh-my-zsh/custom/*
-!.oh-my-zsh/custom/*.*
-
+.oh-my-zsh/
+.oh-my-zsh-custom/*/
 .pyenv/
-.python_history
 .rest-client/
 .ssh/
-.viminfo
-.vscode-oss/
+.Trash/
 .vscode/*
 !.vscode/tasks.json
-.zcompdump*
-.zsh_history
+.vscode-oss/
+!.vscode-oss/tasks.json
+.yarn/
 .zsh_sessions/
 
-# mac specific system files & directories
+# general purpose directories
 Applications/
 Desktop/
 Documents/
 Downloads/
 Library/*
-
-# vscodium
-!Library/Application*Support/
-Library/Application*Support/*
-!Library/Application*Support/VSCodium/
-Library/Application*Support/VSCodium/*
-!Library/Application*Support/VSCodium/User/
-Library/Application*Support/VSCodium/User/*
-!Library/Application*Support/VSCodium/User/*.*
-!Library/Application*Support/VSCodium/User/profiles/
-Library/Application*Support/VSCodium/User/profiles/*/
-!Library/Application*Support/VSCodium/User/snippets/
-
+!Library/Application?Support/
+Library/Application?Support/*
+!Library/Application?Support/Code/
+!Library/Application?Support/VSCodium/
+Library/Application?Support/Code/*
+Library/Application?Support/VSCodium/*
+!Library/Application?Support/Code/User
+!Library/Application?Support/VSCodium/User/
+Library/Application?Support/VSCodium/User/*
+!Library/Application?Support/VSCodium/User/*.*
+!Library/Application?Support/VSCodium/User/profiles/
+Library/Application?Support/VSCodium/User/profiles/*/
+!Library/Application?Support/VSCodium/User/snippets/
 Movies/
 Music/
 Pictures/
-Public/
 projects*/
-.Trash/
+Public/
+Sync/
 
-# **/setup-*.sh
-# need to track ~/.oh-my-zsh/setup-oh-my-zsh-plugins.sh
+# system files
+.bash_history
+.CFUserTextEncoding
+.DS_Store
+# want to track, but need to use no-reply email first in GitHub
+.gitconfig
+.lesshst
+.python_history
+.viminfo
+.yarnrc
+.z
+.zcompdump*
+.zsh_history

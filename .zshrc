@@ -11,6 +11,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="muse"
 # ZSH_THEME="jonathan"
+# ZSH_THEME="af-magic"
 ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
@@ -67,6 +68,7 @@ ZSH_THEME="random"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
+ZSH_CUSTOM=~/.oh-my-zsh-custom/ 
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -81,6 +83,8 @@ plugins=(
     git
     history
     npm
+    nvm
+    screen
     sudo
     vscode
     yarn
