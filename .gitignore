@@ -109,6 +109,7 @@ Sync/
 .lesshst
 .psql_history
 .python_history
+.sudo_as_admin_successful
 .viminfo
 .wget-hsts
 .Xauthority
