@@ -1,6 +1,10 @@
 {
    "exclusionRules" : [
       {
+         "passKeys" : "",
+         "pattern" : "https?://idashy.vercel.app/*"
+      },
+      {
          "passKeys" : "orx",
          "pattern" : "https?://monkeytype.com/*"
       },
@@ -13,16 +17,16 @@
          "pattern" : "https?://www.nitrotype.com/*"
       },
       {
+         "passKeys" : "",
+         "pattern" : "https?://www.openvim.com/*"
+      },
+      {
          "passKeys" : "orx",
          "pattern" : "https?://www.speedcoder.net/*"
       },
       {
          "passKeys" : "orx",
          "pattern" : "https?://zty.pe/*"
-      },
-      {
-         "passKeys" : "",
-         "pattern" : "https?://www.openvim.com/*"
       }
    ],
    "filterLinkHints" : true,

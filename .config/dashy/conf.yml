@@ -29,13 +29,13 @@ sections:
         target: sametab
         id: 0_836_digitalgarden
       - &ref_1
-        title: Hacker news
+        title: Hacker News
         icon: favicon
         url: https://news.ycombinator.com/
         target: sametab
         id: 1_836_hackernews
       - &ref_2
-        title: GitHub pulls
+        title: github/pulls
         icon: favicon
         url: https://github.com/pulls
         target: sametab
@@ -110,56 +110,72 @@ sections:
         icon: favicon
         url: https://github.com/timelyschools/scheduling-service/pulls
         id: 3_1391_schedulingservicepulls
+      - &ref_11
+        title: Planning Meetings
+        icon: favicon
+        url: >-
+          https://www.notion.so/timelyschools/Timely-app-Planning-Meetings-7cd118392adb454dbe3d49a368f89fb0
+        target: modal
+        id: 4_1391_planningmeetings
+      - &ref_12
+        title: Imran's Tasks
+        icon: https://www.notion.so/images/favicon.ico
+        url: >-
+          https://www.notion.so/timelyschools/34a2d172e9604a5f892b3565323bedc2?v=948b7856d8c341d9bfca3d2a0122d491
+        target: sametab
+        id: 5_1391_imranstasks
     filteredItems:
       - *ref_7
       - *ref_8
       - *ref_9
       - *ref_10
+      - *ref_11
+      - *ref_12
   - name: Getting Started
     icon: fas fa-rocket
     items:
-      - &ref_11
+      - &ref_13
         title: Dashy Live
         description: Development a project management links for Dashy
         icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
         url: https://live.dashy.to/
         target: newtab
         id: 0_1481_dashylive
-      - &ref_12
+      - &ref_14
         title: GitHub
         description: Source Code, Issues and Pull Requests
         url: https://github.com/lissy93/dashy
         icon: favicon
         id: 1_1481_github
-      - &ref_13
+      - &ref_15
         title: Docs
         description: Configuring & Usage Documentation
         provider: Dashy.to
         icon: far fa-book
         url: https://dashy.to/docs
         id: 2_1481_docs
-      - &ref_14
+      - &ref_16
         title: Showcase
         description: See how others are using Dashy
         url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
         icon: far fa-grin-hearts
         id: 3_1481_showcase
-      - &ref_15
+      - &ref_17
         title: Config Guide
         description: See full list of configuration options
         url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
         icon: fas fa-wrench
         id: 4_1481_configguide
-      - &ref_16
+      - &ref_18
         title: Support
         description: Get help with Dashy, raise a bug, or get in contact
         url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
         icon: far fa-hands-helping
         id: 5_1481_support
     filteredItems:
-      - *ref_11
-      - *ref_12
       - *ref_13
       - *ref_14
       - *ref_15
       - *ref_16
+      - *ref_17
+      - *ref_18
