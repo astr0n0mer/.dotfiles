@@ -12,6 +12,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="muse"
 # ZSH_THEME="jonathan"
 # ZSH_THEME="af-magic"
+# ZSH_THEME="half-life"
+# ZSH_THEME="agnoster"
 ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random

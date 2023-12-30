@@ -51,7 +51,9 @@ sandbox
 .linuxmint/
 .mozilla/
 .local/
-.logseq/
+.logseq/*
+!.logseq/Dockerfile
+!.logseq/Makefile
 master/
 .mongodb/
 .node/
