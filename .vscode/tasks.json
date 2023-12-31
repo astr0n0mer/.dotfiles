@@ -6,7 +6,7 @@
         {
             "label": "git pull",
             "type": "shell",
-            "command": "git pull",
+            "command": "git fetch --all && git pull",
             "runOptions": {
                 "runOn": "folderOpen"
             }
