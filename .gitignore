@@ -38,6 +38,7 @@ sandbox
 .config/transmission/
 .config/VSCodium/*
 !.config/VSCodium/User
+!.config/VSCodium/product.json
 .config/xed/
 .config/xviewer/
 .config/cinnamon-monitors.xml*
@@ -91,6 +92,7 @@ Library/Application?Support/Code/*
 Library/Application?Support/VSCodium/*
 !Library/Application?Support/Code/User
 !Library/Application?Support/VSCodium/User/
+!Library/Application?Support/VSCodium/product.json
 Library/Application?Support/VSCodium/User/*
 !Library/Application?Support/VSCodium/User/*.*
 !Library/Application?Support/VSCodium/User/profiles/
@@ -120,6 +122,7 @@ Sync/
 .Xauthority
 .xsession*
 .yarnrc
+# z plugin files from ohmyzsh
 .z
 .zcompdump*
 .zsh_history
