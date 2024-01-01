@@ -19,6 +19,7 @@ sandbox
 .config/Docker?Desktop/
 .config/enchant/
 .config/evolution/
+.config/fonts/*/*/.uuid
 .config/gtk-3.0/
 .config/hexchat/
 .config/libreoffice/
