@@ -6,14 +6,14 @@ sandbox
 
 # system directories
 .cache/
-.config/raycast/*/
 
 .config/autostart/
 .config/BraveSoftware/
 .config/caja/
 .config/chromium/
 .config/cinnamon/
-.config/Code/
+.config/Code/*
+!.config/Code/User
 .config/create-next-app-nodejs/
 .config/dconf/
 .config/Docker?Desktop/
@@ -32,10 +32,12 @@ sandbox
 .config/pix/
 .config/pulse/
 .config/qt5ct/
+.config/raycast/*/
 .config/sticky/
 .config/syncthing/
 .config/transmission/
-.config/VSCodium/
+.config/VSCodium/*
+!.config/VSCodium/User
 .config/xed/
 .config/xviewer/
 .config/cinnamon-monitors.xml*
