@@ -13,5 +13,11 @@ dotedit() {
 }
 
 
+# killport
+killport() {
+    kill -9 $(lsof -t -i:$1) && echo "Killed port: ${1}"
+}
+
+
 # screen
 alias sc="screen"
