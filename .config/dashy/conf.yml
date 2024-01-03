@@ -11,6 +11,7 @@ appConfig:
   layout: auto
   iconSize: medium
   language: en
+  defaultOpeningMethod: sametab
 sections:
   - name: Personal
     icon: >-
@@ -26,19 +27,16 @@ sections:
         title: Digital Garden
         icon: https://dgarden.vercel.app/static/img/logo.png
         url: https://dgarden.vercel.app/
-        target: sametab
         id: 0_836_digitalgarden
       - &ref_1
         title: Hacker News
         icon: favicon
         url: https://news.ycombinator.com/
-        target: sametab
         id: 1_836_hackernews
       - &ref_2
         title: github/pulls
         icon: favicon
         url: https://github.com/pulls
-        target: sametab
         id: 2_836_githubpulls
     filteredItems:
       - *ref_0
@@ -72,7 +70,6 @@ sections:
         title: YouTube
         icon: favicon
         url: https://www.youtube.com/@ProcedureHQ
-        target: null
         id: 3_937_youtube
     filteredItems:
       - *ref_3
@@ -115,14 +112,12 @@ sections:
         icon: favicon
         url: >-
           https://www.notion.so/timelyschools/Timely-app-Planning-Meetings-7cd118392adb454dbe3d49a368f89fb0
-        target: modal
         id: 4_1391_planningmeetings
       - &ref_12
         title: Imran's Tasks
         icon: https://www.notion.so/images/favicon.ico
         url: >-
           https://www.notion.so/timelyschools/34a2d172e9604a5f892b3565323bedc2?v=948b7856d8c341d9bfca3d2a0122d491
-        target: sametab
         id: 5_1391_imranstasks
     filteredItems:
       - *ref_7
