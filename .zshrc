@@ -123,3 +123,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Add local binaries to $PATH
+export PATH=$PATH:/Users/imran/.local/bin
+export PATH=$PATH:/home/astronomer/.local/bin

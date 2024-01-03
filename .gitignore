@@ -54,7 +54,8 @@ sandbox
 .gtkrc*
 .linuxmint/
 .mozilla/
-.local/
+.local/*
+!.local/bin/
 .logseq/*
 !.logseq/Dockerfile
 !.logseq/Makefile
