@@ -36,6 +36,6 @@ raycast-settings.rayconfig:
 
 .PHONY: vimium-options.json
 vimium-options.json:
-	((cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@) \
+	((cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@ > /dev/null ) \
 	&& (mv -f ~/Downloads/$@ ~/.config/vimium/$@)) \
 	|| (echo "\nerror encountered. no files changed.")
