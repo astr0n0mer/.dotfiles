@@ -8,13 +8,13 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell
+ZSH_THEME="af-magic" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-magic
 # ZSH_THEME="muse"
 # ZSH_THEME="jonathan"
-# ZSH_THEME="af-magic"
 # ZSH_THEME="half-life"
-# ZSH_THEME="agnoster"
-ZSH_THEME="random"
+# ZSH_THEME="agnoster" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster
+# ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -125,5 +125,4 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Add local binaries to $PATH
-export PATH=$PATH:/Users/imran/.local/bin
-export PATH=$PATH:/home/astronomer/.local/bin
+export PATH=$PATH:$HOME/.local/bin
