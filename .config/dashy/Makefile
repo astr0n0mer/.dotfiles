@@ -1,5 +1,5 @@
 .PHONY: setup
-setup:
+setup: remove-unused-backups
 	ln ~/.config/dashy/*.yml ~/projects/dashy/public/
 
 .PHONY: start
@@ -25,4 +25,4 @@ publish:
 
 .PHONY: remove-unused-backups
 remove-unused-backups:
-	rm ~/.config/dashy/*backup.yml
+	rm ~/.config/dashy/*backup.yml || echo "no backups to remove"
