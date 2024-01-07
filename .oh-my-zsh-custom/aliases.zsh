@@ -1,6 +1,7 @@
 # dashy
-alias startdashy="make -f ~/.config/dashy/Makefile start"
-alias stopdashy="make -f ~/.config/dashy/Makefile stop"
+alias dashystart="make -f ~/.config/dashy/Makefile start"
+alias dashystop="make -f ~/.config/dashy/Makefile stop"
+alias dashypublish="make -f ~/.config/dashy/Makefile publish"
 
 
 # .dotfiles

@@ -15,6 +15,7 @@ sandbox
 .config/Code/*
 !.config/Code/User
 .config/create-next-app-nodejs/
+.config/dashy/*backup.yml
 .config/dconf/
 .config/Docker?Desktop/
 .config/enchant/
