@@ -18,10 +18,17 @@ stop:
 
 .PHONY: publish
 publish:
-	cd ~/projects/dashy/public && \
+	(cd ~/projects/dashy/public && \
 		git add *.yml && \
 		git commit -m "$(shell date)" && \
-		git push
+		git push) || echo "no changes to publish"
+
+.PHONY: cron
+cron:
+	(echo "\n\n======== $(shell date) ========"; \
+		make --silent -f ~/.config/dashy/Makefile publish;) \
+		>> ~/.config/dashy/crontab.logs \
+		2>> ~/.config/dashy/crontab.logs
 
 .PHONY: remove-unused-backups
 remove-unused-backups:

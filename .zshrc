@@ -9,11 +9,11 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell
-ZSH_THEME="af-magic" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-magic
+ZSH_THEME="af-magic"       # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-magic
 # ZSH_THEME="muse"
 # ZSH_THEME="jonathan"
 # ZSH_THEME="half-life"
-# ZSH_THEME="agnoster" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster
+# ZSH_THEME="agnoster"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster
 # ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random

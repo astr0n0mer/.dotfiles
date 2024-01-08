@@ -1,3 +1,3 @@
-.PHONY: setconfig
-setconfig:
+.PHONY: getconfig
+getconfig:
 	crontab -l > ~/.config/crontab/.config
