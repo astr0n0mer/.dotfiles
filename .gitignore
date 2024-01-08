@@ -116,6 +116,7 @@ Sync/
 # want to track, but need to use no-reply email first in GitHub
 .gitconfig
 .lesshst
+*.logs
 .psql_history
 .python_history
 .sudo_as_admin_successful
