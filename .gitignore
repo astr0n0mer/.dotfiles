@@ -5,8 +5,9 @@
 sandbox
 
 # system directories
-.cache/
+*cache/
 
+.aws/
 .config/autostart/
 .config/BraveSoftware/
 .config/caja/
@@ -119,6 +120,7 @@ Sync/
 *.logs
 .psql_history
 .python_history
+.saml2aws
 .sudo_as_admin_successful
 .viminfo
 .wget-hsts
