@@ -1,6 +1,7 @@
 .PHONY: record-myip
 record-myip:
-	echo `curl --silent ipv4.icanhazip.com`$$'\t'`date` \
+	@# https://stackoverflow.com/a/8542420/7753274
+	echo `curl --silent ipv4.icanhazip.com`$$'\t'`networksetup -getairportnetwork en0 | cut -c 24-`$$'\t'`date` \
 		>> ~/.config/myip/crontab.logs
 
 .PHONY: check-if-ip-has-changed
@@ -10,4 +11,6 @@ check-if-ip-has-changed:
 	if [ "$$last_recorded_ip" != "$$current_ip" ]; then \
         say "Your public IP has changed"; \
 		make -f ~/.config/myip/Makefile record-myip; \
+	else \
+		echo "Your public IP has not changed"; \
     fi

@@ -21,6 +21,7 @@ myip() {
         curl icanhazip.com
     else
         curl ipv4.icanhazip.com
+        make --silent -f ~/.config/myip/Makefile record-myip
     fi
 }
 
