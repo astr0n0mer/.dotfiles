@@ -1,5 +1,6 @@
-.PHONY: setup
-setup: remove-unused-backups
+.PHONY: setup-dashy
+setup-dashy: remove-unused-backups
+	git clone git@github.com:astr0n0mer/dashy.git ~/projects
 	ln ~/.config/dashy/*.yml ~/projects/dashy/public/
 
 .PHONY: start
@@ -10,6 +11,8 @@ start:
 		--name dashy \
 		--restart=always \
 		lissy93/dashy:latest
+	# Reference: https://stackoverflow.com/a/38147878/7753274
+	python3 -m webbrowser http://127.0.0.1:4000/
 
 .PHONY: stop
 stop:
@@ -22,6 +25,23 @@ publish:
 		git add *.yml && \
 		git commit -m "$(shell date)" && \
 		git push) || echo "no changes to publish"
+
+# conf_manager is WIP
+.PHONY: setup-conf_manager
+setup-conf_manager:
+	pyenv install 3.12 --skip-existing
+	pyenv virtualenv 3.12 dashy
+	pyenv virtualenvs
+	pyenv activate dashy
+	pip install --requirement ~/.config/dashy/requirements.txt
+	pyenv deactivate
+
+.PHONY: run-conf_manager
+run-conf_manager:
+	zsh -c "source ~/.zshrc" && \
+		pyenv activate dashy && \
+		python ~/.config/dashy/conf_manager.py && \
+		pyenv deactivate
 
 .PHONY: cron
 cron:
