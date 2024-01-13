@@ -12,7 +12,7 @@ start:
 		--restart=always \
 		lissy93/dashy:latest
 	# Reference: https://stackoverflow.com/a/38147878/7753274
-	python3 -m webbrowser http://127.0.0.1:4000/
+	python3 -m webbrowser http://localhost:4000/
 
 .PHONY: stop
 stop:
