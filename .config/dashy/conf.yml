@@ -1,14 +1,6 @@
-pageInfo:
-  title: Dashy - astr0n0mer
-  description: Welcome to your dashboard!
-  navLinks:
-    - title: GitHub
-      path: https://github.com/Lissy93/dashy
-    - title: Documentation
-      path: https://dashy.to/docs
 appConfig:
   theme: colorful
-  layout: vertical
+  layout: auto
   iconSize: small
   language: en
   defaultOpeningMethod: sametab
@@ -50,11 +42,15 @@ appConfig:
   disableUpdateChecks: false
   disableSmartSort: false
   enableErrorReporting: false
-pages:
-  - name: Work
-    path: work.yml
-    displayData:
-      hideForGuests: true
+pageInfo:
+  title: Dashy
+  description: Welcome to your dashboard!
+  navLinks:
+    - title: GitHub
+      path: https://github.com/Lissy93/dashy
+    - title: Documentation
+      path: https://dashy.to/docs
+  footerText: ''
 sections:
   - name: Personal
     icon: >-
@@ -73,7 +69,7 @@ sections:
         id: 0_836_digitalgarden
       - &ref_1
         title: Hacker News
-        icon: favicon
+        icon: https://news.ycombinator.com/y18.svg
         url: https://news.ycombinator.com/
         id: 1_836_hackernews
       - &ref_2
@@ -141,3 +137,42 @@ sections:
       - *ref_7
       - *ref_8
       - *ref_9
+  - name: Backlog
+    icon: https://cdn-icons-png.flaticon.com/512/7022/7022938.png
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: true
+      hideForGuests: false
+    items:
+      - &ref_10
+        title: Storyteller
+        description: >-
+          A self-hosted platform for automatically syncing ebooks and
+          audiobooks.
+        icon: https://smoores.gitlab.io/storyteller/img/favicon.ico
+        url: https://smoores.gitlab.io/storyteller/
+        id: 0_691_storyteller
+      - &ref_11
+        title: anytype
+        icon: favicon
+        url: https://anytype.io/
+        id: 1_691_anytype
+    filteredItems:
+      - *ref_10
+      - *ref_11
+  - name: cheatsheets
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items: []
+    filteredItems: []
+pages:
+  - name: Work
+    path: work.yml
+    displayData:
+      hideForGuests: true
