@@ -1,5 +1,5 @@
 appConfig:
-  theme: colorful
+  theme: dracula
   layout: auto
   iconSize: small
   language: en
@@ -56,7 +56,7 @@ sections:
     icon: >-
       https://lh3.googleusercontent.com/ogw/ANLem4YvPy-r0rB3DzDPGJ-tccXgemTn1MqoBnRKPgS7YQ=s64-c-mo
     displayData:
-      sortBy: default
+      sortBy: most-used
       rows: 1
       cols: 1
       collapsed: false
@@ -73,10 +73,10 @@ sections:
         url: https://news.ycombinator.com/
         id: 1_836_hackernews
       - &ref_2
-        title: github/pulls
+        title: GH/pulls
         icon: favicon
         url: https://github.com/pulls
-        id: 2_836_githubpulls
+        id: 2_836_ghpulls
       - &ref_3
         title: CSSBattle
         icon: https://cssbattle.dev/images/logo-square.png
@@ -143,7 +143,7 @@ sections:
       sortBy: default
       rows: 1
       cols: 1
-      collapsed: true
+      collapsed: false
       hideForGuests: false
     items:
       - &ref_10
@@ -169,8 +169,190 @@ sections:
       cols: 1
       collapsed: false
       hideForGuests: false
-    items: []
-    filteredItems: []
+    items:
+      - &ref_12
+        title: QuickRef.ME
+        url: https://quickref.me/
+        icon: favicon
+        id: 0_1169_quickrefme
+      - &ref_13
+        title: OverAPI
+        url: https://overapi.com/
+        icon: favicon
+        id: 1_1169_overapi
+      - &ref_14
+        title: cheat.sh
+        icon: 💻
+        url: https://cht.sh/
+        tags:
+          - shell
+        id: 2_1169_cheatsh
+      - &ref_15
+        title: Cheatography
+        icon: https://cheatography.com/favicon.png
+        url: https://cheatography.com/
+        id: 3_1169_cheatography
+      - &ref_16
+        title: Devhints.io
+        url: https://devhints.io/
+        icon: favicon
+        id: 4_1169_devhintsio
+      - &ref_17
+        title: Tailwind CSS w/ filter
+        url: https://nerdcave.com/tailwind-cheat-sheet
+        tags:
+          - tailwind
+          - css
+          - filter
+        icon: favicon
+        id: 5_1169_tailwindcsswfilter
+      - &ref_18
+        title: Tailwind CSS
+        url: https://umeshmk.github.io/Tailwindcss-cheatsheet/
+        tags:
+          - tailwind
+          - css
+        icon: favicon
+        id: 6_1169_tailwindcss
+      - &ref_19
+        title: Styled Components
+        icon: 📕
+        url: >-
+          https://scalablecss.com/static/Styled-Components-Cheat-Sheet-c9ef20eda7095a43b5e4c80b36b545a4.pdf
+        tags:
+          - cssin-js
+          - styledcomponents
+        id: 7_1169_styledcomponents
+      - &ref_20
+        title: Emmet
+        url: https://docs.emmet.io/cheat-sheet/
+        tags:
+          - emmet
+        icon: favicon
+        id: 8_1169_emmet
+      - &ref_21
+        title: HTML CSS JS interactive
+        url: https://htmlcheatsheet.com/
+        tags:
+          - html
+          - css
+          - js
+          - interactive
+        icon: favicon
+        id: 9_1169_htmlcssjsinteractive
+      - &ref_22
+        title: Specifishity
+        icon: 🐠
+        url: https://specifishity.com/
+        tags:
+          - css
+          - specificity
+        id: 10_1169_specifishity
+      - &ref_23
+        title: Markdown Guide
+        url: https://www.markdownguide.org/cheat-sheet/
+        tags:
+          - markdown
+          - md
+        icon: favicon
+        id: 11_1169_markdownguide
+      - &ref_24
+        title: Python
+        url: https://www.pythoncheatsheet.org/
+        tags:
+          - python
+        icon: favicon
+        id: 12_1169_python
+      - &ref_25
+        title: 35-cheatsheets-for-developers
+        url: >-
+          https://levelup.gitconnected.com/35-website-cheat-sheets-for-developers-f8da96aa84f1
+        tags:
+          - list
+        icon: favicon
+        id: 13_1169_cheatsheetsfordevelopers
+      - &ref_26
+        title: Emoji
+        url: https://www.webfx.com/tools/emoji-cheat-sheet/
+        tags:
+          - emoji
+        icon: favicon
+        id: 14_1169_emoji
+      - &ref_27
+        title: Key Combiner
+        url: https://keycombiner.com/
+        tags:
+          - learn
+          - shortcuts
+        icon: favicon
+        id: 15_1169_keycombiner
+      - &ref_28
+        title: shortcutFoo
+        url: https://www.shortcutfoo.com/app/dojos
+        tags:
+          - paid
+          - learn
+          - shortcuts
+        icon: favicon
+        id: 16_1169_shortcutfoo
+      - &ref_29
+        title: Shortcuts.design
+        url: https://shortcuts.design/
+        tags:
+          - learn
+          - shortcuts
+        icon: favicon
+        id: 17_1169_shortcutsdesign
+    filteredItems:
+      - *ref_12
+      - *ref_13
+      - *ref_14
+      - *ref_15
+      - *ref_16
+      - *ref_17
+      - *ref_18
+      - *ref_19
+      - *ref_20
+      - *ref_21
+      - *ref_22
+      - *ref_23
+      - *ref_24
+      - *ref_25
+      - *ref_26
+      - *ref_27
+      - *ref_28
+      - *ref_29
+    icon: 🤥
+  - name: Chill
+    icon: 🍿
+    displayData:
+      sortBy: most-used
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - &ref_30
+        title: fbox
+        description: Watch movies and series
+        icon: favicon
+        url: https://fbox.to/
+        tags:
+          - movie
+          - series
+        id: 0_492_fbox
+      - &ref_31
+        title: FlixWave
+        description: Watch movies and series
+        icon: favicon
+        url: https://flixwave.to/home
+        tags:
+          - movie
+          - series
+        id: 1_492_flixwave
+    filteredItems:
+      - *ref_30
+      - *ref_31
 pages:
   - name: Work
     path: work.yml
