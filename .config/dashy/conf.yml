@@ -63,7 +63,7 @@ sections:
     items:
       - &ref_0
         title: Hacker News
-        icon: https://news.ycombinator.com/y18.svg
+        icon: fab fa-hacker-news
         url: https://news.ycombinator.com/
         id: 0_372_hackernews
     filteredItems:
@@ -85,7 +85,7 @@ sections:
         id: 0_921_digitalgarden
       - &ref_2
         title: GitHub
-        icon: favicon
+        icon: fab fa-github
         url: https://github.com/astr0n0mer
         id: 1_921_github
       - &ref_3
@@ -97,7 +97,7 @@ sections:
         id: 2_921_cssbattle
       - &ref_4
         title: Dev.to
-        icon: favicon
+        icon: fab fa-dev
         url: https://dev.to/astronomer
         id: 3_921_devto
       - &ref_5
@@ -105,60 +105,66 @@ sections:
         icon: https://miro.medium.com/v2/1*m-R_BkNf1Qjr1YbyOIJY2w.png
         url: https://medium.com/@astr0n0mer
         id: 4_921_medium
+      - &ref_6
+        title: monkeytype
+        icon: https://monkeytype.com/images/favicon/favicon.ico
+        url: https://monkeytype.com/profile/astronomer
+        id: 5_921_monkeytype
     filteredItems:
       - *ref_1
       - *ref_2
       - *ref_3
       - *ref_4
       - *ref_5
+      - *ref_6
   - name: Getting Started
     icon: fas fa-rocket
     items:
-      - &ref_6
+      - &ref_7
         title: Dashy Live
         description: Development a project management links for Dashy
         icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
         url: https://live.dashy.to/
         target: newtab
         id: 0_1481_dashylive
-      - &ref_7
+      - &ref_8
         title: GitHub
         description: Source Code, Issues and Pull Requests
         url: https://github.com/lissy93/dashy
         icon: favicon
         id: 1_1481_github
-      - &ref_8
+      - &ref_9
         title: Docs
         description: Configuring & Usage Documentation
         provider: Dashy.to
         icon: far fa-book
         url: https://dashy.to/docs
         id: 2_1481_docs
-      - &ref_9
+      - &ref_10
         title: Showcase
         description: See how others are using Dashy
         url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
         icon: far fa-grin-hearts
         id: 3_1481_showcase
-      - &ref_10
+      - &ref_11
         title: Config Guide
         description: See full list of configuration options
         url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
         icon: fas fa-wrench
         id: 4_1481_configguide
-      - &ref_11
+      - &ref_12
         title: Support
         description: Get help with Dashy, raise a bug, or get in contact
         url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
         icon: far fa-hands-helping
         id: 5_1481_support
     filteredItems:
-      - *ref_6
       - *ref_7
       - *ref_8
       - *ref_9
       - *ref_10
       - *ref_11
+      - *ref_12
   - name: cheatsheets
     displayData:
       sortBy: default
@@ -167,34 +173,34 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_12
+      - &ref_13
         title: QuickRef.ME
         url: https://quickref.me/
         icon: favicon
         id: 0_1169_quickrefme
-      - &ref_13
+      - &ref_14
         title: OverAPI
         url: https://overapi.com/
         icon: favicon
         id: 1_1169_overapi
-      - &ref_14
+      - &ref_15
         title: cheat.sh
         icon: 💻
         url: https://cht.sh/
         tags:
           - shell
         id: 2_1169_cheatsh
-      - &ref_15
+      - &ref_16
         title: Cheatography
         icon: https://cheatography.com/favicon.png
         url: https://cheatography.com/
         id: 3_1169_cheatography
-      - &ref_16
+      - &ref_17
         title: Devhints.io
         url: https://devhints.io/
         icon: favicon
         id: 4_1169_devhintsio
-      - &ref_17
+      - &ref_18
         title: Tailwind CSS w/ filter
         url: https://nerdcave.com/tailwind-cheat-sheet
         tags:
@@ -203,7 +209,7 @@ sections:
           - filter
         icon: favicon
         id: 5_1169_tailwindcsswfilter
-      - &ref_18
+      - &ref_19
         title: Tailwind CSS
         url: https://umeshmk.github.io/Tailwindcss-cheatsheet/
         tags:
@@ -211,23 +217,23 @@ sections:
           - css
         icon: favicon
         id: 6_1169_tailwindcss
-      - &ref_19
+      - &ref_20
         title: Styled Components
-        icon: 📕
+        icon: 💅
         url: >-
           https://scalablecss.com/static/Styled-Components-Cheat-Sheet-c9ef20eda7095a43b5e4c80b36b545a4.pdf
         tags:
-          - cssin-js
+          - cssinjs
           - styledcomponents
         id: 7_1169_styledcomponents
-      - &ref_20
+      - &ref_21
         title: Emmet
         url: https://docs.emmet.io/cheat-sheet/
         tags:
           - emmet
         icon: favicon
         id: 8_1169_emmet
-      - &ref_21
+      - &ref_22
         title: HTML CSS JS interactive
         url: https://htmlcheatsheet.com/
         tags:
@@ -237,7 +243,7 @@ sections:
           - interactive
         icon: favicon
         id: 9_1169_htmlcssjsinteractive
-      - &ref_22
+      - &ref_23
         title: Specifishity
         icon: 🐠
         url: https://specifishity.com/
@@ -245,22 +251,22 @@ sections:
           - css
           - specificity
         id: 10_1169_specifishity
-      - &ref_23
+      - &ref_24
         title: Markdown Guide
+        icon: fab fa-markdown
         url: https://www.markdownguide.org/cheat-sheet/
         tags:
           - markdown
           - md
-        icon: favicon
         id: 11_1169_markdownguide
-      - &ref_24
+      - &ref_25
         title: Python
         url: https://www.pythoncheatsheet.org/
         tags:
           - python
         icon: favicon
         id: 12_1169_python
-      - &ref_25
+      - &ref_26
         title: 35-cheatsheets-for-developers
         url: >-
           https://levelup.gitconnected.com/35-website-cheat-sheets-for-developers-f8da96aa84f1
@@ -268,14 +274,14 @@ sections:
           - list
         icon: favicon
         id: 13_1169_cheatsheetsfordevelopers
-      - &ref_26
+      - &ref_27
         title: Emoji
         url: https://www.webfx.com/tools/emoji-cheat-sheet/
         tags:
           - emoji
         icon: favicon
         id: 14_1169_emoji
-      - &ref_27
+      - &ref_28
         title: Key Combiner
         url: https://keycombiner.com/
         tags:
@@ -283,7 +289,7 @@ sections:
           - shortcuts
         icon: favicon
         id: 15_1169_keycombiner
-      - &ref_28
+      - &ref_29
         title: shortcutFoo
         url: https://www.shortcutfoo.com/app/dojos
         tags:
@@ -292,7 +298,7 @@ sections:
           - shortcuts
         icon: favicon
         id: 16_1169_shortcutfoo
-      - &ref_29
+      - &ref_30
         title: Shortcuts.design
         url: https://shortcuts.design/
         tags:
@@ -301,7 +307,6 @@ sections:
         icon: favicon
         id: 17_1169_shortcutsdesign
     filteredItems:
-      - *ref_12
       - *ref_13
       - *ref_14
       - *ref_15
@@ -319,6 +324,7 @@ sections:
       - *ref_27
       - *ref_28
       - *ref_29
+      - *ref_30
     icon: 🤥
   - name: Chill
     icon: 🍿
@@ -329,7 +335,7 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_30
+      - &ref_31
         title: fbox
         description: Watch movies and series
         icon: favicon
@@ -338,7 +344,7 @@ sections:
           - movie
           - series
         id: 0_492_fbox
-      - &ref_31
+      - &ref_32
         title: FlixWave
         description: Watch movies and series
         icon: favicon
@@ -348,8 +354,8 @@ sections:
           - series
         id: 1_492_flixwave
     filteredItems:
-      - *ref_30
       - *ref_31
+      - *ref_32
   - name: Backlog
     icon: https://cdn-icons-png.flaticon.com/512/7022/7022938.png
     displayData:
@@ -359,7 +365,7 @@ sections:
       collapsed: false
       hideForGuests: false
     items:
-      - &ref_32
+      - &ref_33
         title: Storyteller
         description: >-
           A self-hosted platform for automatically syncing ebooks and
@@ -367,14 +373,14 @@ sections:
         icon: https://smoores.gitlab.io/storyteller/img/favicon.ico
         url: https://smoores.gitlab.io/storyteller/
         id: 0_691_storyteller
-      - &ref_33
+      - &ref_34
         title: anytype
         icon: favicon
         url: https://anytype.io/
         id: 1_691_anytype
     filteredItems:
-      - *ref_32
       - *ref_33
+      - *ref_34
 pages:
   - name: Work
     path: work.yml

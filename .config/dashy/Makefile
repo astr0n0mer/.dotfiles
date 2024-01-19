@@ -21,6 +21,8 @@ stop:
 
 .PHONY: publish
 publish:
+	cp -f ~/.config/dashy/conf.yml ~/.config/dashy/work.yml ~/projects/dashy/public/ || \
+		echo "cp: /Users/imran/projects/dashy/public/work.yml and /Users/imran/.config/dashy/work.yml are identical (not copied)."
 	(cd ~/projects/dashy/public && \
 		git add *.yml && \
 		git commit -m "$(shell date)" && \

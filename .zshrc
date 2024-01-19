@@ -10,10 +10,12 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell
 # ZSH_THEME="af-magic"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-magic
-ZSH_THEME="agnoster"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster
-# ZSH_THEME="muse"
-# ZSH_THEME="jonathan"
-# ZSH_THEME="half-life"
+# ZSH_THEME="agnoster"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster # special instructions at the end of this file
+ZSH_THEME="muse"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#muse
+# ZSH_THEME="jonathan"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#jonathan
+# ZSH_THEME="half-life"    # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#half-life
+# ZSH_THEME="nebirhos"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#nebirhos
+# ZSH_THEME="philips"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#philips
 # ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random
@@ -129,5 +131,5 @@ export PATH=$PATH:$HOME/.local/bin
 
 # ======= custom settings for agnoster theme =======
 # to hide user@hostname when using agnoster theme
-prompt_context(){}
+# prompt_context(){}
 # =======
