@@ -14,6 +14,10 @@ dotedit() {
 }
 
 
+# haxor-news
+alias hn="workon haxor-news && haxor-news && deactivate"
+
+
 # IP address
 myip() {
     # Reference: https://askubuntu.com/a/145169

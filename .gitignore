@@ -58,6 +58,7 @@ sandbox
 .mozilla/
 .local/*
 !.local/bin/
+.local/bin/neonmodem
 .logseq/*
 !.logseq/Dockerfile
 !.logseq/Makefile
@@ -74,6 +75,7 @@ master/
 .rest-client/
 .ssh/
 .Trash/
+.virtualenvs/
 .vscode/*
 !.vscode/tasks.json
 .vscode-oss/
@@ -91,6 +93,7 @@ Library/*
 Library/Application?Support/*
 !Library/Application?Support/Code/
 !Library/Application?Support/VSCodium/
+!Library/Application?Support/neonmodem.toml
 Library/Application?Support/Code/*
 Library/Application?Support/VSCodium/*
 !Library/Application?Support/Code/User
@@ -116,6 +119,7 @@ Sync/
 .DS_Store
 # want to track, but need to use no-reply email first in GitHub
 .gitconfig
+.haxornewshistory
 .lesshst
 *.logs
 .psql_history
