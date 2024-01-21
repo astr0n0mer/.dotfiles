@@ -59,6 +59,7 @@ sandbox
 .local/*
 !.local/bin/
 .local/bin/neonmodem
+.local/bin/syncthing
 .logseq/*
 !.logseq/Dockerfile
 !.logseq/Makefile
