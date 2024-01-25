@@ -10,7 +10,8 @@ check-if-ip-has-changed:
 	current_ip=$$(curl --silent ipv4.icanhazip.com); \
 	make -f ~/.config/myip/Makefile record-myip; \
 	if [ "$$last_recorded_ip" != "$$current_ip" ]; then \
-		say "Your public IP has changed"; \
+		terminal-notifier -message "Your public IP has changed. New IP copied to clipboard."; \
+		echo "$$current_ip" | pbcopy; \
 	else \
 		echo "Your public IP has not changed"; \
 	fi
