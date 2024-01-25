@@ -58,8 +58,10 @@ sandbox
 .mozilla/
 .local/*
 !.local/bin/
+.local/bin/alerter
 .local/bin/neonmodem
 .local/bin/syncthing
+.local/bin/trash*
 .logseq/*
 !.logseq/Dockerfile
 !.logseq/Makefile
