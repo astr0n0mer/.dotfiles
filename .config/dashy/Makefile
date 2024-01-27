@@ -1,13 +1,23 @@
+CONFIG_DASHY := ~/.config/dashy
+GITHUB_DASHY := https://github.com/astr0n0mer/dashy
+PROXY_DASHY := ~/projects/dashy
+PROXY_DASHY_PARENT := ~/projects
+
+OS_NAME := $(shell uname -s)
+TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
+						/opt/homebrew/bin/terminal-notifier, \
+						$(HOME)/.local/bin/terminal-notifier)
+
 .PHONY: setup-dashy
 setup-dashy: remove-unused-backups
-	git clone git@github.com:astr0n0mer/dashy.git ~/projects
-	ln ~/.config/dashy/*.yml ~/projects/dashy/public/
+	git clone git@github.com:astr0n0mer/dashy.git ${PROXY_DASHY_PARENT}
+	ln ${CONFIG_DASHY}/*.yml ${PROXY_DASHY}/public/
 
 .PHONY: start
 start:
 	docker run -d \
 		-p 4000:80 \
-		-v ~/.config/dashy:/app/public \
+		-v ${CONFIG_DASHY}:/app/public \
 		--name dashy \
 		--restart=always \
 		lissy93/dashy:latest
@@ -21,12 +31,15 @@ stop:
 
 .PHONY: publish
 publish:
-	cp -f ~/.config/dashy/conf.yml ~/.config/dashy/work.yml ~/projects/dashy/public/ || \
-		echo "cp: /Users/imran/projects/dashy/public/work.yml and /Users/imran/.config/dashy/work.yml are identical (not copied)."
-	(cd ~/projects/dashy/public && \
+	cp -f ${CONFIG_DASHY}/conf.yml ${CONFIG_DASHY}/work.yml ${PROXY_DASHY}/public/ || \
+		echo "cp: ${PROXY_DASHY}/public/work.yml and ${CONFIG_DASHY}/work.yml are identical (not copied)."
+	(cd ${PROXY_DASHY}/public && \
 		git add *.yml && \
 		git commit -m "$(shell date)" && \
-		git push) || echo "no changes to publish"
+		git push && \
+		echo "Pushed latest changes to GitHub. Click to visit." | \
+		${TERMINAL_NOTIFIER} -title Dashy -open ${GITHUB_DASHY} -sound default) || \
+		echo "no changes to publish"
 
 # conf_manager is WIP
 .PHONY: setup-conf_manager
@@ -35,23 +48,24 @@ setup-conf_manager:
 	pyenv virtualenv 3.12 dashy
 	pyenv virtualenvs
 	pyenv activate dashy
-	pip install --requirement ~/.config/dashy/requirements.txt
+	pip install --requirement ${CONFIG_DASHY}/requirements.txt
 	pyenv deactivate
 
 .PHONY: run-conf_manager
 run-conf_manager:
 	zsh -c "source ~/.zshrc" && \
 		pyenv activate dashy && \
-		python ~/.config/dashy/conf_manager.py && \
+		python ${CONFIG_DASHY}/conf_manager.py && \
 		pyenv deactivate
+# conf_manager is WIP
 
 .PHONY: cron
 cron:
 	(echo "\n\n======== $(shell date) ========"; \
-		make --silent -f ~/.config/dashy/Makefile publish;) \
-		>> ~/.config/dashy/crontab.logs \
-		2>> ~/.config/dashy/crontab.logs
+		make --silent -f ${CONFIG_DASHY}/Makefile publish;) \
+		>> ${CONFIG_DASHY}/crontab.logs \
+		2>> ${CONFIG_DASHY}/crontab.logs
 
 .PHONY: remove-unused-backups
 remove-unused-backups:
-	rm ~/.config/dashy/*backup.yml || echo "no backups to remove"
+	@rm ${CONFIG_DASHY}/*backup.yml || echo "no backups to remove"
