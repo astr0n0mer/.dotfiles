@@ -12,7 +12,7 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "vscode.json-language-features"
@@ -46,6 +46,7 @@
   "editor.stickyScroll.enabled": true,
   "editor.wordWrap": "on",
   "files.defaultLanguage": "${activeEditorLanguage}",
+  "files.insertFinalNewline": true,
   "git.autofetch": true,
   "liveSassCompile.settings.autoprefix": [
     "> 1%",

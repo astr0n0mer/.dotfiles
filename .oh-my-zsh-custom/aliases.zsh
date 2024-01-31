@@ -38,3 +38,11 @@ killport() {
 
 # screen
 alias sc="screen"
+
+
+# timer
+timer() {
+    terminal-notifier -message "Timer started for ${1:=25} min" -sound default
+    (sleep $((${1:=25} * 60)) && \
+        terminal-notifier -message ${2:="Timer for ${1:=25} min ended"} -sound default) &
+}
