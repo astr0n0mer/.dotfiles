@@ -122,8 +122,6 @@ Sync/
 .bashrc.save
 .CFUserTextEncoding
 .DS_Store
-# want to track, but need to use no-reply email first in GitHub
-.gitconfig
 .haxornewshistory
 .lesshst
 *.logs

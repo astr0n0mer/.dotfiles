@@ -1,0 +1,8 @@
+[user]
+	email = 42691857+astr0n0mer@users.noreply.github.com
+	name = astr0n0mer
+	signingkey = /Users/imran/.ssh/astr0n0mer.pub
+[gpg]
+	format = ssh
+[commit]
+	gpgsign = true
