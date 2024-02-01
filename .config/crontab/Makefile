@@ -6,7 +6,7 @@ TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
 
 .PHONY: getconfig
 getconfig:
-	@crontab -l > ~/.config/crontab/.config && \
+	crontab -l > ~/.config/crontab/.config && \
 		${TERMINAL_NOTIFIER} \
 		-title crontab \
 		-message "config backup complete" \

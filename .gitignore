@@ -58,6 +58,7 @@ sandbox
 .mozilla/
 .local/*
 !.local/bin/
+.local/bin/2to3
 .local/bin/alerter
 .local/bin/neonmodem
 .local/bin/syncthing
@@ -91,6 +92,7 @@ Applications/
 Desktop/
 Documents/
 Downloads/
+Dropbox/
 Library/*
 !Library/Application?Support/
 Library/Application?Support/*
