@@ -16,6 +16,7 @@ sandbox
 .config/Code/*
 !.config/Code/User
 .config/create-next-app-nodejs/
+.config/crontab/work.*
 .config/dashy/*backup.yml
 .config/dconf/
 .config/Docker?Desktop/

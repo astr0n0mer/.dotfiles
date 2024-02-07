@@ -1,6 +1,7 @@
 CONFIG_MYIP := ~/.config/myip
 NETWORKSETUP := /usr/sbin/networksetup
 IPV4_URL := ipv4.icanhazip.com
+IPV6_URL := icanhazip.com
 
 OS_NAME := $(shell uname -s)
 COPY_TO_CLIPBOARD := $(if $(filter Darwin,$(OS_NAME)), pbcopy, xclip -selection clipboard)
@@ -8,9 +9,19 @@ TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
 						/opt/homebrew/bin/terminal-notifier, \
 						$(HOME)/.local/bin/terminal-notifier)
 
+.PHONY: get-myip
+get-myip:
+	@if [[ "${version}" == "6" ]]; then \
+		curl --silent ${IPV6_URL}; \
+	else \
+		curl --silent ${IPV4_URL}; \
+		make -f ${CONFIG_MYIP}/Makefile record-myip; \
+	fi
+
 .PHONY: record-myip
 record-myip:
-	@# https://stackoverflow.com/a/8542420/7753274
+	@# icanhazip.com ref: https://askubuntu.com/a/145169
+	@# networksetup ref: https://stackoverflow.com/a/8542420/7753274
 	@echo `curl --silent ${IPV4_URL}`$$'\t'`${NETWORKSETUP} -getairportnetwork en0 | cut -c 24-`$$'\t'`date` \
 		>> ${CONFIG_MYIP}/crontab.logs
 
@@ -22,9 +33,9 @@ check-if-ip-has-changed:
 	if [ "$$LAST_RECORDED_IP" != "$$CURRENT_IP" ]; then \
 		${TERMINAL_NOTIFIER} \
 			-title "MyIP" \
-			-message "Your public IP has changed. Click to copy new IP." \
+			-message "Your public IPv4 has changed. New IP copied to clipboard." \
 			-sound default; \
 		printf "$${CURRENT_IP}" | ${COPY_TO_CLIPBOARD}; \
 	else \
-		echo "Your public IP has not changed"; \
+		echo "Your public IPv4 has not changed"; \
 	fi

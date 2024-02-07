@@ -15,18 +15,12 @@ dotedit() {
 
 
 # haxor-news
-alias hn="workon haxor-news && haxor-news && deactivate"
+alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
 # IP address
 myip() {
-    # Reference: https://askubuntu.com/a/145169
-    if [[ "$1" == "v6" ]]; then
-        curl icanhazip.com
-    else
-        curl ipv4.icanhazip.com
-        make --silent -f ~/.config/myip/Makefile record-myip
-    fi
+    make -f ~/.config/myip/Makefile get-myip version="$1"
 }
 
 
