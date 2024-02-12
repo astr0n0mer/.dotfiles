@@ -35,6 +35,7 @@ backup:
 			-sound default; \
 	fi
 
+# I haven't tested this yet
 .PHONY: restore
 restore:
 	@for SETTING in $(SETTINGS); do \

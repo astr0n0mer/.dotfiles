@@ -12,6 +12,7 @@ getconfig:
 		-message "config backup complete" \
 		-sound default
 
+# this is IN-PROGRESS
 .PHONY: check-git-status
 check-git-status:
 	@TOTAL_UNTRACKED=0; \

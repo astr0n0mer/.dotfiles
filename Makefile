@@ -1,30 +1,30 @@
+OS_NAME := $(shell uname -s)
+TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
+						/opt/homebrew/bin/terminal-notifier, \
+						$(HOME)/.local/bin/terminal-notifier)
+
 .PHONY: default
 default:
 	@echo "error: no_target_specified"
-	@make help --silent
 
-.PHONY: help
-help:
-	@echo "Available targets: sync-all, add, commit, push, pull"
+# .PHONY: sync-all
+# sync-all: pull push
 
-.PHONY: sync-all
-sync-all: pull push
+# .PHONY: add
+# add:
+# 	git add .
 
-.PHONY: add
-add:
-	git add .
+# .PHONY: commit
+# commit: add
+# 	git commit -m "$(shell date)"
 
-.PHONY: commit
-commit: add
-	git commit -m "$(shell date)"
+# .PHONY: push
+# push: commit
+# 	git push origin main
 
-.PHONY: push
-push: commit
-	git push origin main
-
-.PHONY: pull
-pull:
-	git pull
+# .PHONY: pull
+# pull:
+# 	git pull
 
 .PHONY: monkeytype-settings.json
 monkeytype-settings.json:
@@ -32,10 +32,29 @@ monkeytype-settings.json:
 
 .PHONY: raycast-settings.rayconfig
 raycast-settings.rayconfig:
-	mv -f ~/Downloads/Raycast*.rayconfig ~/.config/raycast/settings.rayconfig
+	@SOURCE_BACKUP_FILEPATH=~/Downloads/Raycast*.rayconfig; \
+	DESTINATION_FILEPATH=~/.config/raycast/settings.rayconfig; \
+	if mv -f $$SOURCE_BACKUP_FILEPATH $$DESTINATION_FILEPATH; then \
+		MESSAGE="Backup complete"; \
+	else \
+		MESSAGE="No backup file found. No files changed."; \
+	fi; \
+	if [ -n "$(notify)" ]; then \
+		${TERMINAL_NOTIFIER} \
+			-title Raycast \
+			-message "$$MESSAGE" \
+			-sound default; \
+	fi
 
 .PHONY: vimium-options.json
 vimium-options.json:
 	((cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@ > /dev/null ) \
 	&& (mv -f ~/Downloads/$@ ~/.config/vimium/$@)) \
 	|| (echo "\nerror encountered. no files changed.")
+
+.PHONY: cron-daily
+cron-daily:
+	make -f ~/Makefile raycast-settings.rayconfig notify=1 && sleep 1
+	make -f ~/.config/crontab/Makefile getconfig notify=1 && sleep 1
+	make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1
+	make -f ~/.config/macos/Makefile backup notify=1

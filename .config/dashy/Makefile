@@ -41,7 +41,7 @@ publish:
 		${TERMINAL_NOTIFIER} -title Dashy -open ${GITHUB_DASHY} -sound default) || \
 		echo "no changes to publish"
 
-# conf_manager is WIP
+# this is IN-PROGRESS
 .PHONY: setup-conf_manager
 setup-conf_manager:
 	pyenv install 3.12 --skip-existing
@@ -51,6 +51,7 @@ setup-conf_manager:
 	pip install --requirement ${CONFIG_DASHY}/requirements.txt
 	pyenv deactivate
 
+# this is IN-PROGRESS
 .PHONY: run-conf_manager
 run-conf_manager:
 	zsh -c "source ~/.zshrc" && \
