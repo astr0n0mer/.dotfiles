@@ -29,6 +29,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "dotenv.enableAutocloaking": false,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -44,7 +45,33 @@
   "editor.guides.bracketPairs": true,
   "editor.minimap.showSlider": "always",
   "editor.stickyScroll.enabled": true,
+  "editor.tokenColorCustomizations": {
+    "[*Dark*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
+          }
+        }
+      ]
+    },
+    "textMateRules": []
+  },
   "editor.wordWrap": "on",
+  "files.associations": {
+    ".env*": "dotenv"
+  },
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.insertFinalNewline": true,
   "git.autofetch": true,

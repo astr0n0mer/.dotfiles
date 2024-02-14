@@ -92,6 +92,7 @@ plugins=(
     screen
     sudo
     vscode
+    web-search
     yarn
     z
     zsh-autosuggestions
