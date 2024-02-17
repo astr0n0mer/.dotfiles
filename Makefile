@@ -58,3 +58,20 @@ cron-daily:
 	make -f ~/.config/crontab/Makefile getconfig notify=1 && sleep 1
 	make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1
 	make -f ~/.config/macos/Makefile backup notify=1
+
+.PHONY: syncthing-start
+syncthing-start:
+	screen -dmS syncthing-session syncthing
+
+.PHONY: syncthing-stop
+syncthing-stop:
+	pkill syncthing
+
+.PHONY: startup
+startup:
+	${TERMINAL_NOTIFIER} -title "Startup" -message "Running startup commands" -sound default
+	{ \
+		echo; \
+		date; \
+		make -f ~/Makefile syncthing-start; \
+	} >> ~/crontab-startup.logs 2>&1

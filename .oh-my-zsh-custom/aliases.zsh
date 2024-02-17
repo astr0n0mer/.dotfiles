@@ -34,6 +34,11 @@ killport() {
 alias sc="screen"
 
 
+# syncthing
+alias syncstart="make -f ~/Makefile syncthing-start"
+alias syncstop="make -f ~/Makefile syncthing-stop"
+
+
 # timer
 timer() {
     terminal-notifier -message "Timer started for ${1:=25} min" -sound default
