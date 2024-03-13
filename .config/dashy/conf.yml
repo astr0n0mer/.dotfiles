@@ -1,5 +1,5 @@
 appConfig:
-  theme: dracula
+  theme: one-dark
   layout: auto
   iconSize: small
   language: en

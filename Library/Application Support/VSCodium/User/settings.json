@@ -29,7 +29,7 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "dotenv.enableAutocloaking": false,
+  "dotenv.enableAutocloaking": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
@@ -66,7 +66,14 @@
         }
       ]
     },
-    "textMateRules": []
+    "textMateRules": [
+      {
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000"
+        }
+      }
+    ]
   },
   "editor.wordWrap": "on",
   "files.associations": {
@@ -99,7 +106,8 @@
   "window.commandCenter": true,
   "window.titleBarStyle": "custom",
   // "workbench.colorTheme": "GitHub Dark Dimmed",
-  "workbench.colorTheme": "Atom One Dark",
+  // "workbench.colorTheme": "Atom One Dark",
+  "workbench.colorTheme": "Night Owl",
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always"
 }

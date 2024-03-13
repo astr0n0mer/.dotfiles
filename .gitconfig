@@ -6,3 +6,7 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[merge]
+	conflictstyle = zdiff3
+[diff]
+	algorithm = histogram

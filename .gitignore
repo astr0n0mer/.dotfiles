@@ -7,7 +7,11 @@ sandbox
 # system directories
 *cache/
 
+.*auth*
+.android/
 .aws/
+.config/AWS VPN Client/
+.config/AWSVPNClient/
 .config/autostart/
 .config/BraveSoftware/
 .config/caja/
@@ -54,6 +58,7 @@ sandbox
 .ecryptfs
 .gnome/
 .gnupg/
+.gradle/
 .gtkrc*
 .linuxmint/
 .mozilla/
@@ -125,6 +130,8 @@ Sync/
 .DS_Store
 .haxornewshistory
 .lesshst
+*.log
+# need to remove *.logs from here, but need to update all the Makefiles before this
 *.logs
 .psql_history
 .python_history

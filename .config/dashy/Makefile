@@ -64,8 +64,10 @@ run-conf_manager:
 cron:
 	(echo "\n\n======== $(shell date) ========"; \
 		make --silent -f ${CONFIG_DASHY}/Makefile publish;) \
-		>> ${CONFIG_DASHY}/crontab.logs \
-		2>> ${CONFIG_DASHY}/crontab.logs
+		>> ${CONFIG_DASHY}/crontab.logs 2>&1
+		if [ -n "$(notify)" ]; then \
+			${TERMINAL_NOTIFIER} -title "Dashy" -message "Publish complete" -sound default; \
+		fi
 
 .PHONY: remove-unused-backups
 remove-unused-backups:
