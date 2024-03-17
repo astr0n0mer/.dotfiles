@@ -14,8 +14,24 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="muse"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#muse
 # ZSH_THEME="jonathan"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#jonathan
 # ZSH_THEME="half-life"    # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#half-life
-ZSH_THEME="nebirhos"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#nebirhos
-# ZSH_THEME="philips"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#philips
+# ZSH_THEME="nebirhos"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#nebirhos # won't use again: does not print absolute cwd
+# ZSH_THEME="philips"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#philips # won't use again: does not print absolute cwd
+ZSH_THEME="tjkirch"             # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#tjkirch
+# ZSH_THEME="mikeh"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#mikeh
+# ZSH_THEME="trapd00r"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#trapd00r
+# ZSH_THEME="theunraveler"        # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#theunraveler
+# ZSH_THEME="arrow"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#arrow
+# ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#macovsky
+# ZSH_THEME="rgm"                 # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#rgm
+# ZSH_THEME="frontcube"           # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#frontcube
+# ZSH_THEME="crunch"              # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#crunch
+# ZSH_THEME="essembeh"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#essembeh
+# ZSH_THEME="re5et"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#re5et
+# ZSH_THEME="xiong-chiamiov-plus" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#xiong-chiamiov-plus
+# ZSH_THEME="alanpeabody"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#alanpeabody
+# ZSH_THEME="sunrise"             # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#sunrise
+# ZSH_THEME="suvash"              # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#suvash
+# ZSH_THEME="terminalparty"       # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#terminalparty
 # ZSH_THEME="random"
 
 # Set list of themes to pick from when loading at random

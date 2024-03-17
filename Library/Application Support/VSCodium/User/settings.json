@@ -40,6 +40,7 @@
   "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.cursorStyle": "block",
   "editor.fontFamily": "\"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
   "editor.guides.bracketPairs": true,
@@ -82,6 +83,7 @@
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.insertFinalNewline": true,
   "git.autofetch": true,
+  "githubPullRequests.pullBranch": "never",
   "liveSassCompile.settings.autoprefix": [
     "> 1%",
     "last 2 versions"
@@ -107,7 +109,8 @@
   "window.titleBarStyle": "custom",
   // "workbench.colorTheme": "GitHub Dark Dimmed",
   // "workbench.colorTheme": "Atom One Dark",
-  "workbench.colorTheme": "Night Owl",
+  // "workbench.colorTheme": "Night Owl",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always"
 }

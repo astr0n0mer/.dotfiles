@@ -44,6 +44,7 @@ sandbox
 .config/syncthing/
 .config/transmission/
 .config/VSCodium/*
+!.config/VSCodium/patches
 !.config/VSCodium/User
 !.config/VSCodium/product.json
 .config/xed/
