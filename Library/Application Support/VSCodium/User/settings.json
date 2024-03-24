@@ -39,7 +39,7 @@
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.cursorStyle": "block",
-  "editor.fontFamily": "\"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "\"Hack Nerd Font\", \"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
@@ -83,6 +83,12 @@
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.insertFinalNewline": true,
   "git.autofetch": true,
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": false,
+    "scminput": false
+  },
   "githubPullRequests.pullBranch": "never",
   "liveSassCompile.settings.autoprefix": [
     "> 1%",
