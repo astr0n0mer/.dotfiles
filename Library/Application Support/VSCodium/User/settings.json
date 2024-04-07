@@ -90,6 +90,28 @@
     "scminput": false
   },
   "githubPullRequests.pullBranch": "never",
+  "githubPullRequests.queries": [
+    {
+      "label": "Waiting For My Review",
+      "query": "is:open review-requested:${user}"
+    },
+    {
+      "label": "Reviewed By Me",
+      "query": "is:open reviewed-by:${user}"
+    },
+    {
+      "label": "Assigned To Me",
+      "query": "is:open assignee:${user}"
+    },
+    {
+      "label": "Created By Me",
+      "query": "is:open author:${user}"
+    },
+    {
+      "label": "Created By Others",
+      "query": "is:open -author:${user}"
+    }
+  ],
   "liveSassCompile.settings.autoprefix": [
     "> 1%",
     "last 2 versions"
