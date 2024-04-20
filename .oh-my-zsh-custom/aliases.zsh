@@ -1,7 +1,8 @@
 # dashy
 alias dashystart="make -f ~/.config/dashy/Makefile start"
 alias dashystop="make -f ~/.config/dashy/Makefile stop"
-alias dashypublish="make -f ~/.config/dashy/Makefile publish"
+alias dashycleanup="make -f ~/.config/dashy/Makefile cleanup"
+# alias dashypublish="make -f ~/.config/dashy/Makefile publish"
 
 
 # digital-garden

@@ -2,6 +2,9 @@ CONFIG_DASHY := ~/.config/dashy
 GITHUB_DASHY := https://github.com/astr0n0mer/dashy
 PROXY_DASHY := ~/projects/dashy
 PROXY_DASHY_PARENT := ~/projects
+DOCKER_IMAGE_TAG := 3.0.0
+CONTAINER_PORT := 8080
+LOCALHOST_PORT := 8080
 
 OS_NAME := $(shell uname -s)
 TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
@@ -16,49 +19,34 @@ setup-dashy: remove-unused-backups
 .PHONY: start
 start:
 	docker run -d \
-		-p 4000:80 \
-		-v ${CONFIG_DASHY}:/app/public \
+		-p ${LOCALHOST_PORT}:${CONTAINER_PORT} \
+		-v ${CONFIG_DASHY}:/app/user-data \
 		--name dashy \
 		--restart=always \
-		lissy93/dashy:latest
+		lissy93/dashy:${DOCKER_IMAGE_TAG}
 	# Reference: https://stackoverflow.com/a/38147878/7753274
-	python3 -m webbrowser http://localhost:4000/
+	python3 -m webbrowser http://localhost:${LOCALHOST_PORT}/
 
 .PHONY: stop
 stop:
-	docker stop dashy
-	docker rm dashy
+	docker stop dashy > /dev/null
+	docker rm dashy > /dev/null
 
-.PHONY: publish
-publish:
-	cp -f ${CONFIG_DASHY}/conf.yml ${CONFIG_DASHY}/work.yml ${PROXY_DASHY}/public/ || \
-		echo "cp: ${PROXY_DASHY}/public/work.yml and ${CONFIG_DASHY}/work.yml are identical (not copied)."
-	(cd ${PROXY_DASHY}/public && \
-		git add *.yml && \
-		git commit -m "$(shell date)" && \
-		git push && \
-		echo "Pushed latest changes to GitHub. Click to visit." | \
-		${TERMINAL_NOTIFIER} -title Dashy -open ${GITHUB_DASHY} -sound default) || \
-		echo "no changes to publish"
+.PHONY: cleanup
+cleanup: stop
+	docker rmi lissy93/dashy:${DOCKER_IMAGE_TAG}
 
-# this is IN-PROGRESS
-.PHONY: setup-conf_manager
-setup-conf_manager:
-	pyenv install 3.12 --skip-existing
-	pyenv virtualenv 3.12 dashy
-	pyenv virtualenvs
-	pyenv activate dashy
-	pip install --requirement ${CONFIG_DASHY}/requirements.txt
-	pyenv deactivate
-
-# this is IN-PROGRESS
-.PHONY: run-conf_manager
-run-conf_manager:
-	zsh -c "source ~/.zshrc" && \
-		pyenv activate dashy && \
-		python ${CONFIG_DASHY}/conf_manager.py && \
-		pyenv deactivate
-# conf_manager is WIP
+# .PHONY: publish
+# publish:
+# 	cp -f ${CONFIG_DASHY}/conf.yml ${CONFIG_DASHY}/work.yml ${PROXY_DASHY}/public/ || \
+# 		echo "cp: ${PROXY_DASHY}/public/work.yml and ${CONFIG_DASHY}/work.yml are identical (not copied)."
+# 	(cd ${PROXY_DASHY}/public && \
+# 		git add *.yml && \
+# 		git commit -m "$(shell date)" && \
+# 		git push && \
+# 		echo "Pushed latest changes to GitHub. Click to visit." | \
+# 		${TERMINAL_NOTIFIER} -title Dashy -open ${GITHUB_DASHY} -sound default) || \
+# 		echo "no changes to publish"
 
 .PHONY: cron
 cron:

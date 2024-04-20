@@ -42,4 +42,21 @@ for key, val in bookmarks_dict["roots"].items():
         raw_section=val, all_sections=all_sections, raw_section_key_in_all_sections=""
     )
 
-print(json.dumps(all_sections, indent=2))
+formatted_sections_for_dashy = {
+    "sections": [
+        {
+            "name": section_name,
+            "displayData": {"hideForGuests": True},
+            "items": [
+                {
+                    "title" if section_key == "name" else section_key: section_value
+                    for section_key, section_value in section.items()
+                }
+                for section in section_items
+            ],
+        }
+        for section_name, section_items in all_sections.items()
+    ]
+}
+# JSON -> YAML at https://jsonformatter.org/json-to-yaml
+print(json.dumps(formatted_sections_for_dashy, indent=2))

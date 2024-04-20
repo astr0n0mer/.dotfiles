@@ -18,31 +18,22 @@ sections:
       collapsed: false
       hideForGuests: true
     items:
-      - &ref_0
-        title: Site
+      - title: Site
         icon: https://procedure.tech/wp-content/themes/proceduretech/img/favicon.jpg
         url: https://procedure.tech/
         id: 0_937_site
-      - &ref_1
-        title: Repositories
+      - title: Repositories
         icon: favicon
         url: https://github.com/orgs/proceduretech/repositories
-        id: 1_937_github
-      - &ref_2
-        title: Twitter
+        id: 1_937_repositories
+      - title: Twitter
         icon: favicon
         url: https://twitter.com/ProcedureHQ
         id: 2_937_twitter
-      - &ref_3
-        title: YouTube
+      - title: YouTube
         icon: favicon
         url: https://www.youtube.com/@ProcedureHQ
         id: 3_937_youtube
-    filteredItems:
-      - *ref_0
-      - *ref_1
-      - *ref_2
-      - *ref_3
   - name: Timelyschools
     icon: >-
       https://images.squarespace-cdn.com/content/v1/645d110ab878a54b2b9e4165/4f484b10-d769-4ad2-8d3e-52bacf2ed82f/favicon.ico?format=100w
@@ -53,48 +44,43 @@ sections:
       collapsed: false
       hideForGuests: true
     items:
-      - &ref_4
-        title: Repositories
+      - title: Repositories
         icon: favicon
         url: https://github.com/orgs/timelyschools/repositories
-        id: 2_1391_timelyservicepulls
-      - &ref_5
-        title: Data Ingestion 1.0
+        id: 0_1391_repositories
+      - title: Data Ingestion 1.0
         icon: favicon
         url: https://miro.com/app/board/uXjVNKMM6nQ=/?share_link_id=213429650478
-        id: 7_1391_dataingestion
-      - &ref_6
-        title: Planning Meetings
+        id: 1_1391_dataingestion
+      - title: Planning Meetings
         icon: favicon
         url: >-
           https://www.notion.so/timelyschools/Timely-app-Planning-Meetings-7cd118392adb454dbe3d49a368f89fb0
-        id: 4_1391_planningmeetings
-      - &ref_7
-        title: Imran's Tasks
+        id: 2_1391_planningmeetings
+      - title: Imran's Tasks
         icon: https://www.notion.so/images/favicon.ico
         url: >-
           https://www.notion.so/timelyschools/34a2d172e9604a5f892b3565323bedc2?v=948b7856d8c341d9bfca3d2a0122d491
-        id: 5_1391_imranstasks
-      - &ref_8
-        title: Site
+        id: 3_1391_imranstasks
+      - title: Site
         icon: >-
           https://images.squarespace-cdn.com/content/v1/645d110ab878a54b2b9e4165/4f484b10-d769-4ad2-8d3e-52bacf2ed82f/favicon.ico?format=100w
         url: https://www.timelyschools.com/
-        id: 0_1391_site
-      - &ref_9
-        title: Files
+        id: 4_1391_site
+      - title: Files
         icon: favicon
         url: https://files.timelyschools.com/files
-      - &ref_10
-        title: 1Password
+        id: 5_1391_files
+      - title: 1Password
         icon: https://app.1password.com/images/favicon.ico
         url: https://timely.1password.com/
-        id: 1_1391_password
-    filteredItems:
-      - *ref_4
-      - *ref_5
-      - *ref_6
-      - *ref_7
-      - *ref_8
-      - *ref_9
-      - *ref_10
+        id: 6_1391_password
+pages:
+  - name: Bookmarks
+    path: bookmarks.yml
+    displayData:
+      hideForGuests: false
+  - name: Work
+    path: work.yml
+    displayData:
+      hideForGuests: true
