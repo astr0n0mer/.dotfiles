@@ -56,7 +56,7 @@ startup:
 		echo "\n======== $(shell date) ========"; \
 		make -f ~/Makefile dotfiles-pull; \
 		make -f ~/Makefile syncthing-start; \
-	} >> ~/crontab-startup.logs 2>&1
+	} >> ~/crontab-startup.log 2>&1
 
 .PHONY: cron-daily
 cron-daily:
@@ -67,4 +67,4 @@ cron-daily:
 		make -f ~/.config/crontab/Makefile getconfig notify=1 && sleep 1; \
 		make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1; \
 		make -f ~/.config/macos/Makefile backup notify=1; \
-	} >> ~/crontab-daily.logs 2>&1
+	} >> ~/crontab-daily.log 2>&1

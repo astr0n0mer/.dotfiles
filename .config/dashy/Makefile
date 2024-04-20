@@ -52,7 +52,7 @@ cleanup: stop
 cron:
 	(echo "\n\n======== $(shell date) ========"; \
 		make --silent -f ${CONFIG_DASHY}/Makefile publish;) \
-		>> ${CONFIG_DASHY}/crontab.logs 2>&1
+		>> ${CONFIG_DASHY}/crontab.log 2>&1
 		if [ -n "$(notify)" ]; then \
 			${TERMINAL_NOTIFIER} -title "Dashy" -message "Publish complete" -sound default; \
 		fi

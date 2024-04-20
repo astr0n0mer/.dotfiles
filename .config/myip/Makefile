@@ -23,11 +23,11 @@ record-myip:
 	@# icanhazip.com ref: https://askubuntu.com/a/145169
 	@# networksetup ref: https://stackoverflow.com/a/8542420/7753274
 	@echo `curl --silent ${IPV4_URL}`$$'\t'`${NETWORKSETUP} -getairportnetwork en0 | cut -c 24-`$$'\t'`date` \
-		>> ${CONFIG_MYIP}/crontab.logs
+		>> ${CONFIG_MYIP}/crontab.log
 
 .PHONY: check-if-ip-has-changed
 check-if-ip-has-changed:
-	@LAST_RECORDED_IP="$$(tail -n 1 ${CONFIG_MYIP}/crontab.logs | cut -f1)"; \
+	@LAST_RECORDED_IP="$$(tail -n 1 ${CONFIG_MYIP}/crontab.log | cut -f1)"; \
 	CURRENT_IP="$$(curl --silent ${IPV4_URL})"; \
 	make -f ${CONFIG_MYIP}/Makefile record-myip; \
 	if [ "$$LAST_RECORDED_IP" != "$$CURRENT_IP" ]; then \
