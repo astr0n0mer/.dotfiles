@@ -97,7 +97,7 @@
     },
     {
       "label": "Reviewed By Me",
-      "query": "is:open reviewed-by:${user}"
+      "query": "is:open reviewed-by:${user} -author:${user}"
     },
     {
       "label": "Assigned To Me",

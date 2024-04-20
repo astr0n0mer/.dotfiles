@@ -45,6 +45,10 @@ syncthing-start:
 syncthing-stop:
 	pkill syncthing
 
+.PHONY: syncthing-open
+syncthing-open:
+	open http://localhost:8384/
+
 .PHONY: startup
 startup:
 	${TERMINAL_NOTIFIER} -title "Cron" -message "Running startup commands" -sound default

@@ -38,9 +38,21 @@ killport() {
 alias sc="screen"
 
 
+# screenshot
+# get last screenshot
+SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"
+lss() {
+    echo "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n 1)"
+}
+olss() {
+    open "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n 1)"
+}
+
+
 # syncthing
 alias syncstart="make -f ~/Makefile syncthing-start"
 alias syncstop="make -f ~/Makefile syncthing-stop"
+alias syncopen="make -f ~/Makefile syncthing-open"
 
 
 # timer
