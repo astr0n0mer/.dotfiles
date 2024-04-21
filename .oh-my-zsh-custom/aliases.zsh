@@ -1,3 +1,7 @@
+# brave
+alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; cat ~/.config/brave/get-synced-tabs.js | pbcopy"
+
+
 # dashy
 alias dashystart="make -f ~/.config/dashy/Makefile start"
 alias dashystop="make -f ~/.config/dashy/Makefile stop"

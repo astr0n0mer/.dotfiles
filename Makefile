@@ -7,6 +7,25 @@ TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
 default:
 	@echo "error: no_target_specified"
 
+# sync local config files to remote
+.PHONY: dotfiles-pull
+dotfiles-pull:
+	export GIT_DIR=${HOME}/.dotfiles; export GIT_WORK_TREE=${HOME}; git fetch --all && git pull;
+
+# sync local files across devices
+.PHONY: syncthing-start
+syncthing-start:
+	screen -dmS syncthing-session ~/.local/bin/syncthing
+
+.PHONY: syncthing-stop
+syncthing-stop:
+	pkill syncthing
+
+.PHONY: syncthing-open
+syncthing-open:
+	open http://localhost:8384/
+
+# config file backups
 .PHONY: monkeytype-settings.json
 monkeytype-settings.json:
 	xclip -selection c -out | json_xs > ~/.config/monkeytype/settings.json
@@ -33,22 +52,7 @@ vimium-options.json:
 	&& (mv -f ~/Downloads/$@ ~/.config/vimium/$@)) \
 	|| (echo "\nerror encountered. no files changed.")
 
-.PHONY: dotfiles-pull
-dotfiles-pull:
-	export GIT_DIR=${HOME}/.dotfiles; export GIT_WORK_TREE=${HOME}; git fetch --all && git pull;
-
-.PHONY: syncthing-start
-syncthing-start:
-	screen -dmS syncthing-session ~/.local/bin/syncthing
-
-.PHONY: syncthing-stop
-syncthing-stop:
-	pkill syncthing
-
-.PHONY: syncthing-open
-syncthing-open:
-	open http://localhost:8384/
-
+# cron jobs
 .PHONY: startup
 startup:
 	${TERMINAL_NOTIFIER} -title "Cron" -message "Running startup commands" -sound default
@@ -68,3 +72,8 @@ cron-daily:
 		make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1; \
 		make -f ~/.config/macos/Makefile backup notify=1; \
 	} >> ~/crontab-daily.log 2>&1
+
+# setup
+.PHONY: mysetup
+mysetup:
+	make -f ~/.config/mysetup/Makefile all
