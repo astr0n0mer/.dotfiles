@@ -20,10 +20,17 @@ gh:
 
 
 .PHONY: tools
-tools: getnf
+tools: getnf ohmyzsh
 
 .PHONY: getnf
 getnf:
 	@which getnf || ( \
 		curl -fsSL https://raw.githubusercontent.com/ronniedroid/getnf/master/install.sh | bash && \
 		getnf --help)
+
+.PHONY: ohmyzsh
+ohmyzsh:
+	@which zsh && \
+		(which omz || \
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)") || \
+		echo "zsh is not installed"

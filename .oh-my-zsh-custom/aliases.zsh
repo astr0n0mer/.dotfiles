@@ -54,6 +54,10 @@ olss() {
 }
 
 
+# speedtest
+alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
+
+
 # syncthing
 alias syncstart="make -f ~/Makefile syncthing-start"
 alias syncstop="make -f ~/Makefile syncthing-stop"

@@ -62,6 +62,8 @@ sections:
         url: >-
           https://www.notion.so/timelyschools/34a2d172e9604a5f892b3565323bedc2?v=948b7856d8c341d9bfca3d2a0122d491
         id: 3_1391_imranstasks
+      - title: Sentry
+        url: https://timely-schools.sentry.io/issues/?project=4506595403694080
       - title: Site
         icon: >-
           https://images.squarespace-cdn.com/content/v1/645d110ab878a54b2b9e4165/4f484b10-d769-4ad2-8d3e-52bacf2ed82f/favicon.ico?format=100w

@@ -97,7 +97,7 @@
     },
     {
       "label": "Reviewed By Me",
-      "query": "is:open reviewed-by:${user} -author:${user}"
+      "query": "is:open reviewed-by:${user} -review:approved -author:${user}"
     },
     {
       "label": "Assigned To Me",
@@ -110,6 +110,10 @@
     {
       "label": "Created By Others",
       "query": "is:open -author:${user}"
+    },
+    {
+      "label": "Approved",
+      "query": "is:open review:approved"
     }
   ],
   "liveSassCompile.settings.autoprefix": [
@@ -138,7 +142,8 @@
   // "workbench.colorTheme": "GitHub Dark Dimmed",
   // "workbench.colorTheme": "Atom One Dark",
   // "workbench.colorTheme": "Night Owl",
-  "workbench.colorTheme": "One Dark Pro",
+  // "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Bearded Theme Arc EolStorm",
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always"
 }

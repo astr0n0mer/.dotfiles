@@ -48,9 +48,10 @@ raycast-settings.rayconfig:
 
 .PHONY: vimium-options.json
 vimium-options.json:
-	((cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@ > /dev/null ) \
-	&& (mv -f ~/Downloads/$@ ~/.config/vimium/$@)) \
-	|| (echo "\nerror encountered. no files changed.")
+	test -f ~/Downloads/$@ && \
+		((cat ~/Downloads/$@ | json_xs | tee ~/Downloads/$@ > /dev/null ) && \
+		(mv -f ~/Downloads/$@ ~/.config/vimium/$@)) || \
+		(open -a 'Brave Browser' chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html)
 
 # cron jobs
 .PHONY: startup

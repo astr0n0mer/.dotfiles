@@ -24,6 +24,7 @@ start:
 		--name dashy \
 		--restart=always \
 		lissy93/dashy:${DOCKER_IMAGE_TAG}
+	sleep 1
 	# Reference: https://stackoverflow.com/a/38147878/7753274
 	python3 -m webbrowser http://localhost:${LOCALHOST_PORT}/
 
