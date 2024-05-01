@@ -8,6 +8,7 @@ sandbox
 *cache/
 
 .*auth*
+.3T/
 .android/
 .aws/
 .config/AWS VPN Client/
@@ -85,6 +86,7 @@ master/
 .pyenv/
 .rest-client/
 .ssh/
+.swt/
 .Trash/
 .virtualenvs/
 .vscode/*

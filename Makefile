@@ -53,6 +53,13 @@ vimium-options.json:
 		(mv -f ~/Downloads/$@ ~/.config/vimium/$@)) || \
 		(open -a 'Brave Browser' chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html)
 
+.PHONY: tampermonkey-backup.json
+tampermonkey-backup.json:
+	test -f ~/Downloads/tampermonkey-backup-*.txt && \
+		((cat ~/Downloads/tampermonkey-backup-*.txt | json_xs | tee ~/.config/tampermonkey/$@ > /dev/null ) && \
+		(trash ~/Downloads/tampermonkey-backup-*.txt)) || \
+		(open -a 'Brave Browser' chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils)
+
 # cron jobs
 .PHONY: startup
 startup:
