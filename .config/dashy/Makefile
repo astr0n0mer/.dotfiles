@@ -37,17 +37,18 @@ stop:
 cleanup: stop
 	docker rmi lissy93/dashy:${DOCKER_IMAGE_TAG}
 
-# .PHONY: publish
-# publish:
-# 	cp -f ${CONFIG_DASHY}/conf.yml ${CONFIG_DASHY}/work.yml ${PROXY_DASHY}/public/ || \
-# 		echo "cp: ${PROXY_DASHY}/public/work.yml and ${CONFIG_DASHY}/work.yml are identical (not copied)."
-# 	(cd ${PROXY_DASHY}/public && \
-# 		git add *.yml && \
-# 		git commit -m "$(shell date)" && \
-# 		git push && \
-# 		echo "Pushed latest changes to GitHub. Click to visit." | \
-# 		${TERMINAL_NOTIFIER} -title Dashy -open ${GITHUB_DASHY} -sound default) || \
-# 		echo "no changes to publish"
+.PHONY: publish
+publish:
+	cp ${CONFIG_DASHY}/*.yml ${PROXY_DASHY}/user-data/ && \
+		trash ${PROXY_DASHY}/user-data/*backup.yml || \
+		echo "cp: ${PROXY_DASHY} and ${CONFIG_DASHY}/user-data are identical (not copied)."
+	(cd ${PROXY_DASHY}/user-data && \
+		git add *.yml && \
+		git commit -m "$(shell date)" && \
+		git push && \
+		echo "Pushed latest changes to GitHub. Click to visit." | \
+		${TERMINAL_NOTIFIER} -title Dashy -open ${GITHUB_DASHY} -sound default) || \
+		echo "no changes to publish"
 
 .PHONY: cron
 cron:
