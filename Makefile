@@ -15,7 +15,7 @@ dotfiles-pull:
 # sync local files across devices
 .PHONY: syncthing-start
 syncthing-start:
-	screen -dmS syncthing-session ~/.local/bin/syncthing
+	screen -dmS syncthing-session syncthing
 
 .PHONY: syncthing-stop
 syncthing-stop:
