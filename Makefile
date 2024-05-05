@@ -63,7 +63,7 @@ tampermonkey-backup.json:
 # cron jobs
 .PHONY: startup
 startup:
-	${TERMINAL_NOTIFIER} -title "Cron" -message "Running startup commands" -sound default
+	${TERMINAL_NOTIFIER} -title "Cron startup" -message "Running startup commands" -sound default
 	{ \
 		echo "\n======== $(shell date) ========"; \
 		make -f ~/Makefile dotfiles-pull; \
@@ -72,7 +72,7 @@ startup:
 
 .PHONY: cron-daily
 cron-daily:
-	${TERMINAL_NOTIFIER} -title "Cron" -message "Running daily commands" -sound default
+	${TERMINAL_NOTIFIER} -title "Cron daily" -message "Running daily commands" -sound default
 	{ \
 		echo "\n======== $(shell date) ========"; \
 		make -f ~/Makefile raycast-settings.rayconfig notify=1 && sleep 1; \
@@ -80,6 +80,10 @@ cron-daily:
 		make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1; \
 		make -f ~/.config/macos/Makefile backup notify=1; \
 	} >> ~/crontab-daily.log 2>&1
+
+.PHONY: cron-weekly
+cron-weekly:
+	${TERMINAL_NOTIFIER} -title "Cron weekly" -message "not implemented yet" -sound default
 
 # setup
 .PHONY: mysetup

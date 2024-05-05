@@ -37,7 +37,6 @@
     "source.organizeImports": "always"
   },
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": "explicit",
   "editor.cursorStyle": "block",
   "editor.fontFamily": "\"Hack Nerd Font\", \"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
