@@ -47,7 +47,7 @@
          "uuid" : "265ce776-8327-46cc-85db-64facbf00116"
       },
       {
-         "enabled" : false,
+         "enabled" : true,
          "name" : "HackerNews Dark Mode",
          "options" : {
             "check_for_updates" : true,

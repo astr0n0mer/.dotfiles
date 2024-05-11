@@ -2,6 +2,9 @@ OS_NAME := $(shell uname -s)
 TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
 						/opt/homebrew/bin/terminal-notifier, \
 						$(HOME)/.local/bin/terminal-notifier)
+PASTE := $(if $(filter Darwin,$(OS_NAME)), \
+			pbpaste, \
+			xclip -selection c -out)
 
 .PHONY: default
 default:
@@ -28,7 +31,8 @@ syncthing-open:
 # config file backups
 .PHONY: monkeytype-settings.json
 monkeytype-settings.json:
-	xclip -selection c -out | json_xs > ~/.config/monkeytype/settings.json
+	# open https://monkeytype.com/settings#exportSettingsButton
+	${PASTE} | json_xs > ~/.config/monkeytype/settings.json
 
 .PHONY: raycast-settings.rayconfig
 raycast-settings.rayconfig:
