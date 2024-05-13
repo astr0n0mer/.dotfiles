@@ -83,6 +83,7 @@ cron-daily:
 		make -f ~/.config/crontab/Makefile getconfig notify=1 && sleep 1; \
 		make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1; \
 		make -f ~/.config/macos/Makefile backup notify=1; \
+		make -f ~/.config/VSCodium/Makefile backup notify=1; \
 	} >> ~/crontab-daily.log 2>&1
 
 .PHONY: cron-weekly

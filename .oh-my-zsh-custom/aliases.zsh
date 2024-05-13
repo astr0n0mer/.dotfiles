@@ -10,7 +10,7 @@ alias dashypublish="make -f ~/.config/dashy/Makefile publish"
 
 
 # digital-garden
-alias gardenpublish="make --silent -f ~/projects/digital-garden/Makefile publish"
+alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 
 
 # .dotfiles
@@ -19,7 +19,7 @@ dot() {
 }
 
 dotedit() {
-    GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME ${1:-codium} --profile ${2:-code-python} $HOME
+    GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME ${1:-codium} --profile ${2:-codium-python} $HOME
 }
 
 

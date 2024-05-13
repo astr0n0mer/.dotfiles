@@ -1,9 +1,24 @@
 .PHONY: all
 all: prerequisites tools
 
-
 .PHONY: prerequisites
-prerequisites: homebrew gh
+prerequisites: homebrew gh node
+
+.PHONY: tools
+tools: getnf omz
+
+
+.PHONY: getnf
+getnf:
+	@which getnf || ( \
+		curl -fsSL https://raw.githubusercontent.com/ronniedroid/getnf/master/install.sh | bash && \
+		getnf --help)
+
+.PHONY: gh
+gh:
+	@which gh || ( \
+		brew install gh && \
+		gh --version)
 
 .PHONY: homebrew
 homebrew:
@@ -12,25 +27,28 @@ homebrew:
 		(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> ~/.zprofile && \
 		eval "$(/opt/homebrew/bin/brew shellenv)")
 
-.PHONY: gh
-gh:
-	@which gh || ( \
-		brew install gh && \
-		gh --version)
+.PHONY: node
+node: nvm
+	@node --version || ( \
+		nvm install --lts && \
+		nvm current && \
+		node --version)
 
+.PHONY: nvm
+nvm:
+	@test -d ~/.nvm || ( \
+		curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash && \
+		command -v nvm && \
+		nvm --version)
 
-.PHONY: tools
-tools: getnf ohmyzsh
+.PHONY: omz
+omz: zsh
+	@which omz || ( \
+		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)")
 
-.PHONY: getnf
-getnf:
-	@which getnf || ( \
-		curl -fsSL https://raw.githubusercontent.com/ronniedroid/getnf/master/install.sh | bash && \
-		getnf --help)
-
-.PHONY: ohmyzsh
-ohmyzsh:
-	@which zsh && \
-		(which omz || \
-		sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)") || \
-		echo "zsh is not installed"
+.PHONY: zsh
+zsh:
+	@which zsh || ( \
+		apt install zsh && \
+		chsh -s $(shell which zsh) && \
+		zsh --version)

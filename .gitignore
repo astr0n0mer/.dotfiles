@@ -47,6 +47,8 @@ sandbox
 .config/VSCodium/*
 !.config/VSCodium/patches
 !.config/VSCodium/User
+!.config/VSCodium/Makefile
+!.config/VSCodium/*.code-profile
 !.config/VSCodium/product.json
 .config/xed/
 .config/xviewer/
