@@ -1,7 +1,4 @@
 OS_NAME := $(shell uname -s)
-TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
-						/opt/homebrew/bin/terminal-notifier, \
-						$(HOME)/.local/bin/terminal-notifier)
 PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \
 			xclip -selection c -out)
@@ -83,7 +80,10 @@ cron-daily:
 		make -f ~/.config/crontab/Makefile getconfig notify=1 && sleep 1; \
 		make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1; \
 		make -f ~/.config/macos/Makefile backup notify=1; \
-		make -f ~/.config/VSCodium/Makefile backup notify=1; \
+		make -f ~/.config/VSCodium/Makefile backup && \
+			${TERMINAL_NOTIFIER} -title "VSCodium" -message "Backup complete" -sound default; \
+		make -f ~/.config/mysetup/Makefile backup && \
+			${TERMINAL_NOTIFIER} -title "MySetup" -message "Backup complete" -sound default; \
 	} >> ~/crontab-daily.log 2>&1
 
 .PHONY: cron-weekly
@@ -94,3 +94,9 @@ cron-weekly:
 .PHONY: mysetup
 mysetup:
 	make -f ~/.config/mysetup/Makefile all
+
+# ========================================================
+include ~/.config/utils/Makefile
+.PHONY: testing-import
+testing-import:
+	${TERMINAL_NOTIFIER} -title "Testing import" -message "Imported utils" -sound default

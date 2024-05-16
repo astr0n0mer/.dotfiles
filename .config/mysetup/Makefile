@@ -1,11 +1,15 @@
 .PHONY: all
-all: prerequisites tools
+all: prerequisites cli-tools gui-tools
 
 .PHONY: prerequisites
-prerequisites: homebrew gh node
+prerequisites: homebrew node
 
-.PHONY: tools
-tools: getnf omz
+.PHONY: cli-tools
+cli-tools: getnf omz
+
+.PHONY: gui-tools
+gui-tools:
+	echo "No GUI tools to install"
 
 
 .PHONY: getnf
@@ -13,12 +17,6 @@ getnf:
 	@which getnf || ( \
 		curl -fsSL https://raw.githubusercontent.com/ronniedroid/getnf/master/install.sh | bash && \
 		getnf --help)
-
-.PHONY: gh
-gh:
-	@which gh || ( \
-		brew install gh && \
-		gh --version)
 
 .PHONY: homebrew
 homebrew:
@@ -52,3 +50,11 @@ zsh:
 		apt install zsh && \
 		chsh -s $(shell which zsh) && \
 		zsh --version)
+
+.PHONY: backup
+backup:
+	brew bundle dump
+
+.PHONY: restore
+restore:
+	brew bundle install

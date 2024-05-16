@@ -96,7 +96,7 @@
     },
     {
       "label": "Reviewed By Me",
-      "query": "is:open reviewed-by:${user} -review:approved -author:${user}"
+      "query": "is:open reviewed-by:${user} -author:${user} -review:approved"
     },
     {
       "label": "Assigned To Me",
@@ -108,13 +108,14 @@
     },
     {
       "label": "Created By Others",
-      "query": "is:open -author:${user}"
+      "query": "is:open -author:${user} -review:approved"
     },
     {
       "label": "Approved",
       "query": "is:open review:approved"
     }
   ],
+  "githubPullRequests.showPullRequestNumberInTree": true,
   "liveSassCompile.settings.autoprefix": [
     "> 1%",
     "last 2 versions"
@@ -144,6 +145,7 @@
   // "workbench.colorTheme": "One Dark Pro",
   // "workbench.colorTheme": "Bearded Theme Arc EolStorm",
   "workbench.colorTheme": "Bearded Theme HC Midnight Void",
+  "workbench.list.horizontalScrolling": true,
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always"
 }
