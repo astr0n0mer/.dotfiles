@@ -53,8 +53,8 @@ zsh:
 
 .PHONY: backup
 backup:
-	brew bundle dump
+	brew bundle dump --global
 
 .PHONY: restore
 restore:
-	brew bundle install
+	brew bundle install --global
