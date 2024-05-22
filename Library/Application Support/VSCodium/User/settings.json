@@ -76,6 +76,8 @@
     ]
   },
   "editor.wordWrap": "on",
+  "extensions.autoUpdate": "onlySelectedExtensions",
+  "extensions.ignoreRecommendations": true,
   "files.associations": {
     ".env*": "dotenv"
   },
@@ -92,23 +94,23 @@
   "githubPullRequests.queries": [
     {
       "label": "Waiting For My Review",
-      "query": "is:open review-requested:${user}"
+      "query": "is:open review-requested:${user} sort:updated-desc"
     },
     {
       "label": "Reviewed By Me",
-      "query": "is:open reviewed-by:${user} -author:${user} -review:approved"
+      "query": "is:open reviewed-by:${user} -author:${user} -review:approved sort:updated-desc"
     },
     {
       "label": "Assigned To Me",
-      "query": "is:open assignee:${user}"
+      "query": "is:open assignee:${user} sort:updated-desc"
     },
     {
       "label": "Created By Me",
-      "query": "is:open author:${user}"
+      "query": "is:open author:${user} sort:updated-desc"
     },
     {
       "label": "Created By Others",
-      "query": "is:open -author:${user} -review:approved"
+      "query": "is:open -author:${user} -review:approved sort:updated-desc"
     },
     {
       "label": "Approved",
@@ -133,6 +135,7 @@
   "liveSassCompile.settings.showOutputWindowOn": "Error",
   "liveSassCompile.settings.useNewCompiler": false,
   "liveServer.settings.NoBrowser": true,
+  "rest-client.enableTelemetry": false,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.enableMultiLinePasteWarning": false,
