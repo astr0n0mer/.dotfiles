@@ -450,6 +450,97 @@
             "ts" : 1716497641205
          },
          "uuid" : "b5b966a8-cb9b-4b16-8494-cd591a7ba559"
+      },
+      {
+         "enabled" : true,
+         "name" : "YouTube Channel: Copy banner",
+         "options" : {
+            "check_for_updates" : true,
+            "comment" : null,
+            "compat_foreach" : false,
+            "compat_metadata" : false,
+            "compat_powerful_this" : null,
+            "compat_wrappedjsobject" : false,
+            "compatopts_for_requires" : true,
+            "noframes" : null,
+            "override" : {
+               "merge_connects" : true,
+               "merge_excludes" : true,
+               "merge_includes" : true,
+               "merge_matches" : true,
+               "orig_connects" : [],
+               "orig_excludes" : [],
+               "orig_includes" : [],
+               "orig_matches" : [
+                  "https://www.youtube.com/@*",
+                  "https://www.youtube.com/channel/*"
+               ],
+               "orig_noframes" : null,
+               "orig_run_at" : "document-idle",
+               "use_blockers" : [],
+               "use_connects" : [],
+               "use_excludes" : [],
+               "use_includes" : [],
+               "use_matches" : []
+            },
+            "run_at" : null,
+            "sandbox" : null,
+            "tab_types" : null,
+            "unwrap" : null,
+            "user_modified" : null
+         },
+         "position" : 11,
+         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBZb3VUdWJlIENoYW5uZWw6IENvcHkgYmFubmVyCi8vIEBuYW1lc3BhY2UgICAgaHR0cDovL3RhbXBlcm1vbmtleS5uZXQvCi8vIEB2ZXJzaW9uICAgICAgMjAyNC0wNS0yNAovLyBAZGVzY3JpcHRpb24gIHRyeSB0byB0YWtlIG92ZXIgdGhlIHdvcmxkIQovLyBAYXV0aG9yICAgICAgIFlvdQovLyBAbWF0Y2ggICAgICAgIGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL0AqCi8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC8qCi8vIEBpY29uICAgICAgICAgaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zMi9mYXZpY29ucz9zej02NCZkb21haW49eW91dHViZS5jb20KLy8gQGdyYW50ICAgICAgICBub25lCi8vID09L1VzZXJTY3JpcHQ9PQoKInVzZSBzdHJpY3QiOwoKZnVuY3Rpb24gZ2V0Q2hhbm5lbEJhbm5lckFzTWFya2Rvd24oKSB7CiAgY29uc3QgY2hhbm5lbE5hbWUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKAogICAgInl0LWZvcm1hdHRlZC1zdHJpbmcjdGV4dCIKICApPy50ZXh0Q29udGVudDsKICBjb25zdCBjaGFubmVsSGFuZGxlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiI2NoYW5uZWwtaGFuZGxlIik/LnRleHRDb250ZW50OwogIGNvbnN0IGNoYW5uZWxCYW5uZXJJbWcgPSBnZXRDb21wdXRlZFN0eWxlKAogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigieXRkLWM0LXRhYmJlZC1oZWFkZXItcmVuZGVyZXIiKQogICkuZ2V0UHJvcGVydHlWYWx1ZSgiLS15dC1jaGFubmVsLWJhbm5lciIpOwogIGNvbnN0IGNoYW5uZWxCYW5uZXJJbWdGb3JtYXR0ZWQgPSBjaGFubmVsQmFubmVySW1nCiAgICAucmVwbGFjZSgidXJsKCIsICIiKQogICAgLnJlcGxhY2UoIikiLCAiIik7CgogIGNvbnN0IGZvcm1hdHRlZFRleHQgPSBgIVske2NoYW5uZWxOYW1lfSBvbiBZb3VUdWJlXSgke2NoYW5uZWxCYW5uZXJJbWdGb3JtYXR0ZWR9KVxuI1tbWW91VHViZS9DaGFubmVsXV1cbltZb3VUdWJlXShodHRwczovL3d3dy55b3V0dWJlLmNvbS8ke2NoYW5uZWxIYW5kbGV9KWA7CiAgcmV0dXJuIGZvcm1hdHRlZFRleHQ7Cn0KCmZ1bmN0aW9uIG1haW4oKSB7CiAgY29uc3QgY2hhbm5lbEJhbm5lckFzTWFya2Rvd24gPSBnZXRDaGFubmVsQmFubmVyQXNNYXJrZG93bigpOwogIGNvbnN0IGNvcHlCdXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICBjb3B5QnV0dG9uLmlubmVySFRNTCA9ICI8dT5DPC91Pm9weSBiYW5uZXIiOwogIGNvcHlCdXR0b24uYWNjZXNzS2V5ID0gImMiOwogIGNvcHlCdXR0b24ub25jbGljayA9ICgpID0+IHsKICAgIG5hdmlnYXRvci5jbGlwYm9hcmQud3JpdGVUZXh0KGNoYW5uZWxCYW5uZXJBc01hcmtkb3duKTsKICB9OwogIGNvcHlCdXR0b24uc3R5bGUubWFyZ2luSW5saW5lID0gIjFlbSI7CiAgY29weUJ1dHRvbi5zdHlsZS5ib3JkZXJSYWRpdXMgPSAiMmVtIjsKICBjb3B5QnV0dG9uLnN0eWxlLnBhZGRpbmcgPSAiLjI1ZW0gLjc1ZW0iOwoKICBjb3B5QnV0dG9uLnN0eWxlLmJhY2tncm91bmRDb2xvciA9ICIjMjcyNzI3IjsKICBjb3B5QnV0dG9uLnN0eWxlLmNvbG9yID0gIndoaXRlIjsKCiAgY29uc3QgYnV0dG9uQ29udGFpbmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiI2J1dHRvbnMiKVsxXTsKICBidXR0b25Db250YWluZXIuaW5zZXJ0QWRqYWNlbnRFbGVtZW50KCJiZWZvcmVlbmQiLCBjb3B5QnV0dG9uKTsKfQpkb2N1bWVudC5ib2R5Lm9ubG9hZCA9IG1haW47Cg==",
+         "storage" : {
+            "data" : {},
+            "ts" : 1716588183753
+         },
+         "uuid" : "40fe1c01-5a49-400e-80b8-7800ee0341ef"
+      },
+      {
+         "enabled" : true,
+         "name" : "Youtube Video: Copy video URL",
+         "options" : {
+            "check_for_updates" : true,
+            "comment" : null,
+            "compat_foreach" : false,
+            "compat_metadata" : false,
+            "compat_powerful_this" : null,
+            "compat_wrappedjsobject" : false,
+            "compatopts_for_requires" : true,
+            "noframes" : null,
+            "override" : {
+               "merge_connects" : true,
+               "merge_excludes" : true,
+               "merge_includes" : true,
+               "merge_matches" : true,
+               "orig_connects" : [],
+               "orig_excludes" : [],
+               "orig_includes" : [],
+               "orig_matches" : [
+                  "https://www.youtube.com/watch?v=*"
+               ],
+               "orig_noframes" : null,
+               "orig_run_at" : "document-idle",
+               "use_blockers" : [],
+               "use_connects" : [],
+               "use_excludes" : [],
+               "use_includes" : [],
+               "use_matches" : []
+            },
+            "run_at" : null,
+            "sandbox" : null,
+            "tab_types" : null,
+            "unwrap" : null,
+            "user_modified" : 1716593392964
+         },
+         "position" : 12,
+         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBZb3V0dWJlIFZpZGVvOiBDb3B5IHZpZGVvIFVSTAovLyBAbmFtZXNwYWNlICAgIGh0dHA6Ly90YW1wZXJtb25rZXkubmV0LwovLyBAdmVyc2lvbiAgICAgIDIwMjQtMDUtMjQKLy8gQGRlc2NyaXB0aW9uICB0cnkgdG8gdGFrZSBvdmVyIHRoZSB3b3JsZCEKLy8gQGF1dGhvciAgICAgICBZb3UKLy8gQG1hdGNoICAgICAgICBodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PSoKLy8gQGljb24gICAgICAgICBodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTY0JmRvbWFpbj15b3V0dWJlLmNvbQovLyBAZ3JhbnQgICAgICAgIG5vbmUKLy8gPT0vVXNlclNjcmlwdD09CgoidXNlIHN0cmljdCI7CgpmdW5jdGlvbiBnZXRWaWRlb1RpdGxlQXNNYXJrZG93bigpIHsKICBjb25zdCB2aWRlb1RpdGxlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigKICAgICIjYWJvdmUtdGhlLWZvbGQgPiAjdGl0bGUiCiAgKT8uaW5uZXJUZXh0OwogIGNvbnN0IHZpZGVvVXJsID0gd2luZG93LmxvY2F0aW9uLmhyZWY7CiAgY29uc3QgY2hhbm5lbE5hbWUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCIjY2hhbm5lbC1uYW1lIik/LmlubmVyVGV4dDsKCiAgY29uc3QgZm9ybWF0dGVkVGV4dCA9IGAke3ZpZGVvVGl0bGV9IG9uIFtbJHtjaGFubmVsTmFtZX1dXVxue3t2aWRlbyAke3ZpZGVvVXJsfX19YDsKICByZXR1cm4gZm9ybWF0dGVkVGV4dDsKfQoKZnVuY3Rpb24gbWFpbigpIHsKICBjb25zdCB2aWRlb1RpdGxlQXNNYXJrZG93biA9IGdldFZpZGVvVGl0bGVBc01hcmtkb3duKCk7CiAgY29uc3QgY29weUJ1dHRvbiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImJ1dHRvbiIpOwogIGNvcHlCdXR0b24uaW5uZXJIVE1MID0gIjx1PkM8L3U+b3B5IjsKICBjb3B5QnV0dG9uLmFjY2Vzc0tleSA9ICJjIjsKICBjb3B5QnV0dG9uLm9uY2xpY2sgPSAoKSA9PiB7CiAgICBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dCh2aWRlb1RpdGxlQXNNYXJrZG93bik7CiAgfTsKCiAgLy8gICBjb3B5QnV0dG9uLnN0eWxlLnBvc2l0aW9uID0gImZpeGVkIjsKICAvLyAgIGNvcHlCdXR0b24uc3R5bGUudG9wID0gIjFlbSI7CiAgLy8gICBjb3B5QnV0dG9uLnN0eWxlLnJpZ2h0ID0gIjFlbSI7CiAgLy8gICBjb3B5QnV0dG9uLnN0eWxlLnpJbmRleCA9IDNlMzsKCiAgY29weUJ1dHRvbi5zdHlsZS5tYXJnaW5JbmxpbmUgPSAiMWVtIjsKICBjb3B5QnV0dG9uLnN0eWxlLmJvcmRlclJhZGl1cyA9ICIyZW0iOwogIGNvcHlCdXR0b24uc3R5bGUucGFkZGluZyA9ICIuMjVlbSAuNzVlbSI7CgogIGNvcHlCdXR0b24uc3R5bGUuZm9udFNpemUgPSAiMmVtIjsKICBjb3B5QnV0dG9uLnN0eWxlLmJhY2tncm91bmRDb2xvciA9ICIjMjcyNzI3IjsKICBjb3B5QnV0dG9uLnN0eWxlLmNvbG9yID0gIndoaXRlIjsKCiAgZG9jdW1lbnQKICAgIC5xdWVyeVNlbGVjdG9yKCIjb3duZXIiKQogICAgLmluc2VydEFkamFjZW50RWxlbWVudCgiYmVmb3JlZW5kIiwgY29weUJ1dHRvbik7CgogIC8vICAgY29uc3QgYnV0dG9uQ29udGFpbmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiI21lbnUiKTsKICAvLyAgIGJ1dHRvbkNvbnRhaW5lci5pbnNlcnRBZGphY2VudEVsZW1lbnQoImJlZm9yZWVuZCIsIGNvcHlCdXR0b24pOwogIC8vICAgZG9jdW1lbnQuYm9keS5pbnNlcnRBZGphY2VudEVsZW1lbnQoImFmdGVyYmVnaW4iLCBjb3B5QnV0dG9uKTsKfQpkb2N1bWVudC5ib2R5Lm9ubG9hZCA9ICgpID0+CiAgc2V0VGltZW91dCgoKSA9PiB7CiAgICBtYWluKCk7CiAgfSwgMmUzKTsK",
+         "storage" : {
+            "data" : {},
+            "ts" : 1716592152414
+         },
+         "uuid" : "a4687941-7bce-4d53-8b63-2b0d463fa229"
       }
    ],
    "settings" : {
