@@ -29,6 +29,10 @@
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "csv-preview.capitalizeHeaders": false,
+  "csv-preview.formatValues": "never",
+  "csv-preview.lineNumbers": "source",
+  "csv-preview.resizeColumns": "all",
   "dotenv.enableAutocloaking": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,

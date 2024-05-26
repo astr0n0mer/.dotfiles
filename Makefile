@@ -54,6 +54,13 @@ vimium-options.json:
 		(mv -f ~/Downloads/$@ ~/.config/vimium/$@)) || \
 		(open -a 'Brave Browser' chrome-extension://dbepggeogbaibhgnhhndojpepiihcmeb/pages/options.html)
 
+.PHONY: dark-reader-settings.json
+dark-reader-settings.json:
+	test -f ~/Downloads/Dark-Reader-Settings.json && \
+		((cat ~/Downloads/Dark-Reader-Settings.json | json_xs | tee ~/.config/dark-reader/$@ > /dev/null ) && \
+		(trash ~/Downloads/Dark-Reader-Settings.json)) || \
+		(open -a 'Brave Browser' chrome-extension://eimadpbcbfnmbkopoojfekhnkhdbieeh/ui/options/index.html)
+
 .PHONY: tampermonkey-backup.json
 tampermonkey-backup.json:
 	test -f ~/Downloads/tampermonkey-backup-*.txt && \

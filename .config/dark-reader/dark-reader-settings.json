@@ -1,0 +1,58 @@
+{
+   "automation" : {
+      "behavior" : "OnOff",
+      "enabled" : false,
+      "mode" : ""
+   },
+   "changeBrowserTheme" : false,
+   "customThemes" : [],
+   "detectDarkTheme" : true,
+   "disabledFor" : [],
+   "enableContextMenus" : false,
+   "enableForPDF" : true,
+   "enableForProtectedPages" : false,
+   "enabled" : true,
+   "enabledByDefault" : false,
+   "enabledFor" : [
+      "news.ycombinator.com",
+      "npmtrends.com",
+      "www.imdb.com",
+      "www.themoviedb.org"
+   ],
+   "fetchNews" : true,
+   "location" : {
+      "latitude" : null,
+      "longitude" : null
+   },
+   "presets" : [],
+   "previewNewDesign" : true,
+   "schemeVersion" : 2,
+   "syncSettings" : true,
+   "syncSitesFixes" : false,
+   "theme" : {
+      "brightness" : 100,
+      "contrast" : 100,
+      "darkColorScheme" : "Default",
+      "darkSchemeBackgroundColor" : "#181a1b",
+      "darkSchemeTextColor" : "#e8e6e3",
+      "engine" : "dynamicTheme",
+      "fontFamily" : "Helvetica Neue",
+      "grayscale" : 0,
+      "immediateModify" : false,
+      "lightColorScheme" : "Default",
+      "lightSchemeBackgroundColor" : "#dcdad7",
+      "lightSchemeTextColor" : "#181a1b",
+      "mode" : 1,
+      "scrollbarColor" : "",
+      "selectionColor" : "auto",
+      "sepia" : 0,
+      "styleSystemControls" : false,
+      "stylesheet" : "",
+      "textStroke" : 0,
+      "useFont" : false
+   },
+   "time" : {
+      "activation" : "18:00",
+      "deactivation" : "9:00"
+   }
+}
