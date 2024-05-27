@@ -47,7 +47,7 @@
          "uuid" : "265ce776-8327-46cc-85db-64facbf00116"
       },
       {
-         "enabled" : true,
+         "enabled" : false,
          "name" : "Dark Mode: Hacker News",
          "options" : {
             "check_for_updates" : true,
@@ -183,51 +183,6 @@
       },
       {
          "enabled" : true,
-         "name" : "Dark Mode: Google Calendar",
-         "options" : {
-            "check_for_updates" : true,
-            "comment" : null,
-            "compat_foreach" : false,
-            "compat_metadata" : false,
-            "compat_powerful_this" : null,
-            "compat_wrappedjsobject" : false,
-            "compatopts_for_requires" : true,
-            "noframes" : null,
-            "override" : {
-               "merge_connects" : true,
-               "merge_excludes" : true,
-               "merge_includes" : true,
-               "merge_matches" : true,
-               "orig_connects" : [],
-               "orig_excludes" : [],
-               "orig_includes" : [],
-               "orig_matches" : [
-                  "https://calendar.google.com/calendar/*"
-               ],
-               "orig_noframes" : null,
-               "orig_run_at" : "document-idle",
-               "use_blockers" : [],
-               "use_connects" : [],
-               "use_excludes" : [],
-               "use_includes" : [],
-               "use_matches" : []
-            },
-            "run_at" : null,
-            "sandbox" : null,
-            "tab_types" : null,
-            "unwrap" : null,
-            "user_modified" : 1716406282785
-         },
-         "position" : 5,
-         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEYXJrIE1vZGU6IEdvb2dsZSBDYWxlbmRhcgovLyBAbmFtZXNwYWNlICAgIGh0dHA6Ly90YW1wZXJtb25rZXkubmV0LwovLyBAdmVyc2lvbiAgICAgIDIwMjQtMDUtMjIKLy8gQGRlc2NyaXB0aW9uICB0cnkgdG8gdGFrZSBvdmVyIHRoZSB3b3JsZCEKLy8gQGF1dGhvciAgICAgICBZb3UKLy8gQG1hdGNoICAgICAgICBodHRwczovL2NhbGVuZGFyLmdvb2dsZS5jb20vY2FsZW5kYXIvKgovLyBAaWNvbiAgICAgICAgIGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vczIvZmF2aWNvbnM/c3o9NjQmZG9tYWluPWdvb2dsZS5jb20KLy8gQGdyYW50ICAgICAgICBub25lCi8vID09L1VzZXJTY3JpcHQ9PQoKInVzZSBzdHJpY3QiOwoKZnVuY3Rpb24gbWFpbigpIHsKICBjb25zdCBzdHlsZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInN0eWxlIik7CiAgc3R5bGUudGV4dENvbnRlbnQgPSBgCiAgICAuUVFZdXpmLCAuV2VmTlllIHsgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7IH0KCiAgICBib2R5IHsgZmlsdGVyOiBpbnZlcnQoMC45KSBodWUtcm90YXRlKDE4MGRlZyk7IH0KICAgIGltZywgdmlkZW8geyBmaWx0ZXI6IGludmVydCgwLjkpIGh1ZS1yb3RhdGUoMTgwZGVnKTsgfQogIGA7CiAgZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzdHlsZSk7Cn0KbWFpbigpOwo=",
-         "storage" : {
-            "data" : {},
-            "ts" : 1716404489873
-         },
-         "uuid" : "370757d3-2084-4c02-8607-8bbd267eb9e2"
-      },
-      {
-         "enabled" : true,
          "name" : "Dark Mode: Google Sheets",
          "options" : {
             "check_for_updates" : true,
@@ -263,103 +218,13 @@
             "unwrap" : null,
             "user_modified" : null
          },
-         "position" : 6,
+         "position" : 5,
          "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEYXJrIE1vZGU6IEdvb2dsZSBTaGVldHMKLy8gQG5hbWVzcGFjZSAgICBodHRwOi8vdGFtcGVybW9ua2V5Lm5ldC8KLy8gQHZlcnNpb24gICAgICAyMDI0LTA1LTIyCi8vIEBkZXNjcmlwdGlvbiAgdHJ5IHRvIHRha2Ugb3ZlciB0aGUgd29ybGQhCi8vIEBhdXRob3IgICAgICAgWW91Ci8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vc3ByZWFkc2hlZXRzLyoKLy8gQGljb24gICAgICAgICBodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTY0JmRvbWFpbj1nb29nbGUuY29tCi8vIEBncmFudCAgICAgICAgbm9uZQovLyA9PS9Vc2VyU2NyaXB0PT0KCiJ1c2Ugc3RyaWN0IjsKCmZ1bmN0aW9uIG1haW4oKSB7CiAgY29uc3Qgc3R5bGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJzdHlsZSIpOwogIHN0eWxlLnRleHRDb250ZW50ID0gYAogICAgYm9keSB7IGZpbHRlcjogaW52ZXJ0KDAuOSkgaHVlLXJvdGF0ZSgxODBkZWcpOyB9CiAgICBpbWcsIHZpZGVvIHsgZmlsdGVyOiBpbnZlcnQoMC45KSBodWUtcm90YXRlKDE4MGRlZyk7IH0KICBgOwogIGRvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQoc3R5bGUpOwp9Cm1haW4oKTsK",
          "storage" : {
             "data" : {},
             "ts" : 1716406688017
          },
          "uuid" : "72fc1eaf-9b2f-47f6-b68d-2adca4622ac1"
-      },
-      {
-         "enabled" : true,
-         "name" : "Dark Mode: Google Docs",
-         "options" : {
-            "check_for_updates" : true,
-            "comment" : null,
-            "compat_foreach" : false,
-            "compat_metadata" : false,
-            "compat_powerful_this" : null,
-            "compat_wrappedjsobject" : false,
-            "compatopts_for_requires" : true,
-            "noframes" : null,
-            "override" : {
-               "merge_connects" : true,
-               "merge_excludes" : true,
-               "merge_includes" : true,
-               "merge_matches" : true,
-               "orig_connects" : [],
-               "orig_excludes" : [],
-               "orig_includes" : [],
-               "orig_matches" : [
-                  "https://docs.google.com/document/*"
-               ],
-               "orig_noframes" : null,
-               "orig_run_at" : "document-idle",
-               "use_blockers" : [],
-               "use_connects" : [],
-               "use_excludes" : [],
-               "use_includes" : [],
-               "use_matches" : []
-            },
-            "run_at" : null,
-            "sandbox" : null,
-            "tab_types" : null,
-            "unwrap" : null,
-            "user_modified" : null
-         },
-         "position" : 7,
-         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEYXJrIE1vZGU6IEdvb2dsZSBEb2NzCi8vIEBuYW1lc3BhY2UgICAgaHR0cDovL3RhbXBlcm1vbmtleS5uZXQvCi8vIEB2ZXJzaW9uICAgICAgMjAyNC0wNS0yMgovLyBAZGVzY3JpcHRpb24gIHRyeSB0byB0YWtlIG92ZXIgdGhlIHdvcmxkIQovLyBAYXV0aG9yICAgICAgIFlvdQovLyBAbWF0Y2ggICAgICAgIGh0dHBzOi8vZG9jcy5nb29nbGUuY29tL2RvY3VtZW50LyoKLy8gQGljb24gICAgICAgICBodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTY0JmRvbWFpbj1nb29nbGUuY29tCi8vIEBncmFudCAgICAgICAgbm9uZQovLyA9PS9Vc2VyU2NyaXB0PT0KCiJ1c2Ugc3RyaWN0IjsKCmZ1bmN0aW9uIG1haW4oKSB7CiAgY29uc3Qgc3R5bGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJzdHlsZSIpOwogIHN0eWxlLnRleHRDb250ZW50ID0gYAogICAgYm9keSB7IGZpbHRlcjogaW52ZXJ0KDAuOSkgaHVlLXJvdGF0ZSgxODBkZWcpOyB9CiAgICBpbWcsIHZpZGVvIHsgZmlsdGVyOiBpbnZlcnQoMC45KSBodWUtcm90YXRlKDE4MGRlZyk7IH0KICBgOwogIGRvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQoc3R5bGUpOwp9Cm1haW4oKTsK",
-         "storage" : {
-            "data" : {},
-            "ts" : 1716407009947
-         },
-         "uuid" : "631c4325-b4dd-44fa-a525-7d2e1548e389"
-      },
-      {
-         "enabled" : true,
-         "name" : "Dark Mode: npm",
-         "options" : {
-            "check_for_updates" : true,
-            "comment" : null,
-            "compat_foreach" : false,
-            "compat_metadata" : false,
-            "compat_powerful_this" : null,
-            "compat_wrappedjsobject" : false,
-            "compatopts_for_requires" : true,
-            "noframes" : null,
-            "override" : {
-               "merge_connects" : true,
-               "merge_excludes" : true,
-               "merge_includes" : true,
-               "merge_matches" : true,
-               "orig_connects" : [],
-               "orig_excludes" : [],
-               "orig_includes" : [],
-               "orig_matches" : [
-                  "https://www.npmjs.com/*"
-               ],
-               "orig_noframes" : null,
-               "orig_run_at" : "document-idle",
-               "use_blockers" : [],
-               "use_connects" : [],
-               "use_excludes" : [],
-               "use_includes" : [],
-               "use_matches" : []
-            },
-            "run_at" : null,
-            "sandbox" : null,
-            "tab_types" : null,
-            "unwrap" : null,
-            "user_modified" : null
-         },
-         "position" : 8,
-         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEYXJrIE1vZGU6IG5wbQovLyBAbmFtZXNwYWNlICAgIGh0dHA6Ly90YW1wZXJtb25rZXkubmV0LwovLyBAdmVyc2lvbiAgICAgIDIwMjQtMDUtMjIKLy8gQGRlc2NyaXB0aW9uICB0cnkgdG8gdGFrZSBvdmVyIHRoZSB3b3JsZCEKLy8gQGF1dGhvciAgICAgICBZb3UKLy8gQG1hdGNoICAgICAgICBodHRwczovL3d3dy5ucG1qcy5jb20vKgovLyBAaWNvbiAgICAgICAgIGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vczIvZmF2aWNvbnM/c3o9NjQmZG9tYWluPW5wbWpzLmNvbQovLyBAZ3JhbnQgICAgICAgIG5vbmUKLy8gPT0vVXNlclNjcmlwdD09CgoidXNlIHN0cmljdCI7CgpmdW5jdGlvbiBtYWluKCkgewogIGNvbnN0IHN0eWxlID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgic3R5bGUiKTsKICBzdHlsZS50ZXh0Q29udGVudCA9IGAKICAgICNtYWluLCBmb290ZXIgeyBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZSAhaW1wb3J0YW50OyB9CiAgICBib2R5IHsgZmlsdGVyOiBpbnZlcnQoMC45KSBodWUtcm90YXRlKDE4MGRlZyk7IH0KICAgIGltZywgdmlkZW8geyBmaWx0ZXI6IGludmVydCgwLjkpIGh1ZS1yb3RhdGUoMTgwZGVnKTsgfQogIGA7CiAgZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzdHlsZSk7Cn0KbWFpbigpOwo=",
-         "storage" : {
-            "data" : {},
-            "ts" : 1716408110210
-         },
-         "uuid" : "27b4a6f9-eee6-4b62-9d89-5ca3cbddeaf6"
       },
       {
          "enabled" : true,
@@ -398,7 +263,7 @@
             "unwrap" : null,
             "user_modified" : null
          },
-         "position" : 9,
+         "position" : 6,
          "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEYXJrIE1vZGU6IEdvb2dsZSBTbGlkZXMKLy8gQG5hbWVzcGFjZSAgICBodHRwOi8vdGFtcGVybW9ua2V5Lm5ldC8KLy8gQHZlcnNpb24gICAgICAyMDI0LTA1LTIzCi8vIEBkZXNjcmlwdGlvbiAgdHJ5IHRvIHRha2Ugb3ZlciB0aGUgd29ybGQhCi8vIEBhdXRob3IgICAgICAgWW91Ci8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly9kb2NzLmdvb2dsZS5jb20vcHJlc2VudGF0aW9uLyoKLy8gQGljb24gICAgICAgICBodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTY0JmRvbWFpbj1nb29nbGUuY29tCi8vIEBncmFudCAgICAgICAgbm9uZQovLyA9PS9Vc2VyU2NyaXB0PT0KCiJ1c2Ugc3RyaWN0IjsKCmZ1bmN0aW9uIG1haW4oKSB7CiAgY29uc3Qgc3R5bGUgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJzdHlsZSIpOwogIHN0eWxlLnRleHRDb250ZW50ID0gYAogICAgYm9keSB7IGZpbHRlcjogaW52ZXJ0KDAuOSkgaHVlLXJvdGF0ZSgxODBkZWcpOyB9CiAgICBpbWcsIHZpZGVvIHsgZmlsdGVyOiBpbnZlcnQoMC45KSBodWUtcm90YXRlKDE4MGRlZyk7IH0KICBgOwogIGRvY3VtZW50LmhlYWQuYXBwZW5kQ2hpbGQoc3R5bGUpOwp9Cm1haW4oKTsK",
          "storage" : {
             "data" : {},
@@ -443,7 +308,7 @@
             "unwrap" : null,
             "user_modified" : 1716498240446
          },
-         "position" : 10,
+         "position" : 7,
          "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBEYXJrIE1vZGU6IEdtYWlsCi8vIEBuYW1lc3BhY2UgICAgaHR0cDovL3RhbXBlcm1vbmtleS5uZXQvCi8vIEB2ZXJzaW9uICAgICAgMjAyNC0wNS0yMwovLyBAZGVzY3JpcHRpb24gIHRyeSB0byB0YWtlIG92ZXIgdGhlIHdvcmxkIQovLyBAYXV0aG9yICAgICAgIFlvdQovLyBAbWF0Y2ggICAgICAgIGh0dHBzOi8vbWFpbC5nb29nbGUuY29tL21haWwvKgovLyBAaWNvbiAgICAgICAgIGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vczIvZmF2aWNvbnM/c3o9NjQmZG9tYWluPWdvb2dsZS5jb20KLy8gQGdyYW50ICAgICAgICBub25lCi8vID09L1VzZXJTY3JpcHQ9PQoKInVzZSBzdHJpY3QiOwoKZnVuY3Rpb24gbWFpbigpIHsKICBjb25zdCBzdHlsZSA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoInN0eWxlIik7CiAgc3R5bGUudGV4dENvbnRlbnQgPSBgCiAgICBib2R5IHsgZmlsdGVyOiBpbnZlcnQoMC45KSBodWUtcm90YXRlKDE4MGRlZyk7IH0KICAgIGltZywgdmlkZW8geyBmaWx0ZXI6IGludmVydCgwLjkpIGh1ZS1yb3RhdGUoMTgwZGVnKTsgfQogIGA7CiAgZG9jdW1lbnQuaGVhZC5hcHBlbmRDaGlsZChzdHlsZSk7Cn0KbWFpbigpOwo=",
          "storage" : {
             "data" : {},
@@ -489,7 +354,7 @@
             "unwrap" : null,
             "user_modified" : 1716626659350
          },
-         "position" : 11,
+         "position" : 8,
          "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBZb3VUdWJlIENoYW5uZWw6IENvcHkgYmFubmVyCi8vIEBuYW1lc3BhY2UgICAgaHR0cDovL3RhbXBlcm1vbmtleS5uZXQvCi8vIEB2ZXJzaW9uICAgICAgMjAyNC0wNS0yNAovLyBAZGVzY3JpcHRpb24gIHRyeSB0byB0YWtlIG92ZXIgdGhlIHdvcmxkIQovLyBAYXV0aG9yICAgICAgIFlvdQovLyBAbWF0Y2ggICAgICAgIGh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL0AqCi8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly93d3cueW91dHViZS5jb20vY2hhbm5lbC8qCi8vIEBpY29uICAgICAgICAgaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zMi9mYXZpY29ucz9zej02NCZkb21haW49eW91dHViZS5jb20KLy8gQGdyYW50ICAgICAgICBub25lCi8vID09L1VzZXJTY3JpcHQ9PQoKInVzZSBzdHJpY3QiOwoKZnVuY3Rpb24gZ2V0Q2hhbm5lbEJhbm5lckFzTWFya2Rvd24oKSB7CiAgY29uc3QgY2hhbm5lbE5hbWUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKAogICAgInl0LWZvcm1hdHRlZC1zdHJpbmcjdGV4dCIKICApPy50ZXh0Q29udGVudDsKICBjb25zdCBjaGFubmVsSGFuZGxlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiI2NoYW5uZWwtaGFuZGxlIik/LnRleHRDb250ZW50OwogIGNvbnN0IGNoYW5uZWxCYW5uZXJJbWcgPSBnZXRDb21wdXRlZFN0eWxlKAogICAgZG9jdW1lbnQucXVlcnlTZWxlY3RvcigieXRkLWM0LXRhYmJlZC1oZWFkZXItcmVuZGVyZXIiKQogICkuZ2V0UHJvcGVydHlWYWx1ZSgiLS15dC1jaGFubmVsLWJhbm5lciIpOwogIGNvbnN0IGNoYW5uZWxCYW5uZXJJbWdGb3JtYXR0ZWQgPSBjaGFubmVsQmFubmVySW1nCiAgICAucmVwbGFjZSgidXJsKCIsICIiKQogICAgLnJlcGxhY2UoIikiLCAiIik7CgogIGNvbnN0IGZvcm1hdHRlZFRleHQgPSBgIVske2NoYW5uZWxOYW1lfSBvbiBZb3VUdWJlXSgke2NoYW5uZWxCYW5uZXJJbWdGb3JtYXR0ZWR9KVxuI1tbWW91VHViZS9DaGFubmVsXV1cbltZb3VUdWJlXShodHRwczovL3d3dy55b3V0dWJlLmNvbS8ke2NoYW5uZWxIYW5kbGV9KWA7CiAgcmV0dXJuIGZvcm1hdHRlZFRleHQ7Cn0KCmZ1bmN0aW9uIG1haW4oKSB7CiAgY29uc3QgY2hhbm5lbEJhbm5lckFzTWFya2Rvd24gPSBnZXRDaGFubmVsQmFubmVyQXNNYXJrZG93bigpOwogIGNvbnN0IGNvcHlCdXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICBjb3B5QnV0dG9uLmlubmVySFRNTCA9ICI8dT5DPC91Pm9weSBiYW5uZXIiOwogIGNvcHlCdXR0b24uYWNjZXNzS2V5ID0gImMiOwogIGNvcHlCdXR0b24ub25jbGljayA9ICgpID0+IHsKICAgIG5hdmlnYXRvci5jbGlwYm9hcmQud3JpdGVUZXh0KGNoYW5uZWxCYW5uZXJBc01hcmtkb3duKTsKICB9OwogIGNvcHlCdXR0b24uc3R5bGUubWFyZ2luSW5saW5lID0gIjFlbSI7CiAgY29weUJ1dHRvbi5zdHlsZS5ib3JkZXJSYWRpdXMgPSAiMmVtIjsKICBjb3B5QnV0dG9uLnN0eWxlLnBhZGRpbmcgPSAiLjI1ZW0gLjc1ZW0iOwoKICBjb3B5QnV0dG9uLnN0eWxlLmJhY2tncm91bmRDb2xvciA9ICIjMjcyNzI3IjsKICBjb3B5QnV0dG9uLnN0eWxlLmNvbG9yID0gIndoaXRlIjsKCiAgY29uc3QgYnV0dG9uQ29udGFpbmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvckFsbCgiI2J1dHRvbnMiKVsxXTsKICBidXR0b25Db250YWluZXIuaW5zZXJ0QWRqYWNlbnRFbGVtZW50KCJiZWZvcmVlbmQiLCBjb3B5QnV0dG9uKTsKfQoKZG9jdW1lbnQuYm9keS5vbmxvYWQgPSAoKSA9PgogIHNldFRpbWVvdXQoKCkgPT4gewogICAgbWFpbigpOwogIH0sIDJlMyk7Cg==",
          "storage" : {
             "data" : {},
@@ -534,7 +399,7 @@
             "unwrap" : null,
             "user_modified" : 1716626632874
          },
-         "position" : 12,
+         "position" : 9,
          "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBZb3V0dWJlIFZpZGVvOiBDb3B5IHZpZGVvIFVSTAovLyBAbmFtZXNwYWNlICAgIGh0dHA6Ly90YW1wZXJtb25rZXkubmV0LwovLyBAdmVyc2lvbiAgICAgIDIwMjQtMDUtMjQKLy8gQGRlc2NyaXB0aW9uICB0cnkgdG8gdGFrZSBvdmVyIHRoZSB3b3JsZCEKLy8gQGF1dGhvciAgICAgICBZb3UKLy8gQG1hdGNoICAgICAgICBodHRwczovL3d3dy55b3V0dWJlLmNvbS93YXRjaD92PSoKLy8gQGljb24gICAgICAgICBodHRwczovL3d3dy5nb29nbGUuY29tL3MyL2Zhdmljb25zP3N6PTY0JmRvbWFpbj15b3V0dWJlLmNvbQovLyBAZ3JhbnQgICAgICAgIG5vbmUKLy8gPT0vVXNlclNjcmlwdD09CgoidXNlIHN0cmljdCI7CgpmdW5jdGlvbiBnZXRWaWRlb1RpdGxlQXNNYXJrZG93bigpIHsKICBjb25zdCB2aWRlb1RpdGxlID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigKICAgICIjYWJvdmUtdGhlLWZvbGQgPiAjdGl0bGUiCiAgKT8uaW5uZXJUZXh0OwogIGNvbnN0IHZpZGVvVXJsID0gd2luZG93LmxvY2F0aW9uLmhyZWY7CiAgY29uc3QgY2hhbm5lbE5hbWUgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCIjY2hhbm5lbC1uYW1lIik/LmlubmVyVGV4dDsKCiAgY29uc3QgZm9ybWF0dGVkVGV4dCA9IGAke3ZpZGVvVGl0bGV9IG9uIFtbJHtjaGFubmVsTmFtZX1dXVxue3t2aWRlbyAke3ZpZGVvVXJsfX19YDsKICByZXR1cm4gZm9ybWF0dGVkVGV4dDsKfQoKZnVuY3Rpb24gbWFpbigpIHsKICBjb25zdCB2aWRlb1RpdGxlQXNNYXJrZG93biA9IGdldFZpZGVvVGl0bGVBc01hcmtkb3duKCk7CiAgY29uc3QgY29weUJ1dHRvbiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImJ1dHRvbiIpOwogIGNvcHlCdXR0b24uaW5uZXJIVE1MID0gIjx1PkM8L3U+b3B5IjsKICBjb3B5QnV0dG9uLmFjY2Vzc0tleSA9ICJjIjsKICBjb3B5QnV0dG9uLm9uY2xpY2sgPSAoKSA9PiB7CiAgICBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dCh2aWRlb1RpdGxlQXNNYXJrZG93bik7CiAgfTsKCiAgLy8gICBjb3B5QnV0dG9uLnN0eWxlLnBvc2l0aW9uID0gImZpeGVkIjsKICAvLyAgIGNvcHlCdXR0b24uc3R5bGUudG9wID0gIjFlbSI7CiAgLy8gICBjb3B5QnV0dG9uLnN0eWxlLnJpZ2h0ID0gIjFlbSI7CiAgLy8gICBjb3B5QnV0dG9uLnN0eWxlLnpJbmRleCA9IDNlMzsKCiAgY29weUJ1dHRvbi5zdHlsZS5tYXJnaW5JbmxpbmUgPSAiMWVtIjsKICBjb3B5QnV0dG9uLnN0eWxlLmJvcmRlclJhZGl1cyA9ICIyZW0iOwogIGNvcHlCdXR0b24uc3R5bGUucGFkZGluZyA9ICIuMjVlbSAuNzVlbSI7CgogIGNvcHlCdXR0b24uc3R5bGUuZm9udFNpemUgPSAiMS43NWVtIjsKICBjb3B5QnV0dG9uLnN0eWxlLmJhY2tncm91bmRDb2xvciA9ICIjMjcyNzI3IjsKICBjb3B5QnV0dG9uLnN0eWxlLmNvbG9yID0gIndoaXRlIjsKCiAgZG9jdW1lbnQKICAgIC5xdWVyeVNlbGVjdG9yKCIjb3duZXIiKQogICAgLmluc2VydEFkamFjZW50RWxlbWVudCgiYmVmb3JlZW5kIiwgY29weUJ1dHRvbik7CgogIC8vICAgY29uc3QgYnV0dG9uQ29udGFpbmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigiI21lbnUiKTsKICAvLyAgIGJ1dHRvbkNvbnRhaW5lci5pbnNlcnRBZGphY2VudEVsZW1lbnQoImJlZm9yZWVuZCIsIGNvcHlCdXR0b24pOwogIC8vICAgZG9jdW1lbnQuYm9keS5pbnNlcnRBZGphY2VudEVsZW1lbnQoImFmdGVyYmVnaW4iLCBjb3B5QnV0dG9uKTsKfQoKZG9jdW1lbnQuYm9keS5vbmxvYWQgPSAoKSA9PgogIHNldFRpbWVvdXQoKCkgPT4gewogICAgbWFpbigpOwogIH0sIDJlMyk7Cg==",
          "storage" : {
             "data" : {},

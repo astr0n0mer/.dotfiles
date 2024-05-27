@@ -68,9 +68,11 @@ sandbox
 .mozilla/
 .local/*
 !.local/bin/
+.local/bin/*mypy*
 .local/bin/2to3
 .local/bin/alerter
 .local/bin/neonmodem
+.local/bin/stub*
 .local/bin/syncthing
 .local/bin/trash*
 .logseq/*
