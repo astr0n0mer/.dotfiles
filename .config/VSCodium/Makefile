@@ -1,11 +1,11 @@
-PROFILES := code-python code-javascript
+PROFILES := codium-python codium-javascript
 
 define backup-profile
-	code --profile $1 --list-extensions > $1.code-profile
+	codium --profile $1 --list-extensions > $1.code-profile
 endef
 
 define restore-profile
-	cat $1.code-profile | xargs -L 1 code --profile $1 --install-extension
+	cat $1.code-profile | xargs -L 1 codium --profile $1 --install-extension
 endef
 
 .PHONY: backup

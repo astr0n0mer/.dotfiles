@@ -126,7 +126,7 @@
             "sandbox" : null,
             "tab_types" : null,
             "unwrap" : null,
-            "user_modified" : 1716037702911
+            "user_modified" : 1716881262781
          },
          "position" : 3,
          "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBHZXQgR2l0SHViIHJlcG8gaW1hZ2UKLy8gQG5hbWVzcGFjZSAgICBodHRwOi8vdGFtcGVybW9ua2V5Lm5ldC8KLy8gQHZlcnNpb24gICAgICAyMDI0LTA1LTE4Ci8vIEBkZXNjcmlwdGlvbiAgdHJ5IHRvIHRha2Ugb3ZlciB0aGUgd29ybGQhCi8vIEBhdXRob3IgICAgICAgWW91Ci8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly9naXRodWIuY29tLyovKgovLyBAaWNvbiAgICAgICAgIGh0dHBzOi8vd3d3Lmdvb2dsZS5jb20vczIvZmF2aWNvbnM/c3o9NjQmZG9tYWluPWdpdGh1Yi5jb20KLy8gQGdyYW50ICAgICAgICBub25lCi8vID09L1VzZXJTY3JpcHQ9PQoKZnVuY3Rpb24gY3JlYXRlVG9hc3RFbGVtZW50KHR5cGUsIG1lc3NhZ2UpIHsKICBjb25zdCB0b2FzdEVtb2ppID0gdHlwZSA9PT0gInN1Y2Nlc3MiID8gIuKchSIgOiB0eXBlID09PSAiZXJyb3IiID8gIuKdjCIgOiAi4p2TIjsKICBjb25zdCBwID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgicCIpOwogIHAudGV4dENvbnRlbnQgPSBgJHt0b2FzdEVtb2ppfSAke21lc3NhZ2V9YDsKCiAgcC5zdHlsZS5wb3NpdGlvbiA9ICJmaXhlZCI7CiAgcC5zdHlsZS5sZWZ0ID0gIjUwJSI7CiAgcC5zdHlsZS50b3AgPSAiLjVlbSI7CiAgcC5zdHlsZS50cmFuc2xhdGUgPSAiLTUwJSAwIjsKICBwLnN0eWxlLnpJbmRleCA9IDFlNTsKCiAgcC5zdHlsZS5ib3JkZXIgPSAiMXB4IHNvbGlkIHdoaXRlIjsKICBwLnN0eWxlLmJvcmRlclJhZGl1cyA9ICIuNWVtIjsKICBwLnN0eWxlLnBhZGRpbmcgPSAiLjVlbSAuNzVlbSI7CgogIHAuc3R5bGUuYmFja2Ryb3BGaWx0ZXIgPSAiYmx1cig1cHgpIjsKICBwLnN0eWxlLmZvbnRTaXplID0gIjEuMTVlbSI7CiAgcmV0dXJuIHA7Cn0KCmZ1bmN0aW9uIGluamVjdFRvYXN0KGVsZW1lbnQpIHsKICBkb2N1bWVudC5ib2R5Lmluc2VydEFkamFjZW50RWxlbWVudCgiYWZ0ZXJiZWdpbiIsIGVsZW1lbnQpOwogIHNldFRpbWVvdXQoKCkgPT4gewogICAgZWxlbWVudC5yZW1vdmUoKTsKICB9LCAzZTMpOwp9CgpmdW5jdGlvbiB0b2FzdCh0eXBlLCBtZXNzYWdlKSB7CiAgaW5qZWN0VG9hc3QoY3JlYXRlVG9hc3RFbGVtZW50KHR5cGUsIG1lc3NhZ2UpKTsKfQoKZnVuY3Rpb24gbWFpbigpIHsKICAidXNlIHN0cmljdCI7CgogIGNvbnN0IHVybCA9IHdpbmRvdy5sb2NhdGlvbi5ocmVmOwogIGNvbnN0IG1hdGNoZXMgPSB1cmwubWF0Y2hBbGwoCiAgICAvXmh0dHBzPzpcL1wvZ2l0aHViLmNvbVwvKD88dXNlcm5hbWU+W14vXSspXC8oPzxyZXBvPlteL10rKVwvPyQvZwogICk7CiAgY29uc3QgbWF0Y2hlc0FycmF5ID0gQXJyYXkuZnJvbShtYXRjaGVzKTsKCiAgaWYgKG1hdGNoZXNBcnJheS5sZW5ndGgpIHsKICAgIGNvbnNvbGUuZGVidWcoIlJ1bm5pbmcgVGFtcGVybW9ua2V5Iik7CiAgICBjb25zdCB1c2VybmFtZSA9IG1hdGNoZXNBcnJheVswXVsxXTsKICAgIGNvbnN0IHJlcG8gPSBtYXRjaGVzQXJyYXlbMF1bMl07CiAgICBjb25zdCBpbWFnZU1hcmtkb3duID0gYFske3VzZXJuYW1lfS8ke3JlcG99XShodHRwczovL2dpdGh1Yi5jb20vJHt1c2VybmFtZX0vJHtyZXBvfSlcbkBAaHRtbDogPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tLyR7dXNlcm5hbWV9LyR7cmVwb30vIj48aW1nIHNyYz0iaHR0cHM6Ly9naXRodWItcmVhZG1lLXN0YXRzLWFzdHJvbm9tZXIudmVyY2VsLmFwcC9hcGkvcGluLz91c2VybmFtZT0ke3VzZXJuYW1lfSZyZXBvPSR7cmVwb30mdGhlbWU9dG9reW9uaWdodCIgYWx0PSIke3VzZXJuYW1lfS8ke3JlcG99Ii8+PC9hPkBAYDsKCiAgICAvLyBTZXR0aW5nIHVwIHRoZSBidXR0b24gYW5kIGl0cyBjb250YWluZXIgdG8gYmUgaW5qZWN0ZWQKICAgIGNvbnN0IGNvcHlJbWFnZU1hcmtkb3duQnV0dG9uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgiYnV0dG9uIik7CiAgICBjb3B5SW1hZ2VNYXJrZG93bkJ1dHRvbi5pbm5lckhUTUwgPSAiPHU+QzwvdT5vcHkgcmVwbyBpbWFnZSI7CiAgICBjb3B5SW1hZ2VNYXJrZG93bkJ1dHRvbi5hY2Nlc3NLZXkgPSAiYyI7CiAgICBjb3B5SW1hZ2VNYXJrZG93bkJ1dHRvbi5vbmNsaWNrID0gKCkgPT4gewogICAgICBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dChpbWFnZU1hcmtkb3duKTsKICAgICAgdG9hc3QoInN1Y2Nlc3MiLCAiQ29waWVkIHJlcG8gaW1hZ2UiKTsKICAgIH07CiAgICBjb3B5SW1hZ2VNYXJrZG93bkJ1dHRvbi5jbGFzc0xpc3QuYWRkKCJidG4iLCAiYnRuLXNtIik7CgogICAgY29uc3QgbGlzdEl0ZW1Gb3JDb3B5QnV0dG9uID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgibGkiKTsKICAgIGxpc3RJdGVtRm9yQ29weUJ1dHRvbi5hcHBlbmRDaGlsZChjb3B5SW1hZ2VNYXJrZG93bkJ1dHRvbik7CgogICAgY29uc3QgYnV0dG9uQ29udGFpbmVyID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcigKICAgICAgIiNyZXBvc2l0b3J5LWRldGFpbHMtY29udGFpbmVyIgogICAgKTsKICAgIGNvbnN0IGJ1dHRvbnNMaXN0ID0gYnV0dG9uQ29udGFpbmVyLnF1ZXJ5U2VsZWN0b3IoInVsIik7CiAgICBidXR0b25zTGlzdC5pbnNlcnRBZGphY2VudEVsZW1lbnQoImFmdGVyYmVnaW4iLCBsaXN0SXRlbUZvckNvcHlCdXR0b24pOwogIH0gZWxzZSB7CiAgICBjb25zb2xlLmRlYnVnKCJOb3QgcnVubmluZyBUYW1wZXJtb25rZXkiKTsKICB9Cn0KCm1haW4oKTsK",
@@ -182,7 +182,7 @@
          "uuid" : "4fe09e62-a592-4b2b-bd6d-4096934d8642"
       },
       {
-         "enabled" : true,
+         "enabled" : false,
          "name" : "Dark Mode: Google Sheets",
          "options" : {
             "check_for_updates" : true,
@@ -406,6 +406,97 @@
             "ts" : 1716592152414
          },
          "uuid" : "a4687941-7bce-4d53-8b63-2b0d463fa229"
+      },
+      {
+         "enabled" : true,
+         "name" : "Get GitHub PR link",
+         "options" : {
+            "check_for_updates" : true,
+            "comment" : null,
+            "compat_foreach" : false,
+            "compat_metadata" : false,
+            "compat_powerful_this" : null,
+            "compat_wrappedjsobject" : false,
+            "compatopts_for_requires" : true,
+            "noframes" : null,
+            "override" : {
+               "merge_connects" : true,
+               "merge_excludes" : true,
+               "merge_includes" : true,
+               "merge_matches" : true,
+               "orig_connects" : [],
+               "orig_excludes" : [],
+               "orig_includes" : [],
+               "orig_matches" : [
+                  "https://github.com/*/pull/*"
+               ],
+               "orig_noframes" : null,
+               "orig_run_at" : "document-idle",
+               "use_blockers" : [],
+               "use_connects" : [],
+               "use_excludes" : [],
+               "use_includes" : [],
+               "use_matches" : []
+            },
+            "run_at" : null,
+            "sandbox" : null,
+            "tab_types" : null,
+            "unwrap" : null,
+            "user_modified" : 1716881461993
+         },
+         "position" : 10,
+         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBHZXQgR2l0SHViIFBSIGxpbmsKLy8gQG5hbWVzcGFjZSAgICBodHRwOi8vdGFtcGVybW9ua2V5Lm5ldC8KLy8gQHZlcnNpb24gICAgICAyMDI0LTA1LTI4Ci8vIEBkZXNjcmlwdGlvbiAgdHJ5IHRvIHRha2Ugb3ZlciB0aGUgd29ybGQhCi8vIEBhdXRob3IgICAgICAgWW91Ci8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly9naXRodWIuY29tLyovcHVsbC8qCi8vIEBpY29uICAgICAgICAgaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zMi9mYXZpY29ucz9zej02NCZkb21haW49Z2l0aHViLmNvbQovLyBAZ3JhbnQgICAgICAgIG5vbmUKLy8gPT0vVXNlclNjcmlwdD09CgoidXNlIHN0cmljdCI7CgpmdW5jdGlvbiBtYWluKCkgewogIGNvbnN0IHVybCA9IHdpbmRvdy5sb2NhdGlvbi5ocmVmOwogIGNvbnN0IGhlYWRpbmcgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKCIuZ2gtaGVhZGVyLXRpdGxlIikuaW5uZXJUZXh0OwogIGNvbnN0IG1hcmtkb3duTGluayA9IGBbJHtoZWFkaW5nfV0oJHt1cmx9KWA7CgogIGNvbnN0IGJ1dHRvbiA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoImJ1dHRvbiIpOwogIGJ1dHRvbi5pbm5lckhUTUwgPSAiPHU+QzwvdT5vcHkiOwogIGJ1dHRvbi5hY2Nlc3NLZXkgPSAiYyI7CiAgYnV0dG9uLmNsYXNzTGlzdC5hZGQoImJ0biIsICJCdXR0b24tLXNtYWxsIik7CiAgYnV0dG9uLm9uY2xpY2sgPSAoKSA9PiB7CiAgICBuYXZpZ2F0b3IuY2xpcGJvYXJkLndyaXRlVGV4dChtYXJrZG93bkxpbmspOwogIH07CgogIGNvbnN0IGNvbnRhaW5lciA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoIi5naC1oZWFkZXItYWN0aW9ucyIpOwogIGNvbnRhaW5lci5pbnNlcnRBZGphY2VudEVsZW1lbnQoImFmdGVyYmVnaW4iLCBidXR0b24pOwp9CgptYWluKCk7Cg==",
+         "storage" : {
+            "data" : {},
+            "ts" : 1716881433257
+         },
+         "uuid" : "a3de2563-651c-49ad-982f-3b2d39104af0"
+      },
+      {
+         "enabled" : true,
+         "name" : "Copy Schedule Summary",
+         "options" : {
+            "check_for_updates" : true,
+            "comment" : null,
+            "compat_foreach" : false,
+            "compat_metadata" : false,
+            "compat_powerful_this" : null,
+            "compat_wrappedjsobject" : false,
+            "compatopts_for_requires" : true,
+            "noframes" : null,
+            "override" : {
+               "merge_connects" : true,
+               "merge_excludes" : true,
+               "merge_includes" : true,
+               "merge_matches" : true,
+               "orig_connects" : [],
+               "orig_excludes" : [],
+               "orig_includes" : [],
+               "orig_matches" : [
+                  "http://localhost:4200/schedule/*/analytics",
+                  "https://*/schedule/*/analytics"
+               ],
+               "orig_noframes" : null,
+               "orig_run_at" : "document-idle",
+               "use_blockers" : [],
+               "use_connects" : [],
+               "use_excludes" : [],
+               "use_includes" : [],
+               "use_matches" : []
+            },
+            "run_at" : null,
+            "sandbox" : null,
+            "tab_types" : null,
+            "unwrap" : null,
+            "user_modified" : 1716923736488
+         },
+         "position" : 11,
+         "source" : "Ly8gPT1Vc2VyU2NyaXB0PT0KLy8gQG5hbWUgICAgICAgICBDb3B5IFNjaGVkdWxlIFN1bW1hcnkKLy8gQG5hbWVzcGFjZSAgICBodHRwOi8vdGFtcGVybW9ua2V5Lm5ldC8KLy8gQHZlcnNpb24gICAgICAyMDI0LTA1LTI4Ci8vIEBkZXNjcmlwdGlvbiAgdHJ5IHRvIHRha2Ugb3ZlciB0aGUgd29ybGQhCi8vIEBhdXRob3IgICAgICAgWW91Ci8vIEBtYXRjaCAgICAgICAgaHR0cDovL2xvY2FsaG9zdDo0MjAwL3NjaGVkdWxlLyovYW5hbHl0aWNzCi8vIEBtYXRjaCAgICAgICAgaHR0cHM6Ly8qL3NjaGVkdWxlLyovYW5hbHl0aWNzCi8vIEBpY29uICAgICAgICAgaHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS9zMi9mYXZpY29ucz9zej02NCZkb21haW49dGltZWx5c2Nob29scy5jb20KLy8gQGdyYW50ICAgICAgICBub25lCi8vID09L1VzZXJTY3JpcHQ9PQoKInVzZSBzdHJpY3QiOwoKZnVuY3Rpb24gbWFpbigpIHsKICAvLyB4cGF0aCByZWZlcmVuY2U6IGh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vYS8yOTI4OTE5Ni83NzUzMjc0CiAgY29uc3QgeHBhdGggPSAiLy9oMVt0ZXh0KCk9J1NjaGVkdWxlIFN1bW1hcnkgQW5hbHl0aWNzJ10iOwogIGNvbnN0IGhlYWRpbmcgPSBkb2N1bWVudC5ldmFsdWF0ZSgKICAgIHhwYXRoLAogICAgZG9jdW1lbnQsCiAgICBudWxsLAogICAgWFBhdGhSZXN1bHQuRklSU1RfT1JERVJFRF9OT0RFX1RZUEUsCiAgICBudWxsCiAgKS5zaW5nbGVOb2RlVmFsdWU7CiAgY29uc3Qgc3VtbWFyeURpdiA9IGhlYWRpbmcubmV4dEVsZW1lbnRTaWJsaW5nOwoKICBjb25zdCBidXR0b24gPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJidXR0b24iKTsKICBidXR0b24uaW5uZXJIVE1MID0gIjx1PkM8L3U+b3B5IjsKICBidXR0b24uYWNjZXNzS2V5ID0gImMiOwogIGJ1dHRvbi5vbmNsaWNrID0gKCkgPT4gewogICAgbmF2aWdhdG9yLmNsaXBib2FyZC53cml0ZVRleHQoc3VtbWFyeURpdi5pbm5lclRleHQpOwogIH07CgogIGJ1dHRvbi5zdHlsZS5wb3NpdGlvbiA9ICJmaXhlZCI7CiAgYnV0dG9uLnN0eWxlLmluc2V0ID0gIjAgMCBhdXRvIGF1dG8iOwogIGJ1dHRvbi5zdHlsZS56SW5kZXggPSAiMTAwMDAiOwogIGJ1dHRvbi5zdHlsZS5mb250U2l6ZSA9ICIxLjVlbSI7CgogIGRvY3VtZW50LmJvZHkuaW5zZXJ0QWRqYWNlbnRFbGVtZW50KCJhZnRlcmJlZ2luIiwgYnV0dG9uKTsKfQoKZG9jdW1lbnQuYm9keS5vbmxvYWQgPSAoKSA9PgogIHNldFRpbWVvdXQoKCkgPT4gewogICAgbWFpbigpOwogIH0sIDllMyk7Cg==",
+         "storage" : {
+            "data" : {},
+            "ts" : 1716923769807
+         },
+         "uuid" : "c1abc39e-9f0c-4414-873e-b1fafdbcfa81"
       }
    ],
    "settings" : {
