@@ -1,10 +1,17 @@
+# yaml-language-server: $schema=https://dlvhdr.github.io/gh-dash/configuration/gh-dash/schema.json
 prSections:
-- title: My Pull Requests
-  filters: is:open author:@me
 - title: Needs My Review
   filters: is:open review-requested:@me
+- title: Reviewed By Me
+  filters: is:open reviewed-by:@me -author:@me -review:approved
+- title: Assigned To Me
+  filters: is:open assignee:@me
 - title: Involved
   filters: is:open involves:@me -author:@me
+- title: Created By Others
+  filters: is:open user:timelyschools -author:@me -review:approved
+- title: Approved
+  filters: is:open review:approved user:timelyschools
 issuesSections:
 - title: My Issues
   filters: is:open author:@me
@@ -14,7 +21,7 @@ issuesSections:
   filters: is:open involves:@me -author:@me
 defaults:
   preview:
-    open: true
+    open: false
     width: 50
   prsLimit: 20
   issuesLimit: 20
@@ -22,9 +29,9 @@ defaults:
   layout:
     prs:
       updatedAt:
-        width: 7
+        width: 5
       repo:
-        width: 15
+        width: 16
       author:
         width: 15
       assignees:
@@ -49,7 +56,9 @@ defaults:
 keybindings:
   issues: []
   prs: []
-repoPaths: {}
+repoPaths:
+  astr0n0mer/:repo: ~/projects/:repo
+  timelyschools/*: ~/projects-work/timelyschools/*
 theme:
   ui:
     table:

@@ -8,6 +8,7 @@ grapecity.gc-excelviewer
 humao.rest-client
 matangover.mypy
 mechatroner.rainbow-csv
+mongodb.mongodb-vscode
 ms-pyright.pyright
 ms-python.black-formatter
 ms-python.debugpy

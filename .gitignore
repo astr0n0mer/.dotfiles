@@ -91,6 +91,7 @@ master/
 .rest-client/
 .ssh/
 .swt/
+.tmole.sh/
 .Trash/
 .virtualenvs/
 .vscode/*
