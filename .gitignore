@@ -62,6 +62,7 @@ sandbox
 .ecryptfs
 .gnome/
 .gnupg/
+.go/
 .gradle/
 .gtkrc*
 .linuxmint/
@@ -107,6 +108,7 @@ Desktop/
 Documents/
 Downloads/
 Dropbox/
+go/
 Library/*
 !Library/Application?Support/
 Library/Application?Support/*

@@ -15,12 +15,9 @@
    "enabledByDefault" : false,
    "enabledFor" : [
       "calendar.google.com",
-      "command-not-found.com",
       "community.brave.com",
       "community.frame.work",
-      "delve.a9.io",
       "developers.google.com",
-      "docs.file0.dev",
       "docs.google.com",
       "en.wikipedia.org",
       "f-droid.org",
@@ -50,7 +47,12 @@
       "www.themoviedb.org",
       "www.trackawesomelist.com",
       "www.ubuntubuzz.com",
-      "xkcd.com"
+      "xkcd.com",
+      "delve.a9.io",
+      "docs.file0.dev",
+      "command-not-found.com",
+      "tldr.sh",
+      "www.freecodecamp.org"
    ],
    "fetchNews" : true,
    "location" : {
