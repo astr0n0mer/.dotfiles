@@ -68,6 +68,9 @@ tampermonkey-backup.json:
 		(trash ~/Downloads/tampermonkey-backup-*.txt)) || \
 		(open -a 'Brave Browser' chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils)
 
+.PHONY: browser-extensions-backup
+browser-extensions-backup: vimium-options.json dark-reader-settings.json tampermonkey-backup.json
+
 # cron jobs
 .PHONY: startup
 startup:

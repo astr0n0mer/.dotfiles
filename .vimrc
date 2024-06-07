@@ -8,7 +8,7 @@ set number
 set cursorline
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
-set scrolloff=5
+set scrolloff=2
 
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch

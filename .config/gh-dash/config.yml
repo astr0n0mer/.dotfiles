@@ -9,9 +9,9 @@ prSections:
 - title: Involved
   filters: is:open involves:@me -author:@me
 - title: Created By Others
-  filters: is:open user:timelyschools -author:@me -review:approved
+  filters: is:open user:timelyschools -author:@me -repo:timelyschools/timelypymodels-lib -review:approved
 - title: Approved
-  filters: is:open review:approved user:timelyschools
+  filters: is:open review:approved user:timelyschools -repo:timelyschools/timelypymodels-lib
 issuesSections:
 - title: My Issues
   filters: is:open author:@me
@@ -22,7 +22,7 @@ issuesSections:
 defaults:
   preview:
     open: false
-    width: 50
+    width: 80
   prsLimit: 20
   issuesLimit: 20
   view: prs

@@ -8,6 +8,9 @@
    "customThemes" : [],
    "detectDarkTheme" : true,
    "disabledFor" : [],
+   "displayedNews" : [
+      "thanks-2023"
+   ],
    "enableContextMenus" : false,
    "enableForPDF" : false,
    "enableForProtectedPages" : false,
@@ -52,7 +55,30 @@
       "docs.file0.dev",
       "command-not-found.com",
       "tldr.sh",
-      "www.freecodecamp.org"
+      "www.freecodecamp.org",
+      "fosscomics.com",
+      "nixcademy.com",
+      "www.kmjn.org",
+      "containers.dev",
+      "vin01.github.io",
+      "jqplay.org",
+      "mashable.com",
+      "hub.docker.com",
+      "community.bitwarden.com",
+      "cutefish-ubuntu.github.io",
+      "gitlab.com",
+      "www.qemu.org",
+      "morss.it",
+      "robrich.org",
+      "www.docker.com",
+      "lwn.net",
+      "results.eci.gov.in",
+      "thereader.mitpress.mit.edu",
+      "effectiviology.com",
+      "www.get-youtube-thumbnail.com",
+      "unix.stackexchange.com",
+      "superuser.com",
+      "askubuntu.com"
    ],
    "fetchNews" : true,
    "location" : {
@@ -61,6 +87,9 @@
    },
    "presets" : [],
    "previewNewDesign" : true,
+   "readNews" : [
+      "thanks-2023"
+   ],
    "schemeVersion" : 2,
    "syncSettings" : true,
    "syncSitesFixes" : false,
