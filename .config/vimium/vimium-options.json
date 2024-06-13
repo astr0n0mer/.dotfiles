@@ -13,16 +13,16 @@
          "pattern" : "https?://www.nitrotype.com/*"
       },
       {
-         "passKeys" : "",
-         "pattern" : "https?://www.openvim.com/*"
-      },
-      {
          "passKeys" : "orx",
          "pattern" : "https?://www.speedcoder.net/*"
       },
       {
          "passKeys" : "orx",
          "pattern" : "https?://zty.pe/*"
+      },
+      {
+         "passKeys" : "",
+         "pattern" : "https?://*.openvim.com/*"
       }
    ],
    "filterLinkHints" : true,

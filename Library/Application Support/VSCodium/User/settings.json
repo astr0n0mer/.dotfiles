@@ -18,7 +18,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
+    "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[scss]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -81,6 +81,9 @@
   },
   "editor.wordWrap": "on",
   "extensions.autoUpdate": "onlySelectedExtensions",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
   "extensions.ignoreRecommendations": true,
   "files.associations": {
     ".env*": "dotenv"
@@ -140,9 +143,10 @@
   "liveSassCompile.settings.useNewCompiler": false,
   "liveServer.settings.NoBrowser": true,
   "rest-client.enableTelemetry": false,
+  "ruff.nativeServer": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "auto",
   "terminal.integrated.fontSize": 13,
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.vimrc",
