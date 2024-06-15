@@ -14,4 +14,4 @@ eval "$(pyenv virtualenv-init -)"
 export WORKON_HOME="$HOME/.virtualenvs"
 # DO NOT USE $HOME/.pyenv/shims/virtualenvwrapper.sh
 # Reference: https://stackoverflow.com/a/65866266/7753274
-source $HOME/.pyenv/versions/3.12.1/bin/virtualenvwrapper.sh
+[ -f $HOME/.pyenv/versions/3.12.1/bin/virtualenvwrapper.sh ] && source $HOME/.pyenv/versions/3.12.1/bin/virtualenvwrapper.sh

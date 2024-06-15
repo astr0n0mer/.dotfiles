@@ -136,6 +136,7 @@ Sync/
 # system files
 .bash_history
 .bashrc.save
+.Brewfile.lock.json
 .CFUserTextEncoding
 .DS_Store
 .haxornewshistory

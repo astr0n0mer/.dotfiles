@@ -1,10 +1,7 @@
 .PHONY: backup
 backup:
-	cd ~/.config/gh && \
-	/opt/homebrew/bin/gh extension list > extensions.txt
+	gh extension list | awk '{print $$NF}' > ~/.config/gh/extensions.txt
 
-# untested recipe
 .PHONY: restore
 restore:
-	cd ~/.config/gh && \
-	awk '{print $2}' extensions.txt | xargs gh extension install
+	cat ~/.config/gh/extensions.txt | xargs gh extension install
