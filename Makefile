@@ -89,7 +89,6 @@ cron-daily:
 		make -f ~/Makefile raycast-settings.rayconfig notify=1 && sleep 1; \
 		make -f ~/.config/crontab/Makefile getconfig notify=1 && sleep 1; \
 		make -f ~/.config/dashy/Makefile cron notify=1 && sleep 1; \
-		make -f ~/.config/macos/Makefile backup notify=1; \
 		make -f ~/.config/gh/Makefile backup; \
 		make -f ~/.config/VSCodium/Makefile backup && \
 			${TERMINAL_NOTIFIER} -title "VSCodium" -message "Backup complete" -sound default; \
