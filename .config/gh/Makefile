@@ -1,7 +1,7 @@
 .PHONY: backup
 backup:
 	cd ~/.config/gh && \
-	gh extension list > extensions.txt
+	/opt/homebrew/bin/gh extension list > extensions.txt
 
 # untested recipe
 .PHONY: restore

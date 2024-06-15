@@ -1,7 +1,7 @@
 PROFILES := codium-python codium-javascript
 
 define backup-profile
-	codium --profile $1 --list-extensions > $1.code-profile
+	/opt/homebrew/bin/codium --profile $1 --list-extensions > $1.code-profile
 endef
 
 define restore-profile
