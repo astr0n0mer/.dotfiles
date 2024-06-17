@@ -44,7 +44,7 @@ alias logout="launchctl reboot logout"
 
 
 # openapp
-alias openapp="ls -1 /Applications /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs open -a"
+alias openapp="ls -1 /Applications /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} open -a \"{}\""
 
 
 # screen
