@@ -36,9 +36,12 @@
 
       system.defaults = {
         dock.autohide = true;
+        dock.launchanim = false;
         dock.mineffect = "scale";
         dock.mru-spaces = false;
         dock.orientation = "left";
+        dock.static-only = true;
+        dock.tilesize = 48;
         finder._FXShowPosixPathInTitle = true;
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "Nlsv";
