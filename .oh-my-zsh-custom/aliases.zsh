@@ -19,7 +19,7 @@ dot() {
 }
 
 dotedit() {
-    GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME ${1:-codium} $HOME
+    GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME $@
 }
 
 
