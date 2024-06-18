@@ -5,7 +5,12 @@ if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
 
   # Auto-completion
   # ---------------
-  source "/opt/homebrew/opt/fzf/shell/completion.zsh"
+  if [ -d "/opt/homebrew/opt/fzf/shell/completion.zsh" ] ; then
+    source "/opt/homebrew/opt/fzf/shell/completion.zsh"
+  fi
+  if [ -d "/home/linuxbrew/.linuxbrew/bin/fzf" ] ; then
+    source "/home/linuxbrew/.linuxbrew/bin/fzf"
+  fi
 
   # Key bindings
   # ------------
