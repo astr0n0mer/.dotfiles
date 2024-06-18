@@ -14,6 +14,8 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ pkgs.vim
+          pkgs.fastfetch
+          pkgs.flameshot
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -46,6 +48,7 @@
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "Nlsv";
         finder.ShowPathbar = true;
+        LaunchServices.LSQuarantine = false;
         NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls = true;
         NSGlobalDomain.AppleEnableSwipeNavigateWithScrolls = true;
         NSGlobalDomain.AppleInterfaceStyle = "Dark";
@@ -69,11 +72,14 @@
       homebrew = {
         enable = true;
         brews = [
-          "fastfetch"
+          "glab"
         ];
         casks = [
-          "flameshot"
+          "postman"
         ];
+        caskArgs = {
+          no_quarantine = true;
+        };
       };
 
       # The platform the configuration will be used on.
