@@ -92,7 +92,21 @@
       "xkcd.com",
       "jsr.io",
       "devhints.io",
-      "api.slack.com"
+      "api.slack.com",
+      "un.curl.dev",
+      "terminalsare.sexy",
+      "gitlab.*.org",
+      "daiderd.com",
+      "*.substack.com",
+      "aider.chat",
+      "toml.io",
+      "sunnnychan.github.io",
+      "www.uhdpaper.com",
+      "www.wallpaperflare.com",
+      "yoan-thirion.gitbook.io",
+      "slack.com",
+      "nixos.org",
+      "serverfault.com"
    ],
    "fetchNews" : true,
    "location" : {

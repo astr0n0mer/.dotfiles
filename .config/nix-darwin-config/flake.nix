@@ -14,6 +14,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages =
         [ pkgs.vim
+          pkgs.alacritty
           pkgs.fastfetch
           pkgs.flameshot
         ];
