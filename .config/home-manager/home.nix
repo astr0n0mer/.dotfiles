@@ -24,6 +24,7 @@
     pkgs.alacritty
     pkgs.fastfetch
     pkgs.fzf
+    pkgs.lazygit
     pkgs.neovim
     pkgs.ripgrep
     pkgs.tlrc
