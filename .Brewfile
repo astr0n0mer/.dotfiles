@@ -1,5 +1,6 @@
 tap "clintmod/formulas"
 tap "homebrew/bundle"
+tap "homebrew/services"
 tap "jesseduffield/lazygit"
 tap "koekeishiya/formulae"
 tap "sijanc147/formulas"

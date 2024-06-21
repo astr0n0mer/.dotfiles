@@ -15,8 +15,10 @@
       environment.systemPackages =
         [ pkgs.vim
           pkgs.alacritty
+          pkgs.bat
           pkgs.fastfetch
           pkgs.flameshot
+          pkgs.tree
         ];
 
       # Auto upgrade nix package and the daemon service.

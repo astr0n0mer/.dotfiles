@@ -22,6 +22,7 @@
     # # "Hello, world!" when run.
     # pkgs.hello
     pkgs.alacritty
+    pkgs.bat
     pkgs.fastfetch
     pkgs.fzf
     pkgs.lazygit

@@ -1,5 +1,9 @@
 # Configuration guide: https://github.com/koekeishiya/skhd#configuration
 
+# start alacritty
+alt - return : /run/current-system/sw/bin/alacritty
+
+
 # change window focus within space
 alt - h : /opt/homebrew/bin/yabai -m window --focus west
 alt - j : /opt/homebrew/bin/yabai -m window --focus south
@@ -7,29 +11,35 @@ alt - k : /opt/homebrew/bin/yabai -m window --focus north
 alt - l : /opt/homebrew/bin/yabai -m window --focus east
 
 
-#change focus between external displays (left and right)
-alt - s: /opt/homebrew/bin/yabai -m display --focus west
-alt - g: /opt/homebrew/bin/yabai -m display --focus east
+# change focus between external displays (left and right)
+alt - y: /opt/homebrew/bin/yabai -m display --focus west
+alt - o: /opt/homebrew/bin/yabai -m display --focus east
 
 
 # rotate layout clockwise
 shift + alt - r : /opt/homebrew/bin/yabai -m space --rotate 270
 
-# flip along y-axis
-shift + alt - y : /opt/homebrew/bin/yabai -m space --mirror y-axis
-
 # flip along x-axis
 shift + alt - x : /opt/homebrew/bin/yabai -m space --mirror x-axis
 
+# flip along y-axis
+shift + alt - y : /opt/homebrew/bin/yabai -m space --mirror y-axis
+
 # toggle window float
-shift + alt - t : /opt/homebrew/bin/yabai -m window --toggle float --grid 4:4:1:1:2:2
+shift + alt - space : /opt/homebrew/bin/yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 
 # maximize a window
-shift + alt - m : /opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen
+shift + alt - f : /opt/homebrew/bin/yabai -m window --toggle zoom-fullscreen
+
+# resize a window
+alt - 0x1B : /opt/homebrew/bin/yabai -m window --resize top_right:96:0 # keycode for -
+shift + alt - 0x1B : /opt/homebrew/bin/yabai -m window --resize top_right:-96:0 # keycode for -
+alt - 0x18 : /opt/homebrew/bin/yabai -m window --resize bottom_right:0:54 # keycode for =
+shift + alt - 0x18 : /opt/homebrew/bin/yabai -m window --resize bottom_right:0:-54 # keycode for =
 
 # balance out tree of windows (resize to occupy same area)
-shift + alt - e : /opt/homebrew/bin/yabai -m space --balance
+shift + alt - b : /opt/homebrew/bin/yabai -m space --balance
 
 
 # swap windows
@@ -47,8 +57,8 @@ ctrl + alt - l : /opt/homebrew/bin/yabai -m window --warp east
 
 
 # move window to display left and right
-shift + alt - s : /opt/homebrew/bin/yabai -m window --display west; /opt/homebrew/bin/yabai -m display --focus west;
-shift + alt - g : /opt/homebrew/bin/yabai -m window --display east; /opt/homebrew/bin/yabai -m display --focus east;
+shift + alt - y : /opt/homebrew/bin/yabai -m window --display west; /opt/homebrew/bin/yabai -m display --focus west;
+shift + alt - o : /opt/homebrew/bin/yabai -m window --display east; /opt/homebrew/bin/yabai -m display --focus east;
 
 
 # move window to prev and next space
@@ -68,6 +78,6 @@ shift + alt - 9 : /opt/homebrew/bin/yabai -m window --space 9;
 
 
 # stop/start/restart /opt/homebrew/bin/yabai
-ctrl + alt - q : /opt/homebrew/bin/yabai --stop-service
+ctrl + alt - e : /opt/homebrew/bin/yabai --stop-service
 ctrl + alt - s : /opt/homebrew/bin/yabai --start-service
 ctrl + alt - r : /opt/homebrew/bin/yabai --restart-service
