@@ -10,3 +10,5 @@
 	conflictstyle = diff3
 [diff]
 	algorithm = histogram
+[core]
+	editor = vim

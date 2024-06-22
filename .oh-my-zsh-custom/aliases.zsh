@@ -27,6 +27,10 @@ dotedit() {
 alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
+# ls
+alias lssymlinks="find . -maxdepth 1 -type l -exec ls -l {} \;"
+
+
 # IP address
 myip() {
     make -f ~/.config/myip/Makefile get-myip version="$1"

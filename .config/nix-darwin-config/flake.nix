@@ -15,8 +15,10 @@
       environment.systemPackages =
         [ pkgs.vim
           pkgs.alacritty
+          pkgs.bat
           pkgs.fastfetch
           pkgs.flameshot
+          pkgs.tree
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -39,12 +41,17 @@
 
       system.defaults = {
         dock.autohide = true;
+        dock.expose-animation-duration = 0.05;
         dock.launchanim = false;
         dock.mineffect = "scale";
         dock.mru-spaces = false;
         dock.orientation = "left";
+        spaces.spans-displays = true;
         dock.static-only = true;
         dock.tilesize = 48;
+        dock.wvous-bl-corner = 11; # Launchpad
+        dock.wvous-tl-corner = 13; # Lock Screen
+        dock.wvous-tr-corner = 12; # Notification Center
         finder._FXShowPosixPathInTitle = true;
         finder.AppleShowAllExtensions = true;
         finder.FXPreferredViewStyle = "Nlsv";
@@ -67,6 +74,9 @@
         NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
         screensaver.askForPasswordDelay = 10;
         SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
+        trackpad.Clicking = true;
+        trackpad.Dragging = true;
+        trackpad.TrackpadRightClick = true;
       };
       security.pam.enableSudoTouchIdAuth = true;
 
