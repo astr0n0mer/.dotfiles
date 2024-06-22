@@ -3,9 +3,9 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \
 			xclip -selection c -out)
 
-.PHONY: default
-default:
-	@echo "error: no_target_specified"
+.PHONY: adopt
+adopt:
+	bash scripts/move_to_stow.sh ${dotfile}
 
 # sync local config files to remote
 .PHONY: dotfiles-pull
