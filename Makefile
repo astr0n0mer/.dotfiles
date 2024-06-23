@@ -5,7 +5,7 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 
 .PHONY: adopt
 adopt:
-	bash scripts/move_to_stow.sh ${dotfile}
+	bash _scripts/move_to_stow.sh ${dotfile}
 
 # sync local config files to remote
 .PHONY: dotfiles-pull
