@@ -1,3 +1,7 @@
 *.log
 sandbox
+**/VSCodium/User/globalStorage
+**/VSCodium/User/History
+**/VSCodium/User/profiles/*/
+**/VSCodium/User/workspaceStorage
 work.Makefile

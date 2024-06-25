@@ -5,4 +5,5 @@ blur=true
 option_as_alt="Both"
 
 [font]
+normal={family="AurulentSansM Nerd Font"}
 size=13

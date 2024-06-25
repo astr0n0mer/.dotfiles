@@ -3,6 +3,10 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \
 			xclip -selection c -out)
 
+.PHONY: stow_tree
+stow_tree:
+	ls -a | grep "[^(.git)]" | xargs tree -al
+
 .PHONY: adopt
 adopt:
 	bash _scripts/move_to_stow.sh ${dotfile}

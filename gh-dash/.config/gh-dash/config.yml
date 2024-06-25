@@ -64,5 +64,5 @@ theme:
     table:
       showSeparator: true
 pager:
-  diff: ""
+  diff: "bat"
 confirmQuit: false

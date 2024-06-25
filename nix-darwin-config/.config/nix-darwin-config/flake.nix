@@ -48,7 +48,8 @@
         dock.mineffect = "scale";
         dock.mru-spaces = false;
         dock.orientation = "left";
-        spaces.spans-displays = true;
+        # System Settings > Desktop & Dock > Mission Control > Displays have separate Spaces
+        spaces.spans-displays = true; # this is not being set properly by nix-darwin
         dock.static-only = true;
         dock.tilesize = 48;
         dock.wvous-bl-corner = 11; # Launchpad
@@ -71,7 +72,7 @@
         NSGlobalDomain.NSDocumentSaveNewDocumentsToCloud = false;
         NSGlobalDomain.NSNavPanelExpandedStateForSaveMode = true;
         NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
-        NSGlobalDomain._HIHideMenuBar = true;
+        NSGlobalDomain._HIHideMenuBar = false;
         NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
         NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
         screensaver.askForPasswordDelay = 10;
