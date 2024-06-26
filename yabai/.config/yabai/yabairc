@@ -30,3 +30,7 @@ yabai -m config mouse_follows_focus on
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
+
+# dropdown terminal (aka "Quake mode")
+# see additional config in ~/.config/skhd/skhdrc
+yabai -m rule --add title="alacritty_hud" manage=off grid="10:1:0:0:1:4"

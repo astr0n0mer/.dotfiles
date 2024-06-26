@@ -65,4 +65,4 @@ theme:
       showSeparator: true
 pager:
   diff: "bat"
-confirmQuit: false
+confirmQuit: true

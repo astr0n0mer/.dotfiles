@@ -110,7 +110,9 @@
       "yoan-thirion.gitbook.io",
       "www.glassdoor.co.in",
       "tracesof.net",
-      "www.gnu.org"
+      "www.gnu.org",
+      "xmonad.org",
+      "daniel.haxx.se"
    ],
    "fetchNews" : true,
    "location" : {
