@@ -7,6 +7,10 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 stow_tree:
 	ls -a | grep "[^(.git)]" | xargs tree -al
 
+.PHONY: stow_all
+stow_all:
+	find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | xargs stow
+
 .PHONY: adopt
 adopt:
 	bash _scripts/move_to_stow.sh ${dotfile}

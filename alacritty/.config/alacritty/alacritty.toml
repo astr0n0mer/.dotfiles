@@ -7,3 +7,6 @@ option_as_alt="Both"
 [font]
 normal={family="AurulentSansM Nerd Font"}
 size=13
+
+[env]
+WINIT_X11_SCALE_FACTOR="1.0"
