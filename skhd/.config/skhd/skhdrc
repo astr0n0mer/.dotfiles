@@ -3,9 +3,12 @@
 # start alacritty
 alt - return : /run/current-system/sw/bin/alacritty
 
+# start rofi
+alt - d : /opt/local/bin/rofi -show combi
+
 # dropdown terminal (aka "quade mode")
 # see additional config in ~/.config/yabai/yabairc
-alt - space : WINDOW_TITLE="alacritty_hud";                                                                                 \
+alt - escape : WINDOW_TITLE="alacritty_hud";                                                                                    \
                 WINDOW_ID=$(yabai -m query --windows | jq -e ".[] | select(.title==\"$WINDOW_TITLE\") | .id");              \
                 if [ -z "$WINDOW_ID" ]; then                                                                                \
                   pgrep -x alacritty > /dev/null &&                                                                         \

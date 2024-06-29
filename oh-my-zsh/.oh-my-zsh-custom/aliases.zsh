@@ -23,6 +23,10 @@ dotedit() {
 }
 
 
+# git
+alias lg="lazygit"
+
+
 # haxor-news
 alias haxor="workon haxor-news && haxor-news && deactivate"
 
@@ -49,6 +53,10 @@ alias logout="launchctl reboot logout"
 
 # openapp
 alias openapp="ls -1 /Applications /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} open -a \"{}\""
+
+
+# projects
+alias icode="find ~/projects/ ~/projects-work/ -type d \( -name node_modules -o -name .venv -o -name .git -o -name site-packages \) -prune -false -o -type f -print | fzf"
 
 
 # screen

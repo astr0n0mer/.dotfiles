@@ -27,6 +27,7 @@ yabai -m config mouse_follows_focus on
 
 
 # exceptions
+yabai -m rule --add app="^AWS VPN Client$" manage=off
 yabai -m rule --add app="^Calculator$" manage=off
 yabai -m rule --add app="^Karabiner-Elements$" manage=off
 yabai -m rule --add app="^System Settings$" manage=off
