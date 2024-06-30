@@ -3,9 +3,17 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \
 			xclip -selection c -out)
 
-.PHONY: default
-default:
-	@echo "error: no_target_specified"
+.PHONY: stow_tree
+stow_tree:
+	ls -a | grep "[^(.git)]" | xargs tree -al
+
+.PHONY: stow_all
+stow_all:
+	find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | xargs stow
+
+.PHONY: adopt
+adopt:
+	bash _scripts/move_to_stow.sh ${dotfile}
 
 # sync local config files to remote
 .PHONY: dotfiles-pull
