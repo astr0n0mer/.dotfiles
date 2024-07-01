@@ -143,6 +143,7 @@
   "liveSassCompile.settings.useNewCompiler": false,
   "liveServer.settings.NoBrowser": true,
   "rest-client.enableTelemetry": false,
+  "ruff.lineLength": 119,
   "ruff.nativeServer": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",

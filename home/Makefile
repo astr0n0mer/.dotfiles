@@ -5,11 +5,11 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 
 .PHONY: stow_tree
 stow_tree:
-	ls -a | grep "[^(.git)]" | xargs tree -al
+	cd .. && ls -a . | grep "[^(.git)]" | xargs tree -al
 
 .PHONY: stow_all
 stow_all:
-	find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | xargs stow
+	cd .. && find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | xargs stow
 
 .PHONY: adopt
 adopt:
