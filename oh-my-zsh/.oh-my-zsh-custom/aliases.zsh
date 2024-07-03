@@ -24,6 +24,8 @@ dotedit() {
 
 
 # git
+alias gbi="git branch | fzf"
+alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
 
 
