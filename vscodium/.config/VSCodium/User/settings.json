@@ -162,5 +162,7 @@
   "workbench.colorTheme": "Bearded Theme Arc Eggplant",
   "workbench.list.horizontalScrolling": true,
   "workbench.sideBar.location": "right",
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.parameterNames.enabled": "all"
 }

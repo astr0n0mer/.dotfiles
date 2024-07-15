@@ -12,3 +12,5 @@
 	algorithm = histogram
 [core]
 	editor = vim
+[rerere]
+	enabled = true

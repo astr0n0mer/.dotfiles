@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=https://dlvhdr.github.io/gh-dash/configuration/gh-dash/schema.json
 prSections:
-- title: Needs My Review
-  filters: is:open review-requested:@me
-- title: Reviewed By Me
-  filters: is:open reviewed-by:@me -author:@me -review:approved
 - title: Assigned To Me
   filters: is:open assignee:@me
 - title: Involved
   filters: is:open involves:@me -author:@me
+- title: Needs My Review
+  filters: is:open review-requested:@me
+- title: Reviewed By Me
+  filters: is:open reviewed-by:@me -author:@me -review:approved
 - title: Created By Others
   filters: is:open user:timelyschools -author:@me -repo:timelyschools/timelypymodels-lib -review:approved
 - title: Approved
@@ -65,4 +65,4 @@ theme:
       showSeparator: true
 pager:
   diff: "bat"
-confirmQuit: true
+confirmQuit: false

@@ -14,7 +14,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # stow
-export STOW_DIR="$HOME/.dotfiles"
+# export STOW_DIR="$HOME/.dotfiles"
 
 # virtualenvwrapper
 export WORKON_HOME="$HOME/.virtualenvs"

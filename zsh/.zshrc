@@ -21,8 +21,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="tjkirch"             # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#tjkirch
 # ZSH_THEME="trapd00r"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#trapd00r # won't use again
 # ZSH_THEME="arrow"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#arrow
-ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#macovsky
-# ZSH_THEME="rgm"                 # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#rgm
+# ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#macovsky
+ZSH_THEME="rgm"                 # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#rgm
 # ZSH_THEME="frontcube"           # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#frontcube # won't use again: prints cwd in black color
 # ZSH_THEME="crunch"              # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#crunch
 # ZSH_THEME="essembeh"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#essembeh
@@ -109,7 +109,7 @@ plugins=(
     sudo
     vscode
     web-search
-    yarn
+    # yarn
     z
     zsh-autosuggestions
     zsh-syntax-highlighting
@@ -126,11 +126,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"

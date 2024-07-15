@@ -1,0 +1,8 @@
+.git
+.gitignore
+
+_scripts
+
+LICENSE
+Makefile
+README.md
