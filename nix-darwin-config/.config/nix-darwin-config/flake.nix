@@ -16,10 +16,12 @@
         [ pkgs.vim
           pkgs.alacritty
           pkgs.bat
+          pkgs.cargo
           pkgs.fastfetch
           pkgs.flameshot
           pkgs.fzf
           pkgs.stow
+          pkgs.termusic
           pkgs.tree
         ];
 
@@ -42,44 +44,66 @@
       system.stateVersion = 4;
 
       system.defaults = {
-        dock.autohide = true;
-        dock.expose-animation-duration = 0.05;
-        dock.launchanim = false;
-        dock.mineffect = "scale";
-        dock.mru-spaces = false;
-        dock.orientation = "left";
+        dock = {
+          autohide = true;
+          expose-animation-duration = 0.05;
+          launchanim = false;
+          mineffect = "scale";
+          mru-spaces = false;
+          orientation = "left";
+          static-only = true;
+          tilesize = 48;
+          wvous-bl-corner = 11; # Launchpad
+          wvous-tl-corner = 13; # Lock Screen
+          wvous-tr-corner = 12; # Notification Center
+        };
+        finder = {
+          _FXShowPosixPathInTitle = true;
+          AppleShowAllExtensions = true;
+          AppleShowAllFiles = true;
+          FXPreferredViewStyle = "Nlsv";
+          ShowPathbar = true;
+        };
+        LaunchServices = {
+          LSQuarantine = false;
+        };
+        NSGlobalDomain = {
+          AppleEnableMouseSwipeNavigateWithScrolls = true;
+          AppleEnableSwipeNavigateWithScrolls = true;
+          AppleInterfaceStyle = "Dark";
+          ApplePressAndHoldEnabled = false;
+          AppleScrollerPagingBehavior = true;
+          AppleShowAllExtensions = true;
+          AppleShowAllFiles = true;
+          InitialKeyRepeat = 10;
+          KeyRepeat = 1;
+          NSAutomaticWindowAnimationsEnabled = false;
+          NSDocumentSaveNewDocumentsToCloud = false;
+          NSNavPanelExpandedStateForSaveMode = true;
+          NSNavPanelExpandedStateForSaveMode2 = true;
+          _HIHideMenuBar = false;
+          "com.apple.mouse.tapBehavior" = 1;
+          "com.apple.trackpad.enableSecondaryClick" = true;
+        };
+        screensaver = {
+          askForPasswordDelay = 10;
+        };
         # System Settings > Desktop & Dock > Mission Control > Displays have separate Spaces
-        spaces.spans-displays = true; # this is not being set properly by nix-darwin
-        dock.static-only = true;
-        dock.tilesize = 48;
-        dock.wvous-bl-corner = 11; # Launchpad
-        dock.wvous-tl-corner = 13; # Lock Screen
-        dock.wvous-tr-corner = 12; # Notification Center
-        finder._FXShowPosixPathInTitle = true;
-        finder.AppleShowAllExtensions = true;
-        finder.FXPreferredViewStyle = "Nlsv";
-        finder.ShowPathbar = true;
-        LaunchServices.LSQuarantine = false;
-        NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls = true;
-        NSGlobalDomain.AppleEnableSwipeNavigateWithScrolls = true;
-        NSGlobalDomain.AppleInterfaceStyle = "Dark";
-        NSGlobalDomain.ApplePressAndHoldEnabled = false;
-        NSGlobalDomain.AppleScrollerPagingBehavior = true;
-        NSGlobalDomain.AppleShowAllExtensions = true;
-        NSGlobalDomain.InitialKeyRepeat = 10;
-        NSGlobalDomain.KeyRepeat = 1;
-        NSGlobalDomain.NSAutomaticWindowAnimationsEnabled = false;
-        NSGlobalDomain.NSDocumentSaveNewDocumentsToCloud = false;
-        NSGlobalDomain.NSNavPanelExpandedStateForSaveMode = true;
-        NSGlobalDomain.NSNavPanelExpandedStateForSaveMode2 = true;
-        NSGlobalDomain._HIHideMenuBar = false;
-        NSGlobalDomain."com.apple.mouse.tapBehavior" = 1;
-        NSGlobalDomain."com.apple.trackpad.enableSecondaryClick" = true;
-        screensaver.askForPasswordDelay = 10;
-        SoftwareUpdate.AutomaticallyInstallMacOSUpdates = false;
-        trackpad.Clicking = true;
-        trackpad.Dragging = true;
-        trackpad.TrackpadRightClick = true;
+        spaces = {
+          spans-displays = true; # this is not being set properly by nix-darwin
+        };
+        SoftwareUpdate = {
+          AutomaticallyInstallMacOSUpdates = false;
+        };
+        trackpad = {
+          Clicking = true;
+          Dragging = true;
+          TrackpadRightClick = true;
+        };
+      };
+      system.keyboard = {
+          enableKeyMapping = true;
+          remapCapsLockToControl = true;
       };
       security.pam.enableSudoTouchIdAuth = true;
 

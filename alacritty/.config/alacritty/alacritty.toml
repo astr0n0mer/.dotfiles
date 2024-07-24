@@ -5,7 +5,7 @@ blur=true
 option_as_alt="Both"
 
 [font]
-normal={family="AurulentSansM Nerd Font"}
+normal={family="Hack Nerd Font"}
 size=13
 
 [env]
