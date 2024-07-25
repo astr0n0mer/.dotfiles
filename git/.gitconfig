@@ -1,7 +1,7 @@
 [user]
 	email = 42691857+astr0n0mer@users.noreply.github.com
 	name = astr0n0mer
-	signingkey = ~/.ssh/astr0n0mer.pub
+	signingkey = ~/.ssh/github_astr0n0mer.pub
 [gpg]
 	format = ssh
 [commit]
