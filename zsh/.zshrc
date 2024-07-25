@@ -144,6 +144,8 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+setopt HIST_FIND_NO_DUPS
+
 # Add local binaries to $PATH
 export PATH=$PATH:$HOME/.local/bin
 

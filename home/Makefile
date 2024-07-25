@@ -8,6 +8,11 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 dotfiles-pull:
 	export GIT_DIR=${HOME}/.dotfiles; export GIT_WORK_TREE=${HOME}; git fetch --all && git pull;
 
+.PHONY: kanata-start
+kanata-start:
+	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate
+	screen -dmS kanata-session sudo ~/.local/bin/kanata --cfg ~/.config/kanata/kanata.kbd
+
 # sync local files across devices
 .PHONY: syncthing-start
 syncthing-start:
@@ -75,6 +80,7 @@ startup:
 		echo "\n======== $(shell date) ========"; \
 		make -f ~/Makefile dotfiles-pull; \
 		make -f ~/Makefile syncthing-start; \
+		make -f ~/Makefile kanata-start; \
 	} >> ~/crontab-startup.log 2>&1
 
 .PHONY: cron-daily
