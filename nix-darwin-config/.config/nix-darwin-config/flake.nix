@@ -12,17 +12,18 @@
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
-      environment.systemPackages =
-        [ pkgs.vim
+      environment.systemPackages = [
           pkgs.alacritty
           pkgs.bat
           pkgs.cargo
           pkgs.fastfetch
           pkgs.flameshot
           pkgs.fzf
+          pkgs.slack-term
           pkgs.stow
           pkgs.termusic
           pkgs.tree
+          pkgs.vim
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -88,9 +89,8 @@
         screensaver = {
           askForPasswordDelay = 10;
         };
-        # System Settings > Desktop & Dock > Mission Control > Displays have separate Spaces
         spaces = {
-          spans-displays = true; # this is not being set properly by nix-darwin
+          spans-displays = false;
         };
         SoftwareUpdate = {
           AutomaticallyInstallMacOSUpdates = false;
@@ -102,8 +102,9 @@
         };
       };
       system.keyboard = {
-          enableKeyMapping = true;
-          remapCapsLockToControl = true;
+          #! I use karabiner-elements for key-remapping
+          # enableKeyMapping = true;
+          # remapCapsLockToControl = true;
       };
       security.pam.enableSudoTouchIdAuth = true;
 
@@ -113,7 +114,13 @@
           "glab"
         ];
         casks = [
+          # "brave-browser"
+          # "logseq"
+          "karabiner-elements"
           "postman"
+          # "raycast"
+          # "slack"
+          # "studio-3t"
         ];
         caskArgs = {
           no_quarantine = true;
