@@ -23,6 +23,8 @@
           pkgs.stow
           pkgs.termusic
           pkgs.tree
+          pkgs.ttyper
+          pkgs.typioca
           pkgs.vim
         ];
 
@@ -102,7 +104,7 @@
         };
       };
       system.keyboard = {
-          #! I use karabiner-elements for key-remapping
+          #! I use kanata for key-remapping
           # enableKeyMapping = true;
           # remapCapsLockToControl = true;
       };
@@ -116,7 +118,6 @@
         casks = [
           # "brave-browser"
           # "logseq"
-          "karabiner-elements"
           "postman"
           # "raycast"
           # "slack"

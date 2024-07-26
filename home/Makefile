@@ -13,6 +13,10 @@ kanata-start:
 	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate
 	screen -dmS kanata-session sudo ~/.local/bin/kanata --cfg ~/.config/kanata/kanata.kbd
 
+.PHONY: kanata-stop
+kanata-stop:
+	screen -S kanata-session -X quit
+
 # sync local files across devices
 .PHONY: syncthing-start
 syncthing-start:
