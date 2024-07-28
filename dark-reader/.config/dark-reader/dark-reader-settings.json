@@ -145,7 +145,11 @@
       "lexi-lambda.github.io",
       "leetcode.com",
       "grugbrain.dev",
-      "www.webopedia.com"
+      "www.webopedia.com",
+      "karabiner-elements.pqrs.org",
+      "www.mediawiki.org",
+      "survey.stackoverflow.co",
+      "mail.google.com"
    ],
    "fetchNews" : true,
    "location" : {
