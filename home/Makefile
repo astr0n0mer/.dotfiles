@@ -10,7 +10,7 @@ dotfiles-pull:
 
 .PHONY: kanata-start
 kanata-start:
-	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate
+	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate && \
 	screen -dmS kanata-session sudo ~/.local/bin/kanata --cfg ~/.config/kanata/kanata.kbd
 
 .PHONY: kanata-stop

@@ -33,6 +33,11 @@ alias lg="lazygit"
 alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
+# history
+# history | awk '{$1=""; print substr($0,2)}' | sort | uniq | fzf
+alias historyi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
+
+
 # IP address
 myip() {
     make -f ~/.config/myip/Makefile get-myip version="$1"
@@ -55,6 +60,11 @@ alias lssymlinks="find . -maxdepth 1 -type l -exec ls -l {} \;"
 
 # man page
 alias mani="compgen -c | fzf | xargs man"
+
+
+# music
+alias musicstart="screen -S music-session ytermusic"
+alias musicstop="screen -S music-session -X quit"
 
 
 # openapp
