@@ -18,6 +18,7 @@
     "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[python]": {
+    "diffEditor.ignoreTrimWhitespace": true,
     "editor.defaultFormatter": "charliermarsh.ruff"
   },
   "[scss]": {
@@ -33,6 +34,8 @@
   "csv-preview.formatValues": "never",
   "csv-preview.lineNumbers": "source",
   "csv-preview.resizeColumns": "all",
+  "diffEditor.ignoreTrimWhitespace": true,
+  "diffEditor.renderSideBySide": false,
   "dotenv.enableAutocloaking": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
@@ -42,7 +45,7 @@
   },
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "block-outline",
-  "editor.fontFamily": "\"AurulentSansM Nerd Font\", \"LiterationMono Nerd Font\", \"AnonymicePro Nerd Font\", \"Hack Nerd Font\", \"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "\"Hack Nerd Font\", \"AurulentSansM Nerd Font\", \"LiterationMono Nerd Font\", \"AnonymicePro Nerd Font\", \"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 13,
   "editor.formatOnSave": true,
@@ -50,22 +53,22 @@
   "editor.minimap.showSlider": "always",
   "editor.stickyScroll.enabled": true,
   "editor.tokenColorCustomizations": {
-    "[*Light*]": {
-      "textMateRules": [
-        {
-          "scope": "ref.matchtext",
-          "settings": {
-            "foreground": "#000"
-          }
-        }
-      ]
-    },
     "[*Dark*]": {
       "textMateRules": [
         {
           "scope": "ref.matchtext",
           "settings": {
             "foreground": "#fff"
+          }
+        }
+      ]
+    },
+    "[*Light*]": {
+      "textMateRules": [
+        {
+          "scope": "ref.matchtext",
+          "settings": {
+            "foreground": "#000"
           }
         }
       ]
@@ -91,6 +94,7 @@
   "files.defaultLanguage": "${activeEditorLanguage}",
   "files.insertFinalNewline": true,
   "git.autofetch": true,
+  "git.closeDiffOnOperation": true,
   "github.copilot.enable": {
     "*": true,
     "markdown": false,
@@ -125,6 +129,7 @@
     }
   ],
   "githubPullRequests.showPullRequestNumberInTree": true,
+  "javascript.inlayHints.parameterNames.enabled": "all",
   "liveSassCompile.settings.autoprefix": [
     "> 1%",
     "last 2 versions"
@@ -144,11 +149,15 @@
   "liveServer.settings.NoBrowser": true,
   "rest-client.enableTelemetry": false,
   "ruff.lineLength": 119,
+  "ruff.lint.select": [
+    "ALL"
+  ],
   "ruff.nativeServer": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
   "terminal.integrated.enableMultiLinePasteWarning": "auto",
   "terminal.integrated.fontSize": 13,
+  "typescript.inlayHints.parameterNames.enabled": "all",
   "vim.vimrc.enable": true,
   "vim.vimrc.path": "~/.vimrc",
   "window.commandCenter": true,
@@ -161,8 +170,5 @@
   // "workbench.colorTheme": "Bearded Theme HC Midnight Void",
   "workbench.colorTheme": "Bearded Theme Arc Eggplant",
   "workbench.list.horizontalScrolling": true,
-  "workbench.sideBar.location": "right",
-  "workbench.tree.renderIndentGuides": "always",
-  "typescript.inlayHints.parameterNames.enabled": "all",
-  "javascript.inlayHints.parameterNames.enabled": "all"
+  "workbench.sideBar.location": "right"
 }

@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-asvetliakov.vscode-neovim
 beardedbear.beardedtheme
 charliermarsh.ruff
 dotenv.dotenv-vscode
@@ -14,6 +13,5 @@ mongodb.mongodb-vscode
 ms-pyright.pyright
 ms-python.debugpy
 ms-python.python
-rogalmic.bash-debug
 streetsidesoftware.code-spell-checker
 vscodevim.vim

@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-asvetliakov.vscode-neovim
 beardedbear.beardedtheme
 dbaeumer.vscode-eslint
 dotenv.dotenv-vscode
@@ -16,3 +15,4 @@ redhat.vscode-yaml
 ritwickdey.liveserver
 streetsidesoftware.code-spell-checker
 typefox.open-collaboration-tools
+vscodevim.vim
