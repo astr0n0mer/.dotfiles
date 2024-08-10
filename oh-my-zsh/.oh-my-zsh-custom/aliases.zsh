@@ -1,3 +1,10 @@
+# apps
+#! macOS only
+alias appopen="ls -1 /Applications /Applications/AWS\ VPN\ Client /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} open -a \"{}\""
+alias appquit="ls -1 /Applications /Applications/AWS\ VPN\ Client /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} osascript -e 'quit app \"{}\"'"
+#! ==========
+
+
 # brave
 alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; cat ~/.config/brave/get-synced-tabs.js | pbcopy"
 
@@ -25,6 +32,7 @@ dotedit() {
 
 # git
 alias gbi="git branch | fzf"
+alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
 
@@ -65,10 +73,6 @@ alias mani="compgen -c | fzf | xargs man"
 # music
 alias musicstart="screen -S music-session ytermusic"
 alias musicstop="screen -S music-session -X quit"
-
-
-# openapp
-alias openapp="ls -1 /Applications /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} open -a \"{}\""
 
 
 # projects
