@@ -1,7 +1,8 @@
 # apps
 #! macOS only
-alias appopen="ls -1 /Applications /Applications/AWS\ VPN\ Client /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} open -a \"{}\""
-alias appquit="ls -1 /Applications /Applications/AWS\ VPN\ Client /System/Applications /System/Applications/Utilities | grep '.app' | fzf | xargs -I {} osascript -e 'quit app \"{}\"'"
+alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf"
+alias appopen="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf | xargs -I {} open -a \"{}\""
+alias appquit="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf | xargs -I {} osascript -e 'quit app \"{}\"'"
 #! ==========
 
 
