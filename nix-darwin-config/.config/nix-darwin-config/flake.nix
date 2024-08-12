@@ -51,6 +51,7 @@
         dock = {
           autohide = true;
           expose-animation-duration = 0.05;
+          # expose-group-by-app = true;
           launchanim = false;
           mineffect = "scale";
           mru-spaces = false;

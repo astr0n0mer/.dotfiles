@@ -1,7 +1,7 @@
 [window]
 decorations="None"
-opacity=0.7
-blur=true
+opacity=0.9
+blur=false
 option_as_alt="Both"
 
 [font]
