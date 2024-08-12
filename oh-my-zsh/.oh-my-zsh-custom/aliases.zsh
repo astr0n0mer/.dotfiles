@@ -22,11 +22,13 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 
 
 # .dotfiles
+alias dotfile="find ~/.dotfiles \( -path '*/History/*' -o -path '*/globalStorage/*' -o -path '*/workspaceStorage/*' -o -path '*/.git/*' \) -prune -o -type f -print | fzf"
+alias dotedit="find ~/.dotfiles \( -path '*/History/*' -o -path '*/globalStorage/*' -o -path '*/workspaceStorage/*' -o -path '*/.git/*' \) -prune -o -type f -print | fzf | xargs nvim"
 dot() {
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
 }
 
-dotedit() {
+dotgit() {
     GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME $@
 }
 
@@ -44,7 +46,7 @@ alias haxor="workon haxor-news && haxor-news && deactivate"
 
 # history
 # history | awk '{$1=""; print substr($0,2)}' | sort | uniq | fzf
-alias historyi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
+alias histi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
 
 
 # IP address
@@ -77,7 +79,7 @@ alias musicstop="screen -S music-session -X quit"
 
 
 # projects
-alias icode="find ~/projects/ ~/projects-work/ -type d \( -name node_modules -o -name .venv -o -name .git -o -name site-packages \) -prune -false -o -type f -print | fzf"
+alias codei="find ~/projects/ ~/projects-work/ -type d \( -name node_modules -o -name .venv -o -name .git -o -name site-packages \) -prune -false -o -type f -print | fzf"
 
 
 # screen

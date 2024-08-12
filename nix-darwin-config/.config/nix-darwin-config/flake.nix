@@ -116,6 +116,7 @@
         enable = true;
         brews = [
           "glab"
+          "xdotool"
         ];
         casks = [
           # "brave-browser"
