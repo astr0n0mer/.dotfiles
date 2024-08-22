@@ -23,10 +23,12 @@
           pkgs.slack-term
           pkgs.stow
           pkgs.termusic
+          pkgs.tmux
           pkgs.tree
           pkgs.ttyper
           pkgs.typioca
           pkgs.vim
+          pkgs.visidata
         ];
 
       # Auto upgrade nix package and the daemon service.

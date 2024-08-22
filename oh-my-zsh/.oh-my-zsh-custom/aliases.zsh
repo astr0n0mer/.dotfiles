@@ -35,6 +35,8 @@ dotgit() {
 
 # git
 alias gbi="git branch | fzf"
+alias ghn="gh api notifications | jq '.[].subject'"
+alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
