@@ -19,6 +19,7 @@
           pkgs.fastfetch
           pkgs.flameshot
           pkgs.fzf
+          pkgs.jnv
           pkgs.ranger
           pkgs.slack-term
           pkgs.stow

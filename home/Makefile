@@ -84,7 +84,6 @@ startup:
 		echo "\n======== $(shell date) ========"; \
 		make -f ~/Makefile dotfiles-pull; \
 		make -f ~/Makefile syncthing-start; \
-		make -f ~/Makefile kanata-start; \
 	} >> ~/crontab-startup.log 2>&1
 
 .PHONY: cron-daily

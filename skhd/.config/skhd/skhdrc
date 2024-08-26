@@ -2,14 +2,15 @@
 
 # start alacritty
 alt - return : /run/current-system/sw/bin/alacritty
+alt - space : alacritty msg create-window --title "alacritty_hud"
 
 # start rofi
-alt - d : /opt/local/bin/rofi -show combi
+# alt - d : /opt/local/bin/rofi -show combi
 
 # dropdown terminal (aka "quade mode")
 # see additional config in ~/.config/yabai/yabairc
-alt - escape : WINDOW_TITLE="alacritty_hud";                                                                                    \
-                WINDOW_ID=$(yabai -m query --windows | jq -e ".[] | select(.title==\"$WINDOW_TITLE\") | .id");              \
+alt - escape : WINDOW_TITLE="alacritty_hud";                                                                                \
+               WINDOW_ID=$(yabai -m query --windows | jq -e ".[] | select(.title==\"$WINDOW_TITLE\") | .id");               \
                 if [ -z "$WINDOW_ID" ]; then                                                                                \
                   pgrep -x alacritty > /dev/null &&                                                                         \
                   alacritty msg create-window --title "$WINDOW_TITLE" ||                                                    \
@@ -97,7 +98,7 @@ shift + alt - 8 : /opt/homebrew/bin/yabai -m window --space 8;
 shift + alt - 9 : /opt/homebrew/bin/yabai -m window --space 9;
 
 
-# stop/start/restart /opt/homebrew/bin/yabai
+# end/start/restart /opt/homebrew/bin/yabai
 ctrl + alt - e : /opt/homebrew/bin/yabai --stop-service
 ctrl + alt - s : /opt/homebrew/bin/yabai --start-service
 ctrl + alt - r : /opt/homebrew/bin/yabai --restart-service
