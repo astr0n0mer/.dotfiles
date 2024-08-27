@@ -13,23 +13,37 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
-          pkgs.alacritty
+          pkgs.ansible
           pkgs.bat
           pkgs.cargo
+          pkgs.docker
+          pkgs.docker-compose
           pkgs.fastfetch
           pkgs.flameshot
           pkgs.fzf
+          pkgs.gh
+          pkgs.glab
           pkgs.jnv
+          pkgs.jq
+          pkgs.lazydocker
+          pkgs.lazygit
+          pkgs.neovim
+          pkgs.pipx
+          pkgs.pyenv
           pkgs.ranger
+          pkgs.ripgrep
           pkgs.slack-term
           pkgs.stow
+          pkgs.syncthing
           pkgs.termusic
+          pkgs.tlrc
           pkgs.tmux
           pkgs.tree
           pkgs.ttyper
           pkgs.typioca
           pkgs.vim
           pkgs.visidata
+          pkgs.vscodium
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -117,17 +131,34 @@
 
       homebrew = {
         enable = true;
+        taps = [
+          "koekeishiya/formulae"
+          "ngrok/ngrok"
+          "render-oss/render"
+        ];
         brews = [
-          "glab"
+          "koekeishiya/formulae/skhd"
+          "koekeishiya/formulae/yabai"
+          "mpv"
+          "render-oss/render/render"
+          "saml2aws"
+          "terminal-notifier"
+          "trash"
           "xdotool"
         ];
         casks = [
-          # "brave-browser"
-          # "logseq"
+          "alacritty"
+          "brave-browser"
+          "docker"
+          "flameshot"
+          "logseq"
+          "ngrok"
           "postman"
-          # "raycast"
-          # "slack"
-          # "studio-3t"
+          "raycast"
+          "slack"
+          "studio-3t"
+          "vscodium"
+          "zap"
         ];
         caskArgs = {
           no_quarantine = true;
@@ -141,11 +172,11 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."bug-factory" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."w" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."bug-factory".pkgs;
+    darwinPackages = self.darwinConfigurations."w".pkgs;
   };
 }

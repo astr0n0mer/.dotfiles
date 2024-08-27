@@ -10,8 +10,8 @@ alias gvm="$GOPATH/bin/g"; # g-install: do NOT edit, see https://github.com/stef
 
 # pyenv
 export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
 
 # stow
 # export STOW_DIR="$HOME/.dotfiles"
