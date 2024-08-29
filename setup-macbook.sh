@@ -17,6 +17,7 @@ exec $SHELL
 
 # set up git ssh keys
 # https://dgarden.vercel.app/#/page/65bbd580-a619-4432-84be-09456abcea9c
+mkdir -p ~/.ssh
 
 # set up oh-my-zsh
 # https://dgarden.vercel.app/#/page/65896e1b-bc82-4093-9415-2a50207f3e70
@@ -35,6 +36,12 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
 exec $SHELL
 nvm --version
 nvm install --lts
+
+# set up python
+eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+pyenv install 3.11.9
+pyenv global 3.11.9
 
 # manual setup
 open /Applications/Raycast.app

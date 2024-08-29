@@ -1,7 +1,7 @@
 # Configuration guide: https://github.com/koekeishiya/skhd#configuration
 
 # start alacritty
-alt - return : /run/current-system/sw/bin/alacritty
+alt - return : /opt/homebrew/bin/alacritty
 alt - space : alacritty msg create-window --title "alacritty_hud"
 
 # start rofi

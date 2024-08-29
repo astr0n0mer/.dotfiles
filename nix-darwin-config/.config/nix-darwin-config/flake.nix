@@ -28,6 +28,7 @@
           pkgs.lazydocker
           pkgs.lazygit
           pkgs.neovim
+          pkgs.openvpn
           pkgs.pipx
           pkgs.pyenv
           pkgs.ranger
@@ -64,6 +65,7 @@
       # $ darwin-rebuild changelog
       system.stateVersion = 4;
 
+      security.pam.enableSudoTouchIdAuth = true;
       system.defaults = {
         dock = {
           autohide = true;
@@ -110,6 +112,9 @@
         screensaver = {
           askForPasswordDelay = 10;
         };
+        smb = {
+          ServerDescription = "igloo";
+        };
         spaces = {
           spans-displays = false;
         };
@@ -123,11 +128,11 @@
         };
       };
       system.keyboard = {
-          #! I use kanata for key-remapping
-          # enableKeyMapping = true;
-          # remapCapsLockToControl = true;
+          #! I use kanata for key-remapping on Linux
+          enableKeyMapping = true;
+          remapCapsLockToControl = true;
       };
-      security.pam.enableSudoTouchIdAuth = true;
+      system.startup.chime = false;
 
       homebrew = {
         enable = true;
@@ -148,17 +153,20 @@
         ];
         casks = [
           "alacritty"
+          "aws-vpn-client"
           "brave-browser"
+          "cursor"
           "docker"
           "flameshot"
           "logseq"
+          "mongodb-compass"
           "ngrok"
           "postman"
           "raycast"
           "slack"
           "studio-3t"
-          "vscodium"
           "zap"
+          "zoom"
         ];
         caskArgs = {
           no_quarantine = true;
