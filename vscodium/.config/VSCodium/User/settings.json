@@ -84,7 +84,7 @@
     ]
   },
   "editor.wordWrap": "on",
-  "extensions.autoUpdate": "onlySelectedExtensions",
+  "extensions.autoUpdate": false,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },

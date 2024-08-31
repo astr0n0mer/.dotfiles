@@ -12,6 +12,8 @@ prSections:
   filters: is:open user:timelyschools -author:@me -repo:timelyschools/timelypymodels-lib -review:approved
 - title: Approved
   filters: is:open review:approved user:timelyschools -repo:timelyschools/timelypymodels-lib
+- title: Closed
+  filters: is:closed user:timelyschools
 issuesSections:
 - title: My Issues
   filters: is:open author:@me
@@ -28,8 +30,6 @@ defaults:
   view: prs
   layout:
     prs:
-      updatedAt:
-        width: 5
       repo:
         width: 16
       author:
@@ -42,9 +42,9 @@ defaults:
         hidden: true
       lines:
         width: 16
-    issues:
       updatedAt:
-        width: 7
+        width: 5
+    issues:
       repo:
         width: 15
       creator:
@@ -52,6 +52,8 @@ defaults:
       assignees:
         width: 20
         hidden: true
+      updatedAt:
+        width: 7
   refetchIntervalMinutes: 30
 keybindings:
   issues: []

@@ -28,7 +28,7 @@
           pkgs.lazydocker
           pkgs.lazygit
           pkgs.neovim
-          pkgs.openvpn
+          # pkgs.openvpn # INFO: can't set this up to use .ovpn file
           pkgs.pipx
           pkgs.pyenv
           pkgs.ranger
@@ -45,6 +45,7 @@
           pkgs.vim
           pkgs.visidata
           pkgs.vscodium
+          pkgs.weechat
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -65,6 +66,16 @@
       # $ darwin-rebuild changelog
       system.stateVersion = 4;
 
+      networking = {
+        hostName = "cube";
+        localHostName = "cube";
+      };
+      # INFO: this is untested
+      # users.users = {
+      #   "tux" = {
+      #     createHome = true;
+      #   };
+      # };
       security.pam.enableSudoTouchIdAuth = true;
       system.defaults = {
         dock = {
@@ -111,9 +122,6 @@
         };
         screensaver = {
           askForPasswordDelay = 10;
-        };
-        smb = {
-          ServerDescription = "igloo";
         };
         spaces = {
           spans-displays = false;
@@ -180,11 +188,11 @@
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#simple
-    darwinConfigurations."w" = nix-darwin.lib.darwinSystem {
+    darwinConfigurations."cube" = nix-darwin.lib.darwinSystem {
       modules = [ configuration ];
     };
 
     # Expose the package set, including overlays, for convenience.
-    darwinPackages = self.darwinConfigurations."w".pkgs;
+    darwinPackages = self.darwinConfigurations."cube".pkgs;
   };
 }
