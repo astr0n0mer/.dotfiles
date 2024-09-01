@@ -24,6 +24,7 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 # .dotfiles
 alias dotfile="find ~/.dotfiles \( -path '*/History/*' -o -path '*/globalStorage/*' -o -path '*/workspaceStorage/*' -o -path '*/.git/*' \) -prune -o -type f -print | fzf"
 alias dotedit="find ~/.dotfiles \( -path '*/History/*' -o -path '*/globalStorage/*' -o -path '*/workspaceStorage/*' -o -path '*/.git/*' \) -prune -o -type f -print | fzf | xargs nvim"
+alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -r"
 dot() {
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
 }

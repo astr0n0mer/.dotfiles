@@ -1,5 +1,5 @@
 {
-  description = "Example Darwin system flake";
+  description = "astr0n0mer's nix-darwin config";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -173,6 +173,7 @@
           "raycast"
           "slack"
           "studio-3t"
+          "visual-studio-code"
           "zap"
           "zoom"
         ];
