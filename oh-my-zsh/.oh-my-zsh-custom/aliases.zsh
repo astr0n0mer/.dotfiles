@@ -28,10 +28,13 @@ alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -
 dot() {
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
 }
-
 dotgit() {
     GIT_DIR=$HOME/.dotfiles GIT_WORK_TREE=$HOME $@
 }
+
+
+# env
+alias getenvvar='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
 
 
 # git
@@ -79,6 +82,11 @@ alias mani="compgen -c | fzf | xargs man"
 # music
 alias musicstart="screen -S music-session ytermusic"
 alias musicstop="screen -S music-session -X quit"
+
+
+# nix
+# INFO: darwin-rebuild
+alias rebuildd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin-config/.config/nix-darwin-config"
 
 
 # projects

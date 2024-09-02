@@ -28,6 +28,7 @@
           pkgs.lazydocker
           pkgs.lazygit
           pkgs.neovim
+          pkgs.oh-my-zsh
           # pkgs.openvpn # INFO: can't set this up to use .ovpn file
           pkgs.pipx
           pkgs.pyenv
@@ -46,6 +47,12 @@
           pkgs.visidata
           pkgs.vscodium
           pkgs.weechat
+          pkgs.zsh
+          pkgs.zsh-autosuggestions
+          pkgs.zsh-powerlevel10k
+          pkgs.zsh-syntax-highlighting
+          pkgs.zsh-vi-mode
+          pkgs.zsh-you-should-use
         ];
 
       # Auto upgrade nix package and the daemon service.

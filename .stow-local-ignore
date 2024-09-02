@@ -2,6 +2,7 @@
 .gitignore
 
 _scripts
+dotfiles_sensitive
 sandbox
 
 LICENSE
