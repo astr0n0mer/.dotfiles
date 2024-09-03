@@ -88,7 +88,7 @@ ZSH_THEME="alanpeabody"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-ZSH_CUSTOM=~/.oh-my-zsh-custom/ 
+# ZSH_CUSTOM=~/.oh-my-zsh-custom/
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -97,24 +97,25 @@ ZSH_CUSTOM=~/.oh-my-zsh-custom/
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
 plugins=(
+    alias-finder
     bgnotify
-    colorize
     command-not-found
     gh
     git
     history
     npm
     nvm
-    screen
     sudo
+    vi-mode
     vscode
     web-search
-    # yarn
     z
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
+# plugins' settings
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 
 source $ZSH/oh-my-zsh.sh
 

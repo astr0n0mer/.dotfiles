@@ -28,6 +28,7 @@
           pkgs.lazydocker
           pkgs.lazygit
           pkgs.neovim
+          # pkgs.nerdfonts
           pkgs.oh-my-zsh
           # pkgs.openvpn # INFO: can't set this up to use .ovpn file
           pkgs.pipx
@@ -48,10 +49,7 @@
           pkgs.vscodium
           pkgs.weechat
           pkgs.zsh
-          pkgs.zsh-autosuggestions
           pkgs.zsh-powerlevel10k
-          pkgs.zsh-syntax-highlighting
-          pkgs.zsh-vi-mode
           pkgs.zsh-you-should-use
         ];
 
@@ -141,6 +139,11 @@
           Dragging = true;
           TrackpadRightClick = true;
         };
+        # INFO: need to provide "Full Disk Access" to the terminal emulator (Alacritty in this case)
+        # INFO: `open "x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"`
+        # universalaccess = {
+        #   reduceMotion = true;
+        # };
       };
       system.keyboard = {
           #! I use kanata for key-remapping on Linux
@@ -155,6 +158,11 @@
           "koekeishiya/formulae"
           "ngrok/ngrok"
           "render-oss/render"
+          {
+            name = "zen-browser/browser";
+            clone_target = "https://github.com/zen-browser/desktop.git";
+            force_auto_update = true;
+          }
         ];
         brews = [
           "koekeishiya/formulae/skhd"
@@ -182,6 +190,7 @@
           "studio-3t"
           "visual-studio-code"
           "zap"
+          "zen-browser"
           "zoom"
         ];
         caskArgs = {
