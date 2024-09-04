@@ -4,7 +4,7 @@
 cd ~
 git clone https://github.com/astr0n0mer/.dotfiles.git
 cd ~/.dotfiles
-git switch post/explore/gnu-stow
+git switch switch-macbook
 
 # set up nix
 curl --proto "=https" --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
@@ -28,9 +28,10 @@ mkdir -p ~/.ssh
 cd ~/.dotfiles
 make stow_all
 
+# INFO: this is now being done using oh-my-zsh
 # set up oh-my-zsh-plugins
-cd ~/.oh-my-zsh-custom
-make download-plugins
+# cd ~/.oh-my-zsh-custom
+# make download-plugins
 
 # set up node using nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash

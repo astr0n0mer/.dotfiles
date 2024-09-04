@@ -83,6 +83,11 @@
       # };
       security.pam.enableSudoTouchIdAuth = true;
       system.defaults = {
+        CustomSystemPreferences = {
+          universalaccess = { # INFO: this might be ineffective
+            useVirtualKeyboard = true;
+          };
+        };
         dock = {
           autohide = true;
           expose-animation-duration = 0.05;
@@ -125,6 +130,9 @@
           "com.apple.mouse.tapBehavior" = 1;
           "com.apple.trackpad.enableSecondaryClick" = true;
         };
+        screencapture = {
+          location = "~/Downloads/screenshots";
+        };
         screensaver = {
           askForPasswordDelay = 10;
         };
@@ -155,6 +163,7 @@
       homebrew = {
         enable = true;
         taps = [
+          "FelixKratz/formulae"
           "koekeishiya/formulae"
           "ngrok/ngrok"
           "render-oss/render"
@@ -170,6 +179,7 @@
           "mpv"
           "render-oss/render/render"
           "saml2aws"
+          "sketchybar"
           "terminal-notifier"
           "trash"
           "xdotool"
@@ -196,6 +206,12 @@
         caskArgs = {
           no_quarantine = true;
         };
+      };
+
+      services = {
+        sketchybar.enable = true;
+        skhd.enable = true;
+        yabai.enable = true;
       };
 
       # The platform the configuration will be used on.
