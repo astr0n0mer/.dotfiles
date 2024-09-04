@@ -1,5 +1,5 @@
 # apps
-#! macOS only
+# INFO: macOS only
 alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf"
 alias appopen="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf | xargs -I {} open -a \"{}\""
 alias appquit="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf | xargs -I {} osascript -e 'quit app \"{}\"'"
@@ -23,8 +23,8 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 
 
 # .dotfiles
-alias dotfile="find ~/.dotfiles \( -path '*/History/*' -o -path '*/globalStorage/*' -o -path '*/workspaceStorage/*' -o -path '*/.git/*' \) -prune -o -type f -print | fzf"
-alias dotedit="find ~/.dotfiles \( -path '*/History/*' -o -path '*/globalStorage/*' -o -path '*/workspaceStorage/*' -o -path '*/.git/*' \) -prune -o -type f -print | fzf | xargs nvim"
+alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print | fzf --preview 'bat {} --force-colorization --style=numbers' --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+alias dotedit="dotfile | xargs nvim"
 alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -r"
 dot() {
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
@@ -87,7 +87,7 @@ alias musicstop="screen -S music-session -X quit"
 
 # nix
 # INFO: darwin-rebuild
-alias rebuildd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin-config/.config/nix-darwin-config"
+alias rebuildd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin"
 
 
 # projects

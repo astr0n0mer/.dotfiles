@@ -12,7 +12,7 @@ exec $SHELL
 sudo rm /etc/nix/nix.conf
 
 # set up nix-darwin
-nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.dotfiles/nix-darwin-config/.config/nix-darwin-config
+nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin
 exec $SHELL
 
 # set up git ssh keys

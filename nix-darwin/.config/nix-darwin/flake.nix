@@ -28,7 +28,7 @@
           pkgs.lazydocker
           pkgs.lazygit
           pkgs.neovim
-          # pkgs.nerdfonts
+          pkgs.nerdfonts
           pkgs.oh-my-zsh
           # pkgs.openvpn # INFO: can't set this up to use .ovpn file
           pkgs.pipx
