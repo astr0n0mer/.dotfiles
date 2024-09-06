@@ -27,8 +27,8 @@
           pkgs.jq
           pkgs.lazydocker
           pkgs.lazygit
+          pkgs.luajitPackages.luarocks
           pkgs.neovim
-          pkgs.nerdfonts
           pkgs.oh-my-zsh
           # pkgs.openvpn # INFO: can't set this up to use .ovpn file
           pkgs.pipx
@@ -71,6 +71,12 @@
       # $ darwin-rebuild changelog
       system.stateVersion = 4;
 
+      fonts = {
+        packages = [
+          pkgs.nerdfonts
+          pkgs.sketchybar-app-font
+        ];
+      };
       networking = {
         hostName = "cube";
         localHostName = "cube";
@@ -82,6 +88,14 @@
       #   };
       # };
       security.pam.enableSudoTouchIdAuth = true;
+      system.activationScripts = { # INFO: this is not working
+        "postDarwinRebuild" = {
+          # enable = true;
+          text = ''
+            echo "Running postDarwinRebuild script..." >> ~/postDarwinRebuild.log
+          '';
+        };
+      };
       system.defaults = {
         CustomSystemPreferences = {
           universalaccess = { # INFO: this might be ineffective
@@ -98,9 +112,9 @@
           orientation = "left";
           static-only = true;
           tilesize = 48;
-          wvous-bl-corner = 11; # Launchpad
-          wvous-tl-corner = 13; # Lock Screen
+          wvous-tl-corner = 11; # Launchpad
           wvous-tr-corner = 12; # Notification Center
+          wvous-bl-corner = 13; # Lock Screen
         };
         finder = {
           _FXShowPosixPathInTitle = true;
@@ -126,7 +140,7 @@
           NSDocumentSaveNewDocumentsToCloud = false;
           NSNavPanelExpandedStateForSaveMode = true;
           NSNavPanelExpandedStateForSaveMode2 = true;
-          _HIHideMenuBar = false;
+          _HIHideMenuBar = true;
           "com.apple.mouse.tapBehavior" = 1;
           "com.apple.trackpad.enableSecondaryClick" = true;
         };
@@ -202,6 +216,10 @@
           "zap"
           "zen-browser"
           "zoom"
+
+          # INFO: font related casks
+          "font-sf-pro"
+          "sf-symbols"
         ];
         caskArgs = {
           no_quarantine = true;
