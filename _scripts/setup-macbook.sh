@@ -2,22 +2,25 @@
 
 # set up dotfiles
 cd ~
-git clone https://github.com/astr0n0mer/.dotfiles.git
+git clone --recurse-submodules https://github.com/astr0n0mer/.dotfiles.git
 cd ~/.dotfiles
 git switch switch-macbook
 
 # set up nix
 curl --proto "=https" --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
-exec $SHELL
+source ~/.zshrc
 sudo rm /etc/nix/nix.conf
 
 # set up nix-darwin
+sed -i '' "s/cube/$(scutil --get LocalHostName)/" ~/.dotfiles/nix-darwin/.config/nix-darwin/flake.nix
 nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin
-exec $SHELL
+source ~/.zshrc
 
 # set up git ssh keys
-# https://dgarden.vercel.app/#/page/65bbd580-a619-4432-84be-09456abcea9c
-mkdir -p ~/.ssh
+cd ~/.dotfiles/dotfiles_sensitive/.ssh
+make decrypt
+cd ..
+make setup_with_dotfiles
 
 # set up oh-my-zsh
 # https://dgarden.vercel.app/#/page/65896e1b-bc82-4093-9415-2a50207f3e70
@@ -35,7 +38,7 @@ make stow_all
 
 # set up node using nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-exec $SHELL
+source ~/.zshrc
 nvm --version
 nvm install --lts
 

@@ -13,7 +13,7 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [
-          pkgs.ansible
+          # pkgs.ansible
           pkgs.bat
           pkgs.cargo
           pkgs.docker
@@ -50,7 +50,6 @@
           pkgs.weechat
           pkgs.zsh
           pkgs.zsh-powerlevel10k
-          pkgs.zsh-you-should-use
         ];
 
       # Auto upgrade nix package and the daemon service.
@@ -188,12 +187,12 @@
           }
         ];
         brews = [
+          "FelixKratz/formulae/sketchybar"
           "koekeishiya/formulae/skhd"
           "koekeishiya/formulae/yabai"
           "mpv"
           "render-oss/render/render"
           "saml2aws"
-          "sketchybar"
           "terminal-notifier"
           "trash"
           "xdotool"
