@@ -4,10 +4,8 @@
 set -x
 
 # set up oh-my-zsh
-# https://dgarden.vercel.app/#/page/65896e1b-bc82-4093-9415-2a50207f3e70
-# INFO: this is now being done using nix-darwin
-# sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# pre-requisites
+rm ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 rm ~/.zshrc
 
 # stow dotfiles

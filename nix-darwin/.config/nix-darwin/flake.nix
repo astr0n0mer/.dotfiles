@@ -29,7 +29,6 @@
           pkgs.lazygit
           pkgs.luajitPackages.luarocks
           pkgs.neovim
-          pkgs.oh-my-zsh
           # pkgs.openvpn # INFO: can't set this up to use .ovpn file
           pkgs.pipx
           pkgs.pyenv
