@@ -4,18 +4,21 @@
 set -x
 
 # set up oh-my-zsh
-rm ~/.zshrc
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-rm ~/.zshrc
+# INFO: need to run the oh-my-zsh installer in a sub-shell
+# since it blocks the main shell after installation is complete
+# and we need to `exit` the sub-shell
+touch ~/.zshrc && \
+rm $_ && \
+curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | sh && \
+rm ~/.zshrc && \
 
 # stow dotfiles
 cd ~/.dotfiles
 make stow_all
 
-# INFO: this is now being done using oh-my-zsh
 # set up oh-my-zsh-plugins
-# cd ~/.oh-my-zsh-custom
-# make download-plugins
+cd ~/.oh-my-zsh/custom
+make setup_custom_plugins
 
 # set up node using nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
