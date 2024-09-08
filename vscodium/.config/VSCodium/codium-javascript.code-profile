@@ -1,5 +1,4 @@
 aaron-bond.better-comments
-asvetliakov.vscode-neovim
 beardedbear.beardedtheme
 dbaeumer.vscode-eslint
 dotenv.dotenv-vscode
@@ -7,11 +6,13 @@ dsznajder.es7-react-js-snippets
 eamodio.gitlens
 esbenp.prettier-vscode
 github.copilot
+github.copilot-chat
 github.vscode-pull-request-github
 humao.rest-client
 ms-playwright.playwright
-ms-vsliveshare.vsliveshare
 orta.vscode-jest
 redhat.vscode-yaml
 ritwickdey.liveserver
 streetsidesoftware.code-spell-checker
+typefox.open-collaboration-tools
+vscodevim.vim

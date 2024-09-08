@@ -3,27 +3,24 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \
 			xclip -selection c -out)
 
-.PHONY: stow_tree
-stow_tree:
-	cd .. && ls -a . | grep "[^(.git)]" | xargs tree -al
-
-.PHONY: stow_all
-stow_all:
-	cd .. && find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | xargs stow
-
-.PHONY: adopt
-adopt:
-	bash _scripts/move_to_stow.sh ${dotfile}
-
 # sync local config files to remote
 .PHONY: dotfiles-pull
 dotfiles-pull:
 	export GIT_DIR=${HOME}/.dotfiles; export GIT_WORK_TREE=${HOME}; git fetch --all && git pull;
 
+.PHONY: kanata-start
+kanata-start:
+	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate && \
+	screen -dmS kanata-session sudo ~/.local/bin/kanata --cfg ~/.config/kanata/kanata.kbd
+
+.PHONY: kanata-stop
+kanata-stop:
+	screen -S kanata-session -X quit
+
 # sync local files across devices
 .PHONY: syncthing-start
 syncthing-start:
-	screen -dmS syncthing-session ~/.local/bin/syncthing
+	screen -dmS syncthing-session /run/current-system/sw/bin/syncthing
 
 .PHONY: syncthing-stop
 syncthing-stop:

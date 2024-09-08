@@ -1,0 +1,3 @@
+[submodule "dotfiles_sensitive"]
+	path = dotfiles_sensitive
+	url = https://gitlab.com/astr0n0mer/dotfiles_sensitive.git

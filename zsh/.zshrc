@@ -12,16 +12,16 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="agnoster"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster # special instructions at the end of this file
 # ZSH_THEME="half-life"    # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#half-life
 # ZSH_THEME="jonathan"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#jonathan
-# ZSH_THEME="mikeh"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#mikeh
+# ZSH_THEME="mikeh"        # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#mikeh
 # ZSH_THEME="muse"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#muse
-# ZSH_THEME="nebirhos"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#nebirhos # won't use again: does not print absolute cwd
-# ZSH_THEME="philips"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#philips # won't use again: does not print absolute cwd
+# ZSH_THEME="nebirhos"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#nebirhos # Note: does not print absolute cwd
+# ZSH_THEME="philips"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#philips # Note: does not print absolute cwd
 # ZSH_THEME="robbyrussell" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#robbyrussell
-# ZSH_THEME="theunraveler"        # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#theunraveler
+# ZSH_THEME="theunraveler"        # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#theunraveler # Note: does not print absolute cwd
 # ZSH_THEME="tjkirch"             # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#tjkirch
-# ZSH_THEME="trapd00r"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#trapd00r # won't use again
+# ZSH_THEME="trapd00r"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#trapd00r
 # ZSH_THEME="arrow"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#arrow
-ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#macovsky
+# ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#macovsky
 # ZSH_THEME="rgm"                 # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#rgm
 # ZSH_THEME="frontcube"           # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#frontcube # won't use again: prints cwd in black color
 # ZSH_THEME="crunch"              # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#crunch
@@ -29,7 +29,7 @@ ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="re5et"               # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#re5et
 # ZSH_THEME="xiong-chiamiov-plus" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#xiong-chiamiov-plus
 # ZSH_THEME="alanpeabody"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#alanpeabody
-# ZSH_THEME="sunrise"             # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#sunrise
+ZSH_THEME="sunrise"             # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#sunrise
 # ZSH_THEME="suvash"              # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#suvash
 # ZSH_THEME="terminalparty"       # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#terminalparty
 # ZSH_THEME="random"
@@ -88,7 +88,7 @@ ZSH_THEME="macovsky"            # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-ZSH_CUSTOM=~/.oh-my-zsh-custom/ 
+# ZSH_CUSTOM=~/.oh-my-zsh-custom/
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
@@ -97,24 +97,25 @@ ZSH_CUSTOM=~/.oh-my-zsh-custom/
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git)
 plugins=(
+    alias-finder
     bgnotify
-    colorize
     command-not-found
     gh
     git
     history
     npm
     nvm
-    screen
     sudo
+    vi-mode
     vscode
     web-search
-    yarn
     z
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
 
+# plugins' settings
+zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,11 +127,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -143,6 +144,8 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+setopt HIST_FIND_NO_DUPS
 
 # Add local binaries to $PATH
 export PATH=$PATH:$HOME/.local/bin
