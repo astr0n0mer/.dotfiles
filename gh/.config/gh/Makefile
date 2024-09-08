@@ -1,6 +1,6 @@
 .PHONY: backup
 backup:
-	gh extension list | awk '{print $$NF}' > ~/.config/gh/extensions.txt
+	gh extension list | cut -f2 > ~/.config/gh/extensions.txt
 
 .PHONY: restore
 restore:
