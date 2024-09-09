@@ -34,12 +34,6 @@ defaults:
         width: 16
       author:
         width: 15
-      assignees:
-        width: 20
-        hidden: true
-      base:
-        width: 15
-        hidden: true
       lines:
         width: 16
       updatedAt:
@@ -56,15 +50,32 @@ defaults:
         width: 7
   refetchIntervalMinutes: 30
 keybindings:
+  universal: []
   issues: []
   prs: []
 repoPaths:
   astr0n0mer/:repo: ~/projects/:repo
-  timelyschools/*: ~/projects-work/timelyschools/*
+  :owner/:repo: ~/projects-work/:owner/:repo
 theme:
   ui:
     table:
+      compact: true # INFO: https://github.com/dlvhdr/gh-dash/releases/tag/v4.5.0
       showSeparator: true
+    sectionsShowCount: true
+  colors:
+    text:
+      primary: "#E2E1ED"
+      secondary: "#666CA6"
+      inverted: "#242347"
+      faint: "#b0b3bf"
+      warning: "#F7768E"
+      success: "#3DF294"
+    background:
+      selected: "#353535"
+    border:
+      primary: "#383B5B"
+      secondary: "#39386B"
+      faint: "#2B2B40"
 pager:
   diff: "less"
 confirmQuit: false

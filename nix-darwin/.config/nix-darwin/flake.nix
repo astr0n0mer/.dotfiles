@@ -109,7 +109,7 @@
           mru-spaces = false;
           orientation = "left";
           static-only = true;
-          tilesize = 48;
+          tilesize = 40;
           wvous-tl-corner = 11; # Launchpad
           wvous-tr-corner = 12; # Notification Center
           wvous-bl-corner = 13; # Lock Screen

@@ -24,7 +24,8 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 
 # .dotfiles
 alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print | fzf --preview 'bat {} --force-colorization --style=numbers' --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
-alias dotedit="dotfile | xargs nvim"
+alias doted="dotfile | xargs nvim"
+alias dotlg="cd ~/.dotfiles && lazygit && popd"
 alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -r"
 dot() {
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
@@ -45,6 +46,14 @@ alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
+alias repo="find ~/projects ~/projects-work -type d -name \".git\" -prune -exec dirname {} \; | fzf"
+alias repolg="repo | xargs -I {} lazygit --path \"{}\""
+repoo() {
+    repo_dir=$(repo)
+    [ -d "$repo_dir/.venv" ] && source "$repo_dir/.venv/bin/activate"
+    cd "$repo_dir" && nvim . && popd > /dev/null
+    [ -d "$repo_dir/.venv" ] && deactivate
+}
 
 
 # haxor-news
