@@ -8,6 +8,12 @@ cd ~/.dotfiles
 stow
 ```
 
-## [Dashy](https://idashy.vercel.app/)
+```shell
+# nix-darwin setup on macOS
+curl -OL https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/Makefile
+make setup
+rm Makefile
+./setup-macbook.sh
+```
 
-![Dashy](./.config/dashy/assets/screenshot-desktop.png)
+## [Dashy](https://idashy.vercel.app/)

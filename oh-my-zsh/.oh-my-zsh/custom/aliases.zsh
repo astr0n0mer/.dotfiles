@@ -25,7 +25,7 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 # .dotfiles
 alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print | fzf --preview 'bat {} --force-colorization --style=numbers' --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias doted="dotfile | xargs nvim"
-alias dotlg="cd ~/.dotfiles && lazygit && popd"
+alias dotlg="lazygit --path ~/.dotfiles"
 alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -r"
 dot() {
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $@;
@@ -50,9 +50,11 @@ alias repo="find ~/projects ~/projects-work -type d -name \".git\" -prune -exec 
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
 repoo() {
     repo_dir=$(repo)
-    [ -d "$repo_dir/.venv" ] && source "$repo_dir/.venv/bin/activate"
-    cd "$repo_dir" && nvim . && popd > /dev/null
-    [ -d "$repo_dir/.venv" ] && deactivate
+    if [ -n "$repo_dir" ]; then
+        [ -d "$repo_dir/.venv" ] && source "$repo_dir/.venv/bin/activate"
+        cd "$repo_dir" && nvim . && popd > /dev/null
+        [ -d "$repo_dir/.venv" ] && deactivate
+    fi
 }
 
 
