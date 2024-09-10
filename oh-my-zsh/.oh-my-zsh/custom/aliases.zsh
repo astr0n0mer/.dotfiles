@@ -46,7 +46,7 @@ alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
-alias repo="find ~/projects ~/projects-work -type d -name \".git\" -prune -exec dirname {} \; | fzf"
+alias repo="find ~/.dotfiles ~/projects ~/projects-work -type d -name \".git\" -prune -exec dirname {} \; | fzf --preview 'git -C {} status' --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
 repoo() {
     repo_dir=$(repo)
@@ -88,7 +88,7 @@ alias lssymlinks="find . -maxdepth 1 -type l -exec ls -l {} \;"
 
 
 # man page
-alias mani="compgen -c | fzf | xargs man"
+alias mani="compgen -c | fzf --preview 'man {}' --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 
 
 # music

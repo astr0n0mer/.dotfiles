@@ -116,6 +116,7 @@ plugins=(
 
 # plugins' settings
 zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
+bindkey '^G' autosuggest-accept # INFO: accept zsh-autosuggestion with Ctrl+G
 
 source $ZSH/oh-my-zsh.sh
 

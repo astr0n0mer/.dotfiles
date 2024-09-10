@@ -23,6 +23,7 @@
           pkgs.fzf
           pkgs.gh
           pkgs.glab
+          pkgs.glow
           pkgs.jnv
           pkgs.jq
           pkgs.lazydocker
@@ -176,6 +177,7 @@
         enable = true;
         taps = [
           "FelixKratz/formulae"
+          "ggerganov/ggerganov"
           "koekeishiya/formulae"
           "ngrok/ngrok"
           "render-oss/render"
@@ -187,6 +189,7 @@
         ];
         brews = [
           "FelixKratz/formulae/sketchybar"
+          "ggerganov/ggerganov/hnterm"
           "koekeishiya/formulae/skhd"
           "koekeishiya/formulae/yabai"
           "mpv"

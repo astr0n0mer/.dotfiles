@@ -383,6 +383,7 @@ require('lazy').setup({
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
+          file_ignore_patterns = { '.git/', '.venv/', 'node_modules/' },
           layout_config = {
             width = 0.95,
             height = 0.95,
@@ -391,7 +392,11 @@ require('lazy').setup({
           --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
           --   },
         },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            hidden = true, -- Show hidden files
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
