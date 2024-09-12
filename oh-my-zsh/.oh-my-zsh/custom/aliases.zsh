@@ -102,7 +102,7 @@ alias rebuildd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix
 
 
 # projects
-alias codei="find ~/projects/ ~/projects-work/ -type d \( -name node_modules -o -name .venv -o -name .git -o -name site-packages \) -prune -false -o -type f -print | fzf"
+# alias codei="find ~/projects/ ~/projects-work/ -type d \( -name node_modules -o -name .venv -o -name .git -o -name site-packages \) -prune -false -o -type f -print | fzf"
 
 
 # screen
