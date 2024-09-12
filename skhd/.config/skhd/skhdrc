@@ -2,7 +2,7 @@
 
 # start alacritty
 alt - return : /opt/homebrew/bin/alacritty
-alt - space : alacritty msg create-window --title "alacritty_hud"
+alt - d : alacritty msg create-window --title "alacritty_hud"
 
 # start rofi
 # alt - d : /opt/local/bin/rofi -show combi

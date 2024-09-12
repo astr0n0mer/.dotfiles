@@ -16,6 +16,7 @@
           # pkgs.ansible
           pkgs.bat
           pkgs.cargo
+          pkgs.curl
           pkgs.docker
           pkgs.docker-compose
           pkgs.fastfetch
@@ -76,16 +77,35 @@
           pkgs.sketchybar-app-font
         ];
       };
+      launchd.agents = {
+        "crontab_agent" = {
+          serviceConfig = {
+            Label = "crontab";
+            Program = "${pkgs.curl}/bin/curl";
+            ProgramArguments = [
+              "-L"
+              "https://afk-slackbot.onrender.com"
+            ];
+            StartInterval = 720;
+          };
+        };
+        "syncthing_agent" = {
+          serviceConfig = {
+            Label = "syncthing";
+            KeepAlive = true;
+            Program = "${pkgs.syncthing}/bin/syncthing";
+            ProgramArguments = [
+              "serve"
+              "--no-default-folder"
+              "--no-browser"
+            ];
+          };
+        };
+      };
       networking = {
         hostName = "cube";
         localHostName = "cube";
       };
-      # INFO: this is untested
-      # users.users = {
-      #   "tux" = {
-      #     createHome = true;
-      #   };
-      # };
       security.pam.enableSudoTouchIdAuth = true;
       system.activationScripts = { # INFO: this is not working
         "postDarwinRebuild" = {
@@ -104,7 +124,7 @@
         dock = {
           autohide = true;
           expose-animation-duration = 0.05;
-          # expose-group-by-app = true;
+          expose-group-by-app = true;
           launchanim = false;
           mineffect = "scale";
           mru-spaces = false;
@@ -139,6 +159,7 @@
           NSDocumentSaveNewDocumentsToCloud = false;
           NSNavPanelExpandedStateForSaveMode = true;
           NSNavPanelExpandedStateForSaveMode2 = true;
+          NSWindowShouldDragOnGesture = true;
           _HIHideMenuBar = true;
           "com.apple.mouse.tapBehavior" = 1;
           "com.apple.trackpad.enableSecondaryClick" = true;
@@ -170,8 +191,16 @@
           #! I use kanata for key-remapping on Linux
           enableKeyMapping = true;
           remapCapsLockToControl = true;
+          swapLeftCommandAndLeftAlt = true;
       };
       system.startup.chime = false;
+      time.timeZone = "Asia/Kathmandu";
+      # INFO: this is untested
+      # users.users = {
+      #   "tux" = {
+      #     createHome = true;
+      #   };
+      # };
 
       homebrew = {
         enable = true;
@@ -179,6 +208,7 @@
           "FelixKratz/formulae"
           "ggerganov/ggerganov"
           "koekeishiya/formulae"
+          "nikitabobko/tap"
           "ngrok/ngrok"
           "render-oss/render"
           {
@@ -191,7 +221,7 @@
           "FelixKratz/formulae/sketchybar"
           "ggerganov/ggerganov/hnterm"
           "koekeishiya/formulae/skhd"
-          "koekeishiya/formulae/yabai"
+          # "koekeishiya/formulae/yabai"
           "mpv"
           "render-oss/render/render"
           "saml2aws"
@@ -208,6 +238,7 @@
           "flameshot"
           "logseq"
           "mongodb-compass"
+          "nikitabobko/tap/aerospace"
           "ngrok"
           "postman"
           "raycast"
@@ -230,7 +261,7 @@
       services = {
         sketchybar.enable = true;
         skhd.enable = true;
-        yabai.enable = true;
+        # yabai.enable = true;
       };
 
       # The platform the configuration will be used on.
