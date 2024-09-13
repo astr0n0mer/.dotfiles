@@ -160,7 +160,7 @@
           NSNavPanelExpandedStateForSaveMode = true;
           NSNavPanelExpandedStateForSaveMode2 = true;
           NSWindowShouldDragOnGesture = true;
-          _HIHideMenuBar = true;
+          _HIHideMenuBar = false;
           "com.apple.mouse.tapBehavior" = 1;
           "com.apple.trackpad.enableSecondaryClick" = true;
         };
@@ -171,7 +171,7 @@
           askForPasswordDelay = 10;
         };
         spaces = {
-          spans-displays = false;
+          spans-displays = true;
         };
         SoftwareUpdate = {
           AutomaticallyInstallMacOSUpdates = false;
@@ -194,7 +194,7 @@
           swapLeftCommandAndLeftAlt = true;
       };
       system.startup.chime = false;
-      time.timeZone = "Asia/Kathmandu";
+      time.timeZone = "Asia/Calcutta";
       # INFO: this is untested
       # users.users = {
       #   "tux" = {
@@ -220,7 +220,7 @@
         brews = [
           "FelixKratz/formulae/sketchybar"
           "ggerganov/ggerganov/hnterm"
-          "koekeishiya/formulae/skhd"
+          # "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
           "mpv"
           "render-oss/render/render"
@@ -236,6 +236,7 @@
           "cursor"
           "docker"
           "flameshot"
+          "libreoffice"
           "logseq"
           "mongodb-compass"
           "nikitabobko/tap/aerospace"
@@ -260,7 +261,7 @@
 
       services = {
         sketchybar.enable = true;
-        skhd.enable = true;
+        # skhd.enable = true;
         # yabai.enable = true;
       };
 
