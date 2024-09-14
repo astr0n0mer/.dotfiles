@@ -1,14 +1,19 @@
 # apps
 # INFO: macOS only
-alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf"
-alias appopen="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf | xargs -I {} open -a \"{}\""
-alias appquit="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" | fzf | xargs -I {} osascript -e 'quit app \"{}\"'"
-alias settings="defaults domains | tr -d ' ' | tr ',' '\n' | fzf --preview 'defaults read {}' --preview-window=right:60% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" \
+                | sort --ignore-case \
+                | fzf"
+alias appopen="app | xargs -I {} open -a \"{}\""
+alias appquit="app | xargs -I {} osascript -e 'quit app \"{}\"'"
+alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
+                    | fzf --preview 'defaults read {}' \
+                        --preview-window=right:60% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 #! ==========
 
 
 # brave
-alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; cat ~/.config/brave/get-synced-tabs.js | pbcopy"
+alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
+                        cat ~/.config/brave/get-synced-tabs.js | pbcopy"
 
 
 # dashy
@@ -23,7 +28,9 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 
 
 # .dotfiles
-alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print | fzf --preview 'bat {} --force-colorization --style=numbers' --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print \
+                | fzf --preview 'bat {} --force-colorization --style=numbers' \
+                    --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias doted="dotfile | xargs nvim"
 alias dotlg="lazygit --path ~/.dotfiles"
 alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -r"
@@ -46,7 +53,11 @@ alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
-alias repo="find ~/.dotfiles ~/projects ~/projects-work -type d -name \".git\" -prune -exec dirname {} \; | fzf --preview 'git -C {} status' --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+alias repo="find ~/.dotfiles ~/projects ~/projects-work \
+                    -type d -maxdepth 5 -name \".git\" -prune -exec dirname {} \; \
+                | sort --ignore-case --reverse \
+                | fzf --preview 'git -C {} status' \
+                    --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
 repoo() {
     repo_dir=$(repo)

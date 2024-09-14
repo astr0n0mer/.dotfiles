@@ -74,7 +74,7 @@
       fonts = {
         packages = [
           pkgs.nerdfonts
-          pkgs.sketchybar-app-font
+          # pkgs.sketchybar-app-font
         ];
       };
       launchd.agents = {
@@ -116,7 +116,10 @@
         };
       };
       system.defaults = {
-        CustomSystemPreferences = {
+        CustomUserPreferences = {
+          "com.apple.dock" = {
+            expose-group-apps = true;
+          };
           universalaccess = { # INFO: this might be ineffective
             useVirtualKeyboard = true;
           };
@@ -171,7 +174,7 @@
           askForPasswordDelay = 10;
         };
         spaces = {
-          spans-displays = true;
+          spans-displays = false;
         };
         SoftwareUpdate = {
           AutomaticallyInstallMacOSUpdates = false;
@@ -218,7 +221,7 @@
           }
         ];
         brews = [
-          "FelixKratz/formulae/sketchybar"
+          # "FelixKratz/formulae/sketchybar"
           "ggerganov/ggerganov/hnterm"
           # "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
@@ -260,7 +263,7 @@
       };
 
       services = {
-        sketchybar.enable = true;
+        # sketchybar.enable = true;
         # skhd.enable = true;
         # yabai.enable = true;
       };
