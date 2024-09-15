@@ -1,3 +1,8 @@
 *.log
 sandbox
 work.Makefile
+
+# syncthing metadata
+*.sync-conflict*
+.stfolder
+.stversions
