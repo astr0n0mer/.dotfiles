@@ -20,7 +20,7 @@ kanata-stop:
 # sync local files across devices
 .PHONY: syncthing-start
 syncthing-start:
-	screen -dmS syncthing-session /run/current-system/sw/bin/syncthing serve --no-default-folder --no-browser
+	screen -dmS syncthing-session syncthing serve --no-default-folder --no-browser
 
 .PHONY: syncthing-stop
 syncthing-stop:

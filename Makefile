@@ -4,7 +4,7 @@ stow_tree:
 
 .PHONY: stow_all
 stow_all:
-	find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | grep --invert-match "dotfiles_sensitive" | xargs stow
+	find . -maxdepth 1 -type d | sed 's|^\./||' | grep '^[A-Za-z]' | grep --invert-match "dotfiles_sensitive" | xargs stow --adopt
 
 .PHONY: unstow_all
 unstow_all:

@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "astronomer";
-  home.homeDirectory = "/home/astronomer";
+  home.username = "tux";
+  home.homeDirectory = "/home/tux";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -17,20 +17,50 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
     # pkgs.hello
-    pkgs.alacritty
-    pkgs.bat
-    pkgs.fastfetch
-    pkgs.fzf
-    pkgs.lazygit
-    pkgs.neovim
-    pkgs.ripgrep
-    pkgs.tlrc
+    # ansible
+          bat
+          cargo
+          curl
+          docker
+          docker-compose
+          fastfetch
+          flameshot
+          fzf
+          gh
+          glab
+          glow
+          jnv
+          jq
+          lazydocker
+          lazygit
+          luajitPackages.luarocks
+          neovim
+          # openvpn # INFO: can't set this up to use .ovpn file
+          pipx
+          pyenv
+          ranger
+          ripgrep
+          slack-term
+          stow
+          syncthing
+          termusic
+          tlrc
+          tmux
+          tree
+          ttyper
+          typioca
+          vim
+          visidata
+          vscodium
+          weechat
+          zsh
+          zsh-powerlevel10k
 
-    pkgs.flameshot
+    nerdfonts
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -45,6 +75,8 @@
     #   echo "Hello, ${config.home.username}!"
     # '')
   ];
+
+    fonts.fontconfig.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -75,7 +107,7 @@
   #
   # or
   #
-  #  /etc/profiles/per-user/astronomer/etc/profile.d/hm-session-vars.sh
+  #  /etc/profiles/per-user/tux/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
     # EDITOR = "emacs";

@@ -108,8 +108,10 @@ alias musicstop="screen -S music-session -X quit"
 
 
 # nix
+# INFO: home-manager switch
+alias bldh="home-manager switch --flake ~/.dotfiles/home-manager/.config/home-manager"
 # INFO: darwin-rebuild
-alias rebuildd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin"
+alias bldd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin"
 
 
 # projects
