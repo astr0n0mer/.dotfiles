@@ -4,5 +4,5 @@ work.Makefile
 
 # syncthing metadata
 *.sync-conflict*
-.stfolder
+.stfolder*
 .stversions

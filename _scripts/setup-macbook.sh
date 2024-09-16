@@ -36,6 +36,7 @@ curl --proto "=https" --tlsv1.2 -sSf -L https://install.determinate.systems/nix 
 sudo rm -f /etc/nix/nix.conf
 
 # INFO: need to restart the shell here for `nix` command to become available
+. /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh # this should remove the need to restart the shell
 
 # set up nix-darwin
 LOCAL_HOSTNAME=$(scutil --get LocalHostName)
