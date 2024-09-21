@@ -5,7 +5,120 @@
       "mode" : ""
    },
    "changeBrowserTheme" : false,
-   "customThemes" : [],
+   "customThemes" : [
+      {
+         "builtIn" : true,
+         "theme" : {
+            "brightness" : 100,
+            "contrast" : 100,
+            "darkColorScheme" : "Default",
+            "darkSchemeBackgroundColor" : "#181a1b",
+            "darkSchemeTextColor" : "#e8e6e3",
+            "engine" : "svgFilter",
+            "fontFamily" : "Helvetica Neue",
+            "grayscale" : 0,
+            "immediateModify" : false,
+            "lightColorScheme" : "Default",
+            "lightSchemeBackgroundColor" : "#dcdad7",
+            "lightSchemeTextColor" : "#181a1b",
+            "mode" : 1,
+            "scrollbarColor" : "",
+            "selectionColor" : "auto",
+            "sepia" : 0,
+            "styleSystemControls" : false,
+            "stylesheet" : "",
+            "textStroke" : 0,
+            "useFont" : false
+         },
+         "url" : [
+            "*.officeapps.live.com"
+         ]
+      },
+      {
+         "builtIn" : true,
+         "theme" : {
+            "brightness" : 100,
+            "contrast" : 100,
+            "darkColorScheme" : "Default",
+            "darkSchemeBackgroundColor" : "#181a1b",
+            "darkSchemeTextColor" : "#e8e6e3",
+            "engine" : "svgFilter",
+            "fontFamily" : "Helvetica Neue",
+            "grayscale" : 0,
+            "immediateModify" : false,
+            "lightColorScheme" : "Default",
+            "lightSchemeBackgroundColor" : "#dcdad7",
+            "lightSchemeTextColor" : "#181a1b",
+            "mode" : 1,
+            "scrollbarColor" : "",
+            "selectionColor" : "auto",
+            "sepia" : 0,
+            "styleSystemControls" : false,
+            "stylesheet" : "",
+            "textStroke" : 0,
+            "useFont" : false
+         },
+         "url" : [
+            "*.sharepoint.com"
+         ]
+      },
+      {
+         "builtIn" : true,
+         "theme" : {
+            "brightness" : 100,
+            "contrast" : 100,
+            "darkColorScheme" : "Default",
+            "darkSchemeBackgroundColor" : "#181a1b",
+            "darkSchemeTextColor" : "#e8e6e3",
+            "engine" : "svgFilter",
+            "fontFamily" : "Helvetica Neue",
+            "grayscale" : 0,
+            "immediateModify" : false,
+            "lightColorScheme" : "Default",
+            "lightSchemeBackgroundColor" : "#dcdad7",
+            "lightSchemeTextColor" : "#181a1b",
+            "mode" : 1,
+            "scrollbarColor" : "",
+            "selectionColor" : "auto",
+            "sepia" : 0,
+            "styleSystemControls" : false,
+            "stylesheet" : "",
+            "textStroke" : 0,
+            "useFont" : false
+         },
+         "url" : [
+            "docs.google.com"
+         ]
+      },
+      {
+         "builtIn" : true,
+         "theme" : {
+            "brightness" : 100,
+            "contrast" : 100,
+            "darkColorScheme" : "Default",
+            "darkSchemeBackgroundColor" : "#181a1b",
+            "darkSchemeTextColor" : "#e8e6e3",
+            "engine" : "svgFilter",
+            "fontFamily" : "Helvetica Neue",
+            "grayscale" : 0,
+            "immediateModify" : false,
+            "lightColorScheme" : "Default",
+            "lightSchemeBackgroundColor" : "#dcdad7",
+            "lightSchemeTextColor" : "#181a1b",
+            "mode" : 1,
+            "scrollbarColor" : "",
+            "selectionColor" : "auto",
+            "sepia" : 0,
+            "styleSystemControls" : false,
+            "stylesheet" : "",
+            "textStroke" : 0,
+            "useFont" : false
+         },
+         "url" : [
+            "onedrive.live.com"
+         ]
+      }
+   ],
    "detectDarkTheme" : true,
    "disabledFor" : [],
    "displayedNews" : [
@@ -166,15 +279,26 @@
       "charts.mongodb.com",
       "www.bitecode.dev",
       "aws.amazon.com",
-      "www.digitalocean.com"
+      "www.digitalocean.com",
+      "in.bookmyshow.com",
+      "app.datadoghq.com",
+      "docs.datadoghq.com",
+      "tech.aufomm.com",
+      "www.helenjoscott.com"
    ],
    "fetchNews" : true,
+   "installation" : {
+      "date" : 1726171671939,
+      "reason" : "update",
+      "version" : "4.9.90"
+   },
    "location" : {
       "latitude" : null,
       "longitude" : null
    },
    "presets" : [],
    "previewNewDesign" : true,
+   "previewNewestDesign" : false,
    "readNews" : [
       "thanks-2023"
    ],
