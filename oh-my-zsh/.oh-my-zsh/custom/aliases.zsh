@@ -55,6 +55,8 @@ alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
 alias repo="find ~/.dotfiles ~/projects ~/projects-work \
                     -type d -maxdepth 5 -name \".git\" -prune -exec dirname {} \; \
+                | xargs -I {} git -C {} worktree list \
+                | awk '{print \$1}' \
                 | sort --ignore-case --reverse \
                 | fzf --preview 'git -C {} status' \
                     --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
@@ -62,8 +64,8 @@ alias repolg="repo | xargs -I {} lazygit --path \"{}\""
 repoo() {
     repo_dir=$(repo)
     if [ -n "$repo_dir" ]; then
-        [ -d "$repo_dir/.venv" ] && source "$repo_dir/.venv/bin/activate"
-        cd "$repo_dir" && nvim . && popd > /dev/null
+        [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
+        nvim "$repo_dir" --cmd "cd $repo_dir"
         [ -d "$repo_dir/.venv" ] && deactivate
     fi
 }
