@@ -19,7 +19,6 @@
           curl
           docker
           docker-compose
-          docker-credential-helpers
           fastfetch
           flameshot
           fzf
@@ -47,6 +46,7 @@
           tree
           ttyper
           typioca
+          uv
           vim
           visidata
           vscodium
@@ -153,7 +153,7 @@
           "aws-vpn-client"
           "brave-browser"
           "cursor"
-          # "docker"
+          "docker"
           "flameshot"
           "libreoffice"
           "logseq"
@@ -161,7 +161,6 @@
           "ngrok"
           "nikitabobko/tap/aerospace"
           "postman"
-          "rancher" # INFO: docker-desktop alternative
           "raycast"
           "slack"
           "studio-3t"

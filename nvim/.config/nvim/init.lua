@@ -383,7 +383,7 @@ require('lazy').setup({
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
-          file_ignore_patterns = { '.git/', '.venv/', 'node_modules/' },
+          file_ignore_patterns = { '.git/' },
           layout_config = {
             width = 0.95,
             height = 0.95,
