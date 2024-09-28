@@ -1,14 +1,12 @@
 aaron-bond.better-comments
 beardedbear.beardedtheme
 charliermarsh.ruff
-dotenv.dotenv-vscode
 eamodio.gitlens
-github.copilot
-github.copilot-chat
 github.vscode-pull-request-github
 grapecity.gc-excelviewer
 humao.rest-client
 mechatroner.rainbow-csv
+mikestead.dotenv
 mongodb.mongodb-vscode
 ms-pyright.pyright
 ms-python.debugpy

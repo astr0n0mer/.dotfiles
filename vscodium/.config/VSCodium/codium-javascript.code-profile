@@ -1,14 +1,12 @@
 aaron-bond.better-comments
 beardedbear.beardedtheme
 dbaeumer.vscode-eslint
-dotenv.dotenv-vscode
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
 esbenp.prettier-vscode
-github.copilot
-github.copilot-chat
 github.vscode-pull-request-github
 humao.rest-client
+mikestead.dotenv
 ms-playwright.playwright
 orta.vscode-jest
 redhat.vscode-yaml
