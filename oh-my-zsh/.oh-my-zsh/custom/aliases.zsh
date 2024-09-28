@@ -104,7 +104,7 @@ alias logout="launchctl reboot logout"
 
 
 # ls
-alias lssymlinks="find . -maxdepth 1 -type l -exec ls -l {} \;"
+alias lssymlinks="find . -maxdepth 7 -type l -exec ls -l {} \;"
 
 
 # man page
