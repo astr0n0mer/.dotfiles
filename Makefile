@@ -14,11 +14,12 @@ unstow_all:
 adopt:
 	bash _scripts/move_to_stow.sh ${dotfile}
 
-.PHONY: fixup_vscodium
+.PHONY: fixup_vscodium # INFO: this might not be needed
 fixup_vscodium:
-	stow -D vscodium \
-	&& rm -rf ~/.config/VSCodium \
-	&& rm -rf ~/Library/Application Support/VSCodium/User \
+	stow --delete vscodium vscode \
+	&& rm -rf ~/.config/{VSCodium,Code} \
+	&& rm -rf ~/Library/Application Support/{VSCodium,Code}/User \
 	&& mv ./vscodium/.config/VSCodium ~/.config/VSCodium \
-	&& stow --adopt vscodium \
-	&& git restore ./vscodium
+	&& mv ./vscode/.config/Code ~/.config/Code \
+	&& stow --adopt vscodium vscode \
+	&& git restore vscodium vscode

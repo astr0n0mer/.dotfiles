@@ -1,29 +1,40 @@
 PROFILES := python javascript
 
 define backup-profile
-	$1 --profile $2 --list-extensions | sort --ignore-case > $2.code-profile
+	$1 --profile "$1-$2" --list-extensions | sort --ignore-case > $2.code-profile
 endef
 
 define restore-profile
-	cat $2.code-profile | xargs -L 1 $1 --profile $2 --install-extension
+	cat $2.code-profile | xargs -L 1 $1 --profile "$1-$2" --install-extension
 endef
 
+.PHONY: backup_codium
+backup_codium:
+	cd ~/.dotfiles/vscodium/.config/VSCodium && \
+	command -v codium && $(foreach profile,$(PROFILES),$(call backup-profile,codium,$(profile));)
+
+.PHONY: backup_code
+backup_code:
+	cd ~/.dotfiles/vscodium/.config/VSCodium && \
+	command -v code && $(foreach profile,$(PROFILES),$(call backup-profile,code,$(profile));)
+
+.PHONY: backup_cursor
+backup_cursor:
+	cd ~/.dotfiles/vscodium/.config/VSCodium && \
+	command -v cursor && $(foreach profile,$(PROFILES),$(call backup-profile,cursor,$(profile));)
+
 .PHONY: backup
-backup:
-	cd ~/.config/VSCodium && \
-	command -v codium && $(foreach profile,$(PROFILES),$(call backup-profile,codium,codium-$(profile));)
-	command -v code && $(foreach profile,$(PROFILES),$(call backup-profile,code,code-$(profile));)
+backup: backup_codium backup_code backup_cursor
 
 .PHONY: restore
 restore:
-	cd ~/.config/VSCodium && \
+	cd ~/.dotfiles/vscodium/.config/VSCodium && \
 	if command -v codium; then \
-		$(foreach profile,$(PROFILES),$(call restore-profile,codium,codium-$(profile));) \
+		$(foreach profile,$(PROFILES),$(call restore-profile,codium,$(profile));) \
 	fi; \
 	if command -v code; then \
-		$(foreach profile,$(PROFILES),$(call restore-profile,code,code-$(profile));) \
+		$(foreach profile,$(PROFILES),$(call restore-profile,code,$(profile));) \
+	fi; \
+	if command -v cursor; then \
+		$(foreach profile,$(PROFILES),$(call restore-profile,cursor,$(profile));) \
 	fi;
-
-.PHONY: test
-test:
-	codium --profile codium-javascript --list-extensions

@@ -150,6 +150,7 @@ setopt HIST_FIND_NO_DUPS
 
 # Add local binaries to $PATH
 export PATH=$PATH:$HOME/.local/bin
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 
 # ======= custom settings for agnoster theme =======
 # to hide user@hostname when using agnoster theme

@@ -7,9 +7,10 @@ grapecity.gc-excelviewer
 humao.rest-client
 mechatroner.rainbow-csv
 mikestead.dotenv
-mongodb.mongodb-vscode
 ms-pyright.pyright
+ms-python.black-formatter
 ms-python.debugpy
+ms-python.isort
 ms-python.python
 streetsidesoftware.code-spell-checker
 vscodevim.vim
