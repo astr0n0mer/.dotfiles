@@ -1,0 +1,493 @@
+[
+    {
+        "name": "Arch Linux Wiki",
+        "trigger": "arch",
+        "url": "https://wiki.archlinux.org/index.php?search=%s",
+        "tags": [
+            "linux",
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Amazon Search",
+        "trigger": "az",
+        "url": "https://amazon.in/s?k=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Bing Search",
+        "trigger": "b",
+        "url": "https://bing.com/search?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Brave Search",
+        "trigger": "br",
+        "url": "https://search.brave.com/search?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Brave Image Search",
+        "trigger": "bri",
+        "url": "https://search.brave.com/images?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "DuckDuckGo Search",
+        "trigger": "d",
+        "url": "https://duckduckgo.com/?q=%s ",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Google Search",
+        "trigger": "g",
+        "url": "https://google.com/search?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Google Images Search",
+        "trigger": "gi",
+        "url": "https://google.com/search?tbm=isch&q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Google Keep Search",
+        "trigger": "gk",
+        "url": "https://keep.google.com/#search/text=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Google Keep Label",
+        "trigger": "gkl",
+        "url": "https://keep.google.com/#label/%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Gmail Search",
+        "trigger": "gm",
+        "url": "https://mail.google.com/mail/u/#search/%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Gmail Label",
+        "trigger": "gml",
+        "url": "https://mail.google.com/mail/u/0/#search/label:%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Google Maps",
+        "trigger": "gmap",
+        "url": "https://google.com/maps?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Google Trends",
+        "trigger": "gtr",
+        "url": "https://trends.google.com/trends/explore?date=today%201-m&q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Hacker News",
+        "trigger": "hn",
+        "url": "https://hn.algolia.com/?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Mojeek Search",
+        "trigger": "mo",
+        "url": "https://www.mojeek.com/search?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "Wikipedia Search",
+        "trigger": "w",
+        "url": "https://wikipedia.org/w/index.php?title=Special:Search&search=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "YouTube Search",
+        "trigger": "y",
+        "url": "https://youtube.com/results?search_query=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "YouTube Search - Sort by Views",
+        "trigger": "yv",
+        "comment": "TODO: the url looks odd, need to see if ?sp is needed",
+        "url": "https://youtube.com/results?search_query=%s&sp=CAM%253D",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "YouTube Music Search",
+        "trigger": "ym",
+        "url": "https://music.youtube.com/search?q=%s",
+        "tags": [
+            "search_engine"
+        ]
+    },
+    {
+        "name": "IMDb Search",
+        "trigger": "imdb",
+        "url": "https://imdb.com/find/?q=%s",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "My IMDb Watchlist",
+        "trigger": "imdbl",
+        "url": "https://imdb.com/user/ur171737232/lists?t=%s",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "KatmovieHD Search",
+        "trigger": "kat",
+        "url": "https://katmoviehd.dev/?s=%s",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "Reddit: Go to subreddit",
+        "trigger": "r/",
+        "url": "https://www.reddit.com/r/%s/",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "Rotten Tomatoes Search",
+        "trigger": "rot",
+        "url": "https://www.rottentomatoes.com/search?search=%s",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "TheMovieDB Search",
+        "trigger": "tmdb",
+        "url": "https://www.themoviedb.org/search?query=%s",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "YouTube Video by video_id",
+        "trigger": "vid",
+        "url": "http://youtube.com/watch?v=%s",
+        "tags": [
+            "chill"
+        ]
+    },
+    {
+        "name": "Docker: Go to image",
+        "trigger": "doci",
+        "url": "https://hub.docker.com/_/%s/tags",
+        "tags": [
+            "deploy"
+        ]
+    },
+    {
+        "name": "Docker Search",
+        "trigger": "docs",
+        "url": "https://hub.docker.com/search?q=%s",
+        "tags": [
+            "deploy"
+        ]
+    },
+    {
+        "name": "GitHub Search",
+        "trigger": "gh",
+        "url": "https://github.com/search?q=%s",
+        "tags": [
+            "github"
+        ]
+    },
+    {
+        "name": "GitHub: Go to :user/:repo",
+        "trigger": "ghr",
+        "url": "https://github.com/%S",
+        "tags": [
+            "github"
+        ]
+    },
+    {
+        "name": "GitHub: Go to astr0n0mer/:repo",
+        "trigger": "ghar",
+        "url": "https://github.com/astr0n0mer/%s",
+        "tags": [
+            "github"
+        ]
+    },
+    {
+        "name": "GitHub: Search astr0n0mer's repo",
+        "trigger": "ghars",
+        "url": "https://github.com/astr0n0mer?tab=repositories&q=%s",
+        "tags": [
+            "github"
+        ]
+    },
+    {
+        "name": "GitHub: Go to repo pulls",
+        "trigger": "ghrp",
+        "url": "https://github.com/%S/pulls",
+        "tags": [
+            "github"
+        ]
+    },
+    {
+        "name": "GitHub: Go to timelyschools pulls",
+        "trigger": "ghtp",
+        "url": "https://github.com/timelyschools/%s/pulls",
+        "hints": [
+            [
+                "optimizer-service",
+                "scheduling-service",
+                "timely-fe",
+                "timely-service",
+                "ts-terraform"
+            ]
+        ],
+        "tags": [
+            "github"
+        ]
+    },
+    {
+        "name": "Can I Use Search",
+        "trigger": "caniuse",
+        "url": "http://caniuse.com?search=%s",
+        "tags": [
+            "html"
+        ]
+    },
+    {
+        "name": "Google Fonts",
+        "trigger": "fonts",
+        "url": "https://fonts.google.com/?query=%s",
+        "tags": [
+            "html"
+        ]
+    },
+    {
+        "name": "Lorem Ipsum Generator",
+        "trigger": "lorem",
+        "url": "https://loremipsum.io/generator/?n=%s&t=w",
+        "tags": [
+            "html"
+        ]
+    },
+    {
+        "name": "BundlePhobia Search",
+        "trigger": "bundle",
+        "url": "https://bundlephobia.com/package/%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "JSR: Package Search",
+        "trigger": "jsr",
+        "url": "https://jsr.io/packages?search=%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "JSR: Go to package",
+        "trigger": "jsrp",
+        "url": "https://jsr.io/%S",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "mdn web docs",
+        "trigger": "mdn",
+        "url": "https://developer.mozilla.org/search?q=%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "NPM: Search",
+        "trigger": "npm",
+        "url": "https://www.npmjs.com/search?q=%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "NPM: Go to package",
+        "trigger": "npmp",
+        "url": "https://www.npmjs.com/package/%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "NPM Trends",
+        "trigger": "npmtrends",
+        "url": "https://npmtrends.com/%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "pkg-size",
+        "trigger": "pkgsize",
+        "url": "https://pkg-size.dev/%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "pkg-size",
+        "trigger": "npmsize",
+        "url": "https://pkg-size.dev/%s",
+        "tags": [
+            "javascript"
+        ]
+    },
+    {
+        "name": "F-Droid Search",
+        "trigger": "fdroid",
+        "url": "https://search.f-droid.org/?q=%s",
+        "tags": [
+            "package_repository"
+        ]
+    },
+    {
+        "name": "Nix: Search Packages",
+        "trigger": "nix",
+        "url": "https://search.nixos.org/packages?query=%s",
+        "tags": [
+            "package_repository"
+        ]
+    },
+    {
+        "name": "Nix: Search Options",
+        "trigger": "nixo",
+        "url": "https://search.nixos.org/options?query=%s",
+        "tags": [
+            "package_repository"
+        ]
+    },
+    {
+        "name": "PyPI: Search",
+        "trigger": "pip",
+        "url": "https://pypi.org/search/?q=%s",
+        "tags": [
+            "package_repository"
+        ]
+    },
+    {
+        "name": "Rust Package Search",
+        "trigger": "rust",
+        "url": "https://lib.rs/search?q=%s",
+        "tags": [
+            "package_repository"
+        ]
+    },
+    {
+        "name": "Rust: Go to package",
+        "trigger": "rustp",
+        "url": "https://lib.rs/crates/%S",
+        "tags": [
+            "package_repository"
+        ]
+    },
+    {
+        "name": "Command Not Found: Search",
+        "trigger": "cmdnf",
+        "url": "https://command-not-found.com/%s",
+        "tags": [
+            "shell"
+        ]
+    },
+    {
+        "name": "Neovim Craft: Search",
+        "trigger": "nvim",
+        "url": "https://neovimcraft.com/?search=%S",
+        "tags": [
+            "shell"
+        ]
+    },
+    {
+        "name": "TLDR Pages Search",
+        "trigger": "tldr",
+        "url": "https://tldr.inbrowser.app/pages/common/%s",
+        "tags": [
+            "shell"
+        ]
+    },
+    {
+        "name": "1337x",
+        "trigger": "133",
+        "url": "https://www.1337xx.to/search/%s/1/",
+        "tags": [
+            "site_search"
+        ]
+    },
+    {
+        "name": "GIPHY",
+        "trigger": "gif",
+        "url": "https://giphy.com/search/%s",
+        "tags": [
+            "site_search"
+        ]
+    },
+    {
+        "name": "Smartprix",
+        "trigger": "smart",
+        "url": "https://www.smartprix.com/products/?q=%s",
+        "tags": [
+            "site_search"
+        ]
+    },
+    {
+        "name": "X (Twitter) Search",
+        "trigger": "x",
+        "url": "https://x.com/search?q=%s",
+        "tags": [
+            "site_search"
+        ]
+    }
+]

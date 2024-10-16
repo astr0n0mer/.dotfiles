@@ -46,15 +46,23 @@ dotgit() {
 alias getenvvar='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
 
 
+# fastfetch
+alias ff="fastfetch"
+
+
 # git
 alias gbi="git branch | fzf"
 alias ghn="gh api notifications | jq '.[].subject'"
 alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
+alias gitprunebranches="git branch -vv \
+                        | grep ': gone]' \
+                        | awk '{print \$1}' \
+                        | xargs git branch -D"
 alias lg="lazygit"
 alias repo="find ~/.dotfiles ~/projects ~/projects-work \
-                    -type d -maxdepth 5 -name \".git\" -prune -exec dirname {} \; \
+                    -type d -maxdepth 4 -name \".git\" -prune -exec dirname {} \; \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
                 | sort --ignore-case --reverse \
@@ -69,10 +77,17 @@ repoo() {
         # [ -d "$repo_dir/.venv" ] && deactivate # INFO: Not sure if this is needed
     fi
 }
+repoof() {
+    repo_dir=$(repo)
+    if [ -n "$repo_dir" ]; then
+        [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
+        nvim "$repo_dir" --cmd "cd $repo_dir" +':lua require("telescope.builtin").find_files()'
+    fi
+}
 repog() {
     repo_dir=$(repo)
     if [ -n "$repo_dir" ]; then
-        pushd "$repo_dir" > /dev/null
+        pushd "$repo_dir"
         [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
     fi
 }
@@ -139,6 +154,27 @@ lss() {
 }
 olss() {
     open "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n 1)"
+}
+
+
+# search
+search() {
+    local search_engines engine query url
+    search_engines="$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/search_engines.json"
+    engine=$(jq --raw-output '.[] | "\(.trigger); \(.name): \(.url)"' "$search_engines" | fzf | sed "s/.*: //")
+    if [ -z "$engine" ]; then
+        return 1
+    fi
+    read -r "query?Enter search query: "
+    url=$(echo "$engine" | sed "s/%s/$query/i")
+    echo "$url"
+}
+so() {
+    local result
+    result=$(search)
+    if [ -n "$result" ]; then
+        open "$result"
+    fi
 }
 
 
