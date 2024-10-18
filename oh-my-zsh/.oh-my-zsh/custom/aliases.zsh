@@ -31,7 +31,7 @@ alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
 alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print \
                 | fzf --preview 'bat {} --force-colorization --style=numbers' \
                     --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
-alias doted="dotfile | xargs nvim"
+alias doted="dotfile | xargs nvim --cmd \"cd ~/.dotfiles\""
 alias dotlg="lazygit --path ~/.dotfiles"
 alias rmemptydirs="find . -type d -empty -maxdepth 10 | fzf --multi | xargs rm -r"
 dot() {
@@ -147,13 +147,15 @@ alias sc="screen"
 
 
 # screenshot
-# get last screenshot
 SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"
-lss() {
-    echo "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n 1)"
+ss() {
+    echo "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n ${1:-1} | tail -n 1)"
 }
-olss() {
-    open "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n 1)"
+oss() {
+    ss ${1:-1} | xargs -I {} open "{}"
+}
+cleanup_screenshots() {
+    find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash "{}" \;
 }
 
 
