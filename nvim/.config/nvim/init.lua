@@ -674,10 +674,6 @@ require('lazy').setup({
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
           end,
-          -- INFO: https://github.com/williamboman/mason.nvim/issues/1784#issuecomment-2335008233
-          ts_ls = function()
-            require('lspconfig')['tsserver'].setup {}
-          end,
         },
       }
     end,
