@@ -151,10 +151,10 @@ SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"
 ss() {
     echo "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n ${1:-1} | tail -n 1)"
 }
-oss() {
+ssopen() {
     ss ${1:-1} | xargs -I {} open "{}"
 }
-cleanup_screenshots() {
+sscleanup() {
     find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash "{}" \;
 }
 

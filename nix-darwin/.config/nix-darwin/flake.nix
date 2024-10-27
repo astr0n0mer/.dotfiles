@@ -15,17 +15,19 @@
       environment.systemPackages = with pkgs; [
           # ansible
           bat
+          btop
           cargo
           curl
           docker
           docker-compose
           fastfetch
+          # firebase-tools
           flameshot
           fzf
           gh
           glab
           glow
-          jnv
+          jnv # INFO: interactive json viewer with `jq` syntax
           jq
           lazydocker
           lazygit
@@ -33,9 +35,12 @@
           neovim
           # openvpn # INFO: can't set this up to use .ovpn file
           pipx
+          podman
+          podman-compose
           pyenv
           ranger
           ripgrep
+          ruff
           slack-term
           stow
           syncthing
@@ -46,6 +51,7 @@
           tree
           ttyper
           typioca
+          up
           uv
           vim
           visidata
@@ -125,7 +131,7 @@
           "FelixKratz/formulae"
           "ggerganov/ggerganov"
           "koekeishiya/formulae"
-          "mongodb/brew"
+          # "mongodb/brew"
           "ngrok/ngrok"
           "nikitabobko/tap"
           "render-oss/render"
@@ -141,10 +147,11 @@
           "ggerganov/ggerganov/hnterm"
           # "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
-          { name = "mongodb/brew/mongodb-community"; start_service = false; }
+          # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           "mpv"
           "render-oss/render/render"
           "saml2aws"
+          "siege"
           "terminal-notifier"
           "trash"
         ];
@@ -157,7 +164,7 @@
           "flameshot"
           "libreoffice"
           "logseq"
-          "mongodb-compass"
+          # "mongodb-compass"
           "ngrok"
           "nikitabobko/tap/aerospace"
           "postman"
