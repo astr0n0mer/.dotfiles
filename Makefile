@@ -1,6 +1,6 @@
 .PHONY: stow_tree
 stow_tree:
-	ls -a . | grep "[^(.git)]" | xargs tree -al
+	ls -a . | tree -aI ".git"
 
 .PHONY: stow_all
 stow_all:
