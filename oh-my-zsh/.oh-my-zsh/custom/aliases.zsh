@@ -74,7 +74,6 @@ repoo() {
     if [ -n "$repo_dir" ]; then
         [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
         nvim "$repo_dir" --cmd "cd $repo_dir"
-        # [ -d "$repo_dir/.venv" ] && deactivate # INFO: Not sure if this is needed
     fi
 }
 repoof() {

@@ -50,6 +50,7 @@
           terraform
           tlrc
           tmux
+          tokei
           tree
           ttyper
           typioca
