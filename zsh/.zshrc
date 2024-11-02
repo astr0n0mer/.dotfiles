@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source $HOME/.dotfiles/zsh/theme.zsh
+source $HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/theme.zsh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
