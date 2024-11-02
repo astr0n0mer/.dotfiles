@@ -52,6 +52,8 @@
   "editor.guides.bracketPairs": true,
   "editor.minimap.enabled": false,
   "editor.minimap.showSlider": "always",
+  "editor.scrollbar.horizontalScrollbarSize": 6,
+  "editor.scrollbar.verticalScrollbarSize": 6,
   "editor.stickyScroll.enabled": true,
   "editor.tokenColorCustomizations": {
     "[*Dark*]": {

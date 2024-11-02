@@ -1,3 +1,5 @@
+# https://alacritty.org/config-alacritty.html
+
 [window]
 decorations="None"
 opacity=0.85

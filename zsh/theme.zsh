@@ -35,3 +35,8 @@ ZSH_THEME="af-magic"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-ma
 # a theme from this variable instead of looking in $ZSH/themes/
 # If set to an empty array, this variable will have no effect.
 # ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
+
+# ======= custom settings for agnoster theme =======
+# to hide user@hostname when using agnoster theme
+# prompt_context(){}
+# =======

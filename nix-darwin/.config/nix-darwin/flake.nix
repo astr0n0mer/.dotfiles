@@ -33,16 +33,17 @@
           lazydocker
           lazygit
           luajitPackages.luarocks
+          neomutt
           neovim
           # openvpn # INFO: can't set this up to use .ovpn file
           pipx
-          podman
-          podman-compose
+          # podman
+          # podman-compose
           pyenv
           ranger
           ripgrep
           ruff
-          slack-term
+          # slack-term
           stow
           syncthing
           termusic
@@ -58,6 +59,7 @@
           visidata
           vscodium
           weechat
+          yazi
           zsh
           zsh-powerlevel10k
         ];
@@ -173,6 +175,7 @@
           "slack"
           "studio-3t"
           "visual-studio-code"
+          "wezterm"
           "zap"
           "zen-browser"
           "zoom"
