@@ -61,7 +61,7 @@ alias gitprunebranches="git branch -vv \
                         | awk '{print \$1}' \
                         | xargs git branch -D"
 alias lg="lazygit"
-alias repo="find ~/.dotfiles ~/projects ~/projects-work \
+alias repo="find ~/.dotfiles ~/{projects,projects-work} \
                     -type d -maxdepth 4 -name \".git\" -prune -exec dirname {} \; \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
@@ -135,10 +135,6 @@ alias musicstop="screen -S music-session -X quit"
 alias bldh="home-manager switch --flake ~/.dotfiles/home-manager/.config/home-manager"
 # INFO: darwin-rebuild
 alias bldd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin"
-
-
-# projects
-# alias codei="find ~/projects/ ~/projects-work/ -type d \( -name node_modules -o -name .venv -o -name .git -o -name site-packages \) -prune -false -o -type f -print | fzf"
 
 
 # screen

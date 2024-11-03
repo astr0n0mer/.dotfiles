@@ -20,6 +20,7 @@
           cargo
           curl
           docker
+          docker-client
           docker-compose
           fastfetch
           # firebase-tools
@@ -46,7 +47,7 @@
           # slack-term
           stow
           syncthing
-          termusic
+          # termusic
           terraform
           tlrc
           tmux
@@ -152,7 +153,7 @@
           # "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
-          "mpv"
+          # "mpv"
           "render-oss/render/render"
           "saml2aws"
           "siege"
@@ -164,7 +165,7 @@
           "aws-vpn-client"
           "brave-browser"
           "cursor"
-          "docker"
+          # "docker"
           "flameshot"
           "libreoffice"
           "logseq"
