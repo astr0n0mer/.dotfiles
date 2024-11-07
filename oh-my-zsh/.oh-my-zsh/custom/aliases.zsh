@@ -47,7 +47,7 @@ alias getenvvar='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
 
 
 # fastfetch
-alias ff="fastfetch"
+alias ff="fastfetch --logo Linux"
 
 
 # git
@@ -150,7 +150,7 @@ ssopen() {
     ss ${1:-1} | xargs -I {} open "{}"
 }
 sscleanup() {
-    find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash "{}" \;
+    find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash -v "{}" \;
 }
 
 

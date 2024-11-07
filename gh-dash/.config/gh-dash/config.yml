@@ -7,7 +7,7 @@ prSections:
 - title: Needs My Review
   filters: is:open review-requested:@me
 - title: By Others
-  filters: is:open user:timelyschools -author:@me -repo:timelyschools/timelypymodels-lib -review:approved
+  filters: is:open user:@me user:timelyschools -author:@me -repo:timelyschools/timelypymodels-lib -review:approved
 - title: Approved
   filters: is:open review:approved user:timelyschools -repo:timelyschools/timelypymodels-lib
 - title: Closed

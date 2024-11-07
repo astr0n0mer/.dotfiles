@@ -34,6 +34,7 @@
           lazydocker
           lazygit
           luajitPackages.luarocks
+          # man-pages-posix
           neomutt
           neovim
           # openvpn # INFO: can't set this up to use .ovpn file
