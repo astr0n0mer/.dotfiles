@@ -18,6 +18,7 @@
           bat
           btop
           cargo
+          clipse
           curl
           docker
           docker-client
@@ -64,7 +65,7 @@
           weechat
           yazi
           zsh
-          zsh-powerlevel10k
+          # zsh-powerlevel10k
         ];
 
       nixpkgs.config = {
@@ -104,7 +105,7 @@
       launchd.agents = {
         "crontab_agent" = {
           serviceConfig = {
-            Label = "crontab";
+            Label = "crontab_afk_slackbot";
             Program = "${pkgs.curl}/bin/curl";
             ProgramArguments = [
               "-L"
@@ -113,9 +114,19 @@
             StartInterval = 720;
           };
         };
+        "clipse_agent" = {
+          serviceConfig = {
+            Label = "clipse_agent";
+            KeepAlive = true;
+            Program = "${pkgs.clipse}/bin/clipse";
+            ProgramArguments = [
+              "-listen"
+            ];
+          };
+        };
         "syncthing_agent" = {
           serviceConfig = {
-            Label = "syncthing";
+            Label = "syncthing_agent";
             KeepAlive = true;
             Program = "${pkgs.syncthing}/bin/syncthing";
             ProgramArguments = [
@@ -151,7 +162,7 @@
           "awscli"
           # "FelixKratz/formulae/sketchybar"
           "ggerganov/ggerganov/hnterm"
-          # "koekeishiya/formulae/skhd"
+          "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           # "mpv"
@@ -162,13 +173,14 @@
           "trash"
         ];
         casks = [
-          "alacritty"
+          "alacritty" # TODO: to be replaced with wezterm post 2024/11/30
           "aws-vpn-client"
           "brave-browser"
           "cursor"
           # "docker"
-          "flameshot"
+          # "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
           "libreoffice"
+          "librewolf"
           "logseq"
           # "mongodb-compass"
           "ngrok"
@@ -193,11 +205,11 @@
       };
 
       security.pam.enableSudoTouchIdAuth = true;
-      # services = {
+      services = {
       #   sketchybar.enable = true;
-      #   skhd.enable = true;
+        skhd.enable = true;
       #   yabai.enable = true;
-      # };
+      };
       system = {
         activationScripts = { # INFO: this is not working
           "postDarwinRebuild" = {
@@ -260,6 +272,7 @@
             "com.apple.trackpad.enableSecondaryClick" = true;
           };
           screencapture = {
+            disable-shadow = true;
             location = "~/Downloads/screenshots";
           };
           screensaver = {

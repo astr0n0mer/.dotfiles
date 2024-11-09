@@ -143,12 +143,14 @@ alias sc="screen"
 
 # screenshot
 SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"
-ss() {
-    echo "$SCREENSHOT_LOCATION/$(ls -t1 $SCREENSHOT_LOCATION | head -n ${1:-1} | tail -n 1)"
+ss(){
+    cd "$SCREENSHOT_LOCATION" || return 1
+    ls -t1 \
+        | head -n ${1:-20} \
+        | xargs -I {} realpath "{}"
+    popd > /dev/null
 }
-ssopen() {
-    ss ${1:-1} | xargs -I {} open "{}"
-}
+alias ssopen="ss | fzf | xargs -I {} open {}"
 sscleanup() {
     find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash -v "{}" \;
 }
