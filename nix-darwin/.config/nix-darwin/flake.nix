@@ -15,11 +15,13 @@
       environment.systemPackages = with pkgs; [
           # ansible
           # act
-          bat
+          bat # INFO: cat clone with wings
           btop
           cargo
-          clipse
+          circumflex # INFO: Hacker News TUI
+          clipse # INFO: clipboard manager TUI
           curl
+          # direnv
           docker
           docker-client
           docker-compose
@@ -108,7 +110,7 @@
             Label = "crontab_afk_slackbot";
             Program = "${pkgs.curl}/bin/curl";
             ProgramArguments = [
-              "-L"
+              "--location"
               "https://afk-slackbot.onrender.com"
             ];
             StartInterval = 720;
@@ -120,7 +122,7 @@
             KeepAlive = true;
             Program = "${pkgs.clipse}/bin/clipse";
             ProgramArguments = [
-              "-listen"
+              "--listen"
             ];
           };
         };
@@ -161,7 +163,7 @@
         brews = [
           "awscli"
           # "FelixKratz/formulae/sketchybar"
-          "ggerganov/ggerganov/hnterm"
+          "ggerganov/ggerganov/hnterm" # INFO: Hacker News TUI
           "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
