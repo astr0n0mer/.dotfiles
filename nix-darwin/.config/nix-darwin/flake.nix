@@ -21,6 +21,7 @@
           circumflex # INFO: Hacker News TUI
           clipse # INFO: clipboard manager TUI
           curl
+          delta
           # direnv
           docker
           docker-client
@@ -147,13 +148,12 @@
       homebrew = {
         enable = true;
         taps = [
-          "FelixKratz/formulae"
-          "ggerganov/ggerganov"
-          "koekeishiya/formulae"
+          "FelixKratz/formulae" # INFO: for sketchybar
+          "ggerganov/ggerganov" # INFO: for hnterm
+          "koekeishiya/formulae" # INFO: for skhd and yabai
           # "mongodb/brew"
-          "ngrok/ngrok"
-          "nikitabobko/tap"
-          "render-oss/render"
+          "nikitabobko/tap" # INFO: for aerospace
+          "render-oss/render" # INFO: for render
           {
             name = "zen-browser/browser";
             clone_target = "https://github.com/zen-browser/desktop.git";
@@ -185,7 +185,6 @@
           "librewolf"
           "logseq"
           # "mongodb-compass"
-          "ngrok"
           "nikitabobko/tap/aerospace"
           "postman"
           "raycast"
