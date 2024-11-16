@@ -2,14 +2,14 @@
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="af-magic"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-magic
+# ZSH_THEME="af-magic"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#af-magic
 # ZSH_THEME="agnoster"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#agnoster # special instructions at the end of this file
 # ZSH_THEME="alanpeabody"   # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#alanpeabody
 # ZSH_THEME="amuse"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#amuse
 # ZSH_THEME="arrow"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#arrow
 # ZSH_THEME="crunch"        # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#crunch
 # ZSH_THEME="essembeh"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#essembeh
-# ZSH_THEME="fishy"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#fishy
+ZSH_THEME="fishy"         # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#fishy
 # ZSH_THEME="frontcube"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#frontcube # won't use again: prints cwd in black color
 # ZSH_THEME="half-life"     # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#half-life
 # ZSH_THEME="jonathan"      # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes#jonathan

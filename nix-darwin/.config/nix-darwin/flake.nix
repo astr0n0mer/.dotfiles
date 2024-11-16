@@ -37,6 +37,7 @@
           jq # INFO: json processor
           lazydocker # INFO: docker TUI
           lazygit # INFO: git TUI
+          # lazysql
           luajitPackages.luarocks # INFO: lua package manager
           # man-pages-posix
           neomutt # INFO: email client TUI
