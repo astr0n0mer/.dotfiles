@@ -17,7 +17,7 @@
           # act
           bat # INFO: cat clone with wings
           btop
-          cargo
+          cargo # INFO: rust package manager
           circumflex # INFO: Hacker News TUI
           clipse # INFO: clipboard manager TUI
           curl
@@ -26,47 +26,47 @@
           docker
           docker-client
           docker-compose
-          fastfetch
+          fastfetch # INFO: neofetch successor
           # firebase-tools
-          flameshot
-          fzf
-          gh
-          glab
-          glow
+          flameshot # INFO: screenshot tool
+          fzf # INFO: fuzzy finder
+          gh # INFO: GitHub CLI
+          glab # INFO: GitLab CLI
+          glow # INFO: markdown reader
           jnv # INFO: interactive json viewer with `jq` syntax
-          jq
-          lazydocker
-          lazygit
-          luajitPackages.luarocks
+          jq # INFO: json processor
+          lazydocker # INFO: docker TUI
+          lazygit # INFO: git TUI
+          luajitPackages.luarocks # INFO: lua package manager
           # man-pages-posix
-          neomutt
-          neovim
+          neomutt # INFO: email client TUI
+          neovim # INFO: vim successor
           # openvpn # INFO: can't set this up to use .ovpn file
-          pipx
+          pipx # INFO: python package manager
           # podman
           # podman-compose
-          pyenv
-          ranger
-          ripgrep
-          ruff
+          pyenv # INFO: python version manager
+          ranger # INFO: file manager TUI # TODO: to be replaced with yazi post 2024/12/15
+          ripgrep # INFO: faster grep
+          ruff # INFO: python formatter, linter
           # slack-term
-          stow
-          syncthing
+          stow # INFO: symlink manager
+          syncthing # INFO: file sync on local network
           # termusic
-          terraform
-          tlrc
-          tmux
-          tokei
-          tree
-          ttyper
-          typioca
-          up
-          uv
-          vim
-          visidata
-          vscodium
-          weechat
-          yazi
+          terraform # INFO: infrastructure as code
+          tlrc # INFO: tldr of CLI commands
+          tmux # INFO: terminal multiplexer
+          tokei # INFO: code statistics
+          tree # INFO: directory tree viewer
+          ttyper # INFO: typing practice
+          typioca # INFO: typing practice
+          up # INFO: ultimate plumber
+          uv # INFO: python
+          vim # INFO: text editor
+          visidata # INFO: spreadsheet TUI
+          vscodium # INFO: vscode without telemetry # TODO: to be replaced with windsurf post 2024/12/30
+          weechat # INFO: IRC client
+          yazi # INFO: file manager TUI
           zsh
           # zsh-powerlevel10k
         ];
@@ -197,8 +197,8 @@
           "zoom"
 
           # INFO: font related casks
-          "font-sf-pro"
-          "sf-symbols"
+          # "font-sf-pro"
+          # "sf-symbols"
         ];
         caskArgs = {
           no_quarantine = true;

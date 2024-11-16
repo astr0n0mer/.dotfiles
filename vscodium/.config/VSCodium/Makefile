@@ -23,6 +23,11 @@ backup_cursor:
 	cd ~/.dotfiles/vscodium/.config/VSCodium && \
 	command -v cursor && $(foreach profile,$(PROFILES),$(call backup-profile,cursor,$(profile));)
 
+.PHONY: backup_windsurf
+backup_windsurf:
+	cd ~/.dotfiles/vscodium/.config/VSCodium && \
+	command -v windsurf && $(foreach profile,$(PROFILES),$(call backup-profile,windsurf,$(profile));)
+
 .PHONY: backup
 backup: backup_codium backup_code backup_cursor
 
@@ -37,4 +42,7 @@ restore:
 	fi; \
 	if command -v cursor; then \
 		$(foreach profile,$(PROFILES),$(call restore-profile,cursor,$(profile));) \
+	fi; \
+	if command -v windsurf; then \
+		$(foreach profile,$(PROFILES),$(call restore-profile,windsurf,$(profile));) \
 	fi;

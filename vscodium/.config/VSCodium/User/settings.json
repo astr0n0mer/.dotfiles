@@ -165,6 +165,7 @@
   "vim.vimrc.path": "~/.vimrc",
   "window.commandCenter": true,
   "window.titleBarStyle": "custom",
+  "windsurf.autocompleteSpeed": "fast",
   // "workbench.colorTheme": "GitHub Dark Dimmed",
   // "workbench.colorTheme": "Atom One Dark",
   // "workbench.colorTheme": "Night Owl",
