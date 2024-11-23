@@ -44,8 +44,8 @@
           neovim # INFO: vim successor
           # openvpn # INFO: can't set this up to use .ovpn file
           pipx # INFO: python package manager
-          # podman
-          # podman-compose
+          podman # INFO: container runtime
+          podman-compose
           pyenv # INFO: python version manager
           ranger # INFO: file manager TUI # TODO: to be replaced with yazi post 2024/12/15
           ripgrep # INFO: faster grep
@@ -65,7 +65,7 @@
           uv # INFO: python
           vim # INFO: text editor
           visidata # INFO: spreadsheet TUI
-          vscodium # INFO: vscode without telemetry # TODO: to be replaced with windsurf post 2024/12/30
+          # vscodium # INFO: vscode without telemetry # TODO: to be replaced with windsurf post 2024/12/30
           weechat # INFO: IRC client
           yazi # INFO: file manager TUI
           zsh
@@ -151,7 +151,7 @@
         taps = [
           "FelixKratz/formulae" # INFO: for sketchybar
           "ggerganov/ggerganov" # INFO: for hnterm
-          "koekeishiya/formulae" # INFO: for skhd and yabai
+          # "koekeishiya/formulae" # INFO: for skhd and yabai
           # "mongodb/brew"
           "nikitabobko/tap" # INFO: for aerospace
           "render-oss/render" # INFO: for render
@@ -165,7 +165,7 @@
           "awscli"
           # "FelixKratz/formulae/sketchybar"
           "ggerganov/ggerganov/hnterm" # INFO: Hacker News TUI
-          "koekeishiya/formulae/skhd"
+          # "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           # "mpv"
@@ -207,11 +207,11 @@
       };
 
       security.pam.enableSudoTouchIdAuth = true;
-      services = {
+      # services = {
       #   sketchybar.enable = true;
-        skhd.enable = true;
+      #   skhd.enable = true;
       #   yabai.enable = true;
-      };
+      # };
       system = {
         activationScripts = { # INFO: this is not working
           "postDarwinRebuild" = {
