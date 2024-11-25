@@ -6,7 +6,7 @@ alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" \
 alias appopen="app | xargs -I {} open -a \"{}\""
 alias appquit="app | xargs -I {} osascript -e 'quit app \"{}\"'"
 alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
-                    | fzf --preview 'defaults read {}' \
+                    | fzf --preview 'defaults read {} | bat --force-colorization --style=numbers --language=json' \
                         --preview-window=right:60% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 #! ==========
 
@@ -62,7 +62,7 @@ alias gitprunebranches="git branch -vv \
                         | xargs git branch -D"
 alias lg="lazygit"
 alias repo="find ~/.dotfiles ~/{projects,projects-work} \
-                    -type d -maxdepth 4 -name \".git\" -prune -exec dirname {} \; \
+                    -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
                 | sort --ignore-case --reverse \

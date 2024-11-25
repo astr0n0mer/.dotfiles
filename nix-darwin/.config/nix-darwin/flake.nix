@@ -13,74 +13,74 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
-          # ansible
           # act
-          bat # INFO: cat clone with wings
-          btop
+          # ansible
+          # bat # INFO: cat clone with wings
+          # btop
           cargo # INFO: rust package manager
-          circumflex # INFO: Hacker News TUI
-          clipse # INFO: clipboard manager TUI
-          curl
-          delta
+          # circumflex # INFO: Hacker News TUI
+          # clipse # INFO: clipboard manager TUI
+          # curl
+          # delta
           # direnv
-          docker
-          docker-client
-          docker-compose
-          fastfetch # INFO: neofetch successor
+          # docker
+          # docker-client
+          # docker-compose
+          # fastfetch # INFO: neofetch successor
           # firebase-tools
-          flameshot # INFO: screenshot tool
-          fzf # INFO: fuzzy finder
-          gh # INFO: GitHub CLI
-          glab # INFO: GitLab CLI
-          glow # INFO: markdown reader
-          jnv # INFO: interactive json viewer with `jq` syntax
-          jq # INFO: json processor
-          lazydocker # INFO: docker TUI
-          lazygit # INFO: git TUI
+          # flameshot # INFO: screenshot tool
+          # fzf # INFO: fuzzy finder
+          # gh # INFO: GitHub CLI
+          # glab # INFO: GitLab CLI
+          # glow # INFO: markdown reader
+          # jnv # INFO: interactive json viewer with `jq` syntax
+          # jq # INFO: json processor
+          # lazydocker # INFO: docker TUI
+          # lazygit # INFO: git TUI
           # lazysql
           luajitPackages.luarocks # INFO: lua package manager
           # man-pages-posix
-          neomutt # INFO: email client TUI
-          neovim # INFO: vim successor
+          # neomutt # INFO: email client TUI
+          # neovim # INFO: vim successor
           # openvpn # INFO: can't set this up to use .ovpn file
-          pipx # INFO: python package manager
-          podman # INFO: container runtime
-          podman-compose
-          pyenv # INFO: python version manager
-          ranger # INFO: file manager TUI # TODO: to be replaced with yazi post 2024/12/15
-          ripgrep # INFO: faster grep
-          ruff # INFO: python formatter, linter
+          # pipx # INFO: python package manager
+          # podman # INFO: container runtime
+          # podman-compose
+          # pyenv # INFO: python version manager
+          # ranger # INFO: file manager TUI # TODO: to be replaced with yazi post 2024/12/15
+          # ripgrep # INFO: faster grep
+          # ruff # INFO: python formatter, linter
           # slack-term
-          stow # INFO: symlink manager
-          syncthing # INFO: file sync on local network
+          # stow # INFO: symlink manager
+          # syncthing # INFO: file sync on local network
           # termusic
-          terraform # INFO: infrastructure as code
-          tlrc # INFO: tldr of CLI commands
-          tmux # INFO: terminal multiplexer
-          tokei # INFO: code statistics
-          tree # INFO: directory tree viewer
+          # terraform # INFO: infrastructure as code
+          # tlrc # INFO: tldr of CLI commands
+          # tmux # INFO: terminal multiplexer
+          # tokei # INFO: code statistics
+          # tree # INFO: directory tree viewer
           ttyper # INFO: typing practice
           typioca # INFO: typing practice
-          up # INFO: ultimate plumber
-          uv # INFO: python
-          vim # INFO: text editor
+          # up # INFO: ultimate plumber
+          # uv # INFO: python
+          # vim # INFO: text editor
           visidata # INFO: spreadsheet TUI
           # vscodium # INFO: vscode without telemetry # TODO: to be replaced with windsurf post 2024/12/30
-          weechat # INFO: IRC client
-          yazi # INFO: file manager TUI
-          zsh
+          # weechat # INFO: IRC client
+          # yazi # INFO: file manager TUI
+          # zsh
           # zsh-powerlevel10k
         ];
 
-      nixpkgs.config = {
-        # Set this to true to allow all unfree packages
-        # allowUnfree = true;
-
-        # Allow unfree packages only for specific packages
-        allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-          "terraform"
-        ];
-      };
+      # nixpkgs.config = {
+      #   # Set this to true to allow all unfree packages
+      #   # allowUnfree = true;
+      #
+      #   # Allow unfree packages only for specific packages
+      #   allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
+      #     "terraform"
+      #   ];
+      # };
 
       # Auto upgrade nix package and the daemon service.
       services.nix-daemon.enable = true;
@@ -118,16 +118,16 @@
             StartInterval = 720;
           };
         };
-        "clipse_agent" = {
-          serviceConfig = {
-            Label = "clipse_agent";
-            KeepAlive = true;
-            Program = "${pkgs.clipse}/bin/clipse";
-            ProgramArguments = [
-              "--listen"
-            ];
-          };
-        };
+        # "clipse_agent" = {
+        #   serviceConfig = {
+        #     Label = "clipse_agent";
+        #     KeepAlive = true;
+        #     Program = "${pkgs.clipse}/bin/clipse";
+        #     ProgramArguments = [
+        #       "--listen"
+        #     ];
+        #   };
+        # };
         "syncthing_agent" = {
           serviceConfig = {
             Label = "syncthing_agent";
@@ -149,8 +149,9 @@
       homebrew = {
         enable = true;
         taps = [
-          "FelixKratz/formulae" # INFO: for sketchybar
+          # "FelixKratz/formulae" # INFO: for sketchybar
           "ggerganov/ggerganov" # INFO: for hnterm
+          "hashicorp/tap" # INFO: for terraform
           # "koekeishiya/formulae" # INFO: for skhd and yabai
           # "mongodb/brew"
           "nikitabobko/tap" # INFO: for aerospace
@@ -163,25 +164,64 @@
         ];
         brews = [
           "awscli"
+          "bat"
+          "btop"
+          "circumflex"
+          "curl"
+          "docker"
+          "docker-compose"
+          "fastfetch"
           # "FelixKratz/formulae/sketchybar"
+          "fzf"
           "ggerganov/ggerganov/hnterm" # INFO: Hacker News TUI
+          "gh"
+          "git-delta"
+          "glab"
+          "glow"
+          "hashicorp/tap/terraform"
+          "jnv"
+          "jq"
+          "lazydocker"
+          "lazygit"
           # "koekeishiya/formulae/skhd"
           # "koekeishiya/formulae/yabai"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           # "mpv"
+          "neomutt"
+          "neovim"
+          "pipx"
+          "podman"
+          "podman-compose"
+          "podman-tui"
+          "pyenv"
+          "ranger"
           "render-oss/render/render"
+          "ripgrep"
+          "ruff"
           "saml2aws"
           "siege"
+          "stow"
+          "syncthing"
           "terminal-notifier"
+          "tlrc"
+          "tmux"
+          "tokei"
           "trash"
+          "tree"
+          "up"
+          "uv"
+          "vim"
+          "weechat"
+          "yazi"
+          "zsh"
         ];
         casks = [
           "alacritty" # TODO: to be replaced with wezterm post 2024/11/30
           "aws-vpn-client"
           "brave-browser"
           "cursor"
-          # "docker"
-          # "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
+          "docker"
+          "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
           "libreoffice"
           "librewolf"
           "logseq"

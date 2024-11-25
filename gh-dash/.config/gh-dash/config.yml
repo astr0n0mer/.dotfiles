@@ -7,11 +7,11 @@ prSections:
 - title: Needs My Review
   filters: is:open review-requested:@me
 - title: By Others
-  filters: is:open user:@me user:timelyschools -author:@me -repo:timelyschools/timelypymodels-lib -review:approved
+  filters: is:open user:@me user:timelyschools -repo:timelyschools/timelypymodels-lib -author:@me -review:approved
 - title: Approved
-  filters: is:open review:approved user:timelyschools -repo:timelyschools/timelypymodels-lib
+  filters: is:open user:@me user:timelyschools -repo:timelyschools/timelypymodels-lib review:approved
 - title: Closed
-  filters: is:closed user:timelyschools
+  filters: is:closed user:@me user:timelyschools
 issuesSections:
 - title: My Issues
   filters: is:open author:@me
