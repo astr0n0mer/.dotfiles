@@ -47,7 +47,7 @@
           # podman # INFO: container runtime
           # podman-compose
           # pyenv # INFO: python version manager
-          # ranger # INFO: file manager TUI # TODO: to be replaced with yazi post 2024/12/15
+          # ranger # INFO: file manager TUI
           # ripgrep # INFO: faster grep
           # ruff # INFO: python formatter, linter
           # slack-term
@@ -194,7 +194,7 @@
           "podman-compose"
           "podman-tui"
           "pyenv"
-          "ranger"
+          # "ranger"
           "render-oss/render/render"
           "ripgrep"
           "ruff"
@@ -212,6 +212,7 @@
           "uv"
           "vim"
           "weechat"
+          "xclip"
           "yazi"
           "zsh"
         ];
