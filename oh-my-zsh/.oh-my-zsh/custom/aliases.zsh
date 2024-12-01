@@ -61,7 +61,7 @@ alias gitprunebranches="git branch -vv \
                         | awk '{print \$1}' \
                         | xargs git branch -D"
 alias lg="lazygit"
-alias repo="find ~/.dotfiles ~/{projects,projects-work} \
+alias repo="find ~/.dotfiles ~/{projects,projects_work} \
                     -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
