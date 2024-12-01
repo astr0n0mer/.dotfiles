@@ -52,7 +52,7 @@
           # ruff # INFO: python formatter, linter
           # slack-term
           # stow # INFO: symlink manager
-          # syncthing # INFO: file sync on local network
+          syncthing # INFO: file sync on local network
           # termusic
           # terraform # INFO: infrastructure as code
           # tlrc # INFO: tldr of CLI commands
@@ -208,7 +208,6 @@
           "saml2aws"
           "siege"
           "stow"
-          "syncthing"
           "terminal-notifier"
           "tlrc"
           "tmux"
