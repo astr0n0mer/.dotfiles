@@ -69,25 +69,37 @@ alias repo="find ~/.dotfiles ~/{projects,projects_work} \
                 | fzf --preview 'git -C {} status' \
                     --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
+source_repo_env() {
+    local repo_dir="$1"
+    [[ -d "$repo_dir/.venv" ]] && . "$repo_dir/.venv/bin/activate"
+
+    set -a
+    [[ -f "$repo_dir/.env" ]]       && source "$repo_dir/.env"
+    [[ -f "$repo_dir/.env.local" ]] && source "$repo_dir/.env.local"
+    set +a
+}
 repoo() {
+    local repo_dir
     repo_dir=$(repo)
     if [ -n "$repo_dir" ]; then
-        [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
+        source_repo_env "$repo_dir"
         nvim "$repo_dir" --cmd "cd $repo_dir"
     fi
 }
 repoof() {
+    local repo_dir
     repo_dir=$(repo)
     if [ -n "$repo_dir" ]; then
-        [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
+        source_repo_env "$repo_dir"
         nvim "$repo_dir" --cmd "cd $repo_dir" +':lua require("telescope.builtin").find_files()'
     fi
 }
 repog() {
+    local repo_dir
     repo_dir=$(repo)
     if [ -n "$repo_dir" ]; then
-        pushd "$repo_dir"
-        [ -d "$repo_dir/.venv" ] && . "$repo_dir/.venv/bin/activate"
+        source_repo_env "$repo_dir"
+        pushd "$repo_dir" > /dev/null
     fi
 }
 
