@@ -226,7 +226,7 @@
           "zsh"
         ];
         casks = [
-          "alacritty" # TODO: to be replaced with wezterm post 2024/11/30
+          # "alacritty"
           "aws-vpn-client"
           "brave-browser"
           "cursor"
