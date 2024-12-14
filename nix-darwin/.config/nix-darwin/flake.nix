@@ -241,6 +241,7 @@
           "raycast"
           "slack"
           "studio-3t"
+          "ueli"
           "visual-studio-code"
           "wezterm"
           "zap"
@@ -348,7 +349,7 @@
           # };
         };
         keyboard = {
-          #! I use kanata for key-remapping on Linux
+          # INFO: I use kanata for key-remapping on Linux
           enableKeyMapping = true;
           remapCapsLockToControl = true;
           # swapLeftCommandAndLeftAlt = true;

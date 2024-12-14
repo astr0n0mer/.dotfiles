@@ -1,0 +1,10 @@
+{
+    "appearance.searchBarSize": "medium",
+    "extensions.enabledExtensionIds": [
+        "Calculator",
+        "ApplicationSearch",
+        "UeliCommand"
+    ],
+    "window.alwaysOnTop": true,
+    "window.vibrancy": "fullscreen-ui"
+}

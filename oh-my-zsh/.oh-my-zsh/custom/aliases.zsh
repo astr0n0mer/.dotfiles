@@ -99,7 +99,8 @@ repog() {
     repo_dir=$(repo)
     if [ -n "$repo_dir" ]; then
         source_repo_env "$repo_dir"
-        pushd "$repo_dir" > /dev/null
+        pushd "$repo_dir"
+        git fetch --all &
     fi
 }
 
@@ -190,7 +191,7 @@ so() {
 
 
 # speedtest
-alias speedtest="curl -s https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
+# alias speedtest="curl --silent https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
 
 
 # syncthing

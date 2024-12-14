@@ -618,7 +618,6 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
 
-        -- python
         -- pyright = {},
         basedpyright = {},
 
@@ -633,6 +632,8 @@ require('lazy').setup({
         ts_ls = {},
         --
 
+        docker_compose_language_service = {},
+        dockerls = {},
         terraformls = {},
 
         lua_ls = {
