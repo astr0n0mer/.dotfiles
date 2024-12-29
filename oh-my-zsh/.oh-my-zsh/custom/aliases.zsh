@@ -148,6 +148,8 @@ alias musicstop="screen -S music-session -X quit"
 alias bldh="home-manager switch --flake ~/.dotfiles/home-manager/.config/home-manager"
 # INFO: darwin-rebuild
 alias bldd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin"
+# INFO: install pip packages
+alias pipxi="cat ~/.dotfiles/nix-darwin/.config/nix-darwin/requirements.in | xargs -I {} pipx install {}"
 
 
 # screen

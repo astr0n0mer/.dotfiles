@@ -1,10 +1,12 @@
 {
     "appearance.searchBarSize": "medium",
     "extensions.enabledExtensionIds": [
+        "Workflow",
         "Calculator",
         "ApplicationSearch",
         "UeliCommand"
     ],
+    "general.hotkey": "Cmd+Space",
     "window.alwaysOnTop": true,
-    "window.vibrancy": "fullscreen-ui"
+    "window.vibrancy": "selection"
 }

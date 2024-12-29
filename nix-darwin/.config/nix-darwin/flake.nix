@@ -17,6 +17,7 @@
           # ansible
           # bat # INFO: cat clone with wings
           # btop
+          # calcure # INFO: calendar TUI
           cargo # INFO: rust package manager
           # circumflex # INFO: Hacker News TUI
           # clipse # INFO: clipboard manager TUI
@@ -60,11 +61,11 @@
           # tokei # INFO: code statistics
           # tree # INFO: directory tree viewer
           ttyper # INFO: typing practice
-          typioca # INFO: typing practice
+          # typioca # INFO: typing practice
           # up # INFO: ultimate plumber
           # uv # INFO: python
           # vim # INFO: text editor
-          visidata # INFO: spreadsheet TUI
+          # visidata # INFO: spreadsheet TUI
           # vscodium # INFO: vscode without telemetry # TODO: to be replaced with windsurf post 2024/12/30
           # weechat # INFO: IRC client
           # yazi # INFO: file manager TUI
@@ -149,6 +150,7 @@
       homebrew = {
         enable = true;
         taps = [
+          "bloznelis/tap" # INFO: for typioca
           # "FelixKratz/formulae" # INFO: for sketchybar
           "ggerganov/ggerganov" # INFO: for hnterm
           "hashicorp/tap" # INFO: for terraform
@@ -171,6 +173,7 @@
           # "deno"
           "docker"
           "docker-compose"
+          "exercism"
           "fastfetch"
           # "FelixKratz/formulae/sketchybar"
           "fzf"
@@ -217,6 +220,7 @@
           "tokei"
           "trash"
           "tree"
+          "typioca"
           "up"
           "uv"
           "vim"
@@ -228,22 +232,25 @@
         casks = [
           # "alacritty"
           "aws-vpn-client"
+          # "bitwarden" # INFO: couldn't set up autofill on macOS
           "brave-browser"
           "cursor"
           "docker"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
+          "ghostty"
           "libreoffice"
           "librewolf"
           "logseq"
           # "mongodb-compass"
           "nikitabobko/tap/aerospace"
           "postman"
-          "raycast"
+          "raycast" # TODO: to be replaced with ueli post 2025/01/01
           "slack"
           "studio-3t"
           "ueli"
           "visual-studio-code"
           "wezterm"
+          "windsurf"
           "zap"
           "zen-browser"
           "zoom"
@@ -352,7 +359,8 @@
           # INFO: I use kanata for key-remapping on Linux
           enableKeyMapping = true;
           remapCapsLockToControl = true;
-          # swapLeftCommandAndLeftAlt = true;
+          swapLeftCommandAndLeftAlt = true;
+          swapLeftCtrlAndFn = true;
         };
         startup = {
           chime = false;
