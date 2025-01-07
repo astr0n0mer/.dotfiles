@@ -29,7 +29,7 @@ backup_windsurf:
 	command -v windsurf && $(foreach profile,$(PROFILES),$(call backup-profile,windsurf,$(profile));)
 
 .PHONY: backup
-backup: backup_codium backup_code backup_cursor
+backup: backup_codium backup_code backup_cursor backup_windsurf
 
 .PHONY: restore
 restore:

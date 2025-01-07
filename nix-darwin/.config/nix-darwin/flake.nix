@@ -15,61 +15,27 @@
       environment.systemPackages = with pkgs; [
           # act
           # ansible
-          # bat # INFO: cat clone with wings
-          # btop
           # calcure # INFO: calendar TUI
           cargo # INFO: rust package manager
-          # circumflex # INFO: Hacker News TUI
           # clipse # INFO: clipboard manager TUI
-          # curl
           # delta
           # direnv
           # docker
           # docker-client
           # docker-compose
-          # fastfetch # INFO: neofetch successor
           # firebase-tools
           # flameshot # INFO: screenshot tool
-          # fzf # INFO: fuzzy finder
-          # gh # INFO: GitHub CLI
-          # glab # INFO: GitLab CLI
-          # glow # INFO: markdown reader
-          # jnv # INFO: interactive json viewer with `jq` syntax
-          # jq # INFO: json processor
-          # lazydocker # INFO: docker TUI
-          # lazygit # INFO: git TUI
           # lazysql
           luajitPackages.luarocks # INFO: lua package manager
           # man-pages-posix
-          # neomutt # INFO: email client TUI
-          # neovim # INFO: vim successor
           # openvpn # INFO: can't set this up to use .ovpn file
-          # pipx # INFO: python package manager
-          # podman # INFO: container runtime
-          # podman-compose
-          # pyenv # INFO: python version manager
-          # ranger # INFO: file manager TUI
-          # ripgrep # INFO: faster grep
-          # ruff # INFO: python formatter, linter
           # slack-term
-          # stow # INFO: symlink manager
           syncthing # INFO: file sync on local network
           # termusic
           # terraform # INFO: infrastructure as code
-          # tlrc # INFO: tldr of CLI commands
-          # tmux # INFO: terminal multiplexer
-          # tokei # INFO: code statistics
-          # tree # INFO: directory tree viewer
           ttyper # INFO: typing practice
-          # typioca # INFO: typing practice
-          # up # INFO: ultimate plumber
-          # uv # INFO: python
-          # vim # INFO: text editor
           # visidata # INFO: spreadsheet TUI
-          # vscodium # INFO: vscode without telemetry # TODO: to be replaced with windsurf post 2024/12/30
-          # weechat # INFO: IRC client
-          # yazi # INFO: file manager TUI
-          # zsh
+          # vscodium # INFO: vscode without telemetry
           # zsh-powerlevel10k
         ];
 
@@ -150,14 +116,14 @@
       homebrew = {
         enable = true;
         taps = [
-          "bloznelis/tap" # INFO: for typioca
-          # "FelixKratz/formulae" # INFO: for sketchybar
-          "ggerganov/ggerganov" # INFO: for hnterm
-          "hashicorp/tap" # INFO: for terraform
-          # "koekeishiya/formulae" # INFO: for skhd and yabai
+          "bloznelis/tap"
+          # "FelixKratz/formulae"
+          "ggerganov/ggerganov"
+          "hashicorp/tap"
+          # "koekeishiya/formulae"
           # "mongodb/brew"
-          "nikitabobko/tap" # INFO: for aerospace
-          "render-oss/render" # INFO: for render
+          "nikitabobko/tap"
+          "render-oss/render"
           {
             name = "zen-browser/browser";
             clone_target = "https://github.com/zen-browser/desktop.git";
@@ -166,33 +132,36 @@
         ];
         brews = [
           "awscli"
-          "bat"
+          "bat" # INFO: cat clone with wings
+          "bloznelis/tap/typioca" # INFO: typing practice
           "btop"
-          "circumflex"
+          "circumflex" # INFO: Hacker News TUI
           "curl"
           # "deno"
           "docker"
           "docker-compose"
           "exercism"
-          "fastfetch"
+          "fastfetch" # INFO: neofetch successor
           # "FelixKratz/formulae/sketchybar"
-          "fzf"
+          "ffmpeg"
+          "fzf" # INFO: fuzzy finder
           "ggerganov/ggerganov/hnterm" # INFO: Hacker News TUI
-          "gh"
+          "gh" # INFO: GitHub CLI
           "git-delta"
-          "glab"
-          "glow"
+          "glab" # INFO: GitLab CLI
+          "glow" # INFO: markdown reader
           "gpg-tui"
           "hashicorp/tap/terraform"
-          "jnv"
-          "jq"
-          "lazydocker"
-          "lazygit"
-          # "koekeishiya/formulae/skhd"
-          # "koekeishiya/formulae/yabai"
+          "jnv" # INFO: interactive json viewer with `jq` syntax
+          "jq" # INFO: json processor
+          # "koekeishiya/formulae/skhd" # replaced by karabiner-elements
+          # "koekeishiya/formulae/yabai" # replaced by aerospace
+          "lazydocker" # INFO: docker TUI
+          "lazygit" # INFO: git TUI
+          "llvm"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           # "mpv"
-          "neomutt"
+          "neomutt" # INFO: email client TUI
             "abook"
             "ca-certificates"
             "isync"
@@ -201,36 +170,36 @@
             "notmuch"
             "pass"
             "urlview"
-          "neovim"
-          "pipx"
-          "podman"
+          "neovim" # INFO: vim successor
+          "pipx" # INFO: python package manager
+          "podman" # INFO: container runtime
           "podman-compose"
           "podman-tui"
-          "pyenv"
-          # "ranger"
+          "posting"
+          "pyenv" # INFO: python version manager
+          # "ranger" # INFO: file manager TUI # replaced by yazi
           "render-oss/render/render"
-          "ripgrep"
-          "ruff"
+          "ripgrep" # INFO: faster grep
+          "ruff" # INFO: python formatter, linter
           "saml2aws"
           "siege"
-          "stow"
+          "stow" # INFO: symlink manager
           "terminal-notifier"
-          "tlrc"
-          "tmux"
-          "tokei"
+          "tlrc" # INFO: tldr of CLI commands
+          "tmux" # INFO: terminal multiplexer
+          "tokei" # INFO: code statistics
           "trash"
-          "tree"
-          "typioca"
-          "up"
-          "uv"
-          "vim"
-          "weechat"
+          "tree" # INFO: directory tree viewer
+          "up" # INFO: ultimate plumber
+          "uv" # INFO: python
+          "vim" # INFO: text editor
+          "weechat" # INFO: IRC client
           "xclip"
-          "yazi"
-          "zsh"
+          "yazi" # INFO: file manager TUI
+          "zsh" # INFO: shell
         ];
         casks = [
-          # "alacritty"
+          # "alacritty" # replaced by wezterm
           "aws-vpn-client"
           # "bitwarden" # INFO: couldn't set up autofill on macOS
           "brave-browser"
@@ -238,6 +207,7 @@
           "docker"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
           "ghostty"
+          "karabiner-elements"
           "libreoffice"
           "librewolf"
           "logseq"
@@ -281,9 +251,10 @@
         };
         defaults = {
           CustomUserPreferences = {
-            "com.apple.dock" = {
-              expose-group-apps = true;
-            };
+            # TODO: remove below 3 commented lines after 2025-01-31
+            # "com.apple.dock" = {
+            #   expose-group-apps = true;
+            # };
             universalaccess = { # INFO: this might be ineffective
               useVirtualKeyboard = true;
             };
@@ -291,7 +262,7 @@
           dock = {
             autohide = true;
             expose-animation-duration = 0.05;
-            expose-group-by-app = true;
+            expose-group-apps = true;
             launchanim = false;
             mineffect = "scale";
             mru-spaces = false;
@@ -306,6 +277,7 @@
             AppleShowAllExtensions = true;
             AppleShowAllFiles = true;
             FXPreferredViewStyle = "Nlsv";
+            FXRemoveOldTrashItems = true;
             ShowPathbar = true;
             _FXShowPosixPathInTitle = true;
           };

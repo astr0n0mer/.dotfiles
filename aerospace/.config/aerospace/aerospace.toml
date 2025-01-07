@@ -96,10 +96,10 @@ cmd-slash = 'layout tiles horizontal vertical'
 cmd-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-cmd-h = 'focus left'
-cmd-j = 'focus down'
-cmd-k = 'focus up'
-cmd-l = 'focus right'
+cmd-h = 'focus left  --boundaries-action wrap-around-the-workspace'
+cmd-j = 'focus down  --boundaries-action wrap-around-the-workspace'
+cmd-k = 'focus up    --boundaries-action wrap-around-the-workspace'
+cmd-l = 'focus right --boundaries-action wrap-around-the-workspace'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move
 cmd-shift-h = 'move left'

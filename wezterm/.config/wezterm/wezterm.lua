@@ -4,6 +4,7 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
 config.enable_tab_bar = false
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 12.5
 -- config.line_height = 0.9
 config.window_background_opacity = 0.75
