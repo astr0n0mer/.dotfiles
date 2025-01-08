@@ -47,7 +47,7 @@ alias getenvvar='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
 
 
 # fastfetch
-alias ff="fastfetch --logo Linux"
+alias ff="fastfetch"
 
 
 # git

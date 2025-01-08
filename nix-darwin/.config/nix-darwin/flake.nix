@@ -150,6 +150,7 @@
           "git-delta"
           "glab" # INFO: GitLab CLI
           "glow" # INFO: markdown reader
+          "gnu-typist" # INFO: gtypist: typing practice
           "gpg-tui"
           "hashicorp/tap/terraform"
           "jnv" # INFO: interactive json viewer with `jq` syntax
@@ -330,7 +331,7 @@
         keyboard = {
           # INFO: I use kanata for key-remapping on Linux
           enableKeyMapping = true;
-          remapCapsLockToControl = true;
+          # remapCapsLockToControl = true;
           swapLeftCommandAndLeftAlt = true;
           swapLeftCtrlAndFn = true;
         };
