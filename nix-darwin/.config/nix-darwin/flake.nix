@@ -13,7 +13,6 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
-          # act
           # ansible
           # calcure # INFO: calendar TUI
           cargo # INFO: rust package manager
@@ -131,6 +130,7 @@
           }
         ];
         brews = [
+          "act" # INFO: GitHub Actions CLI
           "awscli"
           "bat" # INFO: cat clone with wings
           "bloznelis/tap/typioca" # INFO: typing practice
