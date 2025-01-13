@@ -3,10 +3,13 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 
+config.disable_default_key_bindings = true
 config.enable_tab_bar = false
+
 config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 12.5
 -- config.line_height = 0.9
+
 config.window_background_opacity = 0.75
 config.window_decorations = "RESIZE"
 config.window_padding = {
@@ -15,11 +18,9 @@ config.window_padding = {
 	top = 0,
 	bottom = 0,
 }
--- config.background = {
--- 	{
--- 		source = { Color = "#A52A2A" },
--- 		opacity = 0.5,
--- 	},
--- }
+
+config.keys = {
+	{ key = "L", mods = "CTRL", action = wezterm.action.ShowDebugOverlay },
+}
 
 return config

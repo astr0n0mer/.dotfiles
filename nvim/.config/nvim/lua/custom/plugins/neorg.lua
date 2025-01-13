@@ -1,3 +1,5 @@
+-- Neorg Wiki: https://github.com/nvim-neorg/neorg/wiki
+
 return {
   'nvim-neorg/neorg',
   build = ':Neorg sync-parsers',
@@ -5,6 +7,7 @@ return {
     load = {
       ['core.defaults'] = {}, -- Loads default behaviour
       ['core.concealer'] = {}, -- Adds pretty icons to your documents
+      ['core.itero'] = {}, -- Module designed to continue lists, headings and other iterables
       ['core.dirman'] = { -- Manages Neorg workspaces
         config = {
           workspaces = {

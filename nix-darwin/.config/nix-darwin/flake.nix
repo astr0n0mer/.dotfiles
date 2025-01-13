@@ -163,20 +163,20 @@
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           # "mpv"
           "neomutt" # INFO: email client TUI
-            "abook"
+            "abook" # INFO: address book
             "ca-certificates"
             "isync"
-            "lynx"
-            "msmtp"
-            "notmuch"
-            "pass"
+            "lynx" # INFO: text-based browser
+            "msmtp" # INFO: SMTP client
+            "notmuch" # INFO: email indexer
+            "pass" # INFO: password manager
             "urlview"
           "neovim" # INFO: vim successor
           "pipx" # INFO: python package manager
           "podman" # INFO: container runtime
           "podman-compose"
           "podman-tui"
-          "posting"
+          "posting" # INFO: API client TUI
           "pyenv" # INFO: python version manager
           # "ranger" # INFO: file manager TUI # replaced by yazi
           "render-oss/render/render"
@@ -195,7 +195,7 @@
           "uv" # INFO: python
           "vim" # INFO: text editor
           "weechat" # INFO: IRC client
-          "xclip"
+          "xclip" # INFO: clipboard manager
           "yazi" # INFO: file manager TUI
           "zsh" # INFO: shell
         ];
@@ -206,6 +206,7 @@
           "brave-browser"
           "cursor"
           "docker"
+          "ferdium"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
           "ghostty"
           "karabiner-elements"
@@ -215,10 +216,10 @@
           # "mongodb-compass"
           "nikitabobko/tap/aerospace"
           "postman"
-          "raycast" # TODO: to be replaced with ueli post 2025/01/01
+          # "raycast" # INFO: spotlight alternative (proprietary)
           "slack"
           "studio-3t"
-          "ueli"
+          # "ueli" # INFO: spotlight alternative
           "visual-studio-code"
           "wezterm"
           "windsurf"
@@ -322,7 +323,7 @@
             Dragging = true;
             TrackpadRightClick = true;
           };
-          # INFO: need to provide "Full Disk Access" to the terminal emulator (Alacritty in this case)
+          # INFO: need to provide "Full Disk Access" to the terminal emulator
           # INFO: `open "x-apple.systempreferences:com.apple.preference.security?Privacy_AllFiles"`
           # universalaccess = {
           #   reduceMotion = true;

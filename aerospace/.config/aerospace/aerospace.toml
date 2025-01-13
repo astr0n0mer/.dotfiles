@@ -88,11 +88,10 @@ outer.right =      0
 # You can uncomment this line to open up terminal with alt + enter shortcut
 # See: https://nikitabobko.github.io/AeroSpace/commands#exec-and-forget
 # alt-enter = 'exec-and-forget open -n /System/Applications/Utilities/Terminal.app'
-# alt-enter = 'exec-and-forget wezterm'
-cmd-enter = 'exec-and-forget wezterm start --always-new-process -- zsh -ilc "appopen"'
+# cmd-enter = 'exec-and-forget wezterm start --always-new-process -- zsh -ilc "appopen"'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
-cmd-slash = 'layout tiles horizontal vertical'
+cmd-slash = 'layout tiles     horizontal vertical'
 cmd-comma = 'layout accordion horizontal vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
