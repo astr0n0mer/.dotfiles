@@ -134,8 +134,9 @@
           "awscli"
           "bat" # INFO: cat clone with wings
           "bloznelis/tap/typioca" # INFO: typing practice
+          "borgbackup" # INFO: deduplicating archiver with compression and authenticated encryption
           "btop"
-          "circumflex" # INFO: Hacker News TUI
+          # "circumflex" # INFO: Hacker News TUI
           "curl"
           # "deno"
           "docker"
@@ -161,7 +162,7 @@
           "lazygit" # INFO: git TUI
           "llvm"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
-          # "mpv"
+          "mpv" # INFO: media player
           "neomutt" # INFO: email client TUI
             "abook" # INFO: address book
             "ca-certificates"
@@ -172,6 +173,7 @@
             "pass" # INFO: password manager
             "urlview"
           "neovim" # INFO: vim successor
+          "ollama"
           "pipx" # INFO: python package manager
           "podman" # INFO: container runtime
           "podman-compose"
@@ -204,25 +206,27 @@
           "aws-vpn-client"
           # "bitwarden" # INFO: couldn't set up autofill on macOS
           "brave-browser"
-          "cursor"
+          "cursor" # INFO: vscode fork with AI integration
           "docker"
           "ferdium"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
-          "ghostty"
+          "ghostty" # INFO: terminal emulator
+          "hoppscotch" # INFO: API client
           "karabiner-elements"
-          "libreoffice"
-          "librewolf"
-          "logseq"
+          "libreoffice" # INFO: office suite
+          "librewolf" # INFO: privacy focused browser
+          "logseq" # INFO: note-taking app
           # "mongodb-compass"
-          "nikitabobko/tap/aerospace"
-          "postman"
+          "nikitabobko/tap/aerospace" # INFO: tiling window manager
+          "postman" # INFO: API client
           # "raycast" # INFO: spotlight alternative (proprietary)
           "slack"
+          "stats" # INFO: system monitor
           "studio-3t"
           # "ueli" # INFO: spotlight alternative
           "visual-studio-code"
-          "wezterm"
-          "windsurf"
+          "wezterm" # INFO: terminal emulator
+          # "windsurf"
           "zap"
           "zen-browser"
           "zoom"
