@@ -12,7 +12,6 @@ cd ~
 git clone --recurse-submodules https://github.com/astr0n0mer/.dotfiles.git
 cd ~/.dotfiles
 git fetch --all
-git switch switch-macbook
 git remote remove origin
 git remote add origin git@github.com:astr0n0mer/.dotfiles.git
 rm -r dotfiles_sensitive
@@ -43,4 +42,4 @@ LOCAL_HOSTNAME=$(scutil --get LocalHostName)
 sed -i '' "s/cube/${LOCAL_HOSTNAME}/" ~/.dotfiles/nix-darwin/.config/nix-darwin/flake.nix
 sudo nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin
 
-bash ~/post-setup-macbook.sh
+# bash ~/post-setup-macbook.sh

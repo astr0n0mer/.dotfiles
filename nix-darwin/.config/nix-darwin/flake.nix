@@ -173,6 +173,7 @@
             "pass" # INFO: password manager
             "urlview"
           "neovim" # INFO: vim successor
+          "nvm" # INFO: node version manager
           "ollama"
           "pipx" # INFO: python package manager
           "podman" # INFO: container runtime
