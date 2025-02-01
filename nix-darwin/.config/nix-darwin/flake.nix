@@ -123,11 +123,6 @@
           # "mongodb/brew"
           "nikitabobko/tap"
           "render-oss/render"
-          {
-            name = "zen-browser/browser";
-            clone_target = "https://github.com/zen-browser/desktop.git";
-            force_auto_update = true;
-          }
         ];
         brews = [
           "act" # INFO: GitHub Actions CLI
@@ -139,7 +134,7 @@
           # "circumflex" # INFO: Hacker News TUI
           "curl"
           # "deno"
-          "docker"
+          # "docker" # TODO: confirm if install the `docker` cask automatically installs this
           "docker-compose"
           "exercism"
           "fastfetch" # INFO: neofetch successor
@@ -243,6 +238,8 @@
 
       security.pam.enableSudoTouchIdAuth = true;
       # services = {
+      #   aerospace.enable = true;
+      #   karabiner-elements.enable = true;
       #   sketchybar.enable = true;
       #   skhd.enable = true;
       #   yabai.enable = true;

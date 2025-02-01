@@ -30,6 +30,10 @@ make setup_with_dotfiles
 # pre-requisite for AWS VPN Client
 sudo softwareupdate --install-rosetta
 
+# install homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # set up nix
 curl --proto "=https" --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
 sudo rm -f /etc/nix/nix.conf
@@ -40,6 +44,6 @@ sudo rm -f /etc/nix/nix.conf
 # set up nix-darwin
 LOCAL_HOSTNAME=$(scutil --get LocalHostName)
 sed -i '' "s/cube/${LOCAL_HOSTNAME}/" ~/.dotfiles/nix-darwin/.config/nix-darwin/flake.nix
-sudo nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin -- switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin
+nix run --extra-experimental-features nix-command --extra-experimental-features flakes nix-darwin/master#darwin-rebuild -- switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin
 
-# bash ~/post-setup-macbook.sh
+bash ~/post-setup-macbook.sh
