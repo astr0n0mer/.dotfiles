@@ -5,7 +5,7 @@ set -e
 set -x
 
 # pre-requisites
-touch ~/.zshrc
+echo 'export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}' >> ~/.zshrc
 
 # set up dotfiles
 cd ~

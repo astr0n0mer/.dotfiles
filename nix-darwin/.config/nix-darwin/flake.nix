@@ -168,7 +168,7 @@
             "pass" # INFO: password manager
             "urlview"
           "neovim" # INFO: vim successor
-          "nvm" # INFO: node version manager
+          # "nvm" # INFO: node version manager # installing `nvm` this way is discouraged
           "ollama"
           "pipx" # INFO: python package manager
           "podman" # INFO: container runtime
@@ -196,6 +196,8 @@
           "xclip" # INFO: clipboard manager
           "yazi" # INFO: file manager TUI
           "zsh" # INFO: shell
+          "zsh-autocomplete"
+          "zsh-autosuggestions"
         ];
         casks = [
           # "alacritty" # replaced by wezterm

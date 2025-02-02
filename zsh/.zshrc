@@ -1,10 +1,14 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
+
+source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/aliases.zsh"
+source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/addons.zsh"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source $HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/theme.zsh
+# source $HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/theme.zsh
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -80,7 +84,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-source $ZSH/oh-my-zsh.sh
+# source $ZSH/oh-my-zsh.sh
 
 # plugins' settings
 zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
@@ -116,4 +120,3 @@ setopt HIST_FIND_NO_DUPS
 
 # Add local binaries to $PATH
 export PATH=$PATH:$HOME/.local/bin
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
