@@ -256,6 +256,9 @@
           };
         };
         defaults = {
+          controlcenter = {
+            BatteryShowPercentage = true;
+          };
           CustomUserPreferences = {
             # TODO: remove below 3 commented lines after 2025-01-31
             # "com.apple.dock" = {
@@ -289,6 +292,10 @@
           };
           LaunchServices = {
             LSQuarantine = false;
+          };
+          menuExtraClock = {
+            ShowAMPM = false;
+            ShowDayOfWeek = false;
           };
           NSGlobalDomain = {
             AppleEnableMouseSwipeNavigateWithScrolls = true;
