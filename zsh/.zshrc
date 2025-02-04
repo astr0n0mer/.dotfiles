@@ -2,11 +2,18 @@ export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
 
 source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  bindkey '^G' autosuggest-accept # INFO: accept zsh-autosuggestion with Ctrl+G
 source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/aliases.zsh"
 source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/addons.zsh"
 
+source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/plugins/git.zsh"
+
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+# export ZSH="$HOME/.oh-my-zsh"
+
+# PROMPT='%F{green}%~$ '
+PROMPT='%~$ '
+RPROMPT='%T'
 
 # source $HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/theme.zsh
 
@@ -88,7 +95,6 @@ plugins=(
 
 # plugins' settings
 zstyle ':omz:plugins:alias-finder' autoload yes # disabled by default
-bindkey '^G' autosuggest-accept # INFO: accept zsh-autosuggestion with Ctrl+G
 
 # User configuration
 

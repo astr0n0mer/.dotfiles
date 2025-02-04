@@ -204,11 +204,12 @@
           "aws-vpn-client"
           # "bitwarden" # INFO: couldn't set up autofill on macOS
           "brave-browser"
-          "cursor" # INFO: vscode fork with AI integration
+          "cursor" # INFO: vscode fork with AI integration (proprietary)
           "docker"
-          "ferdium"
+          # "ferdium"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
           "ghostty" # INFO: terminal emulator
+          "gimp" # INFO: GNU Image Manipulation Program
           "hoppscotch" # INFO: API client
           "karabiner-elements"
           "libreoffice" # INFO: office suite
@@ -224,7 +225,7 @@
           # "ueli" # INFO: spotlight alternative
           "visual-studio-code"
           "wezterm" # INFO: terminal emulator
-          # "windsurf"
+          "windsurf" # INFO: vscode fork with AI integration
           "zap"
           "zen-browser"
           "zoom"

@@ -1,5 +1,4 @@
 *.log
-sandbox
 work.Makefile
 
 # syncthing metadata
