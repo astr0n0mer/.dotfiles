@@ -73,17 +73,17 @@
         ];
       };
       launchd.agents = {
-        "crontab_agent" = {
-          serviceConfig = {
-            Label = "crontab_afk_slackbot";
-            Program = "${pkgs.curl}/bin/curl";
-            ProgramArguments = [
-              "--location"
-              "https://afk-slackbot.onrender.com"
-            ];
-            StartInterval = 720;
-          };
-        };
+        # "crontab_agent" = {
+        #   serviceConfig = {
+        #     Label = "crontab_afk_slackbot";
+        #     Program = "${pkgs.curl}/bin/curl";
+        #     ProgramArguments = [
+        #       "--location"
+        #       "https://afk-slackbot.onrender.com"
+        #     ];
+        #     StartInterval = 720;
+        #   };
+        # };
         # "clipse_agent" = {
         #   serviceConfig = {
         #     Label = "clipse_agent";
@@ -149,6 +149,7 @@
           "gnu-typist" # INFO: gtypist: typing practice
           "gpg-tui"
           "hashicorp/tap/terraform"
+          "img2pdf"
           "jnv" # INFO: interactive json viewer with `jq` syntax
           "jq" # INFO: json processor
           # "koekeishiya/formulae/skhd" # replaced by karabiner-elements
@@ -169,6 +170,7 @@
             "urlview"
           "neovim" # INFO: vim successor
           # "nvm" # INFO: node version manager # installing `nvm` this way is discouraged
+          "ocrmypdf" # INFO: adds an OCR text layer to scanned PDF files
           "ollama"
           "pipx" # INFO: python package manager
           "podman" # INFO: container runtime
@@ -184,6 +186,7 @@
           "siege"
           "stow" # INFO: symlink manager
           "terminal-notifier"
+          "tesseract" # INFO: OCR (Optical Character Recognition) engine
           "tlrc" # INFO: tldr of CLI commands
           "tmux" # INFO: terminal multiplexer
           "tokei" # INFO: code statistics
@@ -261,10 +264,6 @@
             BatteryShowPercentage = true;
           };
           CustomUserPreferences = {
-            # TODO: remove below 3 commented lines after 2025-01-31
-            # "com.apple.dock" = {
-            #   expose-group-apps = true;
-            # };
             universalaccess = { # INFO: this might be ineffective
               useVirtualKeyboard = true;
             };

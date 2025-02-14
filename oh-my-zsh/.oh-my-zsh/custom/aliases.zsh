@@ -152,6 +152,10 @@ alias bldd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-dar
 alias pipxi="cat ~/.dotfiles/nix-darwin/.config/nix-darwin/requirements.in | xargs -I {} pipx install {}"
 
 
+# notify
+alias notify="fc -ln -1 | terminal-notifier -sound default"
+
+
 # screen
 alias sc="screen"
 
