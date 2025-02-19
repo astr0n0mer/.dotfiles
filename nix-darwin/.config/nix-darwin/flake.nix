@@ -198,9 +198,11 @@
           "weechat" # INFO: IRC client
           "xclip" # INFO: clipboard manager
           "yazi" # INFO: file manager TUI
+          "zoxide" # INFO: smarter `cd` command
           "zsh" # INFO: shell
           "zsh-autocomplete"
           "zsh-autosuggestions"
+          "zsh-syntax-highlighting"
         ];
         casks = [
           # "alacritty" # replaced by wezterm

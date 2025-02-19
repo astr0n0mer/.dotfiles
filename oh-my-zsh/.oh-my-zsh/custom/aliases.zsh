@@ -100,7 +100,6 @@ repog() {
     if [ -n "$repo_dir" ]; then
         source_repo_env "$repo_dir"
         pushd "$repo_dir"
-        git fetch --all &
     fi
 }
 
