@@ -179,8 +179,10 @@
           "posting" # INFO: API client TUI
           "pyenv" # INFO: python version manager
           # "ranger" # INFO: file manager TUI # replaced by yazi
+          "rclone" # INFO: rsync for cloud storage
           "render-oss/render/render"
           "ripgrep" # INFO: faster grep
+          "rsync" # INFO: file sync over local network
           "ruff" # INFO: python formatter, linter
           "saml2aws"
           "siege"
@@ -287,8 +289,9 @@
           finder = {
             AppleShowAllExtensions = true;
             AppleShowAllFiles = true;
-            FXPreferredViewStyle = "Nlsv";
+            FXPreferredViewStyle = "clmv";
             FXRemoveOldTrashItems = true;
+            NewWindowTarget = "Home";
             ShowPathbar = true;
             _FXShowPosixPathInTitle = true;
           };
