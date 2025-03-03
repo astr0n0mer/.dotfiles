@@ -2,6 +2,9 @@
 prSections:
 - title: By Me
   filters: is:open author:@me
+  layout:
+    author:
+      hidden: true
 - title: Involved
   filters: is:open involves:@me -author:@me
 - title: Needs My Review
@@ -21,35 +24,13 @@ issuesSections:
   filters: is:open involves:@me -author:@me
 defaults:
   preview:
-    open: false
+    open: true
     width: 100
-  prsLimit: 20
-  issuesLimit: 20
-  view: prs
-  layout:
-    prs:
-      repo:
-        width: 16
-      author:
-        width: 15
-      lines:
-        width: 16
-      updatedAt:
-        width: 5
-    issues:
-      repo:
-        width: 15
-      creator:
-        width: 10
-      assignees:
-        width: 20
-        hidden: true
-      updatedAt:
-        width: 7
-  refetchIntervalMinutes: 30
 keybindings:
-  universal: []
-  issues: []
+  universal:
+    - key: g
+      command: >
+        cd {{.RepoPath}} && lazygit
   prs: []
 repoPaths:
   astr0n0mer/:repo: ~/projects/:repo
@@ -57,23 +38,8 @@ repoPaths:
 theme:
   ui:
     table:
-      compact: true # INFO: https://github.com/dlvhdr/gh-dash/releases/tag/v4.5.0
-      showSeparator: true
-    sectionsShowCount: true
-  colors:
-    text:
-      primary: "#E2E1ED"
-      secondary: "#666CA6"
-      inverted: "#242347"
-      faint: "#b0b3bf"
-      warning: "#F7768E"
-      success: "#3DF294"
-    background:
-      selected: "#353535"
-    border:
-      primary: "#383B5B"
-      secondary: "#39386B"
-      faint: "#2B2B40"
+      compact: false # INFO: https://github.com/dlvhdr/gh-dash/releases/tag/v4.5.0
+      showSeparators: true
 pager:
   diff: "less"
 confirmQuit: false

@@ -5,3 +5,7 @@ backup:
 .PHONY: restore
 restore:
 	cat ~/.config/gh/extensions.txt | xargs gh extension install
+
+.PHONY: upgrade
+upgrade:
+	gh extension upgrade --all

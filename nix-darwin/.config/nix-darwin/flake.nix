@@ -169,6 +169,7 @@
             "pass" # INFO: password manager
             "urlview"
           "neovim" # INFO: vim successor
+          "nextdns" # INFO: DNS resolver
           # "nvm" # INFO: node version manager # installing `nvm` this way is discouraged
           "ocrmypdf" # INFO: adds an OCR text layer to scanned PDF files
           "ollama"
@@ -202,7 +203,7 @@
           "yazi" # INFO: file manager TUI
           "zoxide" # INFO: smarter `cd` command
           "zsh" # INFO: shell
-          "zsh-autocomplete"
+          # "zsh-autocomplete"
           "zsh-autosuggestions"
           "zsh-syntax-highlighting"
         ];
