@@ -134,7 +134,8 @@
           # "circumflex" # INFO: Hacker News TUI
           "curl"
           # "deno"
-          # "docker" # TODO: confirm if install the `docker` cask automatically installs this
+          "dnsmasq" # INFO: DNS forwarder and DHCP server
+          # "docker" # INFO: `docker` cask automatically installs this
           "docker-compose"
           "exercism"
           "fastfetch" # INFO: neofetch successor
