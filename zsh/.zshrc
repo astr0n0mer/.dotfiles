@@ -7,9 +7,8 @@ setopt INTERACTIVE_COMMENTS
 setopt PUSHD_IGNORE_DUPS
 
 export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
-REPORTTIME=2 # INFO: show execution time for commands that take longer than 2 seconds
-
-# Preferred editor for local and remote sessions
+REPORTTIME=3 # INFO: show execution time for commands that take longer than 3 seconds
+# preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
@@ -19,7 +18,8 @@ fi
 # INFO: instead of pressing ↑ for every previous command, make ↑ and ↓ search based on what you've typed
 bindkey "^[[A" history-beginning-search-backward # up_arrow
 bindkey "^[[B" history-beginning-search-forward  # down_arrow
-bindkey '^r' history-incremental-search-backward # INFO: search history with Ctrl+R
+bindkey '^R' history-incremental-search-backward # search history with Ctrl+R
+bindkey -v # enable vim mode
 
 # source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"

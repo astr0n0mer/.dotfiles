@@ -18,13 +18,11 @@
           cargo # INFO: rust package manager
           # clipse # INFO: clipboard manager TUI
           # delta
-          # direnv
           # docker
           # docker-client
           # docker-compose
           # firebase-tools
           # flameshot # INFO: screenshot tool
-          # lazysql
           luajitPackages.luarocks # INFO: lua package manager
           # man-pages-posix
           # openvpn # INFO: can't set this up to use .ovpn file
@@ -33,8 +31,6 @@
           # termusic
           # terraform # INFO: infrastructure as code
           ttyper # INFO: typing practice
-          # visidata # INFO: spreadsheet TUI
-          # vscodium # INFO: vscode without telemetry
           # zsh-powerlevel10k
         ];
 
@@ -48,10 +44,6 @@
       #   ];
       # };
 
-      # Auto upgrade nix package and the daemon service.
-      services.nix-daemon.enable = true;
-      # nix.package = pkgs.nix;
-
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
@@ -64,13 +56,12 @@
 
       # Used for backwards compatibility, please read the changelog before changing.
       # $ darwin-rebuild changelog
-      system.stateVersion = 4;
+      system.stateVersion = 5;
 
       fonts = {
         packages = with pkgs; [
-          nerdfonts
           # sketchybar-app-font
-        ];
+        ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
       };
       launchd.agents = {
         # "crontab_agent" = {
@@ -134,6 +125,7 @@
           # "circumflex" # INFO: Hacker News TUI
           "curl"
           # "deno"
+          # "direnv"
           "dnsmasq" # INFO: DNS forwarder and DHCP server
           # "docker" # INFO: `docker` cask automatically installs this
           "docker-compose"
@@ -157,6 +149,7 @@
           # "koekeishiya/formulae/yabai" # replaced by aerospace
           "lazydocker" # INFO: docker TUI
           "lazygit" # INFO: git TUI
+          # "lazysql"
           "llvm"
           # { name = "mongodb/brew/mongodb-community"; start_service = false; }
           "mpv" # INFO: media player
@@ -199,6 +192,7 @@
           "up" # INFO: ultimate plumber
           "uv" # INFO: python
           "vim" # INFO: text editor
+          "visidata" # INFO: spreadsheet TUI
           "weechat" # INFO: IRC client
           "xclip" # INFO: clipboard manager
           "yazi" # INFO: file manager TUI
@@ -233,6 +227,7 @@
           "studio-3t"
           # "ueli" # INFO: spotlight alternative
           "visual-studio-code"
+          # "vscodium" # INFO: vscode without telemetry
           "wezterm" # INFO: terminal emulator
           "windsurf" # INFO: vscode fork with AI integration
           "zap"
@@ -248,7 +243,7 @@
         };
       };
 
-      security.pam.enableSudoTouchIdAuth = true;
+      security.pam.services.sudo_local.touchIdAuth = true;
       # services = {
       #   aerospace.enable = true;
       #   karabiner-elements.enable = true;
