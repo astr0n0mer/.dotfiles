@@ -203,13 +203,11 @@
           "zsh-syntax-highlighting"
         ];
         casks = [
-          # "alacritty" # replaced by wezterm
           "aws-vpn-client"
           # "bitwarden" # INFO: couldn't set up autofill on macOS
           "brave-browser"
           "cursor" # INFO: vscode fork with AI integration (proprietary)
           "docker"
-          # "ferdium"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
           "ghostty" # INFO: terminal emulator
           "gimp" # INFO: GNU Image Manipulation Program
@@ -219,13 +217,15 @@
           "librewolf" # INFO: privacy focused browser
           "logseq" # INFO: note-taking app
           # "mongodb-compass"
+          "msty" # INFO: ollama UI (proprietary)
           "nikitabobko/tap/aerospace" # INFO: tiling window manager
           "postman" # INFO: API client
           # "raycast" # INFO: spotlight alternative (proprietary)
           "slack"
-          "stats" # INFO: system monitor
+          # "stats" # INFO: system monitor
           "studio-3t"
           # "ueli" # INFO: spotlight alternative
+          "utm" # INFO: virtual machine manager (proprietary)
           "visual-studio-code"
           # "vscodium" # INFO: vscode without telemetry
           "wezterm" # INFO: terminal emulator
@@ -233,10 +233,6 @@
           "zap"
           "zen-browser"
           "zoom"
-
-          # INFO: font related casks
-          # "font-sf-pro"
-          # "sf-symbols"
         ];
         caskArgs = {
           no_quarantine = true;
@@ -252,14 +248,6 @@
       #   yabai.enable = true;
       # };
       system = {
-        activationScripts = { # INFO: this is not working
-          "postDarwinRebuild" = {
-            # enable = true;
-            text = ''
-              echo "Running postDarwinRebuild script..." >> ~/postDarwinRebuild.log
-            '';
-          };
-        };
         defaults = {
           controlcenter = {
             BatteryShowPercentage = true;
@@ -354,12 +342,6 @@
         };
       };
       time.timeZone = "Asia/Calcutta";
-      # INFO: this is untested
-      # users.users = {
-      #   "tux" = {
-      #     createHome = true;
-      #   };
-      # };
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
