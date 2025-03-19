@@ -13,36 +13,19 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       environment.systemPackages = with pkgs; [
-          # ansible
           # calcure # INFO: calendar TUI
           cargo # INFO: rust package manager
           # clipse # INFO: clipboard manager TUI
-          # delta
-          # docker
-          # docker-client
-          # docker-compose
           # firebase-tools
           # flameshot # INFO: screenshot tool
           luajitPackages.luarocks # INFO: lua package manager
           # man-pages-posix
-          # openvpn # INFO: can't set this up to use .ovpn file
           # slack-term
           syncthing # INFO: file sync on local network
           # termusic
-          # terraform # INFO: infrastructure as code
           ttyper # INFO: typing practice
           # zsh-powerlevel10k
         ];
-
-      # nixpkgs.config = {
-      #   # Set this to true to allow all unfree packages
-      #   # allowUnfree = true;
-      #
-      #   # Allow unfree packages only for specific packages
-      #   allowUnfreePredicate = pkg: builtins.elem (pkgs.lib.getName pkg) [
-      #     "terraform"
-      #   ];
-      # };
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
@@ -117,6 +100,7 @@
         ];
         brews = [
           "act" # INFO: GitHub Actions CLI
+          # "ansible"
           "awscli"
           "bat" # INFO: cat clone with wings
           "bloznelis/tap/typioca" # INFO: typing practice
@@ -167,6 +151,7 @@
           # "nvm" # INFO: node version manager # installing `nvm` this way is discouraged
           "ocrmypdf" # INFO: adds an OCR text layer to scanned PDF files
           "ollama"
+          # "openvpn" # INFO: can't set this up to use .ovpn file
           "pipx" # INFO: python package manager
           "podman" # INFO: container runtime
           "podman-compose"
@@ -182,6 +167,7 @@
           "saml2aws"
           "siege"
           "stow" # INFO: symlink manager
+          "speedtest-cli" # INFO: internet speed test
           "terminal-notifier"
           "tesseract" # INFO: OCR (Optical Character Recognition) engine
           "tlrc" # INFO: tldr of CLI commands
