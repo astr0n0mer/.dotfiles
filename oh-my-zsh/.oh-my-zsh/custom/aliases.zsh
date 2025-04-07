@@ -56,10 +56,10 @@ alias ghn="gh api notifications | jq '.[].subject'"
 alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
-alias gitprunebranches="git branch -vv \
-                        | grep ': gone]' \
-                        | awk '{print \$1}' \
-                        | xargs git branch -D"
+# alias gitprunebranches="git branch -vv \
+#                         | grep ': gone]' \
+#                         | awk '{print \$1}' \
+#                         | xargs git branch -D"
 alias lg="lazygit"
 alias repo="find ~/.dotfiles ~/{projects,projects_work} \
                     -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \

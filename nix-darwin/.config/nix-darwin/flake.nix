@@ -96,7 +96,7 @@
           # "koekeishiya/formulae"
           # "mongodb/brew"
           "nikitabobko/tap"
-          "render-oss/render"
+          # "render-oss/render"
         ];
         brews = [
           "act" # INFO: GitHub Actions CLI
@@ -110,7 +110,7 @@
           "curl"
           # "deno"
           # "direnv"
-          "dnsmasq" # INFO: DNS forwarder and DHCP server
+          # "dnsmasq" # INFO: DNS forwarder and DHCP server
           # "docker" # INFO: `docker` cask automatically installs this
           "docker-compose"
           "exercism"
@@ -158,14 +158,15 @@
           "podman-tui"
           "posting" # INFO: API client TUI
           "pyenv" # INFO: python version manager
+          "qpdf" # INFO: PDF transformation
           # "ranger" # INFO: file manager TUI # replaced by yazi
           "rclone" # INFO: rsync for cloud storage
-          "render-oss/render/render"
+          # "render-oss/render/render"
           "ripgrep" # INFO: faster grep
           "rsync" # INFO: file sync over local network
           "ruff" # INFO: python formatter, linter
           "saml2aws"
-          "siege"
+          "siege" # INFO: HTTP load tester
           "stow" # INFO: symlink manager
           "speedtest-cli" # INFO: internet speed test
           "terminal-notifier"
@@ -195,7 +196,7 @@
           "cursor" # INFO: vscode fork with AI integration (proprietary)
           "docker"
           "flameshot" # INFO: Install from nixpkgs since brew does not install the `flameshot` CLI
-          "ghostty" # INFO: terminal emulator
+          # "ghostty" # INFO: terminal emulator
           "gimp" # INFO: GNU Image Manipulation Program
           "hoppscotch" # INFO: API client
           "karabiner-elements"
@@ -216,7 +217,7 @@
           # "vscodium" # INFO: vscode without telemetry
           "wezterm" # INFO: terminal emulator
           "windsurf" # INFO: vscode fork with AI integration
-          "zap"
+          # "zap" # INFO: Web App Security Testing
           "zen-browser"
           "zoom"
         ];
