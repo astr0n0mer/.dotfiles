@@ -972,5 +972,10 @@ require('lazy').setup({
   },
 })
 
+-- INFO: https://gpanders.com/blog/whats-new-in-neovim-0-11#virtual-text-handler-changed-from-opt-out-to-opt-in
+vim.diagnostic.config {
+  virtual_text = { current_line = true },
+}
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
