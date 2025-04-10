@@ -1,2 +1,2 @@
 #!/bin/sh
-git branch --merged | grep -vE '^\*|main|master' | xargs git branch -d
+git branch --merged | grep --extended-regexp --invert-match '^\*|main|master' | xargs git branch --delete

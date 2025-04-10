@@ -1,0 +1,2 @@
+#!/bin/sh
+git branch -vv | grep ': gone]' | awk '{print $1}' | xargs git branch --force --delete
