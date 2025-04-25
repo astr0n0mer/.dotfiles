@@ -211,3 +211,6 @@ timer() {
     (sleep $((${1:=25} * 60)) && \
         terminal-notifier -message ${2:="Timer for ${1:=25} min ended"} -sound default) &
 }
+
+# yazi
+alias y="yazi"
