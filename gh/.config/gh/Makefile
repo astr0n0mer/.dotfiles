@@ -1,10 +1,14 @@
+.PHONY: install
+install:
+	cat ~/.config/gh/extensions.txt | xargs gh extension install
+
+.PHONY: uninstall
+uninstall:
+	gh extension list | cut -f2 | xargs gh extension remove
+
 .PHONY: backup
 backup:
 	gh extension list | cut -f2 > ~/.config/gh/extensions.txt
-
-.PHONY: restore
-restore:
-	cat ~/.config/gh/extensions.txt | xargs gh extension install
 
 .PHONY: upgrade
 upgrade:

@@ -23,8 +23,9 @@ alias dashycleanup="make -f ~/.config/dashy/Makefile cleanup"
 alias dashypublish="make -f ~/.config/dashy/Makefile publish"
 
 
-# digital-garden
-alias gardenpublish="make -f ~/projects/digital-garden/Makefile publish"
+# digital_garden
+alias diary="nvim --cmd 'cd ~/projects/digital_garden_vimwiki/' +':VimwikiMakeDiaryNote'"
+alias gardenpublish="make -f ~/projects/digital_garden/Makefile publish"
 
 
 # .dotfiles
