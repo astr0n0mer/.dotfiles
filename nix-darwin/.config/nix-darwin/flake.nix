@@ -219,6 +219,7 @@
           "windsurf" # INFO: vscode fork with AI integration
           # "zap" # INFO: Web App Security Testing
           "zen-browser"
+          "zettlr" # INFO: note-taking app
           "zoom"
         ];
         caskArgs = {
