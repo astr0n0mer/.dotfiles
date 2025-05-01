@@ -4,5 +4,5 @@ setup_plugins:
 
 .PHONY: setup_plugins_force
 setup_plugins_force:
-	rm -rf ~/.tmux/plugins
+	rm -rf ~/.config/tmux/plugins
 	git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm

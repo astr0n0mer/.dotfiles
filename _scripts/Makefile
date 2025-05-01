@@ -1,6 +1,10 @@
 .PHONY: setup
 setup:
-	curl -LO https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup-macbook.sh && \
-	curl -LO https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/post-setup-macbook.sh && \
-	chmod u+x setup-macbook.sh && \
-	chmod u+x post-setup-macbook.sh
+	curl --location --remote-name --create-file-mode 744 \
+		https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/setup.sh && \
+	curl --location --remote-name --create-file-mode 744 \
+		https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/setup_dotfiles_repo.sh && \
+	curl --location --remote-name --create-file-mode 744 \
+		https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/set_system_settings.sh && \
+	curl --location --remote-name --create-file-mode 744 \
+		https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/post_setup.sh

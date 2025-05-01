@@ -1,7 +1,6 @@
 tap "bloznelis/tap"
 tap "ggerganov/ggerganov"
 tap "hashicorp/tap"
-tap "homebrew/bundle"
 tap "nikitabobko/tap"
 tap "render-oss/render"
 brew "abook"

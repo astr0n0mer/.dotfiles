@@ -1,4 +1,32 @@
-# INFO: zsh options man page: https://zsh.sourceforge.io/Doc/Release/Options.html
+#########################################
+# 1. Path & Environment Variables
+#########################################
+
+# Add local binaries to $PATH
+export PATH="$PATH:$HOME/.local/bin"
+
+# Set XDG base directory
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+
+# Preferred editor depending on session
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+# Homebrew options
+export HOMEBREW_CASK_OPTS="--no-quarantine"
+
+# Show execution time for commands > 3s
+REPORTTIME=3
+
+
+#########################################
+# ⚙️ 2. Zsh Options
+# Reference: https://zsh.sourceforge.io/Doc/Release/Options.html
+#########################################
+
 setopt AUTO_CD
 setopt AUTO_PUSHD
 setopt CORRECT
@@ -7,34 +35,58 @@ setopt HIST_FIND_NO_DUPS
 setopt INTERACTIVE_COMMENTS
 setopt PUSHD_IGNORE_DUPS
 
-export XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-$HOME/.config}
-REPORTTIME=3 # INFO: show execution time for commands that take longer than 3 seconds
-# preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='nvim'
-fi
 
-# INFO: instead of pressing ↑ for every previous command, make ↑ and ↓ search based on what you've typed
-bindkey "^[[A" history-beginning-search-backward # up_arrow
-bindkey "^[[B" history-beginning-search-forward  # down_arrow
-bindkey '^R' history-incremental-search-backward # search history with Ctrl+R
-bindkey -v # enable vim mode
+#########################################
+# 🔄 3. Completion System Setup
+#########################################
 
-# source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+autoload -Uz compinit
+compinit
+
+# Case-insensitive completion
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+
+#########################################
+# 🧠 4. Keybindings & History Search
+#########################################
+
+# Vim keybindings
+bindkey -v
+
+# History search with arrows
+bindkey "^[[A" history-beginning-search-backward  # up_arrow
+bindkey "^[[B" history-beginning-search-forward   # down_arrow
+bindkey '^R' history-incremental-search-backward  # Ctrl+R
+
+
+#########################################
+# 💡 5. Plugins & Features
+#########################################
+
+# Suggestions (zsh-autosuggestions)
 source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
-  bindkey '^G' autosuggest-accept # INFO: accept zsh-autosuggestion with Ctrl+G
-source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+bindkey '^G' autosuggest-accept  # Accept suggestion with Ctrl+G
 
+# Autocomplete (zsh-autocomplete)
+# source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+
+# Syntax highlighting
+source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+
+# Git plugin
+source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/plugins/git.zsh"
+
+# Custom alias and addon scripts
 source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/aliases.zsh"
 source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/addons.zsh"
 
-source "$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/plugins/git.zsh"
+
+#########################################
+# 🔍 6. Git Info in Prompt (vcs_info)
+#########################################
 
 autoload -Uz vcs_info
-
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' # INFO: enable case-insensitive tab completion
 zstyle ':vcs_info:*' enable git
 zstyle ':vcs_info:git:*' formats '(%b)'
 
@@ -50,27 +102,3 @@ precmd() {
     RPROMPT="%F{green}${vcs_info_msg_0_} %T%f"
   fi
 }
-
-# Add local binaries to $PATH
-export PATH=$PATH:$HOME/.local/bin
-
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-# plugins=(
-#     alias-finder
-#     bgnotify
-#     command-not-found
-#     gh
-#     git
-#     history
-#     npm
-#     nvm
-#     sudo
-#     vi-mode
-#     vscode
-#     web-search
-#     z
-#     zsh-autosuggestions
-#     zsh-syntax-highlighting
-# )
