@@ -1,3 +1,10 @@
+# TODOS
+- TODO check if we can decommission dashy configs
+- TODO cleanup home/Makefile
+- TODO check if we can decommission myip/Makefile
+- TODO check if we can decommission utils/Makefile
+- TODO check if we can trim out unnecessary lines in zsh/addons.zsh
+
 # dotfiles
 
 ## Setup
