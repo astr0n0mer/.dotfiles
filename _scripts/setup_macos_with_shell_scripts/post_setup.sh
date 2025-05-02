@@ -17,7 +17,7 @@ brew bundle --file ~/.dotfiles/homebrew/.Brewfile
 # INFO: nvm: install and set up node
 command -v nvm >/dev/null || {
 	curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
-	export NVM_DIR="$HOME/.nvm"
+	export NVM_DIR="$XDG_CONFIG_HOME/nvm"
 	[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 	[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
 	command -v nvm >/dev/null && nvm install --lts
