@@ -36,6 +36,7 @@ defaults write com.apple.menuextra.clock ShowDayOfWeek -bool false
 
 defaults write NSGlobalDomain AppleEnableMouseSwipeNavigateWithScrolls -bool true
 defaults write NSGlobalDomain AppleEnableSwipeNavigateWithScrolls -bool true
+defaults write NSGlobalDomain AppleICUForce12HourTime -bool true
 defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleScrollerPagingBehavior -bool true
