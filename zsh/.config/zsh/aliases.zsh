@@ -13,7 +13,7 @@ alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
 
 # brave
 alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
-                        cat ~/.config/brave/get-synced-tabs.js | pbcopy"
+                        cat ~/.config/brave/get_synced_tabs.js | pbcopy"
 
 
 # dashy
@@ -143,13 +143,8 @@ alias musicstart="screen -S music-session ytermusic"
 alias musicstop="screen -S music-session -X quit"
 
 
-# nix
-# INFO: home-manager switch
-# alias bldh="home-manager switch --flake ~/.dotfiles/home-manager/.config/home-manager"
-# INFO: darwin-rebuild
-alias bldd="darwin-rebuild switch --flake ~/.dotfiles/nix-darwin/.config/nix-darwin"
 # INFO: install pip packages
-alias pipxi="cat ~/.dotfiles/nix-darwin/.config/nix-darwin/requirements.in | xargs -I {} pipx install {}"
+alias pipxi="cat ~/.dotfiles/home/requirements.in | xargs -I {} pipx install {}"
 
 
 # notify
@@ -178,7 +173,7 @@ sscleanup() {
 # search
 search() {
     local search_engines engine query url
-    search_engines="$HOME/.dotfiles/oh-my-zsh/.oh-my-zsh/custom/search_engines.json"
+    search_engines="$HOME/.dotfiles/zsh/.config/zsh/search_engines.json"
     engine=$(jq --raw-output '.[] | "\(.trigger); \(.name): \(.url)"' "$search_engines" | fzf | sed "s/.*: //")
     if [ -z "$engine" ]; then
         return 1

@@ -167,8 +167,8 @@
           "ruff" # INFO: python formatter, linter
           "saml2aws"
           "siege" # INFO: HTTP load tester
-          "stow" # INFO: symlink manager
           "speedtest-cli" # INFO: internet speed test
+          "stow" # INFO: symlink manager
           "terminal-notifier"
           "tesseract" # INFO: OCR (Optical Character Recognition) engine
           "tlrc" # INFO: tldr of CLI commands

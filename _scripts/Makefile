@@ -1,5 +1,5 @@
-.PHONY: setup
-setup:
+.PHONY: setup_macos_with_shell_scripts
+setup_macos_with_shell_scripts:
 	curl --location --remote-name --create-file-mode 744 \
 		https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/setup.sh && \
 	curl --location --remote-name --create-file-mode 744 \

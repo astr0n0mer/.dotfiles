@@ -1,3 +1,8 @@
+.PHONY: setup_pip_tools
+setup_pip_tools:
+	cat ./requirements.in | xargs -I {} pipx install "{}"
+
+
 OS_NAME := $(shell uname -s)
 PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \

@@ -23,3 +23,4 @@ hosts:
         api_host: gitlab.com
         # Your GitLab access token. To get one, read https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html
         token:
+last_update_check_timestamp: "2025-05-02T23:19:51+05:30"

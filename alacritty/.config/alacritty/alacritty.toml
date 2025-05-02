@@ -7,7 +7,7 @@ blur=false
 option_as_alt="Both"
 
 [font]
-normal={family="BitstromWera Nerd Font"}
+normal={family="JetBrainsMono Nerd Font"}
 size=13
 
 [env]
