@@ -1,5 +1,0 @@
-youtube.com##ytd-grid-video-renderer:has([href*="shorts"])
-youtube.com###dismissible:has([href*="shorts"])
-youtube.com##ytd-search [overlay-style="SHORTS"]:upward(ytd-video-renderer)
-youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer [overlay-style="SHORTS"]:upward(ytd-grid-video-renderer)
-youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer [overlay-style="SHORTS"]:upward(ytd-item-section-renderer)

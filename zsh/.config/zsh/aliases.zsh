@@ -144,7 +144,7 @@ alias musicstop="screen -S music-session -X quit"
 
 
 # INFO: install pip packages
-alias pipxi="cat ~/.dotfiles/home/requirements.in | xargs -I {} pipx install {}"
+alias pipxi="cat ~/.dotfiles/home/.config/home/requirements.in | xargs -I {} pipx install {}"
 
 
 # notify
