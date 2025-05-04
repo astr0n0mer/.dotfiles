@@ -41,7 +41,6 @@ defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
 defaults write NSGlobalDomain AppleScrollerPagingBehavior -bool true
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-defaults write NSGlobalDomain AppleShowAllFiles -bool true
 defaults write NSGlobalDomain InitialKeyRepeat -int 10
 defaults write NSGlobalDomain KeyRepeat -int 1
 defaults write NSGlobalDomain NSAutomaticWindowAnimationsEnabled -bool false
@@ -50,8 +49,8 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode2 -bool true
 defaults write NSGlobalDomain NSWindowShouldDragOnGesture -bool true
 defaults write NSGlobalDomain _HIHideMenuBar -bool false
-defaults write NSGlobalDomain "com.apple.mouse.tapBehavior" -int 1
-defaults write NSGlobalDomain "com.apple.trackpad.enableSecondaryClick" -bool true
+defaults write com.apple.mouse.tapBehavior -int 1
+defaults write com.apple.trackpad.enableSecondaryClick -bool true
 
 DESIRED_SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"
 defaults write com.apple.screencapture disable-shadow -bool true
@@ -64,8 +63,11 @@ defaults write com.apple.spaces spans-displays -bool false
 
 defaults write com.apple.SoftwareUpdate AutomaticallyInstallMacOSUpdates -bool false
 
+defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Dragging -bool true
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad DragLock -bool false
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadRightClick -bool true
 
 # defaults write NSGlobalDomain AppleKeyboardUIMode -int 3 # INFO: Enable keyboard access to all controls (approximation of enableKeyMapping)

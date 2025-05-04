@@ -694,6 +694,7 @@ require('lazy').setup({
         docker_compose_language_service = {},
         dockerls = {},
         jsonls = {},
+        marksman = {},
         terraformls = {},
 
         lua_ls = {
