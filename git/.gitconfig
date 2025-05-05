@@ -11,7 +11,7 @@
 [diff]
 	algorithm = histogram
 [core]
-	editor = vim
+	; editor = vim ; INFO: falls back to $GIT_EDITOR, $VISUAL, then $EDITOR
 [rerere]
 	enabled = true
 [color "blame"]
