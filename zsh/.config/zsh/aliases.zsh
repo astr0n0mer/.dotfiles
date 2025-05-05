@@ -1,15 +1,39 @@
-# apps
-# INFO: macOS only
-alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" \
-                | sort --ignore-case \
-                | fzf"
-alias appopen="app | xargs -I {} open -a \"{}\""
-alias appquit="app | xargs -I {} osascript -e 'quit app \"{}\"'"
-alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
-                    | fzf --preview 'defaults read {} | bat --force-colorization --style=numbers --language=json' \
-                        --preview-window=right:60% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
-#! ==========
+if [[ "$(uname)" == "Darwin" ]]; then
+    # apps
+    alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" \
+                    | sort --ignore-case \
+                    | fzf"
+    alias appopen="app | xargs -I {} open -a \"{}\""
+    alias appquit="app | xargs -I {} osascript -e 'quit app \"{}\"'"
+    alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
+                        | fzf --preview 'defaults read {} \
+                        | bat --force-colorization --style=numbers --language=json' \
+                            --preview-window=right:60% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 
+
+    # logout
+    alias logout="launchctl reboot logout"
+
+
+    # notify
+    alias notify="fc -ln -1 | terminal-notifier -sound default"
+
+
+    # speedtest
+    alias speedtest="networkQuality -v"
+
+
+    # timer
+    timer() {
+        terminal-notifier -message "Timer started for ${1:=25} min" -sound default
+        (sleep $((${1:=25} * 60)) && \
+            terminal-notifier -message ${2:="Timer for ${1:=25} min ended"} -sound default) &
+    }
+elif [[ "$(uname)" == "Linux" ]]; then
+    # INFO: Linux specific aliases
+    # speedtest
+    alias speedtest="curl --silent https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
+fi
 
 # brave
 alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
@@ -110,7 +134,6 @@ alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
 # history
-# history | awk '{$1=""; print substr($0,2)}' | sort | uniq | fzf
 alias histi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
 
 
@@ -124,10 +147,6 @@ myip() {
 killport() {
     kill -9 $(lsof -t -i:$1) && echo "Killed port: ${1}"
 }
-
-
-# logout
-alias logout="launchctl reboot logout"
 
 
 # ls
@@ -145,10 +164,6 @@ alias musicstop="screen -S music-session -X quit"
 
 # INFO: install pip packages
 alias pipxi="cat ~/.dotfiles/home/.config/home/requirements.in | xargs -I {} pipx install {}"
-
-
-# notify
-alias notify="fc -ln -1 | terminal-notifier -sound default"
 
 
 # screen
@@ -191,22 +206,10 @@ so() {
 }
 
 
-# speedtest
-# alias speedtest="curl --silent https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
-
-
 # syncthing
 alias syncstart="make -f ~/Makefile syncthing-start"
 alias syncstop="make -f ~/Makefile syncthing-stop"
 alias syncopen="make -f ~/Makefile syncthing-open"
-
-
-# timer
-timer() {
-    terminal-notifier -message "Timer started for ${1:=25} min" -sound default
-    (sleep $((${1:=25} * 60)) && \
-        terminal-notifier -message ${2:="Timer for ${1:=25} min ended"} -sound default) &
-}
 
 # yazi
 alias y="yazi"
