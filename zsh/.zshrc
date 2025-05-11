@@ -75,7 +75,7 @@ bindkey '^G' autosuggest-accept  # Accept suggestion with Ctrl+G
 source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Git plugin
-source "$HOME/.dotfiles/zsh/.config/zsh/plugins/git.zsh"
+source "$HOME/.dotfiles/zsh/.config/zsh/plugins/git.plugin.zsh"
 
 # Custom alias and addon scripts
 source "$HOME/.dotfiles/zsh/.config/zsh/aliases.zsh"
