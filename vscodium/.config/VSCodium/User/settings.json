@@ -45,7 +45,7 @@
   },
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "block-outline",
-  "editor.fontFamily": "\"BitstromWera Nerd Font\", \"Hack Nerd Font\", \"AurulentSansM Nerd Font\", \"LiterationMono Nerd Font\", \"AnonymicePro Nerd Font\", \"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
+  "editor.fontFamily": "\"JetBrainsMono Nerd Font\", \"BitstromWera Nerd Font\", \"Hack Nerd Font\", \"AurulentSansM Nerd Font\", \"LiterationMono Nerd Font\", \"AnonymicePro Nerd Font\", \"FiraCode Nerd Font\", \"Cartograph CF\", MonoLisa, \"JetBrains Mono\", \"Cascadia Code\", Consolas, 'Courier New', monospace",
   "editor.fontLigatures": true,
   "editor.fontSize": 12,
   "editor.formatOnSave": true,
