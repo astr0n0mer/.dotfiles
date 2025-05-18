@@ -11,6 +11,33 @@ if [[ "$(uname)" == "Darwin" ]]; then
                             --preview-window=right:60% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 
 
+    # image manipulation
+    get_max_image_height() {
+        local max=0
+        for file in $1; do
+            if [[ -f "$file" ]]; then
+                height=$(sips --getProperty pixelHeight "$file" 2>/dev/null | awk 'NR==2 {print $2}')
+                if [[ "$height" =~ ^[0-9]+$ ]] && (( height > max )); then
+                    max=$height
+                fi
+            fi
+        done
+        echo "$max"
+    }
+    get_max_image_width() {
+        local max=0
+        for file in $1; do
+            if [[ -f "$file" ]]; then
+                width=$(sips --getProperty pixelWidth "$file" 2>/dev/null | awk 'NR==2 {print $2}')
+                if [[ "$width" =~ ^[0-9]+$ ]] && (( width > max )); then
+                    max=$width
+                fi
+            fi
+        done
+        echo "$max"
+    }
+
+
     # logout
     alias logout="launchctl reboot logout"
 
@@ -134,7 +161,7 @@ alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
 # history
-alias histi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
+# alias histi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
 
 
 # IP address
