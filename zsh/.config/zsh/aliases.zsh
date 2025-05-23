@@ -14,7 +14,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     # image manipulation
     get_max_image_height() {
         local max=0
-        for file in $1; do
+        for file in "$@"; do
             if [[ -f "$file" ]]; then
                 height=$(sips --getProperty pixelHeight "$file" 2>/dev/null | awk 'NR==2 {print $2}')
                 if [[ "$height" =~ ^[0-9]+$ ]] && (( height > max )); then
@@ -26,7 +26,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
     }
     get_max_image_width() {
         local max=0
-        for file in $1; do
+        for file in "$@"; do
             if [[ -f "$file" ]]; then
                 width=$(sips --getProperty pixelWidth "$file" 2>/dev/null | awk 'NR==2 {print $2}')
                 if [[ "$width" =~ ^[0-9]+$ ]] && (( width > max )); then
@@ -47,7 +47,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 
 
     # speedtest
-    alias speedtest="networkQuality -v"
+    # alias speedtest="networkQuality -v"
 
 
     # timer
@@ -157,7 +157,7 @@ repog() {
 
 
 # haxor-news
-alias haxor="workon haxor-news && haxor-news && deactivate"
+# alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
 # history
@@ -185,8 +185,8 @@ alias mani="compgen -c | fzf --preview 'man {}' --preview-window=right:50% --bin
 
 
 # music
-alias musicstart="screen -S music-session ytermusic"
-alias musicstop="screen -S music-session -X quit"
+# alias musicstart="screen -S music-session ytermusic"
+# alias musicstop="screen -S music-session -X quit"
 
 
 # INFO: install pip packages
