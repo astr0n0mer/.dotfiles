@@ -1,11 +1,11 @@
+.DS_Store
 .git
 .gitignore
+LICENSE
+Makefile
+README.md
 
 _android
 _scripts
 dotfiles_sensitive
 sandbox
-
-LICENSE
-Makefile
-README.md
