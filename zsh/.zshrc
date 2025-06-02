@@ -27,6 +27,7 @@ REPORTTIME=3
 # Reference: https://zsh.sourceforge.io/Doc/Release/Options.html
 #########################################
 
+export HISTFILE=${HISTFILE:-~/.zsh_history}
 export HISTSIZE=100000
 export SAVEHIST=100000
 
@@ -74,14 +75,16 @@ bindkey '^R' history-incremental-search-backward  # Ctrl+R
 #########################################
 
 # Suggestions (zsh-autosuggestions)
-source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+# source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
 bindkey '^G' autosuggest-accept  # Accept suggestion with Ctrl+G
 
 # Autocomplete (zsh-autocomplete)
 # source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
 # Syntax highlighting
-source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+# source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Git plugin
 source "$HOME/.dotfiles/zsh/.config/zsh/plugins/git.plugin.zsh"

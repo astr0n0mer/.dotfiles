@@ -36,3 +36,5 @@ pavucontrol
 # sudo systemctl start  bluetooth.service
 # systemctl status bluetooth.service
 trash-cli
+zsh-autosuggestions
+zsh-syntax-highlighting
