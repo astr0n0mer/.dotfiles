@@ -4,12 +4,14 @@
 set -e # INFO: fail on first error
 set -x # INFO: print all commands before execution
 
-# TODO: fix this to only run on macOS
-	# INFO: xcode: install if not already installed
-	# xcode-select -p || xcode-select --install
-# TODO: fix this to only run on macOS
 
-# TODO: add github.com and gitlab.com to known hosts
+if [[ "$(uname)" == "Darwin" ]]; then
+	# INFO: xcode: install if not already installed
+	xcode-select -p || xcode-select --install
+fi
+
+# INFO: add github.com and gitlab.com to known hosts
+ssh-keyscan -H github.com gitlab.com >> ~/.ssh/known_hosts
 
 # INFO: dotfiles: clone and set up
 cd ~
