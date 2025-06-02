@@ -6,8 +6,10 @@ set -x # INFO: print all commands before execution
 
 # TODO: fix this to only run on macOS
 	# INFO: xcode: install if not already installed
-	xcode-select -p || xcode-select --install
+	# xcode-select -p || xcode-select --install
 # TODO: fix this to only run on macOS
+
+# TODO: add github.com and gitlab.com to known hosts
 
 # INFO: dotfiles: clone and set up
 cd ~

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # set -e # INFO: fail on first error
 set -x # INFO: print all commands before execution
