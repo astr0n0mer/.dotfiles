@@ -1,4 +1,5 @@
 brave-bin
+getnf
 jnv
 lazydocker
 nextdns
