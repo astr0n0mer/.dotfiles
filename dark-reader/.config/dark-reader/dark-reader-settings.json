@@ -289,7 +289,8 @@
       "xkcd.com",
       "xmonad.org",
       "yoan-thirion.gitbook.io",
-      "zoom.us"
+      "zoom.us",
+      "aur.archlinux.org"
    ],
    "fetchNews" : true,
    "installation" : {

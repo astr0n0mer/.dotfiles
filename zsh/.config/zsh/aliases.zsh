@@ -74,9 +74,9 @@ alias dashycleanup="make -f ~/.config/dashy/Makefile cleanup"
 alias dashypublish="make -f ~/.config/dashy/Makefile publish"
 
 
-# digital_garden
-alias diary="nvim --cmd 'cd ~/projects/digital_garden_vimwiki/' +':VimwikiMakeDiaryNote'"
-alias gardenpublish="make -f ~/projects/digital_garden/Makefile publish"
+# # digital_garden
+# alias diary="nvim --cmd 'cd ~/projects/digital_garden_vimwiki/' +':VimwikiMakeDiaryNote'"
+# alias gardenpublish="make -f ~/projects/digital_garden/Makefile publish"
 
 
 # .dotfiles
@@ -108,10 +108,6 @@ alias ghn="gh api notifications | jq '.[].subject'"
 alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
-# alias gitprunebranches="git branch -vv \
-#                         | grep ': gone]' \
-#                         | awk '{print \$1}' \
-#                         | xargs git branch -D"
 alias lg="lazygit"
 alias repo="find ~/.dotfiles ~/{projects,projects_work} \
                     -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
@@ -154,10 +150,6 @@ repog() {
         pushd "$repo_dir"
     fi
 }
-
-
-# haxor-news
-# alias haxor="workon haxor-news && haxor-news && deactivate"
 
 
 # history
