@@ -689,6 +689,8 @@ require('lazy').setup({
         -- biome = {},
         -- But for many setups, the LSP (`ts_ls`) will work just fine
         ts_ls = {},
+        cssls = {},
+        css_variables = {},
         --
 
         docker_compose_language_service = {},
