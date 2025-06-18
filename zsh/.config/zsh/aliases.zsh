@@ -122,8 +122,8 @@ source_repo_env() {
     [[ -d "$repo_dir/.venv" ]] && . "$repo_dir/.venv/bin/activate"
 
     set -a
-    [[ -f "$repo_dir/.env" ]]       && source "$repo_dir/.env"
-    [[ -f "$repo_dir/.env.local" ]] && source "$repo_dir/.env.local"
+    [[ -f "$repo_dir/.env" ]]       && . "$repo_dir/.env"
+    [[ -f "$repo_dir/.env.local" ]] && . "$repo_dir/.env.local"
     set +a
 }
 repoo() {

@@ -4,3 +4,6 @@ python = ["3.11", "3.13"]
 
 [settings]
 idiomatic_version_file_enable_tools = ["node"]
+
+# [env]
+# _.python.venv = { path = ".venv" } # https://mise.jdx.dev/lang/python.html#automatic-virtualenv-activation
