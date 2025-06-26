@@ -70,6 +70,9 @@ repog() {
 SERVERS_SESSION_NAME="servers_session"
 alias setup_servers_session="tmux has-session -t ${SERVERS_SESSION_NAME} 2>/dev/null || tmux new-session -d -s ${SERVERS_SESSION_NAME}"
 
+alias digital_garden_serve="setup_servers_session && \
+    tmux new-window -t ${SERVERS_SESSION_NAME}: 'cd ~/projects/digital_garden_v2 && npx quartz build --serve'"
+
 alias ollama_start="setup_servers_session && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'ollama serve'"
 
@@ -77,6 +80,4 @@ alias syncthing_start="setup_servers_session && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'syncthing serve --no-default-folder --no-browser'"
 alias syncthing_open="open http://localhost:8384/"
 
-alias start_servers="ollama_start && syncthing_start"
-
-
+alias start_servers="digital_garden_serve && ollama_start && syncthing_start"
