@@ -11,6 +11,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 
 # INFO: add github.com and gitlab.com to known hosts
+mkdir -p ~/.ssh
 ssh-keyscan -H github.com gitlab.com >> ~/.ssh/known_hosts
 
 # INFO: dotfiles: clone and set up
