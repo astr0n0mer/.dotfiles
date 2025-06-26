@@ -23,7 +23,7 @@ REPORTTIME=3
 
 
 #########################################
-# ⚙️ 2. Zsh Options
+# 2. Zsh Options
 # Reference: https://zsh.sourceforge.io/Doc/Release/Options.html
 #########################################
 
@@ -47,7 +47,7 @@ setopt SHARE_HISTORY
 
 
 #########################################
-# 🔄 3. Completion System Setup
+# 3. Completion System Setup
 #########################################
 
 autoload -Uz compinit
@@ -58,7 +58,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
 #########################################
-# 🧠 4. Keybindings & History Search
+# 4. Keybindings & History Search
 #########################################
 
 # Vim keybindings
@@ -71,7 +71,7 @@ bindkey '^R' history-incremental-search-backward  # Ctrl+R
 
 
 #########################################
-# 💡 5. Plugins & Features
+# 5. Plugins & Features
 #########################################
 
 if [[ "$(uname)" == "Darwin" ]]; then
@@ -94,7 +94,7 @@ source "$HOME/.dotfiles/zsh/.config/zsh/addons.zsh"
 
 
 #########################################
-# 🔍 6. Git Info in Prompt (vcs_info)
+# 6. Git Info in Prompt (vcs_info)
 #########################################
 
 autoload -Uz vcs_info

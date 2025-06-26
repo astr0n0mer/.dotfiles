@@ -18,17 +18,17 @@ kanata-stop:
 	screen -S kanata-session -X quit
 
 # sync local files across devices
-.PHONY: syncthing-start
-syncthing-start:
-	screen -dmS syncthing-session syncthing serve --no-default-folder --no-browser
-
-.PHONY: syncthing-stop
-syncthing-stop:
-	pkill syncthing
-
-.PHONY: syncthing-open
-syncthing-open:
-	open http://localhost:8384/
+# .PHONY: syncthing-start
+# syncthing-start:
+# 	screen -dmS syncthing-session syncthing serve --no-default-folder --no-browser
+#
+# .PHONY: syncthing-stop
+# syncthing-stop:
+# 	pkill syncthing
+#
+# .PHONY: syncthing-open
+# syncthing-open:
+# 	open http://localhost:8384/
 
 # config file backups
 .PHONY: monkeytype-settings.json
