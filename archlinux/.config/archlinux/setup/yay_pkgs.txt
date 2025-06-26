@@ -1,0 +1,6 @@
+brave-bin
+getnf
+jnv
+lazydocker
+nextdns
+tlrc

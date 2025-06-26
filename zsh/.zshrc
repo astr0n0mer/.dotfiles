@@ -23,10 +23,11 @@ REPORTTIME=3
 
 
 #########################################
-# ⚙️ 2. Zsh Options
+# 2. Zsh Options
 # Reference: https://zsh.sourceforge.io/Doc/Release/Options.html
 #########################################
 
+export HISTFILE=${HISTFILE:-~/.zsh_history}
 export HISTSIZE=100000
 export SAVEHIST=100000
 
@@ -46,7 +47,7 @@ setopt SHARE_HISTORY
 
 
 #########################################
-# 🔄 3. Completion System Setup
+# 3. Completion System Setup
 #########################################
 
 autoload -Uz compinit
@@ -57,7 +58,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
 #########################################
-# 🧠 4. Keybindings & History Search
+# 4. Keybindings & History Search
 #########################################
 
 # Vim keybindings
@@ -70,18 +71,19 @@ bindkey '^R' history-incremental-search-backward  # Ctrl+R
 
 
 #########################################
-# 💡 5. Plugins & Features
+# 5. Plugins & Features
 #########################################
 
-# Suggestions (zsh-autosuggestions)
-source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+if [[ "$(uname)" == "Darwin" ]]; then
+  source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  # source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+elif [[ "$(uname)" == "Linux" ]]; then
+  source "/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh"
+  source "/usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
 bindkey '^G' autosuggest-accept  # Accept suggestion with Ctrl+G
 
-# Autocomplete (zsh-autocomplete)
-# source "$HOMEBREW_PREFIX/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
-
-# Syntax highlighting
-source "$HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 
 # Git plugin
 source "$HOME/.dotfiles/zsh/.config/zsh/plugins/git.plugin.zsh"
@@ -92,7 +94,7 @@ source "$HOME/.dotfiles/zsh/.config/zsh/addons.zsh"
 
 
 #########################################
-# 🔍 6. Git Info in Prompt (vcs_info)
+# 6. Git Info in Prompt (vcs_info)
 #########################################
 
 autoload -Uz vcs_info

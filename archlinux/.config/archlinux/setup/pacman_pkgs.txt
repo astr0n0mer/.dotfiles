@@ -1,0 +1,40 @@
+base-devel
+bat
+btop
+curl
+fastfetch
+firefox
+fzf
+git
+github-cli
+glab
+jq
+lazygit
+less
+man-db
+nano
+neovim
+pyenv
+python-pipx
+ruff
+stow
+syncthing
+tmux
+tokei
+uv
+vi
+vim
+yazi
+zoxide
+zsh
+
+blueman
+bluez
+bluez-utils
+pavucontrol
+# sudo systemctl enable bluetooth.service
+# sudo systemctl start  bluetooth.service
+# systemctl status bluetooth.service
+trash-cli
+zsh-autosuggestions
+zsh-syntax-highlighting

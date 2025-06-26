@@ -1,2 +1,8 @@
-.DS_Store
+# tool config files
+**/.mise.toml
+
+# logs
 nohup.out
+
+# macOS artifacts
+.DS_Store
