@@ -66,15 +66,14 @@ dark-reader-settings.json:
 		(trash ~/Downloads/Dark-Reader-Settings.json)) || \
 		(open -a 'Brave Browser' chrome-extension://eimadpbcbfnmbkopoojfekhnkhdbieeh/ui/options/index.html)
 
-.PHONY: tampermonkey-backup.json
-tampermonkey-backup.json:
-	test -f ~/Downloads/tampermonkey-backup-*.txt && \
-		((cat ~/Downloads/tampermonkey-backup-*.txt | json_xs | tee ~/.config/tampermonkey/$@ > /dev/null ) && \
-		(trash ~/Downloads/tampermonkey-backup-*.txt)) || \
-		(open -a 'Brave Browser' chrome-extension://dhdgffkkebhmkfjojejmpbldmpobfkfo/options.html#nav=utils)
+# .PHONY: violentmonkey_backup
+# violentmonkey_backup:
+# 	test -f ~/Downloads/violentmonkey_*.zip && \
+# 		mv ~/Downloads/violentmonkey_*.zip ~/.config/violentmonkey/ || \
+# 		(open -a 'Brave Browser' chrome-extension://jinjaccalgkegednnccohejagnlnfdag/options/index.html#settings)
 
 .PHONY: browser-extensions-backup
-browser-extensions-backup: vimium-options.json dark-reader-settings.json tampermonkey-backup.json
+browser-extensions-backup: vimium-options.json dark-reader-settings.json # violentmonkey.json
 
 # cron jobs
 .PHONY: startup
