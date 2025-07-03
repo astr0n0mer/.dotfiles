@@ -1,5 +1,5 @@
 [tools]
-node = ["lts", "latest"]
+node = ["lts"]
 python = ["3.11", "3.13"]
 
 [settings]

@@ -17,40 +17,11 @@ kanata-start:
 kanata-stop:
 	screen -S kanata-session -X quit
 
-# sync local files across devices
-# .PHONY: syncthing-start
-# syncthing-start:
-# 	screen -dmS syncthing-session syncthing serve --no-default-folder --no-browser
-#
-# .PHONY: syncthing-stop
-# syncthing-stop:
-# 	pkill syncthing
-#
-# .PHONY: syncthing-open
-# syncthing-open:
-# 	open http://localhost:8384/
-
 # config file backups
 .PHONY: monkeytype-settings.json
 monkeytype-settings.json:
 	# open https://monkeytype.com/settings#exportSettingsButton
 	${PASTE} | json_xs > ~/.config/monkeytype/settings.json
-
-.PHONY: raycast-settings.rayconfig
-raycast-settings.rayconfig:
-	@SOURCE_BACKUP_FILEPATH=~/Downloads/Raycast*.rayconfig; \
-	DESTINATION_FILEPATH=~/.config/raycast/settings.rayconfig; \
-	if mv -f $$SOURCE_BACKUP_FILEPATH $$DESTINATION_FILEPATH; then \
-		MESSAGE="Backup complete"; \
-	else \
-		MESSAGE="No backup file found. No files changed."; \
-	fi; \
-	if [ -n "$(notify)" ]; then \
-		${TERMINAL_NOTIFIER} \
-			-title Raycast \
-			-message "$$MESSAGE" \
-			-sound default; \
-	fi
 
 .PHONY: vimium-options.json
 vimium-options.json:
@@ -65,12 +36,6 @@ dark-reader-settings.json:
 		((cat ~/Downloads/Dark-Reader-Settings.json | json_xs | tee ~/.config/dark-reader/$@ > /dev/null ) && \
 		(trash ~/Downloads/Dark-Reader-Settings.json)) || \
 		(open -a 'Brave Browser' chrome-extension://eimadpbcbfnmbkopoojfekhnkhdbieeh/ui/options/index.html)
-
-# .PHONY: violentmonkey_backup
-# violentmonkey_backup:
-# 	test -f ~/Downloads/violentmonkey_*.zip && \
-# 		mv ~/Downloads/violentmonkey_*.zip ~/.config/violentmonkey/ || \
-# 		(open -a 'Brave Browser' chrome-extension://jinjaccalgkegednnccohejagnlnfdag/options/index.html#settings)
 
 .PHONY: browser-extensions-backup
 browser-extensions-backup: vimium-options.json dark-reader-settings.json # violentmonkey.json
