@@ -28,8 +28,8 @@ return {
 
       vim.keymap.set("n", "<space>ff", require("telescope.builtin").find_files, { desc = "[F]ind [F]iles" })
       vim.keymap.set("n", "<space>fh", require("telescope.builtin").help_tags, { desc = "[F]ind [H]elp" })
-      vim.keymap.set("n", "grd", require("telescope.builtin").lsp_definitions, { desc = "[G]oto [D]efinition" })
-      vim.keymap.set("n", "grr", require("telescope.builtin").lsp_references, { desc = "[G]oto [R]eferences" })
+      -- vim.keymap.set("n", "grd", require("telescope.builtin").lsp_definitions, { desc = "[G]oto [D]efinition" })
+      -- vim.keymap.set("n", "grr", require("telescope.builtin").lsp_references, { desc = "[G]oto [R]eferences" })
       vim.keymap.set("n", "<space>fc", function()
         require("telescope.builtin").find_files({
           cwd = vim.fn.stdpath("config"),
