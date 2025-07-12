@@ -1,12 +1,6 @@
-#########################################
 # 1. Path & Environment Variables
-#########################################
-
-# Add local binaries to $PATH
-export PATH="$PATH:$HOME/.local/bin"
-
-# Set XDG base directory
-export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+[ -f "$HOME/.profile" ] && source "$HOME/.profile"
+[ -f "$HOME/.dotfiles/shell/.profile" ] && source "$HOME/.dotfiles/shell/.profile"
 
 # Preferred editor depending on session
 if [[ -n $SSH_CONNECTION ]]; then
@@ -22,10 +16,8 @@ export HOMEBREW_CASK_OPTS="--no-quarantine"
 REPORTTIME=3
 
 
-#########################################
 # 2. Zsh Options
 # Reference: https://zsh.sourceforge.io/Doc/Release/Options.html
-#########################################
 
 export HISTFILE=${HISTFILE:-~/.zsh_history}
 export HISTSIZE=100000
@@ -46,9 +38,7 @@ setopt PUSHD_IGNORE_DUPS
 setopt SHARE_HISTORY
 
 
-#########################################
 # 3. Completion System Setup
-#########################################
 
 autoload -Uz compinit
 compinit
@@ -57,9 +47,7 @@ compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
 
 
-#########################################
 # 4. Keybindings & History Search
-#########################################
 
 # Vim keybindings
 bindkey -v
@@ -70,9 +58,7 @@ bindkey "^[[B" history-beginning-search-forward   # down_arrow
 bindkey '^R' history-incremental-search-backward  # Ctrl+R
 
 
-#########################################
 # 5. Plugins & Features
-#########################################
 
 if [[ "$(uname)" == "Darwin" ]]; then
   source "$HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
@@ -93,9 +79,7 @@ source "$HOME/.dotfiles/zsh/.config/zsh/aliases.zsh"
 source "$HOME/.dotfiles/zsh/.config/zsh/addons.zsh"
 
 
-#########################################
 # 6. Git Info in Prompt (vcs_info)
-#########################################
 
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git

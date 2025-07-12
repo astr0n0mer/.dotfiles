@@ -1,7 +1,7 @@
 # INFO: .dotfiles
 alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print \
                 | fzf --preview 'bat {} --force-colorization --style=numbers' \
-                    --preview-window=bottom:90% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+                    --preview-window=bottom:75% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias doted="dotfile | xargs nvim --cmd \"cd ~/.dotfiles\""
 alias dotlg="lazygit --path ~/.dotfiles"
 # dot() {
@@ -29,7 +29,7 @@ alias repo="find ~/.dotfiles ~/{projects,projects_work} \
                 | awk '{print \$1}' \
                 | sort --ignore-case --reverse \
                 | fzf --preview 'git -C {} status' \
-                    --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+                    --preview-window=bottom:75% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
 source_repo_env() {
     local repo_dir="$1"

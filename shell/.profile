@@ -6,7 +6,7 @@
 
 # the default umask is set in /etc/profile; for setting the umask
 # for ssh logins, install and configure the libpam-umask package.
-#umask 022
+# umask 022
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -21,7 +21,32 @@ if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
 
-# set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
+
+# INFO: macOS-specific XDG setup
+if [ "$(uname)" = "Darwin" ]; then
+    # XDG Base Directory Specification: https://specifications.freedesktop.org/basedir-spec/latest/
+    export XDG_BIN_HOME="${XDG_BIN_HOME:-$HOME/.local/bin}"
+    export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+    export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+    export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/tmp/xdg-runtime-$UID}"
+    export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+
+    # Add user bin to PATH (if not already)
+    case ":$PATH:" in
+        *":$XDG_BIN_HOME:"*) ;;
+        *) PATH="$XDG_BIN_HOME:$PATH" ;;
+    esac
+    export PATH
+
+    # Create necessary directories
+    mkdir -p \
+	"$XDG_BIN_HOME" \
+	"$XDG_CACHE_HOME" \
+	"$XDG_CONFIG_HOME" \
+	"$XDG_DATA_HOME" \
+	"$XDG_RUNTIME_DIR" \
+	"$XDG_STATE_HOME"
+
+    chmod 700 "$XDG_RUNTIME_DIR"
 fi

@@ -44,7 +44,7 @@ SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"
 # alias ssopen="ss | fzf | xargs -I {} open {}"
 alias ssopen="open ${SCREENSHOT_LOCATION}/Screenshot*"
 sscleanup() {
-    find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash -v "{}" \;
+    find "$SCREENSHOT_LOCATION" -type f -mtime ${1:-+30} -exec trash --verbose "{}" \;
 }
 
 
