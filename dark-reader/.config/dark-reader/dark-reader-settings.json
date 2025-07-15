@@ -1,8 +1,8 @@
 {
    "automation" : {
       "behavior" : "OnOff",
-      "enabled" : false,
-      "mode" : ""
+      "enabled" : true,
+      "mode" : "system"
    },
    "changeBrowserTheme" : false,
    "customThemes" : [
@@ -127,7 +127,7 @@
    "enableContextMenus" : false,
    "enableForPDF" : false,
    "enableForProtectedPages" : false,
-   "enabled" : true,
+   "enabled" : false,
    "enabledByDefault" : false,
    "enabledFor" : [
       "*.stackexchange.com",
@@ -166,9 +166,7 @@
       "docs.zettlr.com",
       "dotfiles.github.io",
       "effectiviology.com",
-      "en.wikipedia.org",
       "erikdemaine.org",
-      "exercism.org",
       "f-droid.org",
       "files.timelyschools.com",
       "fosscomics.com",
@@ -196,11 +194,9 @@
       "lexi-lambda.github.io",
       "lwn.net",
       "m.uber.com",
-      "mail.google.com",
       "man.freebsd.org",
       "marketplace.visualstudio.com",
       "mashable.com",
-      "medium.com",
       "miro.com",
       "morss.it",
       "mtlynch.io",
@@ -290,7 +286,17 @@
       "xmonad.org",
       "yoan-thirion.gitbook.io",
       "zoom.us",
-      "aur.archlinux.org"
+      "aur.archlinux.org",
+      "wellfound.com",
+      "medium.com",
+      "www.overleaf.com",
+      "groups.google.com",
+      "accounts.snapchat.com",
+      "docs.google.com",
+      "www.meetup.com",
+      "tidyfirst.substack.com",
+      "mail.google.com",
+      "www.freepik.com"
    ],
    "fetchNews" : true,
    "installation" : {
