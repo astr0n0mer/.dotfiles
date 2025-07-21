@@ -34,8 +34,9 @@
   "csv-preview.formatValues": "never",
   "csv-preview.lineNumbers": "source",
   "csv-preview.resizeColumns": "all",
+  "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": true,
-  "diffEditor.renderSideBySide": false,
+  "diffEditor.renderSideBySide": true,
   "dotenv.enableAutocloaking": true,
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
@@ -86,6 +87,7 @@
     ]
   },
   "editor.wordWrap": "on",
+  "extensions.autoCheckUpdates": false,
   "extensions.autoUpdate": false,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
