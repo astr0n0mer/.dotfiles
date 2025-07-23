@@ -20,8 +20,10 @@ REPORTTIME=3
 # Reference: https://zsh.sourceforge.io/Doc/Release/Options.html
 
 export HISTFILE=${HISTFILE:-~/.zsh_history}
-export HISTSIZE=100000
-export SAVEHIST=100000
+export HISTSIZE=1000000000
+export SAVEHIST=$HISTSIZE
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="20"
+export ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 setopt APPEND_HISTORY
 setopt AUTO_CD
@@ -39,9 +41,15 @@ setopt SHARE_HISTORY
 
 
 # 3. Completion System Setup
+# INFO: Instead of rebuilding the completion cache every time, we only do it once a day
+# https://scottspence.com/posts/speeding-up-my-zsh-shell#fixing-the-completion-system-3076--10
 
 autoload -Uz compinit
-compinit
+if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; then
+  compinit
+else
+  compinit -C
+fi
 
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
