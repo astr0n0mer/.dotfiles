@@ -65,6 +65,12 @@ bindkey "^[[A" history-beginning-search-backward  # up_arrow
 bindkey "^[[B" history-beginning-search-forward   # down_arrow
 bindkey '^R' history-incremental-search-backward  # Ctrl+R
 
+# Enable Ctrl+X Ctrl+E to open the current command in $EDITOR
+# reference: https://thevaluable.dev/zsh-install-configure-mouseless/#editing-command-lines-in-vim
+autoload -Uz edit-command-line
+zle -N edit-command-line
+bindkey '^X^E' edit-command-line
+
 
 # 5. Plugins & Features
 

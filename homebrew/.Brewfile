@@ -12,7 +12,7 @@ brew "borgbackup"
 brew "btop"
 brew "curl"
 brew "dnsmasq"
-brew "docker"
+brew "docker", link: false
 brew "docker-compose"
 brew "exercism"
 brew "fastfetch"
