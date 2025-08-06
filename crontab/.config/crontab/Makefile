@@ -1,4 +1,4 @@
-PROJECTS := ~/projects
+PROJECTS := ~/root/projects
 OS_NAME := $(shell uname -s)
 TERMINAL_NOTIFIER := $(if $(filter Darwin,$(OS_NAME)), \
 						/opt/homebrew/bin/terminal-notifier, \

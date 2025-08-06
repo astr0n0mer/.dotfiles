@@ -1,7 +1,7 @@
 CONFIG_DASHY := ~/.config/dashy
 GITHUB_DASHY := https://github.com/astr0n0mer/dashy
-PROXY_DASHY := ~/projects/dashy
-PROXY_DASHY_PARENT := ~/projects
+PROXY_DASHY := ~/root/projects/dashy
+PROXY_DASHY_PARENT := ~/root/projects
 DOCKER_IMAGE_TAG := 3.0.0
 CONTAINER_PORT := 8080
 LOCALHOST_PORT := 8080

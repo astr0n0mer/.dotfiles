@@ -15,20 +15,9 @@ alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
                         cat ~/.config/brave/get_synced_tabs.js | pbcopy"
 
 
-# dashy
-# alias dashystart="make -f ~/.config/dashy/Makefile start"
-# alias dashystop="make -f ~/.config/dashy/Makefile stop"
-# alias dashycleanup="make -f ~/.config/dashy/Makefile cleanup"
-# alias dashypublish="make -f ~/.config/dashy/Makefile publish"
-
-
 # # digital_garden
-# alias diary="nvim --cmd 'cd ~/projects/digital_garden_vimwiki/' +':VimwikiMakeDiaryNote'"
-# alias gardenpublish="make -f ~/projects/digital_garden/Makefile publish"
-
-
-# history
-# alias histi='history | awk '\''{$1=""; print substr($0,2)}'\'' | sort | uniq | fzf'
+# alias diary="nvim --cmd 'cd ~/root/projects/digital_garden_vimwiki/' +':VimwikiMakeDiaryNote'"
+# alias gardenpublish="make -f ~/root/projects/digital_garden/Makefile publish"
 
 
 # IP address
@@ -49,11 +38,6 @@ alias lssymlinks="find . -maxdepth 7 -type l -exec ls -l {} \;"
 
 # man page
 alias mani="compgen -c | fzf --preview 'man {}' --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
-
-
-# music
-# alias musicstart="screen -S music-session ytermusic"
-# alias musicstop="screen -S music-session -X quit"
 
 
 # INFO: install pip packages

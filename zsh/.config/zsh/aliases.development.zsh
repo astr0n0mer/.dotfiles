@@ -23,7 +23,7 @@ alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
-alias repo="find ~/.dotfiles ~/{projects,projects_work} \
+alias repo="find ~/.dotfiles ~/root/{projects,projects_work} \
                     -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
@@ -71,7 +71,7 @@ SERVERS_SESSION_NAME="servers_session"
 alias setup_servers_session="tmux has-session -t ${SERVERS_SESSION_NAME} 2>/dev/null || tmux new-session -d -s ${SERVERS_SESSION_NAME}"
 
 alias digital_garden_serve="setup_servers_session && \
-    tmux new-window -t ${SERVERS_SESSION_NAME}: 'cd ~/projects/digital_garden_v2 && npx quartz build --serve'"
+    tmux new-window -t ${SERVERS_SESSION_NAME}: 'cd ~/root/projects/digital_garden_v2 && npx quartz build --serve'"
 
 alias ollama_start="setup_servers_session && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'ollama serve'"
