@@ -66,5 +66,5 @@ so() {
 
 
 # INFO: shorthand aliases for common commands
-alias ff="fastfetch"
+alias f="fastfetch"
 alias y="yazi"
