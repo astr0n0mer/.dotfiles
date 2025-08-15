@@ -63,7 +63,7 @@ brew "saml2aws"
 brew "siege"
 brew "speedtest-cli"
 brew "stow"
-brew "syncthing"
+brew "syncthing", restart_service: :changed
 brew "terminal-notifier"
 brew "tlrc"
 brew "tmux"

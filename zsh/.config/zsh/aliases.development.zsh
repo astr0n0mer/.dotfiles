@@ -48,14 +48,14 @@ repoo() {
         nvim "$repo_dir" --cmd "cd $repo_dir"
     fi
 }
-repoof() {
-    local repo_dir
-    repo_dir=$(repo)
-    if [ -n "$repo_dir" ]; then
-        source_repo_env "$repo_dir"
-        nvim "$repo_dir" --cmd "cd $repo_dir" +':lua require("telescope.builtin").find_files()'
-    fi
-}
+# repoof() {
+#     local repo_dir
+#     repo_dir=$(repo)
+#     if [ -n "$repo_dir" ]; then
+#         source_repo_env "$repo_dir"
+#         nvim "$repo_dir" --cmd "cd $repo_dir" +':lua require("telescope.builtin").find_files()'
+#     fi
+# }
 repog() {
     local repo_dir
     repo_dir=$(repo)
@@ -76,8 +76,9 @@ alias digital_garden_serve="servers_session_start && \
 alias ollama_start="servers_session_start && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'ollama serve'"
 
+# INFO: better to use `brew services start syncthing` instead of this alias on macOS
 alias syncthing_start="servers_session_start && \
-    tmux new-window -t ${SERVERS_SESSION_NAME}: 'syncthing serve --no-default-folder --no-browser'"
+    tmux new-window -t ${SERVERS_SESSION_NAME}: 'syncthing serve --no-browser'"
 alias syncthing_open="open http://localhost:8384/"
 
 alias servers_start="digital_garden_serve && ollama_start && syncthing_start"

@@ -131,7 +131,6 @@
    "enabledByDefault" : false,
    "enabledFor" : [
       "*.stackexchange.com",
-      "*.substack.com",
       "aider.chat",
       "api.slack.com",
       "app.datadoghq.com",
@@ -294,7 +293,6 @@
       "accounts.snapchat.com",
       "docs.google.com",
       "www.meetup.com",
-      "tidyfirst.substack.com",
       "mail.google.com",
       "www.freepik.com"
    ],

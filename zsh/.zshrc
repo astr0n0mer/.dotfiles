@@ -50,9 +50,11 @@ if [ "$(date +'%j')" != "$(stat -f '%Sm' -t '%j' ~/.zcompdump 2>/dev/null)" ]; t
 else
   compinit -C
 fi
+_comp_options+=(globdots) # include hidden files in completion
 
 # Case-insensitive completion
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' menu select
 
 
 # 4. Keybindings & History Search
@@ -69,7 +71,23 @@ bindkey '^R' history-incremental-search-backward  # Ctrl+R
 # reference: https://thevaluable.dev/zsh-install-configure-mouseless/#editing-command-lines-in-vim
 autoload -Uz edit-command-line
 zle -N edit-command-line
-bindkey '^X^E' edit-command-line
+# bindkey '^X^E' edit-command-line
+bindkey -M vicmd v edit-command-line
+
+# Adding text objects for zsh vi mode
+# https://thevaluable.dev/zsh-install-configure-mouseless/#adding-text-objects
+autoload -Uz select-bracketed select-quoted
+zle -N select-quoted
+zle -N select-bracketed
+for km in viopp visual; do
+  bindkey -M $km -- '-' vi-up-line-or-history
+  for c in {a,i}${(s..)^:-\'\"\`\|,./:;=+@}; do
+    bindkey -M $km $c select-quoted
+  done
+  for c in {a,i}${(s..)^:-'()[]{}<>bB'}; do
+    bindkey -M $km $c select-bracketed
+  done
+done
 
 
 # 5. Plugins & Features
