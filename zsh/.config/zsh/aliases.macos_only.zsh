@@ -11,6 +11,11 @@ alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
                         --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 
 
+# homebrew
+alias brew_backup="brew bundle dump --force --global &"
+alias brew_restore="brew bundle --global &"
+
+
 # image manipulation
 get_max_image_height() {
     local max=0
