@@ -28,6 +28,7 @@ alias repo="find ~/.dotfiles ~/root/{projects,projects_work} \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
                 | sort --ignore-case --reverse \
+                | uniq \
                 | fzf --preview 'git -C {} status' \
                     --preview-window=bottom:75% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
