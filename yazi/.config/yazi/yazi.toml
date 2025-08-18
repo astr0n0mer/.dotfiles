@@ -3,15 +3,15 @@ ratio = [1,2,5]
 show_hidden = true
 show_symlink = false
 
-[opener]
-open = [
-	{ run = 'vd "$@"', block = true, desc = "Open CSV file with VisiData" },
-]
+# [opener]
+# open = [
+# 	{ run = 'vd "$@"', block = true, desc = "Open CSV file with VisiData" },
+# ]
 
-[open]
-prepend_rules = [
-	{ name = "*.csv", use = [ "open" ] },
-]
+# [open]
+# prepend_rules = [
+# 	{ name = "*.csv", use = [ "open" ] },
+# ]
 
 [preview]
 wrap = "yes"

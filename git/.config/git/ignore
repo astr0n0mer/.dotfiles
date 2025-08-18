@@ -1,3 +1,6 @@
+# env file
+.env*
+
 # tool config files
 **/.mise.toml
 
@@ -5,4 +8,4 @@
 nohup.out
 
 # macOS artifacts
-.DS_Store
+**/.DS_Store
