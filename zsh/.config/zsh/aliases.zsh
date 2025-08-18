@@ -20,12 +20,6 @@ alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
 # alias gardenpublish="make -f ~/root/projects/digital_garden/Makefile publish"
 
 
-# IP address
-myip() {
-    make -f ~/.config/myip/Makefile get-myip version="$1"
-}
-
-
 # killport
 killport() {
     kill -9 $(lsof -t -i:$1) && echo "Killed port: ${1}"
@@ -36,12 +30,7 @@ killport() {
 alias lssymlinks="find . -maxdepth 7 -type l -exec ls -l {} \;"
 
 
-# man page
-alias mani="compgen -c | fzf --preview 'man {}' --preview-window=right:50% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
-
-
-# INFO: install pip packages
-alias pipxi="cat ~/.dotfiles/home/.config/home/requirements.in | xargs -I {} pipx install {}"
+alias pipx_install="cat ~/.dotfiles/home/.config/home/requirements.in | xargs -I {} pipx install \"{}\""
 
 
 # search

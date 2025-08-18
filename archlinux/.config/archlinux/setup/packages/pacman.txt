@@ -31,10 +31,11 @@ zsh
 blueman
 bluez
 bluez-utils
-pavucontrol
+pavucontrol # INFO: PluseAudio Volume Control
 # sudo systemctl enable bluetooth.service
 # sudo systemctl start  bluetooth.service
 # systemctl status bluetooth.service
+
 trash-cli
 zsh-autosuggestions
 zsh-syntax-highlighting

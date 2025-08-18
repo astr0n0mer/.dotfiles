@@ -3,19 +3,19 @@ PASTE := $(if $(filter Darwin,$(OS_NAME)), \
 			pbpaste, \
 			xclip -selection c -out)
 
-# sync local config files to remote
-.PHONY: dotfiles-pull
-dotfiles-pull:
-	export GIT_DIR=${HOME}/.dotfiles; export GIT_WORK_TREE=${HOME}; git fetch --all && git pull;
+# # sync local config files to remote
+# .PHONY: dotfiles-pull
+# dotfiles-pull:
+# 	export GIT_DIR=${HOME}/.dotfiles; export GIT_WORK_TREE=${HOME}; git fetch --all && git pull;
 
-.PHONY: kanata-start
-kanata-start:
-	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate && \
-	screen -dmS kanata-session sudo ~/.local/bin/kanata --cfg ~/.config/kanata/kanata.kbd
-
-.PHONY: kanata-stop
-kanata-stop:
-	screen -S kanata-session -X quit
+# .PHONY: kanata-start
+# kanata-start:
+# 	/Applications/.Karabiner-VirtualHIDDevice-Manager.app/Contents/MacOS/Karabiner-VirtualHIDDevice-Manager activate && \
+# 	screen -dmS kanata-session sudo ~/.local/bin/kanata --cfg ~/.config/kanata/kanata.kbd
+#
+# .PHONY: kanata-stop
+# kanata-stop:
+# 	screen -S kanata-session -X quit
 
 # config file backups
 .PHONY: monkeytype-settings.json
@@ -69,13 +69,13 @@ cron-daily:
 cron-weekly:
 	${TERMINAL_NOTIFIER} -title "Cron weekly" -message "not implemented yet" -sound default
 
-# setup
-.PHONY: mysetup
-mysetup:
-	make -f ~/.config/mysetup/Makefile all
+# # setup
+# .PHONY: mysetup
+# mysetup:
+# 	make -f ~/.config/mysetup/Makefile all
 
 # ========================================================
-include ~/.config/utils/Makefile
-.PHONY: testing-import
-testing-import:
-	${TERMINAL_NOTIFIER} -title "Testing import" -message "Imported utils" -sound default
+# include ~/.config/utils/Makefile
+# .PHONY: testing-import
+# testing-import:
+# 	${TERMINAL_NOTIFIER} -title "Testing import" -message "Imported utils" -sound default
