@@ -11,14 +11,34 @@
 ## Setup
 
 ```shell
-curl --location --remote-name https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/setup.sh
-curl --location --remote-name https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/set_system_settings.sh
-curl --location --remote-name https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/setup_dotfiles_repo.sh
-curl --location --remote-name https://raw.githubusercontent.com/astr0n0mer/.dotfiles/main/_scripts/setup_macos_with_shell_scripts/post_setup.sh
-chmod u+x setup.sh
-chmod u+x set_system_settings.sh
-chmod u+x setup_dotfiles_repo.sh
-chmod u+x post_setup.sh
+curl --location --parallel --remote-name-all \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/post_setup.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/setup.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/setup_dotfiles_repo.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/setup_opendns.sh
+
+mkdir -p archlinux/packages
+cd archlinux
+curl --location --parallel --remote-name-all \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/archlinux/install_packages.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/archlinux/set_system_settings.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/archlinux/setup_dotfiles_prerequisites.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/archlinux/sync_packages.sh
+cd packages
+curl --location --parallel --remote-name-all \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/archlinux/packages/pacman.txt \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/archlinux/packages/yay.txt
+cd ../..
+
+mkdir -p macos
+cd macos
+curl --location --parallel --remote-name-all \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/macos/install_packages.sh \
+	https://github.com/astr0n0mer/.dotfiles/raw/refs/heads/main/_mysetup/macos/set_system_settings.sh
+cd ..
+
+find . -type f -name "*.sh" -exec chmod u+x "{}" \;
+
 ./setup.sh
 ```
 
