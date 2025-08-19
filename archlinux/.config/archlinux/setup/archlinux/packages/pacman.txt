@@ -21,12 +21,15 @@ stow
 syncthing
 tmux
 tokei
+trash-cli
 uv
 vi
 vim
 yazi
 zoxide
 zsh
+zsh-autosuggestions
+zsh-syntax-highlighting
 
 blueman
 bluez
@@ -35,7 +38,3 @@ pavucontrol # INFO: PluseAudio Volume Control
 # sudo systemctl enable bluetooth.service
 # sudo systemctl start  bluetooth.service
 # systemctl status bluetooth.service
-
-trash-cli
-zsh-autosuggestions
-zsh-syntax-highlighting

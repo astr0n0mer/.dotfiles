@@ -1,18 +1,22 @@
 #!/bin/sh
 
-set -e # Exit on error
-set -x # Enable debugging
+set -e # INFO: fail on first error
+set -x # INFO: print all commands before execution
 
-sudo pacman --sync base-devel git
 
-cwd=$(pwd)
-# INFO: install yay AUR helper
-cd $(mktemp -d)
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
-cd "$cwd"
+if [[ "$(uname)" == "Linux" ]]; then
+	./archlinux/setup_dotfiles_prerequisites.sh
+elif [[ "$(uname)" == "Darwin" ]]; then
+	xcode-select -p || xcode-select --install
+fi
 
-./sync_pkgs.sh
 ./setup_dotfiles_repo.sh
+
+if [[ "$(uname)" == "Linux" ]]; then
+	./archlinux/install_packages.sh
+elif [[ "$(uname)" == "Darwin" ]]; then
+	./macos/install_packages.sh
+fi
+
 ./post_setup.sh
+./setup_opendns.sh
