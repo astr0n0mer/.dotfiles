@@ -3,6 +3,7 @@
 set -e # INFO: fail on first error
 set -x # INFO: print all commands before execution
 
+
 brew --version || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 

@@ -5,7 +5,6 @@ LICENSE
 Makefile
 README.md
 
-_android
-_scripts
+_*
 dotfiles_sensitive
 sandbox

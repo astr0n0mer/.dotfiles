@@ -1,1 +1,0 @@
-../../archlinux/.config/archlinux/setup/setup_dotfiles_repo.sh
