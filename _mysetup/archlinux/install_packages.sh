@@ -17,4 +17,4 @@ else
 	yay -Syu --noconfirm
 fi
 
-/bin/sh ./sync_packages.sh
+./sync_packages.sh

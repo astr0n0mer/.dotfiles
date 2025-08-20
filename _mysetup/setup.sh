@@ -17,7 +17,10 @@ echo "$XDG_CONFIG_HOME"
 
 
 if [[ "$(uname)" == "Linux" ]]; then
-	/bin/sh ./archlinux/install_packages.sh
+	cwd=$(pwd)
+	cd archlinux
+	./install_packages.sh
+	cd "$cwd"
 elif [[ "$(uname)" == "Darwin" ]]; then
 	./macos/install_packages.sh
 fi
