@@ -23,7 +23,7 @@ fi
 
 
 # INFO: macOS-specific XDG setup
-if [ "$(uname)" = "Darwin" ]; then
+# if [ "$(uname)" = "Darwin" ]; then
     # XDG Base Directory Specification: https://specifications.freedesktop.org/basedir-spec/latest/
     export XDG_BIN_HOME="${XDG_BIN_HOME:-$HOME/.local/bin}"
     export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
@@ -49,4 +49,4 @@ if [ "$(uname)" = "Darwin" ]; then
 	"$XDG_STATE_HOME"
 
     chmod 700 "$XDG_RUNTIME_DIR"
-fi
+# fi

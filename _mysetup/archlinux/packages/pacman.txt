@@ -9,9 +9,11 @@ git
 github-cli
 glab
 jq
+kitty
 lazygit
 less
 man-db
+mise
 nano
 neovim
 pyenv
@@ -34,7 +36,7 @@ zsh-syntax-highlighting
 blueman
 bluez
 bluez-utils
-pavucontrol # INFO: PluseAudio Volume Control
+# pavucontrol # INFO: PluseAudio Volume Control
 # sudo systemctl enable bluetooth.service
 # sudo systemctl start  bluetooth.service
 # systemctl status bluetooth.service
