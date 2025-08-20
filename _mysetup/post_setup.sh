@@ -4,13 +4,23 @@ set -e # INFO: fail on first error
 set -x # INFO: print all commands before execution
 
 
+if [[ "$(uname)" == "Linux" ]]; then
+	./archlinux/set_system_settings.sh
+elif [[ "$(uname)" == "Darwin" ]]; then
+	./macos/set_system_settings.sh
+fi
+
 # INFO: add github.com and gitlab.com to known hosts
 mkdir -p ~/.ssh
-ssh-keyscan -H github.com gitlab.com >> ~/.ssh/known_hosts
+ssh-keyscan -H github.com gitlab.com > ~/.ssh/known_hosts
+
+# INFO: tmux: set up plugins
+# cd ~/.dotfiles/tmux/.config/tmux
+make --file ~/.dotfiles/tmux/.config/tmux/Makefile setup_plugins_force
 
 rm -f ~/.zshrc
-cd ~/.dotfiles # TODO: this line may not be needed
-make --file ~/.dotfiles/Makefile stow_all
+cd ~/.dotfiles # INFO: this is needed as the stow-ignore file is in this directory
+make stow_all
 
 cd ~/.dotfiles
 git remote remove origin
@@ -24,15 +34,3 @@ git remote add origin git@gitlab.com:astr0n0mer/dotfiles_sensitive.git
 git fetch --all
 git switch main
 git branch --set-upstream-to=origin/main
-
-
-# INFO: tmux: set up plugins
-cd ~/.dotfiles # TODO: this line may not be needed
-make --file ~/.dotfiles/tmux/.config/tmux/Makefile setup_plugins_force
-
-
-if [[ "$(uname)" == "Linux" ]]; then
-	./archlinux/set_system_settings.sh
-elif [[ "$(uname)" == "Darwin" ]]; then
-	./macos/set_system_settings.sh
-fi
