@@ -22,31 +22,35 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 
-# INFO: macOS-specific XDG setup
-# if [ "$(uname)" = "Darwin" ]; then
-    # XDG Base Directory Specification: https://specifications.freedesktop.org/basedir-spec/latest/
-    export XDG_BIN_HOME="${XDG_BIN_HOME:-$HOME/.local/bin}"
-    export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
-    export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
-    export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
-    export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/tmp/xdg-runtime-$UID}"
-    export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
+# XDG Base Directory Specification: https://specifications.freedesktop.org/basedir-spec/latest/
+export XDG_BIN_HOME="${XDG_BIN_HOME:-$HOME/.local/bin}"
+export XDG_CACHE_HOME="${XDG_CACHE_HOME:-$HOME/.cache}"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
+export XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+export XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR:-/tmp/xdg-runtime-$UID}"
+export XDG_STATE_HOME="${XDG_STATE_HOME:-$HOME/.local/state}"
 
-    # Add user bin to PATH (if not already)
-    case ":$PATH:" in
-        *":$XDG_BIN_HOME:"*) ;;
-        *) PATH="$XDG_BIN_HOME:$PATH" ;;
-    esac
-    export PATH
+# Add user bin to PATH (if not already)
+case ":$PATH:" in
+    *":$XDG_BIN_HOME:"*) ;;
+    *) PATH="$XDG_BIN_HOME:$PATH" ;;
+esac
+export PATH
 
-    # Create necessary directories
-    mkdir -p \
-	"$XDG_BIN_HOME" \
-	"$XDG_CACHE_HOME" \
-	"$XDG_CONFIG_HOME" \
-	"$XDG_DATA_HOME" \
-	"$XDG_RUNTIME_DIR" \
-	"$XDG_STATE_HOME"
+# Create necessary directories
+mkdir -p \
+    "$XDG_BIN_HOME" \
+    "$XDG_CACHE_HOME" \
+    "$XDG_CONFIG_HOME" \
+    "$XDG_DATA_HOME" \
+    "$XDG_RUNTIME_DIR" \
+    "$XDG_STATE_HOME"
 
-    chmod 700 "$XDG_RUNTIME_DIR"
-# fi
+chmod 700 "$XDG_RUNTIME_DIR"
+
+
+if [ "$(uname)" = "Darwin" ]; then
+    # homebrew
+    [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
+    # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+fi

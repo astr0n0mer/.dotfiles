@@ -12,8 +12,12 @@ fi
 
 ./setup_dotfiles_repo.sh
 
+. ~/.dotfiles/shell/.profile
+echo "$XDG_CONFIG_HOME"
+
+
 if [[ "$(uname)" == "Linux" ]]; then
-	./archlinux/install_packages.sh
+	/bin/sh ./archlinux/install_packages.sh
 elif [[ "$(uname)" == "Darwin" ]]; then
 	./macos/install_packages.sh
 fi
