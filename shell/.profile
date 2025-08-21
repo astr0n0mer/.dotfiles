@@ -53,4 +53,7 @@ if [ "$(uname)" = "Darwin" ]; then
     # homebrew
     [ -f /opt/homebrew/bin/brew ] && eval "$(/opt/homebrew/bin/brew shellenv)"
     # [ -f /home/linuxbrew/.linuxbrew/bin/brew ] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+elif [ "$(uname)" = "Linux" ]; then
+    command -v gsettings > /dev/null && gsettings set org.gnome.desktop.peripherals.keyboard delay 150
+    command -v gsettings > /dev/null && gsettings set org.gnome.desktop.peripherals.keyboard repeat-interval 15
 fi
