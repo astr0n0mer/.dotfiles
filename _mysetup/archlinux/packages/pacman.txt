@@ -13,7 +13,6 @@ github-cli
 glab
 jnv
 jq
-kitty
 lazygit
 less
 libreoffice-fresh
@@ -39,6 +38,7 @@ uv
 vi
 vim
 visidata
+wezterm
 yazi
 zoxide
 zsh
