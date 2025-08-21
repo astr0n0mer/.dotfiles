@@ -3,11 +3,9 @@ export ZSH_CONFIG="${XDG_CONFIG_HOME}/zsh"
 . "${ZSH_CONFIG}/aliases.utilities.zsh"
 
 if [[ "$(uname)" == "Darwin" ]]; then
-    . "${ZSH_CONFIG}/aliases.macos_only.zsh"
+    . "${ZSH_CONFIG}/aliases.macos.zsh"
 elif [[ "$(uname)" == "Linux" ]]; then
-    # INFO: Linux specific aliases
-    # speedtest
-    alias speedtest="curl --silent https://raw.githubusercontent.com/sivel/speedtest-cli/master/speedtest.py | python - "
+    . "${ZSH_CONFIG}/aliases.archlinux.zsh"
 fi
 
 # brave
