@@ -1,7 +1,7 @@
 alias get_empty_dirs="find . -type d -empty -maxdepth 10 | fzf --multi"
 alias get_my_ip="curl --silent https://api.ipify.org"
 alias get_my_ip_v6="curl --silent https://api64.ipify.org"
-
+alias ls_symlinks="find . -maxdepth 7 -type l -exec ls -l {} \;"
 
 # INFO: screenshot
 SCREENSHOT_LOCATION="$HOME/Downloads/screenshots"

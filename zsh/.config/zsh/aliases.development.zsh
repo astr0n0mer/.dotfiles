@@ -23,11 +23,14 @@ alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias lg="lazygit"
-alias repo="find ~/.dotfiles ~/root/{projects,projects_work} \
+alias repos="find ~/.dotfiles ~/root/{projects,projects_work} \
                     -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
+                | sort --ignore-case \
+                | uniq"
+alias repo="repos \
                 | xargs -I {} git -C {} worktree list \
                 | awk '{print \$1}' \
-                | sort --ignore-case --reverse \
+                | sort --ignore-case \
                 | uniq \
                 | fzf --preview 'git -C {} status' \
                     --preview-window=bottom:75% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
@@ -64,6 +67,12 @@ repog() {
         source_repo_env "$repo_dir"
         pushd "$repo_dir"
     fi
+}
+
+
+# killport
+killport() {
+    kill -9 $(lsof -t -i:$1) && echo "Killed port: ${1}"
 }
 
 

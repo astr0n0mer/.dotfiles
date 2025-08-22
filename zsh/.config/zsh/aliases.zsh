@@ -18,16 +18,6 @@ alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
 # alias gardenpublish="make -f ~/root/projects/digital_garden/Makefile publish"
 
 
-# killport
-killport() {
-    kill -9 $(lsof -t -i:$1) && echo "Killed port: ${1}"
-}
-
-
-# ls
-alias lssymlinks="find . -maxdepth 7 -type l -exec ls -l {} \;"
-
-
 alias pipx_install="cat ~/.dotfiles/home/.config/home/requirements.in | xargs -I {} pipx install \"{}\""
 
 
