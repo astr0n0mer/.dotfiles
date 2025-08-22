@@ -30,17 +30,13 @@ alias repos="find ~/.dotfiles ~/root/{projects,projects_work} \
     | sort --ignore-case \
     | uniq"
 repos_fetch() {
+    export log_folder="$(mktemp -d)"
     repos | xargs -n1 -P0 sh -c '
         repo=$1
-        logfile=$(mktemp -t repos_fetch_"$(basename "$repo")"_XXXX.txt)
-        echo "$logfile"
-        git \
-            --work-tree="$repo" \
-            --git-dir="$repo/.git" \
-            fetch \
-            --all \
-        >"$logfile" 2>&1
-        ' sh
+        log_file="$log_folder/$(basename "$repo").txt"
+        git -C "$repo" fetch --all >"$log_file" 2>&1
+    ' sh
+    echo "$log_folder"
 }
 alias repo="repos \
     | xargs -I {} git -C {} worktree list \
