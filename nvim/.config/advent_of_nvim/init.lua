@@ -33,9 +33,16 @@ vim.diagnostic.config {
 
 -- vim.hl.on_yank({higroup="Visual", timeout=300})
 
-vim.opt.shiftwidth = 4
-vim.opt.relativenumber = true
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.inccommand = 'split' -- INFO: Preview substitutions live, as you type!
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.relativenumber = true
+vim.opt.shiftwidth = 4
+vim.opt.signcolumn = 'yes'
+vim.opt.timeoutlen = 300
+vim.opt.updatetime = 250
+
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = "Highlight when yanking text",
