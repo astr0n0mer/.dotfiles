@@ -1,7 +1,9 @@
 # INFO: .dotfiles
 alias dotfile="find ~/.dotfiles \( -path '*/.git/*' \) -prune -o -type f -print \
-                | fzf --preview 'bat {} --force-colorization --style=numbers' \
-                    --preview-window=bottom:75% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+    | fzf \
+        --preview 'bat {} --force-colorization --style=numbers' \
+        --preview-window=bottom:75% \
+        --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias doted="dotfile | xargs nvim --cmd \"cd ~/.dotfiles\""
 alias dotlg="lazygit --path ~/.dotfiles"
 # dot() {
@@ -22,18 +24,33 @@ alias ghn="gh api notifications | jq '.[].subject'"
 alias ghnl="gh api notifications | jq '.[].subject' | less"
 alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
-alias lg="lazygit"
 alias repos="find ~/.dotfiles ~/root/{projects,projects_work} \
-                    -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
-                | sort --ignore-case \
-                | uniq"
+        -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
+    | grep --invert-match \".stversions\" \
+    | sort --ignore-case \
+    | uniq"
+repos_fetch() {
+    repos | xargs -n1 -P0 sh -c '
+        repo=$1
+        logfile=$(mktemp -t repos_fetch_"$(basename "$repo")"_XXXX.txt)
+        echo "$logfile"
+        git \
+            --work-tree="$repo" \
+            --git-dir="$repo/.git" \
+            fetch \
+            --all \
+        >"$logfile" 2>&1
+        ' sh
+}
 alias repo="repos \
-                | xargs -I {} git -C {} worktree list \
-                | awk '{print \$1}' \
-                | sort --ignore-case \
-                | uniq \
-                | fzf --preview 'git -C {} status' \
-                    --preview-window=bottom:75% --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+    | xargs -I {} git -C {} worktree list \
+    | awk '{print \$1}' \
+    | sort --ignore-case \
+    | uniq \
+    | fzf \
+        --preview 'git -C {} status --short' \
+        --preview-window=bottom:75% \
+        --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 alias repolg="repo | xargs -I {} lazygit --path \"{}\""
 source_repo_env() {
     local repo_dir="$1"

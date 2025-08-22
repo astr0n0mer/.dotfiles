@@ -1,14 +1,15 @@
 # apps
 alias app="find /Applications /System/Applications -maxdepth 2 -name \"*.app\" \
-                | sort --ignore-case \
-                | fzf"
+    | sort --ignore-case \
+    | fzf"
 alias appopen="app | xargs -I {} open -a \"{}\""
 alias appquit="app | xargs -I {} osascript -e 'quit app \"{}\"'"
 alias settings="defaults domains | tr -d ' ' | tr ',' '\n' \
-                    | fzf --preview 'defaults read {} \
-                            | bat --force-colorization --style=numbers --language=json' \
-                        --preview-window=right:60% \
-                        --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
+    | fzf \
+        --preview 'defaults read {} \
+            | bat --force-colorization --style=numbers --language=json' \
+        --preview-window=right:60% \
+        --bind 'ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down'"
 
 
 # homebrew

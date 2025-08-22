@@ -18,7 +18,8 @@ alias getsyncedtabs="open -a 'Brave Browser' brave://history/syncedTabs; \
 # alias gardenpublish="make -f ~/root/projects/digital_garden/Makefile publish"
 
 
-alias pipx_install="cat ~/.dotfiles/home/.config/home/requirements.in | xargs -I {} pipx install \"{}\""
+alias pipx_install="cat ~/.dotfiles/home/.config/home/requirements.in \
+    | xargs -I {} pipx install \"{}\""
 
 
 # search
@@ -44,4 +45,5 @@ so() {
 
 # INFO: shorthand aliases for common commands
 alias f="fastfetch"
+alias lg="lazygit"
 alias y="yazi"
