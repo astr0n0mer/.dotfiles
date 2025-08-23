@@ -1,52 +1,60 @@
 7zip
-base-devel
 bat
 btop
 curl
 fastfetch
 fd
 fzf
-git
-git-delta
-github-cli
-glab
-hyprland
 jnv
 jq
-kitty # INFO: for working in i3wm
-lazygit
 less
-libreoffice-fresh
 man-db
-mise
-nano
 navi
-neovim
-pyenv
 python-pipx
 rclone
 ripgrep
-ruff
 stow
 syncthing
-tmux
-tokei
 trash-cli
 tree
-up
 uv
-vi
-vim
 visidata
-waybar
 wezterm
-wofi
 yazi
 zoxide
 zsh
 zsh-autosuggestions
 zsh-syntax-highlighting
 
-blueman
-bluez
-bluez-utils
+# bluetooth
+blueman     # INFO: GTK+ GUI bluetooth manager
+bluez       # INFO: provides `bluetoothd` daemon
+bluez-utils # INFO: provides `bluetoothctl` interactive CLI
+
+# editors
+nano
+neovim
+vi
+vim
+
+# programming
+base-devel
+git
+git-delta
+github-cli
+glab
+lazygit
+mise
+ruff
+tmux
+tokei
+up
+
+# GUI
+libreoffice-fresh
+
+# hyprland
+hyprland
+kitty # INFO: for working in hyprland
+waybar
+wofi
