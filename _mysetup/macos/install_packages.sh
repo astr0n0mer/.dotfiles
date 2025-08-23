@@ -11,3 +11,5 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 sudo softwareupdate --install-rosetta --agree-to-license
 
 brew bundle --file ~/.dotfiles/homebrew/.Brewfile
+brew services start syncthing
+brew services list
