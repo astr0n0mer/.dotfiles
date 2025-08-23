@@ -43,6 +43,10 @@ vim.opt.signcolumn = 'yes'
 vim.opt.timeoutlen = 300
 vim.opt.updatetime = 250
 
+vim.schedule(function()
+  vim.opt.clipboard = 'unnamedplus'
+end)
+
 
 vim.api.nvim_create_autocmd('TextYankPost', {
   desc = "Highlight when yanking text",
