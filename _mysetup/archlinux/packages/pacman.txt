@@ -10,6 +10,7 @@ git
 git-delta
 github-cli
 glab
+hyprland
 jnv
 jq
 kitty # INFO: for working in i3wm
@@ -37,7 +38,9 @@ uv
 vi
 vim
 visidata
+waybar
 wezterm
+wofi
 yazi
 zoxide
 zsh
@@ -47,11 +50,3 @@ zsh-syntax-highlighting
 blueman
 bluez
 bluez-utils
-
-gst-plugin-pipewire
-pavucontrol # INFO: PluseAudio Volume Control
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-wireplumber
