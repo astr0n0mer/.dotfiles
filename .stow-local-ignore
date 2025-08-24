@@ -1,12 +1,5 @@
-.DS_Store
 .git
-.gitignore
-.gitmodules
 .stfolder
-.stignore
 .stversions
-LICENSE
-Makefile
-README.md
 _*
 dotfiles_sensitive

@@ -1,5 +1,7 @@
+zsh/.zsh_history
+
 *.log
-work.Makefile
+# work.Makefile
 
 # syncthing metadata
 *.sync-conflict*
