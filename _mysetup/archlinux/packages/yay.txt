@@ -1,6 +1,7 @@
 brave-bin
 getnf
 jnv
+kanata
 lazydocker
 nextdns
 tlrc
