@@ -96,15 +96,19 @@ alias servers_session_start="tmux has-session -t ${SERVERS_SESSION_NAME} 2>/dev/
 alias digital_garden_serve="servers_session_start && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'cd ~/root/projects/digital_garden_v2 && npx quartz build --serve'"
 
+alias kanata_start="servers_session_start && \
+    tmux new-window -t ${SERVERS_SESSION_NAME}: 'sudo kanata --cfg $XDG_CONFIG_HOME/kanata/kanata.kbd'"
+
 alias ollama_start="servers_session_start && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'ollama serve'"
 
-# INFO: better to use `brew services start syncthing` instead of this alias on macOS
-alias syncthing_start="servers_session_start && \
-    tmux new-window -t ${SERVERS_SESSION_NAME}: 'syncthing serve --no-browser'"
-alias syncthing_open="open http://localhost:8384/"
+# INFO: use `brew services start syncthing` instead of this alias on macOS
+# use a system service (systemd) for this on Linux
+# alias syncthing_start="servers_session_start && \
+#     tmux new-window -t ${SERVERS_SESSION_NAME}: 'syncthing serve --no-browser'"
+# alias syncthing_open="open http://localhost:8384/"
 
-alias servers_start="digital_garden_serve && ollama_start && syncthing_start"
+alias servers_start="digital_garden_serve && ollama_start"
 
 
 # INFO: `multilog` usage:

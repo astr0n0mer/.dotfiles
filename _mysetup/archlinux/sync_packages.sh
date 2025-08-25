@@ -11,8 +11,8 @@ set -x # INFO: print all commands before execution
 # - deletes empty lines
 sed -E 's/#.*//; s/^[[:space:]]+//; s/[[:space:]]+$//; /^[[:space:]]*$/d' ./packages/pacman.txt \
     | sudo pacman --sync --needed --noconfirm -- -
-sed -E 's/#.*//; s/^[[:space:]]+//; s/[[:space:]]+$//; /^[[:space:]]*$/d' ./packages/yay.txt \
-    | yay         --sync --needed --noconfirm -
+sed -E 's/#.*//; s/^[[:space:]]+//; s/[[:space:]]+$//; /^[[:space:]]*$/d' ./packages/aur.txt \
+    | yay --sync --needed --batchinstall --noconfirm -
 
 # # Enable only if not already enabled
 # if ! systemctl --user is-enabled --quiet syncthing.service; then
