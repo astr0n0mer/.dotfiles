@@ -1,0 +1,4 @@
+[user]
+	name = astr0n0mer
+	email = 20461113-astr0n0mer@users.noreply.gitlab.com
+	signingkey = ~/.ssh/gitlab_astr0n0mer.pub
