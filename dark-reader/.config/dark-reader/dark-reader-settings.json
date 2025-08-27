@@ -291,10 +291,10 @@
       "www.overleaf.com",
       "groups.google.com",
       "accounts.snapchat.com",
-      "docs.google.com",
       "www.meetup.com",
       "mail.google.com",
-      "www.freepik.com"
+      "www.freepik.com",
+      "developers.zoom.us"
    ],
    "fetchNews" : true,
    "installation" : {

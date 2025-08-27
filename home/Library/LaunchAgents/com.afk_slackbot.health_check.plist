@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>Label</key>
+    <string>com.afk_slackbot.health_check</string>
+    <key>ProgramArguments</key>
+    <array>
+      <string>/usr/bin/curl</string>
+      <string>--location</string>
+      <string>https://afk-slackbot.onrender.com</string>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/tmp/com.afk_slackbot.health_check.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.afk_slackbot.health_check.err.log</string>
+    <key>StartInterval</key>
+    <integer>720</integer>
+  </dict>
+</plist>

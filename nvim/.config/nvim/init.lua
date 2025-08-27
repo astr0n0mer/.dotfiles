@@ -34,13 +34,20 @@ vim.diagnostic.config {
 -- vim.hl.on_yank({higroup="Visual", timeout=300})
 
 vim.opt.clipboard = 'unnamedplus'
+vim.opt.confirm = true
+vim.opt.ignorecase = true    -- INFO: Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.opt.inccommand = 'split' -- INFO: Preview substitutions live, as you type!
 vim.opt.list = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+vim.opt.number = true
 vim.opt.relativenumber = true
+vim.opt.scrolloff = 10
 vim.opt.shiftwidth = 4
+vim.opt.showmode = false
 vim.opt.signcolumn = 'yes'
+vim.opt.smartcase = true
 vim.opt.timeoutlen = 300
+vim.opt.undofile = true
 vim.opt.updatetime = 250
 
 vim.schedule(function()
