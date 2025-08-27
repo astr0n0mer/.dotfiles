@@ -26,7 +26,7 @@ local live_multigrep = function(opts)
       end
 
       local pieces = vim.split(prompt, "  ")
-      local args = { "rg" }
+      local args = { "rg", "--hidden" }
       if pieces[1] then
         table.insert(args, "--regexp")
         table.insert(args, pieces[1])
