@@ -22,10 +22,10 @@ alias getenvvar='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
 alias gbi="git branch | fzf"
 alias ghn="gh api notifications | jq '.[].subject'"
 alias ghnl="gh api notifications | jq '.[].subject' | less"
-alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
+# alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
 alias repos="find ~/.dotfiles ~/root/{projects,projects_work} \
-        -maxdepth 4 -type d -name \".git\" -prune -exec dirname {} \; \
+        -maxdepth 4 -name \".git\" -prune -exec dirname {} \; \
     | grep --invert-match \".stversions\" \
     | sort --ignore-case \
     | uniq"
