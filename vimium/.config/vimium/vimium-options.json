@@ -23,6 +23,10 @@
       {
          "passKeys" : "",
          "pattern" : "https?://*.openvim.com/*"
+      },
+      {
+         "passKeys" : "",
+         "pattern" : "https?://excalidraw.com/*"
       }
    ],
    "filterLinkHints" : true,

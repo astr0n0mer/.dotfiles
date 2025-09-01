@@ -1,6 +1,8 @@
 [user]
 	name = astr0n0mer
-	; email = 42691857+astr0n0mer@users.noreply.github.com
+	; INFO: fallback email and signingkey if a remote is not yet configured for a repository
+	email = 42691857+astr0n0mer@users.noreply.github.com
+	signingkey = ~/.ssh/github_astr0n0mer.pub
 [gpg]
 	format = ssh
 [commit]
