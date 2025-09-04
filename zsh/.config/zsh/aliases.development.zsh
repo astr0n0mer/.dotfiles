@@ -15,7 +15,7 @@ alias dotlg="lazygit --path ~/.dotfiles"
 
 
 # env
-alias getenvvar='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
+alias get_env_var='printenv | cut -d"=" -f1 | fzf | xargs printenv | tr -d "\n"'
 
 
 # INFO: git
@@ -24,6 +24,8 @@ alias ghn="gh api notifications | jq '.[].subject'"
 alias ghnl="gh api notifications | jq '.[].subject' | less"
 # alias gstaai="git stash list | fzf | cut -d ':' -f1 | xargs git stash apply"
 alias gswi="git branch | fzf | xargs git switch"
+
+# INFO: local repos
 alias repos="find ~/.dotfiles ~/root/{projects,projects_work} \
         -maxdepth 4 -name \".git\" -prune -exec dirname {} \; \
     | grep --invert-match \".stversions\" \
@@ -83,7 +85,6 @@ repog() {
 }
 
 
-# killport
 killport() {
     kill -9 $(lsof -t -i:$1) && echo "Killed port: ${1}"
 }
@@ -99,19 +100,30 @@ alias digital_garden_serve="servers_session_start && \
 alias kanata_start="servers_session_start && \
     tmux new-window -t ${SERVERS_SESSION_NAME}: 'sudo kanata --cfg $XDG_CONFIG_HOME/kanata/kanata.kbd'"
 
-alias ollama_start="servers_session_start && \
-    tmux new-window -t ${SERVERS_SESSION_NAME}: 'ollama serve'"
-
-# INFO: use `brew services start syncthing` instead of this alias on macOS
-# use a system service (systemd) for this on Linux
+# On Linux: use a system service (systemd)
+# 	systemctl --user enable --now test_app.service
+# On macOS: use `brew services start syncthing`
+# alias ollama_start="servers_session_start && \
+#     tmux new-window -t ${SERVERS_SESSION_NAME}: 'ollama serve'"
 # alias syncthing_start="servers_session_start && \
 #     tmux new-window -t ${SERVERS_SESSION_NAME}: 'syncthing serve --no-browser'"
 # alias syncthing_open="open http://localhost:8384/"
+# alias servers_start="digital_garden_serve && ollama_start"
 
-alias servers_start="digital_garden_serve && ollama_start"
+
+# INFO: Usage:
+# md_to_ansi <file.md>
+# Converts a Markdown file into an ANSI-colored version using glow.
+# Example:
+#   md_to_ansi file.md   # generates file.ansi
+md_to_ansi() {
+  local input="$1"
+  local output="${input%.md}.ansi"
+  CLICOLOR_FORCE=1 glow --style=dark "$input" > "$output"
+}
 
 
-# INFO: `multilog` usage:
+# INFO: Usage:
 # multilog <label> <log_category>
 # python -m http.server | multilog "http_server" 1 &
 # npx quartz build --serve | multilog "quartz" 2 &

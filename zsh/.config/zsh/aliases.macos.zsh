@@ -56,7 +56,6 @@ alias notify="fc -ln -1 | terminal-notifier -sound default"
 # alias speedtest="networkQuality -v"
 
 
-# timer
 timer() {
     terminal-notifier -message "Timer started for ${1:=25} min" -sound default
     (sleep $((${1:=25} * 60)) && \
